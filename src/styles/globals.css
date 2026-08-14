@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* Ativa o modo escuro por classe (controlado pelo ThemeContext), em vez de depender apenas de prefers-color-scheme. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "SF Pro Display", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Paleta neutra usada como base do glassmorphism em ambos os temas. */
+  --color-base-0: #ffffff;
+  --color-base-50: #f7f7f9;
+  --color-base-100: #eef0f3;
+  --color-base-800: #1c1c1f;
+  --color-base-900: #101012;
+  --color-base-950: #08080a;
+
+  /* Cor de destaque principal (usada em CTAs, contador, links). */
+  --color-accent-400: #6c8cff;
+  --color-accent-500: #4f6bf0;
+  --color-accent-600: #3d54d8;
+
+  /* Cores por categoria — minimalistas, sem saturação exagerada. */
+  --color-cat-violeta: #8b7cf6;
+  --color-cat-azul: #5b9dff;
+  --color-cat-ciano: #4fd1d9;
+  --color-cat-rosa: #f78ca2;
+  --color-cat-ambar: #f4b860;
+  --color-cat-verde: #6fcf97;
+  --color-cat-indigo: #7c8cf8;
+  --color-cat-grafite: #9aa0ab;
+
+  --radius-glass: 1.25rem;
+  --radius-glass-lg: 1.75rem;
+
+  --shadow-soft: 0 8px 30px -8px rgb(0 0 0 / 0.12);
+  --shadow-soft-dark: 0 8px 30px -8px rgb(0 0 0 / 0.55);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-base-50 text-base-900 antialiased;
+    font-family: var(--font-sans);
+  }
+
+  .dark body {
+    @apply bg-base-950 text-base-50;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  /* Cartão de vidro (glassmorphism) — base de praticamente toda a UI. */
+  .vidro {
+    @apply rounded-[var(--radius-glass)] border border-white/40 bg-white/60 shadow-[var(--shadow-soft)] backdrop-blur-xl;
+  }
+
+  .dark .vidro {
+    @apply border-white/10 bg-white/[0.06] shadow-[var(--shadow-soft-dark)] backdrop-blur-xl;
+  }
+
+  .vidro-forte {
+    @apply rounded-[var(--radius-glass-lg)] border border-white/50 bg-white/75 shadow-[var(--shadow-soft)] backdrop-blur-2xl;
+  }
+
+  .dark .vidro-forte {
+    @apply border-white/10 bg-white/[0.08] shadow-[var(--shadow-soft-dark)] backdrop-blur-2xl;
+  }
+}
+
+@layer utilities {
+  .scrollbar-discreta::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+  .scrollbar-discreta::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-black/10;
+  }
+  .dark .scrollbar-discreta::-webkit-scrollbar-thumb {
+    @apply bg-white/15;
+  }
+}

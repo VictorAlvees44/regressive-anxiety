@@ -1,0 +1,66 @@
+rules_version = '2';
+
+// Firestore Security Rules — Regressive Anxiety
+//
+// Princípios:
+// 1. Apenas os dois e-mails abaixo podem escrever qualquer dado.
+// 2. Qualquer outro usuário autenticado é "visitante": apenas leitura
+//    dos dados compartilhados do casal (eventos, lista de desejos).
+// 3. Usuários não autenticados não têm acesso a nada no Firestore
+//    (os dados públicos de sugestões de lançamentos vêm dos arquivos
+//    JSON estáticos, não do Firestore).
+// 4. Toda validação de permissão acontece aqui — o frontend nunca é
+//    a fonte de verdade da autorização.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function ehAdministrador() {
+      return request.auth != null &&
+        request.auth.token.email in [
+          'chavosso16@gmail.com',
+          'gabrielly.gsena@gmail.com'
+        ];
+    }
+
+    function estaAutenticado() {
+      return request.auth != null;
+    }
+
+    // Eventos: dados COMPARTILHADOS entre os dois administradores
+    // (é o painel de um casal, não dados isolados por conta).
+    // Visitantes podem visualizar, mas nunca escrever.
+    match /eventos/{eventoId} {
+      allow read: if estaAutenticado();
+      allow write: if ehAdministrador();
+    }
+
+    // Lista de desejos: mesma lógica de compartilhamento dos eventos.
+    match /listaDesejos/{itemId} {
+      allow read: if estaAutenticado();
+      allow write: if ehAdministrador();
+    }
+
+    // Tokens de notificação push (Firebase Cloud Messaging): cada
+    // administrador só pode ler/escrever os próprios tokens de
+    // dispositivo. Notificações são um recurso exclusivo dos admins.
+    match /tokensNotificacao/{uid}/dispositivos/{tokenId} {
+      allow read, write: if ehAdministrador() && request.auth.uid == uid;
+    }
+
+    // Logs administrativos: apenas administradores podem ler ou escrever.
+    // Nunca expostos a visitantes.
+    match /logs/{logId} {
+      allow read: if ehAdministrador();
+      allow write: if ehAdministrador();
+    }
+
+    // Backups: apenas administradores.
+    match /backups/{backupId} {
+      allow read: if ehAdministrador();
+      allow write: if ehAdministrador();
+    }
+
+    // Qualquer outra coleção não prevista explicitamente é negada por
+    // padrão (nenhuma regra de "allow" corresponde a ela).
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sug-001",
+    "titulo": "The Witcher 4",
+    "descricao": "Novo capítulo da saga de Geralt de Rívia.",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2027-02-10T03:00:00.000Z",
+    "imagemUrl": "https://images.unsplash.com/photo-1519326844852-704caea5679e?w=800&q=80",
+    "idExterno": "igdb-2",
+    "fonte": "igdb"
+  },
+  {
+    "id": "sug-002",
+    "titulo": "Homem-Aranha: Novo Amanhecer",
+    "descricao": "Mais uma aventura do herói aracnídeo.",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2027-01-15T03:00:00.000Z",
+    "imagemUrl": "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=800&q=80",
+    "idExterno": "tmdb-movie-2",
+    "fonte": "tmdb"
+  },
+  {
+    "id": "sug-003",
+    "titulo": "Stranger Things - Temporada Final",
+    "descricao": "O desfecho da saga de Hawkins.",
+    "categoria": "series",
+    "dataLancamentoISO": "2026-10-31T03:00:00.000Z",
+    "imagemUrl": "https://images.unsplash.com/photo-1572188863110-46d457c9234d?w=800&q=80",
+    "idExterno": "tmdb-tv-2",
+    "fonte": "tmdb"
+  }
+]

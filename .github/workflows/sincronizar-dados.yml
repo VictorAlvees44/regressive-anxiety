@@ -1,0 +1,41 @@
+name: Sincronizar dados públicos
+
+# Executa uma vez por dia (05:00 UTC) e permite disparo manual.
+# Consulta as APIs de jogos/filmes/séries e commita o JSON atualizado
+# em public/data/sugestoes.json — o app nunca chama essas APIs
+# diretamente, apenas consome esse arquivo.
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Executar sincronização
+        env:
+          IGDB_CLIENT_ID: ${{ secrets.IGDB_CLIENT_ID }}
+          IGDB_CLIENT_SECRET: ${{ secrets.IGDB_CLIENT_SECRET }}
+          RAWG_API_KEY: ${{ secrets.RAWG_API_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: node scripts/sincronizar-dados.mjs
+
+      - name: Commitar alterações (se houver)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/sugestoes.json
+          git diff --cached --quiet || git commit -m "chore: sincronizar sugestões de lançamentos"
+          git push
