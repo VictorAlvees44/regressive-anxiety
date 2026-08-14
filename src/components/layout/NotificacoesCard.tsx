@@ -42,7 +42,7 @@ export function NotificacoesCard({ uid }: NotificacoesCardProps) {
           <div>
             <h3 className="font-semibold">Notificações push</h3>
             <p className="text-xs text-base-900/55 dark:text-base-50/55">
-              {ativo ? "Ativas neste dispositivo" : "Receba avisos antes dos lançamentos"}
+              {ativo ? "Ativas neste dispositivo — sem deixar estreia escapar" : "No app instalado, os avisos chegam mesmo com ele fechado"}
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export function NotificacoesCard({ uid }: NotificacoesCardProps) {
           </Button>
         ) : (
           <Button tamanho="sm" icone={<Bell size={16} />} disabled={carregando} onClick={handleAtivar}>
-            {carregando ? "Ativando..." : "Ativar"}
+            {carregando ? "Só um segundo..." : "Quero os avisos"}
           </Button>
         )}
       </div>

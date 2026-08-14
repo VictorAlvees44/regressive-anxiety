@@ -17,7 +17,7 @@ export function AppShell() {
     <div className="flex min-h-screen w-full gap-4 p-3 sm:p-4">
       <FundoAmbiente />
       <Sidebar />
-      <main className="mx-auto w-full max-w-2xl flex-1 pb-24 sm:pb-6">
+      <main className="mx-auto w-full max-w-6xl flex-1 pb-24 sm:pb-6">
         <Outlet />
       </main>
       <TabBar />

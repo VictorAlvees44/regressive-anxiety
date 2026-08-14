@@ -1,159 +1,185 @@
 #!/usr/bin/env node
 /**
- * Script de sincronização diária de dados públicos.
- *
- * Executado uma vez por dia via GitHub Actions (ver
- * .github/workflows/sincronizar-dados.yml). Consulta as APIs de
- * jogos (IGDB, com fallback para RAWG) e de filmes/séries (TMDB),
- * e grava o resultado em `public/data/sugestoes.json` — o único
- * arquivo que o frontend consome para a tela de Sugestões.
- *
- * Nunca é executado no navegador do usuário: por isso pode usar
- * variáveis de ambiente "secretas" (tokens de API) sem exposição.
- *
- * Como adicionar um novo provedor de dados:
- * 1. Crie uma função `buscarDoNovoProvedor()` seguindo o mesmo formato
- *    de retorno das funções existentes (mapeando para `SugestaoLancamento`).
- * 2. Chame-a em `main()` e concatene o resultado ao array final.
- * 3. Adicione as variáveis de ambiente necessárias no workflow e no
- *    `.env.example`.
+ * Monta o catálogo público diário. As fontes são consultadas no servidor da
+ * Action; nenhuma chave ou chamada de terceiros chega ao navegador.
  */
-
 import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const SAIDA = path.resolve("public/data/sugestoes.json");
-
 const IGDB_CLIENT_ID = process.env.IGDB_CLIENT_ID;
 const IGDB_CLIENT_SECRET = process.env.IGDB_CLIENT_SECRET;
-const RAWG_API_KEY = process.env.RAWG_API_KEY;
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
+const DIA = 86_400_000;
+const agora = Date.now();
+const emDoisAnos = new Date(agora + 730 * DIA).toISOString().slice(0, 10);
+const haUmAno = new Date(agora - 365 * DIA).toISOString().slice(0, 10);
+const haQuatroMeses = new Date(agora - 120 * DIA).toISOString().slice(0, 10);
 
-/** Obtém um token de acesso IGDB via OAuth do Twitch (necessário para toda chamada à IGDB). */
+function iso(data) {
+  const valor = new Date(data).getTime();
+  return Number.isNaN(valor) ? null : new Date(valor).toISOString();
+}
+function momento(data) { return new Date(data).getTime() < agora ? "disponivel" : "em-breve"; }
+function normalizarImagemIgdb(url) { return url ? `https:${url.replace("t_thumb", "t_cover_big")}` : undefined; }
+
+async function json(url, opcoes) {
+  try {
+    const resposta = await fetch(url, opcoes);
+    return resposta.ok ? resposta.json() : null;
+  } catch { return null; }
+}
+
 async function obterTokenIgdb() {
   if (!IGDB_CLIENT_ID || !IGDB_CLIENT_SECRET) return null;
-
-  const resposta = await fetch(
-    `https://id.twitch.tv/oauth2/token?client_id=${IGDB_CLIENT_ID}&client_secret=${IGDB_CLIENT_SECRET}&grant_type=client_credentials`,
-    { method: "POST" },
-  );
-  if (!resposta.ok) return null;
-  const dados = await resposta.json();
-  return dados.access_token ?? null;
+  const dados = await json(`https://id.twitch.tv/oauth2/token?client_id=${IGDB_CLIENT_ID}&client_secret=${IGDB_CLIENT_SECRET}&grant_type=client_credentials`, { method: "POST" });
+  return dados?.access_token ?? null;
 }
 
 async function buscarJogosIgdb() {
   const token = await obterTokenIgdb();
-  if (!token) return null;
-
-  const agoraSegundos = Math.floor(Date.now() / 1000);
-  const corpo = `
-    fields name, summary, first_release_date, cover.url, screenshots.url;
-    where first_release_date > ${agoraSegundos};
-    sort first_release_date asc;
-    limit 20;
-  `;
-
-  const resposta = await fetch("https://api.igdb.com/v4/games", {
-    method: "POST",
-    headers: {
-      "Client-ID": IGDB_CLIENT_ID,
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "text/plain",
-    },
-    body: corpo,
-  });
-
-  if (!resposta.ok) return null;
-  const jogos = await resposta.json();
-
-  return jogos.map((jogo) => ({
-    id: `sug-igdb-${jogo.id}`,
-    titulo: jogo.name,
-    descricao: jogo.summary?.slice(0, 240),
-    categoria: "jogos",
-    dataLancamentoISO: new Date(jogo.first_release_date * 1000).toISOString(),
-    imagemUrl: jogo.cover?.url ? `https:${jogo.cover.url.replace("t_thumb", "t_cover_big")}` : undefined,
-    idExterno: `igdb-${jogo.id}`,
-    fonte: "igdb",
-  }));
+  if (!token) return [];
+  const inicio = Math.floor((agora - 365 * DIA) / 1000);
+  const fim = Math.floor((agora + 730 * DIA) / 1000);
+  const corpo = `fields name, summary, first_release_date, cover.url, screenshots.url, websites.url, platforms.name; where first_release_date >= ${inicio} & first_release_date <= ${fim}; sort first_release_date asc; limit 150;`;
+  const jogos = await json("https://api.igdb.com/v4/games", { method: "POST", headers: { "Client-ID": IGDB_CLIENT_ID, Authorization: `Bearer ${token}`, "Content-Type": "text/plain" }, body: corpo });
+  return (jogos ?? []).map((jogo) => {
+    const data = iso(jogo.first_release_date * 1000);
+    return data && { id: `sug-igdb-${jogo.id}`, titulo: jogo.name, descricao: jogo.summary?.slice(0, 300), categoria: "jogos", dataLancamentoISO: data, imagemUrl: normalizarImagemIgdb(jogo.cover?.url), bannerUrl: normalizarImagemIgdb(jogo.screenshots?.[0]?.url), plataformas: jogo.platforms?.map((plataforma) => plataforma.name), linksOficiais: jogo.websites?.slice(0, 2).map((site) => ({ label: "Site oficial", url: site.url })), idExterno: `igdb-${jogo.id}`, fonte: "igdb", momento: momento(data) };
+  }).filter(Boolean);
 }
 
-async function buscarJogosRawg() {
-  if (!RAWG_API_KEY) return [];
-
-  const hoje = new Date().toISOString().slice(0, 10);
-  const emSeisMeses = new Date(Date.now() + 1000 * 60 * 60 * 24 * 180).toISOString().slice(0, 10);
-
-  const resposta = await fetch(
-    `https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=${hoje},${emSeisMeses}&ordering=released&page_size=20`,
-  );
-  if (!resposta.ok) return [];
-  const dados = await resposta.json();
-
-  return (dados.results ?? []).map((jogo) => ({
-    id: `sug-rawg-${jogo.id}`,
-    titulo: jogo.name,
-    categoria: "jogos",
-    dataLancamentoISO: new Date(jogo.released ?? Date.now()).toISOString(),
-    imagemUrl: jogo.background_image ?? undefined,
-    idExterno: `rawg-${jogo.id}`,
-    fonte: "rawg",
-  }));
+/** Fonte sem credencial: catálogo de lançamentos recentes e próximos da Steam. */
+async function buscarJogosSteam() {
+  const dados = await json("https://store.steampowered.com/api/featuredcategories?cc=br&l=portuguese");
+  const itens = [...(dados?.coming_soon?.items ?? []), ...(dados?.specials?.items ?? [])];
+  return itens.map((jogo) => {
+    const data = iso((jogo.release_date ?? 0) * 1000);
+    if (!data || new Date(data).getTime() < agora - 180 * DIA || new Date(data).getTime() > agora + 730 * DIA) return null;
+    return { id: `sug-steam-${jogo.id}`, titulo: jogo.name, categoria: "jogos", dataLancamentoISO: data, imagemUrl: jogo.large_capsule_image ?? jogo.small_capsule_image, plataformas: ["Steam"], linksOficiais: [{ label: "Ver na Steam", url: `https://store.steampowered.com/app/${jogo.id}` }], idExterno: `steam-${jogo.id}`, fonte: "steam", momento: momento(data) };
+  }).filter(Boolean);
 }
 
-async function buscarJogos() {
-  const doIgdb = await buscarJogosIgdb();
-  if (doIgdb && doIgdb.length > 0) return doIgdb;
-  return buscarJogosRawg();
+/** Catálogo público da Epic Games Store, sem depender de chave de API. */
+async function buscarJogosEpic() {
+  const dados = await json("https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=pt-BR&country=BR&allowCountries=BR");
+  const jogos = dados?.data?.Catalog?.searchStore?.elements ?? dados?.Catalog?.searchStore?.elements ?? [];
+  return jogos.map((jogo) => {
+    const data = iso(jogo.releaseDate ?? jogo.effectiveDate);
+    if (!data || new Date(data).getTime() < agora - 180 * DIA || new Date(data).getTime() > agora + 730 * DIA) return null;
+    const imagem = jogo.keyImages?.find((item) => item.type === "OfferImageWide" || item.type === "DieselStoreFrontWide")?.url ?? jogo.keyImages?.[0]?.url;
+    const slug = jogo.productSlug ?? jogo.urlSlug;
+    return { id: `sug-epic-${jogo.id}`, titulo: jogo.title, descricao: jogo.description?.slice(0, 300), categoria: "jogos", dataLancamentoISO: data, imagemUrl: imagem, plataformas: ["Epic Games Store"], linksOficiais: slug ? [{ label: "Ver na Epic", url: `https://store.epicgames.com/pt-BR/p/${slug}` }] : undefined, idExterno: `epic-${jogo.id}`, fonte: "epic", momento: momento(data) };
+  }).filter((jogo) => jogo?.titulo);
 }
 
-async function buscarTmdb(caminho, categoria, prefixoId) {
+async function buscarTmdbDescoberta(tipo, categoria, dataInicial) {
   if (!TMDB_API_KEY) return [];
+  const campoData = tipo === "movie" ? "primary_release_date" : "first_air_date";
+  const paginas = await Promise.all([1, 2, 3].map((pagina) => json(`https://api.themoviedb.org/3/discover/${tipo}?api_key=${TMDB_API_KEY}&language=pt-BR&sort_by=popularity.desc&page=${pagina}&${campoData}.gte=${dataInicial}&${campoData}.lte=${emDoisAnos}`)));
+  return paginas.flatMap((dados) => dados?.results ?? []).map((item) => {
+    const data = iso(item.release_date || item.first_air_date);
+    return data && { id: `sug-tmdb-${tipo}-${item.id}`, titulo: item.title ?? item.name, descricao: item.overview?.slice(0, 300), categoria, dataLancamentoISO: data, imagemUrl: item.poster_path ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : undefined, bannerUrl: item.backdrop_path ? `https://image.tmdb.org/t/p/w780${item.backdrop_path}` : undefined, linksOficiais: [{ label: "Ver no TMDB", url: `https://www.themoviedb.org/${tipo}/${item.id}` }], idExterno: `tmdb-${tipo}-${item.id}`, fonte: "tmdb", momento: momento(data) };
+  }).filter(Boolean);
+}
 
-  const resposta = await fetch(
-    `https://api.themoviedb.org/3/${caminho}?api_key=${TMDB_API_KEY}&language=pt-BR&page=1`,
-  );
-  if (!resposta.ok) return [];
-  const dados = await resposta.json();
-  const agora = Date.now();
+/** Fonte aberta para séries em exibição, complementar ao catálogo do TMDB. */
+async function buscarSeriesTvmaze() {
+  const dados = await json("https://api.tvmaze.com/schedule?country=US&date=" + new Date().toISOString().slice(0, 10));
+  return (dados ?? []).slice(0, 60).map((episodio) => {
+    const serie = episodio.show;
+    const data = iso(serie?.premiered || episodio.airdate);
+    if (!serie?.id || !data) return null;
+    return { id: `sug-tvmaze-${serie.id}`, titulo: serie.name, descricao: serie.summary?.replace(/<[^>]+>/g, "").slice(0, 300), categoria: "series", dataLancamentoISO: data, imagemUrl: serie.image?.medium, linksOficiais: [{ label: "Ver na TVmaze", url: serie.url }], idExterno: `tvmaze-${serie.id}`, fonte: "tvmaze", momento: "disponivel" };
+  }).filter(Boolean);
+}
 
-  return (dados.results ?? [])
-    .map((item) => {
-      const dataLancamento = item.release_date || item.first_air_date;
-      if (!dataLancamento) return null;
-      return {
-        id: `sug-${prefixoId}-${item.id}`,
-        titulo: item.title ?? item.name,
-        descricao: item.overview?.slice(0, 240),
-        categoria,
-        dataLancamentoISO: new Date(dataLancamento).toISOString(),
-        imagemUrl: item.poster_path ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : undefined,
-        idExterno: `tmdb-${prefixoId}-${item.id}`,
-        fonte: "tmdb",
-      };
-    })
-    .filter((item) => item && new Date(item.dataLancamentoISO).getTime() > agora);
+/** Catálogo aberto de cinema, complementar ao TMDB e sem credencial. */
+async function buscarFilmesWikidata() {
+  const inicio = new Date(agora - 120 * DIA).toISOString();
+  const fim = new Date(agora + 730 * DIA).toISOString();
+  const consulta = `SELECT ?filme ?filmeLabel ?data ?imagem WHERE { ?filme wdt:P31/wdt:P279* wd:Q11424; wdt:P577 ?data. OPTIONAL { ?filme wdt:P18 ?imagem. } FILTER(?data >= "${inicio}"^^xsd:dateTime && ?data <= "${fim}"^^xsd:dateTime) SERVICE wikibase:label { bd:serviceParam wikibase:language "pt,en". } } ORDER BY ASC(?data) LIMIT 100`;
+  const dados = await json(`https://query.wikidata.org/sparql?format=json&query=${encodeURIComponent(consulta)}`, { headers: { Accept: "application/sparql-results+json", "User-Agent": "RegressiveAnxiety/1.0" } });
+  return (dados?.results?.bindings ?? []).map((item) => {
+    const data = iso(item.data?.value);
+    const id = item.filme?.value?.split("/").pop();
+    return data && id && { id: `sug-wikidata-${id}`, titulo: item.filmeLabel?.value, categoria: "filmes", dataLancamentoISO: data, imagemUrl: item.imagem?.value, linksOficiais: [{ label: "Ficha do filme", url: item.filme.value }], idExterno: `wikidata-${id}`, fonte: "wikidata", momento: momento(data) };
+  }).filter((item) => item?.titulo);
+}
+
+function decodificarXml(texto = "") { return texto.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">"); }
+function removerHtml(texto = "") { return decodificarXml(texto).replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim(); }
+function valorXml(bloco, tag) {
+  return decodificarXml(bloco.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`))?.[1] ?? "");
+}
+
+/** Comunicados diretos das fabricantes; data é a publicação, nunca uma data de lançamento presumida. */
+async function buscarAtualizacoesOficiais({ fonte, nome, plataforma, url, baseUrl }) {
+  try {
+    const resposta = await fetch(url, { headers: { Accept: "application/rss+xml, application/xml, text/xml" } });
+    if (!resposta.ok) return [];
+    const xml = await resposta.text();
+    const entradas = [...xml.matchAll(/<(?:item|entry)>([\s\S]*?)<\/(?:item|entry)>/g)].slice(0, 40);
+    return entradas.map(([, entrada], indice) => {
+      const titulo = removerHtml(valorXml(entrada, "title"));
+      const data = iso(valorXml(entrada, "pubDate") || valorXml(entrada, "published") || valorXml(entrada, "updated"));
+      const linkDireto = valorXml(entrada, "link");
+      const linkAtom = entrada.match(/<link[^>]+href=["']([^"']+)["']/)?.[1];
+      const link = linkDireto || linkAtom;
+      const descricao = removerHtml(valorXml(entrada, "description") || valorXml(entrada, "content") || valorXml(entrada, "summary"));
+      if (!titulo || !data || !link || new Date(data).getTime() < agora - 90 * DIA) return null;
+      const urlCompleta = /^https?:\/\//i.test(link) ? link : new URL(link, baseUrl).toString();
+      return { id: `sug-${fonte}-${new Date(data).getTime()}-${indice}`, titulo, descricao: `${nome}: ${descricao}`.slice(0, 300), categoria: "jogos", dataLancamentoISO: data, plataformas: [plataforma], linksOficiais: [{ label: `Abrir no ${nome}`, url: urlCompleta }], idExterno: `${fonte}-${urlCompleta}`, fonte, momento: "disponivel", tipoConteudo: "atualizacao-oficial" };
+    }).filter(Boolean);
+  } catch { return []; }
+}
+async function buscarNoticias(sugestao) {
+  const termo = sugestao.categoria === "jogos" ? "jogo" : sugestao.categoria === "filmes" ? "filme" : "série";
+  try {
+    const resposta = await fetch(`https://news.google.com/rss/search?q=${encodeURIComponent(`${sugestao.titulo} ${termo}`)}&hl=pt-BR&gl=BR&ceid=BR:pt-419`);
+    if (!resposta.ok) return [];
+    const xml = await resposta.text();
+    return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 3).map(([, item]) => {
+      const pegar = (tag) => decodificarXml(item.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`))?.[1] ?? "");
+      const url = pegar("link"); const titulo = pegar("title");
+      return url && titulo ? { titulo, url, fonte: pegar("source"), publicadaEmISO: iso(pegar("pubDate")) ?? undefined } : null;
+    }).filter(Boolean);
+  } catch { return []; }
+}
+
+function deduplicar(itens) {
+  const vistos = new Set();
+  return itens.filter((item) => {
+    const chave = `${item.categoria}:${item.titulo}`.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    if (vistos.has(chave)) return false;
+    vistos.add(chave); return true;
+  });
 }
 
 async function main() {
-  const [jogos, filmes, series] = await Promise.all([
-    buscarJogos(),
-    buscarTmdb("movie/upcoming", "filmes", "movie"),
-    buscarTmdb("tv/on_the_air", "series", "tv"),
+  const [igdb, steam, epic, nintendo, playstation, xbox, filmes, filmesWikidata, seriesTmdb, seriesTvmaze] = await Promise.all([
+    buscarJogosIgdb(),
+    buscarJogosSteam(),
+    buscarJogosEpic(),
+    buscarAtualizacoesOficiais({ fonte: "nintendo", nome: "Nintendo", plataforma: "Nintendo", url: "https://www.nintendo.co.jp/news/whatsnew.xml", baseUrl: "https://www.nintendo.co.jp" }),
+    buscarAtualizacoesOficiais({ fonte: "playstation", nome: "PlayStation", plataforma: "PlayStation 5", url: "https://blog.playstation.com/feed/", baseUrl: "https://blog.playstation.com" }),
+    buscarAtualizacoesOficiais({ fonte: "xbox", nome: "Xbox Wire", plataforma: "Xbox Series X|S", url: "https://news.xbox.com/en-us/feed/", baseUrl: "https://news.xbox.com" }),
+    buscarTmdbDescoberta("movie", "filmes", haQuatroMeses), buscarFilmesWikidata(), buscarTmdbDescoberta("tv", "series", haUmAno), buscarSeriesTvmaze(),
   ]);
-
-  const sugestoes = [...jogos, ...filmes, ...series].sort(
-    (a, b) => new Date(a.dataLancamentoISO).getTime() - new Date(b.dataLancamentoISO).getTime(),
-  );
-
+  const sugestoes = deduplicar([...igdb, ...steam, ...epic, ...nintendo, ...playstation, ...xbox, ...filmes, ...filmesWikidata, ...seriesTmdb, ...seriesTvmaze])
+    .sort((a, b) => {
+      const aData = new Date(a.dataLancamentoISO).getTime();
+      const bData = new Date(b.dataLancamentoISO).getTime();
+      const aFuturo = aData >= agora;
+      const bFuturo = bData >= agora;
+      if (aFuturo !== bFuturo) return aFuturo ? -1 : 1;
+      return aFuturo ? aData - bData : bData - aData;
+    });
+  // Notícias para os itens mais próximos da data atual: limita requisições e mantém o JSON leve.
+  const comNoticias = [...sugestoes].sort((a, b) => Math.abs(new Date(a.dataLancamentoISO).getTime() - agora) - Math.abs(new Date(b.dataLancamentoISO).getTime() - agora));
+  await Promise.all(comNoticias.slice(0, 80).map(async (sugestao) => { sugestao.noticias = await buscarNoticias(sugestao); }));
   await mkdir(path.dirname(SAIDA), { recursive: true });
   await writeFile(SAIDA, JSON.stringify(sugestoes, null, 2), "utf-8");
-
   console.log(`Sincronização concluída: ${sugestoes.length} sugestões salvas em ${SAIDA}`);
 }
-
-main().catch((erro) => {
-  console.error("Falha na sincronização de dados:", erro);
-  process.exitCode = 1;
-});
+main().catch((erro) => { console.error("Falha na sincronização de dados:", erro); process.exitCode = 1; });

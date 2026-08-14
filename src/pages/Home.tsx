@@ -7,6 +7,7 @@ import { EventCard } from "../components/events/EventCard";
 import { EventList } from "../components/events/EventList";
 import { ThemeToggle } from "../components/ui/ThemeToggle";
 import { GlassCard } from "../components/ui/GlassCard";
+import { InstalarAppCard } from "../components/layout/InstalarAppCard";
 
 export function Home() {
   const saudacao = useSaudacao();
@@ -38,6 +39,8 @@ export function Home() {
       >
         “{frase.texto}”
       </motion.p>
+
+      <InstalarAppCard />
 
       {carregando && (
         <GlassCard className="text-center text-sm text-base-900/50 dark:text-base-50/50">

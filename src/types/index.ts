@@ -96,8 +96,23 @@ export interface SugestaoLancamento {
   bannerUrl?: string;
   trailerUrl?: string;
   linksOficiais?: LinkOficial[];
+  /** Plataformas em que o jogo pode ser acompanhado, quando informadas pela fonte. */
+  plataformas?: string[];
+  /** Notícias recentes, obtidas durante a sincronização diária. */
+  noticias?: NoticiaSugestao[];
+  /** Diferencia um lançamento rastreado de um comunicado da própria plataforma. */
+  tipoConteudo?: "lancamento" | "atualizacao-oficial";
+  /** Itens já lançados continuam visíveis enquanto ainda são relevantes. */
+  momento: "em-breve" | "disponivel";
   idExterno: string;
-  fonte: "igdb" | "rawg" | "tmdb";
+  fonte: "igdb" | "steam" | "epic" | "nintendo" | "playstation" | "xbox" | "tmdb" | "tvmaze" | "wikidata";
+}
+
+export interface NoticiaSugestao {
+  titulo: string;
+  url: string;
+  fonte?: string;
+  publicadaEmISO?: string;
 }
 
 /** Item da Lista de Desejos (módulo opcional). */

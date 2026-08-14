@@ -4,8 +4,8 @@ import type { SugestaoLancamento } from "../types";
 /**
  * Em produção, o app consome apenas `public/data/sugestoes.json`,
  * gerado uma vez por dia pelo workflow `sincronizar-dados.yml`
- * (ver `scripts/sincronizar-dados.mjs`). O app nunca chama IGDB/RAWG/TMDB
- * diretamente. Em desenvolvimento, se o arquivo ainda não existir ou
+ * (ver `scripts/sincronizar-dados.mjs`). O app nunca chama IGDB, Steam,
+ * TMDB, TVmaze ou Google News diretamente. Em desenvolvimento, se o arquivo ainda não existir ou
  * estiver vazio, caímos no mock para manter a tela navegável.
  */
 export async function listarSugestoes(): Promise<SugestaoLancamento[]> {

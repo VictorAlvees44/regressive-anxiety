@@ -1,8 +1,8 @@
 # Regressive Anxiety
 
-PWA pessoal e privado para acompanhar contagens regressivas de lançamentos de **jogos, filmes e séries** — e, opcionalmente, viagens, datas pessoais, finanças e mais. Feito para um casal, com visual inspirado no iOS (glassmorphism, blur, animações suaves).
+PWA pessoal e privado para acompanhar estreias de **jogos, filmes e séries** — e, opcionalmente, viagens, datas pessoais, finanças e mais. Feito para um casal, com visual de catálogo e sem deixar aquela estreia enorme passar despercebida.
 
-> Este projeto **não** é uma rede social, agenda ou app de produtividade. É um painel bonito e divertido para contar os dias.
+> Este projeto **não** é uma rede social, agenda ou app de produtividade. É a sua programação de entretenimento, com um pouquinho de ansiedade saudável.
 >
 > Procurando o passo a passo prático de "extrair o zip até funcionar no celular"? Veja **[GUIA-DEPLOY.md](./GUIA-DEPLOY.md)**. Este README é a referência técnica/arquitetural do projeto.
 
@@ -51,7 +51,7 @@ O único "backend" de fato é uma única Cloud Function agendada (`functions/`),
 O projeto combina três fontes de dados:
 
 ```
-APIs externas (IGDB/RAWG/TMDB)      Firestore (Auth + dados do casal)      Cloud Function agendada
+APIs externas e feeds oficiais (IGDB/Steam/Epic/Nintendo/PlayStation/Xbox/TMDB/Wikidata/TVmaze)  Firestore (Auth + dados do casal)  Cloud Function agendada
         |  1x/dia via Actions                |  tempo real, leitura p/ visitantes    |  1x/dia, 09h
         v                                     v  escrita só p/ os 2 admins            v
 public/data/sugestoes.json          coleções `eventos` e `listaDesejos`     lê `eventos` + tokens FCM
@@ -61,7 +61,7 @@ public/data/sugestoes.json          coleções `eventos` e `listaDesejos`     l�
                           consome as três fontes conforme a tela
 ```
 
-- **Dados públicos** (sugestões de lançamentos): nunca buscados em tempo real pelo navegador. O workflow `sincronizar-dados.yml` roda uma vez por dia, consulta as APIs e grava `public/data/sugestoes.json`. O app só lê esse arquivo (`src/lib/sugestoesRepositorio.ts`).
+- **Dados públicos** (sugestões de lançamentos e notícias): nunca buscados em tempo real pelo navegador. O workflow `sincronizar-dados.yml` roda uma vez por dia, consulta IGDB, Steam/Valve, Epic Games Store, os feeds oficiais da Nintendo, PlayStation e Xbox, TMDB, Wikidata, TVmaze e o feed do Google News e grava `public/data/sugestoes.json`. O app só lê esse arquivo (`src/lib/sugestoesRepositorio.ts`).
 - **Dados do casal** (eventos, favoritos, lista de desejos): vivem em coleções Firestore de nível raiz — **compartilhadas entre os dois administradores**, já que é o painel de um casal, não dados isolados por conta. Protegidas por `firestore.rules`: leitura para qualquer autenticado, escrita só para os dois e-mails admin.
 - **Notificações**: os tokens de dispositivo (FCM) ficam em `tokensNotificacao/{uid}/dispositivos/{token}` (privados por admin). Uma Cloud Function agendada (`functions/index.js`) roda 1x/dia, cruza os eventos com a data de hoje e envia os pushes correspondentes.
 
@@ -136,7 +136,7 @@ Veja o passo a passo completo em **[GUIA-DEPLOY.md](./GUIA-DEPLOY.md)**. Resumo:
 
 ## Como funciona a sincronização automática
 
-O workflow `.github/workflows/sincronizar-dados.yml` roda todos os dias às 05:00 UTC (ou manualmente em **Actions → Run workflow**). Executa `scripts/sincronizar-dados.mjs`, que busca jogos (IGDB, com fallback RAWG) e filmes/séries (TMDB), grava `public/data/sugestoes.json` e comita o resultado. O app nunca chama essas APIs diretamente.
+O workflow `.github/workflows/sincronizar-dados.yml` roda todos os dias às 05:00 UTC (ou manualmente em **Actions → Run workflow**). Executa `scripts/sincronizar-dados.mjs`, que busca jogos no IGDB, Steam/Valve e Epic Games Store — com destaque na tela para Steam, PlayStation 5 e Xbox Series — e inclui atualizações publicadas pela Nintendo, PlayStation e Xbox. Filmes vêm do TMDB e Wikidata, séries do TMDB e TVmaze, e as notícias do feed do Google News. Comunicados das fabricantes aparecem identificados como “Atualização oficial”, sem fingir que a data da notícia é uma estreia. Em seguida, grava `public/data/sugestoes.json` e comita o resultado. O app nunca chama essas fontes diretamente.
 
 ## Como atualizar as APIs
 
@@ -157,7 +157,7 @@ Fluxo completo, do dispositivo até o envio:
 2. **Recebimento em segundo plano** (`src/sw.ts`): o service worker escuta `onBackgroundMessage` e exibe a notificação do sistema, mesmo com o app fechado.
 3. **Envio** (`functions/index.js`): uma Cloud Function agendada roda 1x/dia (09h, horário de Brasília), verifica quais eventos estão a 7, 3 ou 1 dia de distância (ou são hoje), monta a mensagem com `functions/notificacoes.js` (mesmos templates de `src/data/notificacoes.ts`) e envia via `admin.messaging().sendEachForMulticast`. Toda segunda-feira também envia um resumo semanal consolidado. A mesma execução também verifica `dataPreVendaISO` (veja [Pré-venda de ingressos](#pré-venda-de-ingressos-filmes)). Tokens inválidos são removidos automaticamente do Firestore.
 
-Deploy da função: `firebase deploy --only functions` (detalhado no GUIA-DEPLOY.md). Para testar sem esperar o agendamento, chame o endpoint HTTP `testarNotificacoes` gerado no deploy.
+Deploy da função: `firebase deploy --only functions` (detalhado no GUIA-DEPLOY.md). Para testar sem esperar o agendamento, use o endpoint HTTP `testarNotificacoes` com um Firebase ID token de uma conta administradora; ele não aceita mais chamadas anônimas.
 
 > Nota de arquitetura: notificações push exigem um disparo do lado do servidor em algum ponto — não é possível agendar de forma confiável com o app fechado usando apenas JavaScript no navegador. Por isso esta é a única peça do projeto que roda fora do GitHub Pages (uma Cloud Function do Firebase, plano gratuito Spark/Blaze conforme volume).
 

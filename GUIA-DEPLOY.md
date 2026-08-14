@@ -1,12 +1,12 @@
-# Guia de Deploy — Regressive Anxiety
+# Colocando no ar — Regressive Anxiety
 
-Este guia assume que você **não** tem experiência prévia com Firebase, GitHub Actions ou linha de comando avançada. Siga na ordem, sem pular etapas. No final, você terá:
+Este guia foi feito para ir do zero ao app no celular sem precisar virar especialista em siglas misteriosas. Vá na ordem, faça uma pausa para um café quando quiser e, no final, você terá:
 
 - O código no seu GitHub.
 - Um projeto Firebase real (login com Google + banco de dados + notificações).
 - O site publicado e acessível de qualquer dispositivo (celular, tablet, computador), instalável como app (PWA).
 
-Tempo estimado: 45–90 minutos na primeira vez.
+Tempo estimado: 45–90 minutos na primeira vez. Depois fica bem menos dramático.
 
 ---
 
@@ -285,7 +285,7 @@ Esse comando pode levar alguns minutos na primeira vez. Ao final, o terminal mos
 Function URL (testarNotificacoes): https://us-central1-regressive-anxiety-a1b2c.cloudfunctions.net/testarNotificacoes
 ```
 
-A função `verificarNotificacoesDiarias` roda sozinha, todo dia às 9h (horário de Brasília). A `testarNotificacoes` é um endereço que você pode abrir no navegador a qualquer momento para forçar uma verificação manual (útil para testar).
+A função `verificarNotificacoesDiarias` roda sozinha, todo dia às 9h (horário de Brasília). A `testarNotificacoes` é um endpoint protegido para teste manual: ela exige um Firebase ID token de uma conta administradora, portanto não deve ser aberta diretamente no navegador.
 
 ### 8.4 Ativar as notificações no app
 
@@ -322,13 +322,11 @@ A IGDB usa autenticação via Twitch Developer:
 5. Após criar, copie o **Client ID**.
 6. Clique em **"Nova Chave Secreta"** (New Secret) e copie o **Client Secret**.
 
-### 9.3 RAWG (alternativa/fallback para jogos) — mais simples que a IGDB
+### 9.3 Fontes adicionais sem chave
 
-1. Crie uma conta em [rawg.io/login](https://rawg.io/login).
-2. Acesse [rawg.io/apidocs](https://rawg.io/apidocs) e clique em **"GET API KEY"**.
-3. Copie a chave gerada.
+Além de IGDB e TMDB, a sincronização consulta Steam, Epic Games Store, TVmaze, Wikidata e o feed do Google News. Essas fontes não precisam de cadastro ou chave; só as credenciais de IGDB e TMDB são necessárias.
 
-Guarde as quatro chaves (TMDB, IGDB Client ID, IGDB Client Secret, RAWG) — você vai colá-las no GitHub daqui a pouco.
+Guarde as credenciais que for usar (TMDB, IGDB Client ID e IGDB Client Secret) — você vai colá-las no GitHub daqui a pouco.
 
 ---
 
@@ -387,7 +385,6 @@ Ao rodar `git push`, o GitHub pode abrir uma janela do navegador pedindo para vo
 | `VITE_FIREBASE_APP_ID` | `.env.local` (passo 5) |
 | `IGDB_CLIENT_ID` | Twitch Developer Console (passo 9.2) |
 | `IGDB_CLIENT_SECRET` | Twitch Developer Console (passo 9.2) |
-| `RAWG_API_KEY` | RAWG (passo 9.3) |
 | `TMDB_API_KEY` | TMDB (passo 9.1) |
 
 > Repare que `VITE_FIREBASE_VAPID_KEY` também deve ser cadastrada se você configurou o passo 8, para o build de produção sair com as notificações push habilitadas:
@@ -408,9 +405,9 @@ Se alguma chave de API você optou por pular (ex.: não criou conta na IGDB), si
 
 ---
 
-## 13. Publicar (deploy) e conferir se está no ar
+## 13. Publicar e conferir se está no ar
 
-Se você já fez o `git push` no passo 10, o deploy provavelmente **já rodou automaticamente** (o workflow dispara em todo push na branch `main`).
+Se você já fez o `git push` no passo 10, a publicação provavelmente **já rodou automaticamente** (o workflow dispara em todo push na branch `main`). A mágica aqui é só organização — sem coelho na cartola.
 
 1. No repositório, clique na aba **Actions**.
 2. Você verá uma execução chamada **"Publicar no GitHub Pages"**. Clique nela para acompanhar o progresso.
@@ -504,7 +501,7 @@ No Console do Firebase → Authentication → Settings → "Domínios autorizado
 Confira se as regras do Firestore foram publicadas (`firebase deploy --only firestore:rules`) e se ambos estão logados com os e-mails corretos. Tente atualizar a página (F5) no outro dispositivo.
 
 **"As notificações não chegam."**
-Confirme: (1) plano Blaze ativado, (2) `VITE_FIREBASE_VAPID_KEY` preenchida antes do build, (3) a função foi publicada (`firebase deploy --only functions`), (4) você clicou em "Ativar" no cartão de notificações **depois** do site publicado com a chave VAPID correta, (5) teste manualmente abrindo a URL da função `testarNotificacoes` no navegador.
+Confirme: (1) plano Blaze ativado, (2) `VITE_FIREBASE_VAPID_KEY` preenchida antes do build, (3) a função foi publicada (`firebase deploy --only functions`), (4) você clicou em "Ativar" no cartão de notificações **depois** do site publicado com a chave VAPID correta, (5) para teste manual, use `testarNotificacoes` apenas com um Firebase ID token de administrador.
 
 **"Mudei o `.env.local` mas o site publicado não refletiu a mudança."**
 `.env.local` só afeta o `npm run dev` local. Para produção, os valores vêm dos **Secrets do GitHub** (passo 11) — atualize-os lá e faça um novo commit/push (ou re-rode a Action manualmente em **Actions → Publicar no GitHub Pages → Run workflow**).

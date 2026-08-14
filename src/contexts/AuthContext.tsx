@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { emailEhAdministrador, entrarComGoogle, observarUsuario, sair } from "../lib/firebase";
+import { emailEhAdministrador, entrarComGoogle, firebaseConfigurado, observarUsuario, sair } from "../lib/firebase";
 import type { Perfil, UsuarioAutenticado } from "../types";
 
 interface AuthContextValor {
@@ -26,6 +26,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // demonstração local sem `.env.local`), a inicialização do SDK
     // pode falhar. Nesse caso, tratamos o usuário como "visitante" em
     // vez de deixar a aplicação inteira quebrar.
+    if (!firebaseConfigurado) {
+      setCarregando(false);
+      return undefined;
+    }
+
     try {
       const cancelarInscricao = observarUsuario((firebaseUser) => {
         if (!firebaseUser) {
