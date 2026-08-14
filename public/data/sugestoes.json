@@ -268,16 +268,16 @@
     "tipoConteudo": "atualizacao-oficial",
     "noticias": [
       {
-        "titulo": "Marvel's Wolverine: Entenda o Sistema de Combate e Níveis de Fúria - games.gg",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQeUlVRXJoVnJIak42Z3RrbzBzMXVNTVVlOU5LbThtajVic2hRRUNpV0xjSTRaYU1NZHZNXzljSzNtR1dxVnVvWVIzMVVZTkhEek9oUHlxMXNRR3lfZjhCNjlUNHF2UmhCT1ByaU9qUHBBa1NGc1lCbnBhak9SVHdLcTg3NEZUVkFzZDZIOGVNRWZadmdQZlpWUFg5elhmMHMxNFBEcjF3?oc=5",
-        "fonte": "games.gg",
-        "publicadaEmISO": "2026-08-13T20:23:08.000Z"
-      },
-      {
         "titulo": "Kelly Hu é Tyger Tiger em Marvel's Wolverine; saiba mais - einerd.com",
         "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBpMlhRZWZoY1ZPekEwYkVxNTNpRGthZzhTRGtkNklNdXRkWDIzMlYzVVJlaHF2TzdySkxiWFpLNl8ydVg5Q1Fsei16T3pkWHdmMXQ0WFZmWDl6QlZiSlI4UTNaWURkTW9HSDZEZEp3aw?oc=5",
         "fonte": "einerd.com",
         "publicadaEmISO": "2026-08-14T00:00:00.000Z"
+      },
+      {
+        "titulo": "Marvel's Wolverine: Entenda o Sistema de Combate e Níveis de Fúria - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQeUlVRXJoVnJIak42Z3RrbzBzMXVNTVVlOU5LbThtajVic2hRRUNpV0xjSTRaYU1NZHZNXzljSzNtR1dxVnVvWVIzMVVZTkhEek9oUHlxMXNRR3lfZjhCNjlUNHF2UmhCT1ByaU9qUHBBa1NGc1lCbnBhak9SVHdLcTg3NEZUVkFzZDZIOGVNRWZadmdQZlpWUFg5elhmMHMxNFBEcjF3?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-13T20:23:08.000Z"
       },
       {
         "titulo": "Marvel’s Wolverine: 15 detalhes de combate, exploração e história revelados nos previews - pclabs.com.br",
@@ -320,9 +320,9 @@
         "publicadaEmISO": "2026-08-13T15:06:11.000Z"
       },
       {
-        "titulo": "Xbox: Gears of War E‑Day e mais jogos ficam de graça neste final de semana - TechTudo",
+        "titulo": "Xbox: Gears of War E‑Day e mais jogos ficam de graça neste final de semana - techtudo.com.br",
         "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVjZMUXZ6UVdmTC1UUWJ0UkNGbUJCdm1aV1dESlNkX3pxdDJYX0ZZUXc4Mmp3NUJGWDBZR3Z1RjYxa0hlSG0wSW5KajZ0TElNeGdDUWlLUTVnVjdqQzVZTk5fZVU1bjRZa3pSN1BLU0xlQkVBNXN5czVLVG5HWnNPUjdXNW1HbG9YaWtHYWEydHBYckl0aHJKX3I5WjdCTklnVTVsYVEtWktWVkMtM2Z5ekZkOHJETUlCeHMwbU1faFk3WkxFV2dWaUtOc9IB2gFBVV95cUxOazd0SEdzdUNWdFFFRC1nRkpmU1ZFRVVuNkk1S1hLZlNPUzFwSUJ4WDY0YTVObFNRWjlBa1JDei1NX2lVRTlXcTUzQVhBa3FzX3psbDNJTmlwVU5mTTd6d05SMGZJOExFTlJCX2lLWC1wcUFkQy14dGdwQUZ6MWh1OGZrX2FLN0Y2V1BYOXFfZkZmdlZGMmdJYUowSmVMVzhfOVRRQ003OG5weU5aU3RFRHlpLXJvZEozRXZmbnFTbXRxTE43eDVmY01nVzViQ2Y3aGVYcXk2bUFrdw?oc=5",
-        "fonte": "TechTudo",
+        "fonte": "techtudo.com.br",
         "publicadaEmISO": "2026-08-14T03:00:56.000Z"
       }
     ]
@@ -411,15 +411,15 @@
     "tipoConteudo": "atualizacao-oficial",
     "noticias": [
       {
-        "titulo": "PlayStation Store, PlayStation Blog Officially Launched in Brazil - PlayStation.Blog",
+        "titulo": "PlayStation Store, PlayStation Blog Officially Launched in Brazil - blog.playstation.com",
         "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNOEVlM0lTaFNRNHAwbW1tc0s3aTUyQ0JVVENLeUNQSEpYWmxmcHZ5TlFhTS04VWsxdDBUMXEyU1VhYU9hTWg5YnNOYVU0RzJ1UEIycF80cHFEVmZjQXRsRmZxRDBNSDlBSUtMQWNfMTJoMk9RM25qcXZaamRtWDFsem9Qa0RHaEtYcHBaOEdtLTNHaGFuTklLQXc0RXpEdURjNzdESGdaSFk?oc=5",
-        "fonte": "PlayStation.Blog",
+        "fonte": "blog.playstation.com",
         "publicadaEmISO": "2011-07-21T07:00:00.000Z"
       },
       {
-        "titulo": "Gran Turismo World Series 2024 begins with online qualifiers April 17 - PlayStation.Blog",
+        "titulo": "Gran Turismo World Series 2024 begins with online qualifiers April 17 - blog.playstation.com",
         "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPdnA4YmlmNUVYVmYtaXo1UmZDSmtfWGVyV0MzTUFsNk42R1RpdEYyam95cVdDY0N5aTJNS3JUamhYeDRHQlljczBGT196aE9NUUZDSVdXR0dnVXV1MVFfU3FwUGRCem5IQWFmanBBSW90N21tcUM2ZjQyRkNSbFhjUG9SVDFfY25UR2kteHJKblRaRDhwN0h4U0FVN2ZDejM5MTRTbEpQLTBMeXgxaFVN?oc=5",
-        "fonte": "PlayStation.Blog",
+        "fonte": "blog.playstation.com",
         "publicadaEmISO": "2024-04-04T07:00:00.000Z"
       }
     ]
@@ -615,9 +615,9 @@
         "publicadaEmISO": "2026-08-12T14:05:20.000Z"
       },
       {
-        "titulo": "Ghost Of Yōtei Complete Edition: entenda o que muda na DLC gratuita - TechTudo",
+        "titulo": "Ghost Of Yōtei Complete Edition: entenda o que muda na DLC gratuita - techtudo.com.br",
         "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPczR6WGZDcUJMWnI4VHRPTnFwaXpoanJCNlAwUUk3QWRnQTMybTd3RnU2bFhHeTlaeUNoSU1xUFIzS3Etd1FWdHhYSllZMnloTW5GZG1lOTVXOF93LXJ2NHVGVE5Ydm9faDVPdW1QaUFneEdIaU0zeFhMYUJNWW1PVFVIVmY3S0JmbzhyRG5wdnMyZmh1WXZTa3FtTTYwNkRKVk5JMnlCQ1pVdElxUTlBc1p3c242cVRJR0JCanF30gHMAUFVX3lxTE5mbXNieklCelFOUl93MlNTUl9SRDNDMnloeW82TWdHRlJNNGs1V0VLQ3FkeHNyV1I3T2NSMENCS0JJeGRNS1JWNWdydm5DV2tOaWtGTElBbGZ3ZjNvazBBNVNNVVRNV3JLRHBXWWZKSmd0Mk1hUG9UT0I4TVlzRE5fSzZ2aFNFN0tNZXBvQUR1dUtzVjVQWUhXR0FfUG9jY0RkWENzNHdZNHFtWENUdWl1UEdCNmVEQXhtZXB3ekMzb3FEc3lVbjZtbnJacA?oc=5",
-        "fonte": "TechTudo",
+        "fonte": "techtudo.com.br",
         "publicadaEmISO": "2026-08-13T17:15:19.000Z"
       },
       {
@@ -953,14 +953,7 @@
     "idExterno": "tvmaze-93370",
     "fonte": "tvmaze",
     "momento": "disponivel",
-    "noticias": [
-      {
-        "titulo": "‘Early Start’ Anchor Christine Romans Departs CNN After 24 Years - IMDb",
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBkVnJrb0lkc0tYaVZNTTZQTXVzOGdBQnpjYlhDdDA0Y0NQQWw3dnZiQkVSR295WTVYUTJJTXhWeTBLbm8xMEJJTm82aUlqVThIUXc?oc=5",
-        "fonte": "IMDb",
-        "publicadaEmISO": "2026-02-17T03:27:59.000Z"
-      }
-    ]
+    "noticias": []
   },
   {
     "id": "sug-nintendo-1785460551000-15",
@@ -1626,41 +1619,6 @@
     ]
   },
   {
-    "id": "sug-wikidata-Q134906322",
-    "titulo": "Kokuho (filme)",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q134906322"
-      }
-    ],
-    "idExterno": "wikidata-Q134906322",
-    "fonte": "wikidata",
-    "momento": "disponivel",
-    "noticias": [
-      {
-        "titulo": "Kokuho – O Preço Da Perfeição - Ingresso.com",
-        "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNc0t6RGlNdTRQeTFoZlJib0hHS0F1dFFRVmV2QWpHZzY2WXBTY0tEQjVJd2NqZEpSQUtYNlZnMnNGQWh2ZURPWkUwSWJQUlQwVTFndjQtYU1iNmZMV0NsNVZfQXJzUEtyQTVZMTRMUTMxTk9tU3RseG0yUWc0Rjd6aHVuSUdtUGJ3dEJLV2h2NzUwdWQ2V3hmbkhXSEhnR3A3MmJUYjlDSGN1a1ozVktoWE02a2pwakNsdGJraER3MVAwZFNkYWV6eDlkcklMRWVVeDhsLVdtcVVLSURkQlVQTmduWl9xU29jQlNtUFI3a01tencwSWhHb3ZPcEpGdVRsNE9rNFVEVThFVzhZR1p3eG1xemU?oc=5",
-        "fonte": "Ingresso.com",
-        "publicadaEmISO": "2026-08-14T14:18:04.000Z"
-      },
-      {
-        "titulo": "Kokuho | Filme japonês indicado ganha data no Brasil - Omelete",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNel82bkNZTmxHUUZ5SFNUMy1OQzlrNFZwQkFwLUcza3kzMHc0bWF4T1VBcUJsTkw3SmpOMUFTRGVhVkFTYlIxWG11Sm4xYUlSdW90ZzNoTzI1MVZ0RVdsUjBDbGY5eExxd2NhZzdCaFpYVmxoei1XTklQZzA4SU92TnMzdlYxVDM3X2ZEVg?oc=5",
-        "fonte": "Omelete",
-        "publicadaEmISO": "2026-01-22T08:00:00.000Z"
-      },
-      {
-        "titulo": "Kokuho (2025) | Crítica - OCA-UFF",
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBTMmpUUWJNU0ljb1hnVnE0ZnZQUnhUOGdBTjhXVGlTVm0tU1E4cmxPNjBob1VhTDBRXzNXa0FHY2dVSHV2TWdUV3VCUm44WWFLX3c?oc=5",
-        "fonte": "OCA-UFF",
-        "publicadaEmISO": "2026-03-14T07:00:00.000Z"
-      }
-    ]
-  },
-  {
     "id": "sug-wikidata-Q133871350",
     "titulo": "A Pale View of Hills",
     "categoria": "filmes",
@@ -1697,6 +1655,41 @@
     ]
   },
   {
+    "id": "sug-wikidata-Q134906322",
+    "titulo": "Kokuho (filme)",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q134906322"
+      }
+    ],
+    "idExterno": "wikidata-Q134906322",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Kokuho – O Preço Da Perfeição - Ingresso.com",
+        "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNc0t6RGlNdTRQeTFoZlJib0hHS0F1dFFRVmV2QWpHZzY2WXBTY0tEQjVJd2NqZEpSQUtYNlZnMnNGQWh2ZURPWkUwSWJQUlQwVTFndjQtYU1iNmZMV0NsNVZfQXJzUEtyQTVZMTRMUTMxTk9tU3RseG0yUWc0Rjd6aHVuSUdtUGJ3dEJLV2h2NzUwdWQ2V3hmbkhXSEhnR3A3MmJUYjlDSGN1a1ozVktoWE02a2pwakNsdGJraER3MVAwZFNkYWV6eDlkcklMRWVVeDhsLVdtcVVLSURkQlVQTmduWl9xU29jQlNtUFI3a01tencwSWhHb3ZPcEpGdVRsNE9rNFVEVThFVzhZR1p3eG1xemU?oc=5",
+        "fonte": "Ingresso.com",
+        "publicadaEmISO": "2026-08-14T14:18:04.000Z"
+      },
+      {
+        "titulo": "Kokuho | Filme japonês indicado ganha data no Brasil - Omelete",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNel82bkNZTmxHUUZ5SFNUMy1OQzlrNFZwQkFwLUcza3kzMHc0bWF4T1VBcUJsTkw3SmpOMUFTRGVhVkFTYlIxWG11Sm4xYUlSdW90ZzNoTzI1MVZ0RVdsUjBDbGY5eExxd2NhZzdCaFpYVmxoei1XTklQZzA4SU92TnMzdlYxVDM3X2ZEVg?oc=5",
+        "fonte": "Omelete",
+        "publicadaEmISO": "2026-01-22T08:00:00.000Z"
+      },
+      {
+        "titulo": "Kokuho: O Preço da Perfeição explora a rivalidade no mundo do kabuki - Omelete",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUnhQNU5QSjF5d2VqR1VyT01EUE1nbEFoTU04S0EyamQ5Mm9xRE5QYzBTTHdsSWtfaW9CX2JZS3ZCWnZ3NFlYVTE4Ny1pbU5ncnY3cmFoWllkcGk3blhkbzRlNGdmSDgyWW1OQmk5VFlEWnZPdXBfR2lDb3hKQXhpaHY0a2Q?oc=5",
+        "fonte": "Omelete",
+        "publicadaEmISO": "2026-03-10T07:00:00.000Z"
+      }
+    ]
+  },
+  {
     "id": "sug-wikidata-Q134280292",
     "titulo": "O Estrangeiro (2025)",
     "categoria": "filmes",
@@ -1712,9 +1705,9 @@
     "momento": "disponivel",
     "noticias": [
       {
-        "titulo": "Nova adaptação de 'O estrangeiro', de Albert Camus, chega aos cinemas brasileiros em abril - PublishNews",
+        "titulo": "Nova adaptação de 'O estrangeiro', de Albert Camus, chega aos cinemas brasileiros em abril - publishnews.com.br",
         "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMU4wOEtYVzFHdjFUUktTMTVwVlpvRF9rdnhIcVYtVXVuTkZ5TDQ1SEN2YWNDdzc4YWNWeWZFWXFsQmFnMWxNN2ZFRUpuQXpkSkYwWlFnTmFDbVhKdXJzUXhGRkE2ckozRzhncTdhVVFPM0lQQktQbENibjRpSEhIS1lGR1FyX0NqOEpEdHdRWHNHSjBqZFcxMHFQWjVWY0N1bGJDOG1aVG5iNE5sYk1NVS1EMGFrNVdGdDhOc1NfN25XYkotYnZ3U3lB?oc=5",
-        "fonte": "PublishNews",
+        "fonte": "publishnews.com.br",
         "publicadaEmISO": "2026-03-16T07:00:00.000Z"
       },
       {
@@ -1788,9 +1781,9 @@
         "publicadaEmISO": "2026-02-21T08:00:00.000Z"
       },
       {
-        "titulo": "Drama político vence Berlinale em edição tomada por polêmica - dw.com",
+        "titulo": "Drama político vence Berlinale em edição tomada por polêmica - DW.com",
         "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQMVZSTW5GcU4waDd0VUhZVUY2NExyZzBmS0o3dkJYd1JxMDNXN0tqbTJQd09ualJYMk9LNDIzT0NpVElGdVpQTHhPODBCQ1YzNUg5OGdNRWlsUWNwMlkwTGlvbk5uNTdqbWZmSXpUbG9HTlVxLUxzODlVWGpsM1lEV05oeTR5cE9QSHBaNHFsWkVOV3JwSlFRdEpmLTRiSlhjTW9hYjJrTXA3WUV2dnppdzdoM0txcU9xVENvNzFBcVRoa0ktc2dLZjNJX3HSAcwBQVVfeXFMTUxJVmhvS3FfZXdnejM1X0w3dTFwZnBta2g5MlRxdS03OXlPQmZxN0V0TWJvWThBTUdBV2czRUNISVN4YnU5eE43ZXRBRXZSeTU1d2hwbC1NblVDRlViZFR4NGo3OXNVcUE5aXZPaGR0UEpXYUdBYlhYYlF6dUhKS2FkQUxxMEZHbHNFc0tqX3FpT1RtV2tHNVhtb09GQ1pKT0ZzTDBsTXctanFZQUh6QVVBLWl5djM1dEZVbTZEX2dQX1hyUTNjdWhuUEhC?oc=5",
-        "fonte": "dw.com",
+        "fonte": "DW.com",
         "publicadaEmISO": "2026-02-21T08:00:00.000Z"
       },
       {
@@ -1858,16 +1851,16 @@
         "publicadaEmISO": "2023-12-05T08:00:00.000Z"
       },
       {
-        "titulo": "Dragon Ball | Trailer do novo filme mostra Gohan levado ao limite - O Vício",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNVVF1RXlrcTFvZkplbE1xTVRwcmxwV3RyN1hCaTBUbS1jVENiU2dQUEdrUlcxUXdJWFFtdUx5WDljWl90dUZyTE1MemxsbHB0UVNHYlVDWmlycjluNkstNFEzUW54OTZSczVwODV2N19VQnIyUjI4aUhJUEl3Tk1zNm5XN1hXakVUYjBYLUlKQQ?oc=5",
-        "fonte": "O Vício",
-        "publicadaEmISO": "2022-05-27T07:00:00.000Z"
-      },
-      {
         "titulo": "Dragon Ball: Novo filme confirma que Gohan é mais forte que Goku - IGN Brasil",
         "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPM0FCWjJDUkl6UHdBV1VwdkV6T0JCVVpnTm1VeElWN0FZcmxodmtfMklXUTlLZDRFV2lxblh3UmFSd0VOODA1UC0zc0dvcmJxd1FZemJFbmNQbHNab0t1WGxHVDFVRlhZZmVrcVRER0ZuLUdxMjBROThLTS1IajBkMEM5ZXp6cmUxX2x4ZGZ0RmFGNTZHZlNRYWUzU3dObWtoUC03WFVtbkZQTjI0M19VX1pWVGdLUGVYRy1VMUpwcw?oc=5",
         "fonte": "IGN Brasil",
         "publicadaEmISO": "2021-12-22T08:00:00.000Z"
+      },
+      {
+        "titulo": "Dragon Ball | Trailer do novo filme mostra Gohan levado ao limite - O Vício",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNVVF1RXlrcTFvZkplbE1xTVRwcmxwV3RyN1hCaTBUbS1jVENiU2dQUEdrUlcxUXdJWFFtdUx5WDljWl90dUZyTE1MemxsbHB0UVNHYlVDWmlycjluNkstNFEzUW54OTZSczVwODV2N19VQnIyUjI4aUhJUEl3Tk1zNm5XN1hXakVUYjBYLUlKQQ?oc=5",
+        "fonte": "O Vício",
+        "publicadaEmISO": "2022-05-27T07:00:00.000Z"
       }
     ]
   },
@@ -1923,6 +1916,76 @@
     ]
   },
   {
+    "id": "sug-wikidata-Q137396843",
+    "titulo": "Everybody To Kenmure Street",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q137396843"
+      }
+    ],
+    "idExterno": "wikidata-Q137396843",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "New York Times aponta 10 filmes para ver em 2026 e mistura blockbusters, terror e documentários - A Crítica de Campo Grande",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUXpKU29BMXd4NHA4TUdnNzI4TDVYQ0pJb05HSzQyZWJ4bmJiQ3g4dC1LZ3BtN2wyOGR5ejhpbHB6MFd5c25xSjNGZVJIN0JhMS1WS3ctdUhNNHROR1hOaU1IQl82bnlaTlktSml5Y3BBNzBpMGFPX3RWbEQweE5xdmpMQTA?oc=5",
+        "fonte": "A Crítica de Campo Grande",
+        "publicadaEmISO": "2026-06-30T07:00:00.000Z"
+      },
+      {
+        "titulo": "Os melhores filmes de 2026 até agora, segundo o New York Times; veja lista - Estadão",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXd3RTRFejhla3NJdUFfRnNSQU03V0FxTFJwYzJWd0VkMS1jTDROSmJWNWpPcl95TUdta180VF95WnNRT0Z1UzU5bTFrWWtUSzExS05vX3JOUUJ3UmRQWFZuTVI5VVh5WTZ1VGVlcGh4bDU1aU9TaHVHY1NIMXM2R1dqbVBZMTQzZllaZTg3bGxCMXVnakZaT2xzbGNXN1JwZklFQ000MVZJT1o5NDFfdXhha29qQQ?oc=5",
+        "fonte": "Estadão",
+        "publicadaEmISO": "2026-06-30T07:00:00.000Z"
+      },
+      {
+        "titulo": "Tovah (2026) ⭐ 6.3 | Documentário - IMDb",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1SLTF1c3d4QUlXeUNERHBTc0gwQ0dZczE4dDdrdEdtbGJRNEF3Wi1ZMWNYVU03bHdvRWlZWTV6MGRObG9KaWc2azExb0Fuc0ZLRXkw?oc=5",
+        "fonte": "IMDb",
+        "publicadaEmISO": "2026-01-28T14:59:38.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q137535221",
+    "titulo": "Charlie the Wonderdog",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q137535221"
+      }
+    ],
+    "idExterno": "wikidata-Q137535221",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Diretor de 'Charlie the Wonderdog' revela o super cãozinho animado da ICON! - Animation Magazine",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOTi05djh6U2s5MzNXY0NSZFdZa0RPLTJCSkFuM0ppUFpWTXJwWDlfdElZQ2hSQVYwTGdtM3F0SUtBRWt3Sk1vMDBrVkpMbE5lNUJEajNlRk5XZXpsRFNJaW5ENW84T0NOWXM5TlBnZ1NIZnU5cjlDQnU0WVlzNDlFRVktdWtFTjRrTGItQU5qS0FZMU1ILUdMS19ycEhfZzNwcldIY1pYS0lsT2NtVHkzT2FuS2c4U3hkYjVUSTE3Wm9pcW5yYVNn?oc=5",
+        "fonte": "Animation Magazine",
+        "publicadaEmISO": "2025-09-08T07:00:00.000Z"
+      },
+      {
+        "titulo": "Charlie, o Super Cão (2025) ⭐ 5.1 | Animação, Comédia, Família - IMDb",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5oMGxmVi1iLTFPcUtEMXNjeFVTMDh3TVhKLVZHdlF6OUFaaFlWT2R3ZE4xOUpDOVRMb1JzVHMtRGtteGxjaFBuQnNnNFoxRl9vbjMw?oc=5",
+        "fonte": "IMDb",
+        "publicadaEmISO": "2024-12-13T06:29:36.000Z"
+      },
+      {
+        "titulo": "'Charlie, o Cão Maravilha', ganha vida com a voz de Owen Wilson - Animation Magazine",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNd3hiS09EalRwT1lTbWN4YmltbGNvWElZSjVBdWZxX2tmdVoyU3VfZkpFVjFwS0hzUTd4QV9ZcGNWdmI2bG5HbFNJRzM1WElFUng4azhQS0FudFdYemlDelR1a3JrcFJFQ1BSU0NYcV9MdjlTRlZsN3VSeURSN0RwTk50ZVhfaV9FcGJRUnluNmFhX28wb3lmMS1rSnVmcWF3RFA0S19WTUUzdmtGVkx5bVBCdmRCMTQ?oc=5",
+        "fonte": "Animation Magazine",
+        "publicadaEmISO": "2024-10-23T07:00:00.000Z"
+      }
+    ]
+  },
+  {
     "id": "sug-wikidata-Q137686379",
     "titulo": "Q137686379",
     "categoria": "filmes",
@@ -1939,41 +2002,6 @@
     "noticias": []
   },
   {
-    "id": "sug-wikidata-Q139496302",
-    "titulo": "Kara",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q139496302"
-      }
-    ],
-    "idExterno": "wikidata-Q139496302",
-    "fonte": "wikidata",
-    "momento": "disponivel",
-    "noticias": [
-      {
-        "titulo": "‘Supergirl’: conheça ‘Mulher do Amanhã’, HQ que serviu de inspiração para o filme da Garota de Aço - Ingresso.com",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVXJPei1La29GZ25iVHNNemhmay04ekFHS19TQWFEcVBLZE92eUlwYTY0ZXpOdDhZXy03YWZWMVJpalBQU2N6VVkzX1UtMVpVYmdrY1FwNXBNU3dGMzZvWW1OeUdsaVRtb0VRWENTX1JxZDZaVWVDR3NBLWJtU2hFWVc0c3VzNmRIWS01c0ppc0lSZVM4NTFGcGNKWUxaaEhjVkg5cg?oc=5",
-        "fonte": "Ingresso.com",
-        "publicadaEmISO": "2026-06-26T07:00:00.000Z"
-      },
-      {
-        "titulo": "Supergirl: trailer final mostra o verdadeiro poder de Kara Zor-El - TudoCelular.com",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZWhxa2lBVG1GaExqVlcxc1NkbnpNTEVuWDZhUEJrR2s1b0NpbFhtazd4cFZXM1BCbmYzWGJvSDg0YmFmNVBFMXBqSTI4aXFSajFQamJNRjlEQS1FS2g2WDBiSk5ZQnNJdHdMQ3pHRXI3NC1lZGZjVk9kbDRnWUstc0JfNmphODJibUJuZUZRZGJjUUtSRE94end6dFllUXAwbkd2Yg?oc=5",
-        "fonte": "TudoCelular.com",
-        "publicadaEmISO": "2026-06-03T07:00:00.000Z"
-      },
-      {
-        "titulo": "Supergirl | Kara Zor-El precisa salvar Krypto no novo trailer do filme do DCU — assista - Cinema com Rapadura",
-        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOG83eHhiOW8tel9ETGdrdW03RHRqZWNqS3gyY05sUGZaX2hDMmVJaWFnUEpTcVNpSTY1WHdHd2VJYno1NjhwRlFIQXhyT2JKWk9McUZlZDdtMnVlY3NpaDFvM2ZXV0o4QkpXNGUycFZOLUJlaUFDM0NQeGVLVGNHV1A2ai1CcmJ6THNOVk1hcnIxLXYzN3NQNmFXWG55Q05ncEFVS205TG45bHVKLTVzUXdOWHg2a0hZOUY2TEk5RXRrVzVOR25hbFR2bXAwQQ?oc=5",
-        "fonte": "Cinema com Rapadura",
-        "publicadaEmISO": "2026-03-31T07:00:00.000Z"
-      }
-    ]
-  },
-  {
     "id": "sug-wikidata-Q139584110",
     "titulo": "Kairos",
     "categoria": "filmes",
@@ -1986,27 +2014,7 @@
     ],
     "idExterno": "wikidata-Q139584110",
     "fonte": "wikidata",
-    "momento": "disponivel",
-    "noticias": [
-      {
-        "titulo": "Congresso Kairós reúne fiéis da Renovação Carismática em Petrolina - G1",
-        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQVUd3VzlNbG9uOE9vTTM5aVB6M1VKRzJQLTVEQTIycmdQSU1BOXp5bzJQYkhmWndnZDN6ZkIyNVlzeTFua0JwbGd0cFY1dnBfd1FITUxCdHdEZjhGNmtfc1ZmUzlhZmxPNjdDOE9LTWxVZlFmNXhMY0pmMWtoYmx1UUwxOUdrZHRaMUdKT1l2c2RxQXBlUUVNNEc2T29BdVVSQm9qSTJMYXBZNFM3UnRiZEdPSExQMmNGcXUwb1NNcTdrZkxQV0tXOHdIRE82c29NZkFDSVUyUTZUdG50OUJxTEhsVdIB8gFBVV95cUxPVlhEUGxLbmVNRm55bFVIUWlZYXByUm51LWZLV0hnVjMyM21URXg0WmRNcmZ0dkRxZkNGazNtYlBFSTBLNmt5R0xnZ3lHWjl0bjJjUWlNckhSc3VvOUdVbFFFMVNCdF9VelFRUFY5TElSWG0wenhCN0FROTdrbmhudERGdEVvckx3aTFhMlpyOHBrLXBFZ3FweThDQU9HR1ZjOTFmd1p6Mm1RRGh4TDkwd2d2S2ZmMGxHNXlCOHhmN0VfWWlRN0hfVVI4bTlvN3hEMGNwY0E0WVdYU1lPQ1dkMk1qZG9LYnU2MmF2MHl4RkZmUQ?oc=5",
-        "fonte": "G1",
-        "publicadaEmISO": "2026-07-04T07:00:00.000Z"
-      },
-      {
-        "titulo": "A mitologia que inspirou filme do reencontro do BTS - Rolling Stone Brasil",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbzZvZDFLYy1tTXpibDJ4Mm4wcXhoR2hmMXdqN2Zza09kVWlvYW1PSUQ1RHNXMjlKWHRhVjhBUkVXRlBzQW5BUHAzLU9lWHNjUzFKejVuR2c4cmRWWHJZaV96V3ROWFU2ZldEYlNybU5MblAwM3JYZWdtcDRHOUszbE5kNjUwaGhEM01tb0RkVUE?oc=5",
-        "fonte": "Rolling Stone Brasil",
-        "publicadaEmISO": "2026-03-25T07:00:00.000Z"
-      },
-      {
-        "titulo": "Kairos (2019) ⭐ 6.2 | Drama - IMDb",
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE14RTZDZkI1MVZZRmRpZExfazlEWGJWMGcyclY5bDNpb0JkZmxKLTc0MUVTcy1ZcXByX2M3VW9HV3RIQXRjcFoydXFPWXZxcWxXOVE?oc=5",
-        "fonte": "IMDb",
-        "publicadaEmISO": "2024-12-13T11:33:55.000Z"
-      }
-    ]
+    "momento": "disponivel"
   },
   {
     "id": "sug-wikidata-Q139592698",
@@ -2040,6 +2048,21 @@
     "momento": "disponivel"
   },
   {
+    "id": "sug-wikidata-Q139496302",
+    "titulo": "Kara",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139496302"
+      }
+    ],
+    "idExterno": "wikidata-Q139496302",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
     "id": "sug-wikidata-Q140078860",
     "titulo": "Zico, O Samurai de Quintino",
     "categoria": "filmes",
@@ -2051,36 +2074,6 @@
       }
     ],
     "idExterno": "wikidata-Q140078860",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q140360595",
-    "titulo": "Blood Curse",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140360595"
-      }
-    ],
-    "idExterno": "wikidata-Q140360595",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q137396843",
-    "titulo": "Everybody To Kenmure Street",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q137396843"
-      }
-    ],
-    "idExterno": "wikidata-Q137396843",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -2325,21 +2318,6 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q138326461",
-    "titulo": "Dirty Hands",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q138326461"
-      }
-    ],
-    "idExterno": "wikidata-Q138326461",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
     "id": "sug-wikidata-Q138808930",
     "titulo": "Blood Moon Rite 8",
     "categoria": "filmes",
@@ -2370,17 +2348,17 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q138033538",
-    "titulo": "Kraken. The Black Book of Hours",
+    "id": "sug-wikidata-Q139719116",
+    "titulo": "Trum So",
     "categoria": "filmes",
     "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
     "linksOficiais": [
       {
         "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q138033538"
+        "url": "http://www.wikidata.org/entity/Q139719116"
       }
     ],
-    "idExterno": "wikidata-Q138033538",
+    "idExterno": "wikidata-Q139719116",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -2445,21 +2423,6 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q139719116",
-    "titulo": "Trum So",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q139719116"
-      }
-    ],
-    "idExterno": "wikidata-Q139719116",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
     "id": "sug-wikidata-Q124806421",
     "titulo": "Super Mario Galaxy: O Filme",
     "categoria": "filmes",
@@ -2471,6 +2434,36 @@
       }
     ],
     "idExterno": "wikidata-Q124806421",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138033538",
+    "titulo": "Kraken. The Black Book of Hours",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138033538"
+      }
+    ],
+    "idExterno": "wikidata-Q138033538",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138326461",
+    "titulo": "Dirty Hands",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138326461"
+      }
+    ],
+    "idExterno": "wikidata-Q138326461",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -2490,21 +2483,6 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q127324468",
-    "titulo": "Fuze",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q127324468"
-      }
-    ],
-    "idExterno": "wikidata-Q127324468",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
     "id": "sug-wikidata-Q125422670",
     "titulo": "Who Let the Dog Bite?",
     "categoria": "filmes",
@@ -2516,6 +2494,21 @@
       }
     ],
     "idExterno": "wikidata-Q125422670",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q127324468",
+    "titulo": "Fuze",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q127324468"
+      }
+    ],
+    "idExterno": "wikidata-Q127324468",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -2715,17 +2708,33 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q138013977",
-    "titulo": "In a Whisper",
+    "id": "sug-wikidata-Q136945628",
+    "titulo": "The Doll",
     "categoria": "filmes",
     "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
     "linksOficiais": [
       {
         "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q138013977"
+        "url": "http://www.wikidata.org/entity/Q136945628"
       }
     ],
-    "idExterno": "wikidata-Q138013977",
+    "idExterno": "wikidata-Q136945628",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139591664",
+    "titulo": "Café y comando",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "imagemUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Poster%20cafeycomando.png",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139591664"
+      }
+    ],
+    "idExterno": "wikidata-Q139591664",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -2790,22 +2799,6 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q139591664",
-    "titulo": "Café y comando",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
-    "imagemUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Poster%20cafeycomando.png",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q139591664"
-      }
-    ],
-    "idExterno": "wikidata-Q139591664",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
     "id": "sug-wikidata-Q140482918",
     "titulo": "Q140482918",
     "categoria": "filmes",
@@ -2821,17 +2814,17 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q136945628",
-    "titulo": "The Doll",
+    "id": "sug-wikidata-Q138013977",
+    "titulo": "In a Whisper",
     "categoria": "filmes",
     "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
     "linksOficiais": [
       {
         "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q136945628"
+        "url": "http://www.wikidata.org/entity/Q138013977"
       }
     ],
-    "idExterno": "wikidata-Q136945628",
+    "idExterno": "wikidata-Q138013977",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -3046,6 +3039,21 @@
     "momento": "disponivel"
   },
   {
+    "id": "sug-wikidata-Q138835565",
+    "titulo": "Hive",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138835565"
+      }
+    ],
+    "idExterno": "wikidata-Q138835565",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
     "id": "sug-wikidata-Q136458718",
     "titulo": "Q136458718",
     "categoria": "filmes",
@@ -3061,47 +3069,32 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q138566602",
-    "titulo": "Roommates",
+    "id": "sug-wikidata-Q137570236",
+    "titulo": "Bindusagar",
     "categoria": "filmes",
     "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
     "linksOficiais": [
       {
         "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q138566602"
+        "url": "http://www.wikidata.org/entity/Q137570236"
       }
     ],
-    "idExterno": "wikidata-Q138566602",
+    "idExterno": "wikidata-Q137570236",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q138589517",
-    "titulo": "Lorne",
+    "id": "sug-wikidata-Q137176843",
+    "titulo": "The Quiet Beekeper",
     "categoria": "filmes",
     "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
     "linksOficiais": [
       {
         "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q138589517"
+        "url": "http://www.wikidata.org/entity/Q137176843"
       }
     ],
-    "idExterno": "wikidata-Q138589517",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q138835565",
-    "titulo": "Hive",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q138835565"
-      }
-    ],
-    "idExterno": "wikidata-Q138835565",
+    "idExterno": "wikidata-Q137176843",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -3151,36 +3144,6 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q137176843",
-    "titulo": "The Quiet Beekeper",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q137176843"
-      }
-    ],
-    "idExterno": "wikidata-Q137176843",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q137570236",
-    "titulo": "Bindusagar",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q137570236"
-      }
-    ],
-    "idExterno": "wikidata-Q137570236",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
     "id": "sug-wikidata-Q132456673",
     "titulo": "Goat",
     "categoria": "filmes",
@@ -3192,6 +3155,36 @@
       }
     ],
     "idExterno": "wikidata-Q132456673",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138566602",
+    "titulo": "Roommates",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138566602"
+      }
+    ],
+    "idExterno": "wikidata-Q138566602",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138589517",
+    "titulo": "Lorne",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138589517"
+      }
+    ],
+    "idExterno": "wikidata-Q138589517",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
