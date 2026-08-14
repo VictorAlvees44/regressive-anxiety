@@ -1,1 +1,4075 @@
-[]
+[
+  {
+    "id": "sug-epic-a802acab90af4a07952a07a9fa677f2f",
+    "titulo": "Pacote do Mago Épico",
+    "descricao": "Reivindique um Presente Mágico Gratuito no valor de mais de $55! Aprimore sua jornada em Albion com Itens de Vaidade encantados, duas fantasias de montaria únicas e um tesouro de recompensas essenciais para a progressão.",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-20T15:00:00.000Z",
+    "imagemUrl": "https://cdn1.epicgames.com/spt-assets/92837229023341268267ff64cae425a5/albion-online-1j97n.png",
+    "plataformas": [
+      "Epic Games Store"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Ver na Epic",
+        "url": "https://store.epicgames.com/pt-BR/p/epic-mage-bundle"
+      }
+    ],
+    "idExterno": "epic-a802acab90af4a07952a07a9fa677f2f",
+    "fonte": "epic",
+    "momento": "em-breve",
+    "noticias": [
+      {
+        "titulo": "Epic Games Store distribui jogo grátis de aventura de ficção científica em um belíssimo mundo aberto - TudoCelular.com",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOTXVRc3A2bmNEeV9NbDlzNjA4TDVqaGpuSW5YeE1MM0R0Znh0OWk2TlFYcl9qTk1xdUk1aThjUUVZVmQ1Zko0bjhxYmNXWGVCLW54dEpQVFIwZVNOcko2OGtSQXpOVG91Z0lvYWl2bFRld0ctMHZ0QUxIMVFQOEJJT1ktRHg5aTFORHRrZzM1V2RhdnNCSk9uTnR3?oc=5",
+        "fonte": "TudoCelular.com",
+        "publicadaEmISO": "2026-08-13T15:03:20.000Z"
+      },
+      {
+        "titulo": "Epic Games libera jogo grátis nesta quinta; veja como resgatar Caravan SandWitch - Oficina da Net",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUUw5SEwyMmVhck9OSkFvQVJpZXpjZmJxMHl1NWIyb0x0RC1VaDk2U3BWOTVfcGcyWDBZaTdWRDR0cGNmczU0djdpNFRjZXotN0xnTEx3UzRwRzJkSm05MFhKQ3dKUjBXaDlkczVqVW03QV92b0ZrcENsYzR3V28tWU51U2lPM09ENFYtUVFRZ1lEbHZ5X1dFUkJn0gGaAUFVX3lxTFBRTDlITDIyZWFyT05KQW9BUmllemNmYnEweXU1YjJvTHRELVVoOTZTcFY5NV9wZzJYMFlpN1ZENHRwY2ZzNTR2N2k0VGNlei03TGdMTHdTNHBHMmRKbTkwWEpDd0pSMFdoOWRzNWpVbTdBX3ZvRmtwQ2xjNHdXby1ZTnVTaU8zT0Q0Vi1RUVFnWURsdnlfV0VSQmc?oc=5",
+        "fonte": "Oficina da Net",
+        "publicadaEmISO": "2026-08-13T18:27:00.000Z"
+      },
+      {
+        "titulo": "Dragon Age II: Ultimate Edition - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBmMDB0YjhEN19xMlc2MUlya1dTN3lXN0IyNm9UYVR1ZGk0UDhDVzlwSU5YWmVUR2Z5eDVDOUpjNnVGa1FyVEZwM0tLMUExYmN0LVowMkhqSHM4X2h6Y2pUQlV3SWI?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-10T05:08:12.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-xbox-1786730400000-0",
+    "titulo": "Whisper of the House Unpacks Cozy Xbox Preorders Today",
+    "descricao": "Xbox Wire: Hello, XBOX community! I am Zhicheng, Producer at GD Studio. I work with a small, tight-knit indie team of fewer than ten people who pour our hearts into making warm, meaningful games. Today, I am incredibly excited to announce that my pixel-art cozy game, Whisper of the House, is officia",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-14T18:00:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://news.xbox.com/en-us/2026/08/14/whisper-of-the-house-unpacks-cozy-xbox-preorders-today/"
+      }
+    ],
+    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/14/whisper-of-the-house-unpacks-cozy-xbox-preorders-today/",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-playstation-1786726290000-0",
+    "titulo": "Official PlayStation Podcast Episode 545: Walk and Talk",
+    "descricao": "PlayStation: Email us at PSPodcast@sony.com! Subscribe via Apple Podcasts, Spotify, or download here Hey, everybody! Sid, Tim, Kristen, and I are back this week to discuss a major milestone for No Man’s Sky, which got its start on PlayStation 4, new content for Ghost of Yōtei, exploring Big Walk, an",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-14T16:51:30.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/14/official-playstation-podcast-episode-545-walk-and-talk/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/14/official-playstation-podcast-episode-545-walk-and-talk/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-playstation-1786723205000-1",
+    "titulo": "Share of the Week: Big Walk",
+    "descricao": "PlayStation: Last week, we asked you to grab some friends and explore the world of Big Walk, available now as a PlayStation Plus Monthly Game, using #PSshare #PSBlog. Here are this week’s highlights: rorottino shares them and some friends standing in a circular window by the sea darc262000 shares tw",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-14T16:00:05.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/14/share-of-the-week-big-walk/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/14/share-of-the-week-big-walk/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-xbox-1786716000000-1",
+    "titulo": "Next Week on XBOX: New Games for August 17 to 21",
+    "descricao": "Xbox Wire: Welcome to Next Week on XBOX! In this weekly feature we cover all the games coming soon to XBOX Series X&#124;S, XBOX One, XBOX on PC, and Game Pass! Get more details on these upcoming games below and click their profiles for further info (release dates subject to change). Let’s jump in! ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-14T14:00:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://news.xbox.com/en-us/2026/08/14/next-week-on-xbox-new-games-for-august-17-to-21/"
+      }
+    ],
+    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/14/next-week-on-xbox-new-games-for-august-17-to-21/",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1786687372000-0",
+    "titulo": "「コーポレートIT職種全体説明会」の参加申込締切は8月21日（金）12:00（JST）までです。参加を希望される方は締切までにご応募ください。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-14T06:02:52.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.co.jp/jobs/career/session.html"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.co.jp/jobs/career/session.html",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1786669502000-1",
+    "titulo": "【8/17（月）まで】終了迫る、「ニンテンドーeショップ サマーセール」開催中。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-14T01:05:02.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/b050f000-c6bd-4643-8e8b-4df6743f8bc9"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/b050f000-c6bd-4643-8e8b-4df6743f8bc9",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1786669443000-2",
+    "titulo": "ニンテンドーeショップ新作ソフト情報 8/14（金）号。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-14T01:04:03.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/5fd5a6f2-24c1-4c29-bcb9-47a1c97e71a5"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/5fd5a6f2-24c1-4c29-bcb9-47a1c97e71a5",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-xbox-1786658400000-2",
+    "titulo": "Skatesterre: Where Classic Arcade Skateboarding Meets a New Generation",
+    "descricao": "Xbox Wire: I’m Dieter from Headup, and together with Goon Squad we created Skatesterre, an arcade skateboarding game that takes you back to the golden era of the genre. Today, I will tell you about how the game came to be, why we chose to work with Sterre Meijer on this project, and where the journe",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-13T22:00:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://news.xbox.com/en-us/2026/08/13/skatesterre-where-classic-arcade-skateboarding-meets-a-new-generation/"
+      }
+    ],
+    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/13/skatesterre-where-classic-arcade-skateboarding-meets-a-new-generation/",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-xbox-1786647600000-3",
+    "titulo": "The Gears of War: E-Day Open Beta is Available Now for Everyone",
+    "descricao": "Xbox Wire: The post The Gears of War: E-Day Open Beta is Available Now for Everyone appeared first on XBOX Wire.",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-13T19:00:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://www.xbox.com/en-US/games/store/gears-of-war-e-day-multiplayer-beta/9nhlzs3g6d8h#new_tab"
+      }
+    ],
+    "idExterno": "xbox-https://www.xbox.com/en-US/games/store/gears-of-war-e-day-multiplayer-beta/9nhlzs3g6d8h#new_tab",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": [
+      {
+        "titulo": "Revelados os controles Xbox de Gears of War: E-Day Limited Edition - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeEtHRzJGX1pxVjNxMkdlcHMxa3dYZW1ybDcyRER5MGJSSE1xX2xlcm5JZzFkSjhqTmZpcDNRRktrVTJ4bWR6cUMyTnBXUFBKTHY3b2RwRTBxbld4aGpIOGdoSkZDaG56c3RvV0MwYVA5cGEySG00TFhad21kV1NkQWh5VV9TZXpRUk5wWjFmMzd6X0dldlhoMHJn?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-12T21:28:21.000Z"
+      },
+      {
+        "titulo": "Xbox Game Pass Update Adds More Games You Can Play Right Now - IMDb",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBsUW5QRHZ6QmZnRlFLSHhZU2E4V3o3TThucDhjLXFwNEE5SUhnMUxlTTNROGVkanFPbFRqU2FDX0E0RGZyZkRFXzNrMDJEMk9jZmtrSllzbFVYeVNtYkdhNGx4eDFfWW8?oc=5",
+        "fonte": "IMDb",
+        "publicadaEmISO": "2026-08-10T21:36:42.000Z"
+      },
+      {
+        "titulo": "XBOX Game Pass anuncia beta aberto de Gears of War: E-Day, Date Everything! e mais - TudoCelular.com",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOU3R3STdtV0REVkNYY05aZ0x6Rk5MNUVET3UySGJaQmMxM3k2X1NXdVRoeXk4SndiZ1ZucGNDOUU5UExma2ZCUWo5SDhBUnV6NXZnOUZJTHlRUlU1d2hKd3lPV1NaaUwwMlYyWTc0SWRBeFBJMXh5YUM0WXJVSWtocEpMdzlMYTdmMFdUbjNJRGxNZkZ1dURGSlFaV2N1cnhPUUc2VWQ1M3NJcDl4c1E?oc=5",
+        "fonte": "TudoCelular.com",
+        "publicadaEmISO": "2026-08-04T14:52:03.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-playstation-1786633203000-2",
+    "titulo": "Hands-on report: Marvel’s Wolverine",
+    "descricao": "PlayStation: It’s been a big week for fans of Marvel’s Wolverine, starting with the announcement of sharp-looking PS5 hardware and accessories. Now, with just over a month away until its September 15 launch, Insomniac is sharing a deep dive on the game’s story, combat, and exploration thanks to an e",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-13T15:00:03.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/13/hands-on-report-marvels-wolverine/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/13/hands-on-report-marvels-wolverine/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": [
+      {
+        "titulo": "Marvel's Wolverine: Entenda o Sistema de Combate e Níveis de Fúria - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQeUlVRXJoVnJIak42Z3RrbzBzMXVNTVVlOU5LbThtajVic2hRRUNpV0xjSTRaYU1NZHZNXzljSzNtR1dxVnVvWVIzMVVZTkhEek9oUHlxMXNRR3lfZjhCNjlUNHF2UmhCT1ByaU9qUHBBa1NGc1lCbnBhak9SVHdLcTg3NEZUVkFzZDZIOGVNRWZadmdQZlpWUFg5elhmMHMxNFBEcjF3?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-13T20:23:08.000Z"
+      },
+      {
+        "titulo": "Kelly Hu é Tyger Tiger em Marvel's Wolverine; saiba mais - einerd.com",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBpMlhRZWZoY1ZPekEwYkVxNTNpRGthZzhTRGtkNklNdXRkWDIzMlYzVVJlaHF2TzdySkxiWFpLNl8ydVg5Q1Fsei16T3pkWHdmMXQ0WFZmWDl6QlZiSlI4UTNaWURkTW9HSDZEZEp3aw?oc=5",
+        "fonte": "einerd.com",
+        "publicadaEmISO": "2026-08-14T00:00:00.000Z"
+      },
+      {
+        "titulo": "Marvel’s Wolverine: 15 detalhes de combate, exploração e história revelados nos previews - pclabs.com.br",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNckRWY0FTNndRMk9YSElGdVBJQUR4YWo0OVhNSTNKSFdBa3R4QXQ2RXRxRUFtTl9iSjdaMl9TTXROTkNnV0JZejFRTG9ULVVkTkpfNndVRWZsSG9IdXNpWEdqcldCUk1kcER1WU5xYnlLSVJGT1ZTbWZsZ0lVNUFiVjBnbmhCOXNxRUpYNEt2TmxZeG9oSHpJX0dSNy1pR0U5WGkzVzZwaG5JWnhU?oc=5",
+        "fonte": "pclabs.com.br",
+        "publicadaEmISO": "2026-08-13T18:48:55.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-xbox-1786633200000-4",
+    "titulo": "Free Play Days – Gears of War: E-Day Open Beta, Sunderfolk and Asdivine Cross",
+    "descricao": "Xbox Wire: Cross paths with adventure with a new Free&#160;Play&#160;Days this weekend! The Gears of War:&#160;E‑Day&#160;online multiplayer beta is open from August 13 at 12pm PT until August 17 at 10am PT, available on XBOX PC and console for players with Xbox Game Pass Essential or higher. Sunder",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-13T15:00:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://news.xbox.com/en-us/2026/08/13/template-free-play-days-08-13-2026/"
+      }
+    ],
+    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/13/template-free-play-days-08-13-2026/",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": [
+      {
+        "titulo": "Gears of War: E-Day inicia beta aberto com novo modo de 12 jogadores - Última Ficha",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNa1BhSV84ZWh2aFRFNTVtRGkxeG1DQ0VjNXZoVFJOcHFWUC10VnJhNXZmY1VZRTBRazhaRzhtUU9wbHVNTFNOX1JwMm84a2tEbksyMUp6M3BQbHVYZktwU1IzTXNKSTRGMmYyY2tUNUE5dFROYjl6R0dmbFF5cnNWN1J5dw?oc=5",
+        "fonte": "Última Ficha",
+        "publicadaEmISO": "2026-08-13T15:30:08.000Z"
+      },
+      {
+        "titulo": "Dias para Jogar de Graça: beta aberto de Gears of War: E-Day e mais - XBOX Wire",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQazlZeUlkVzQtd1pFNDNFZjdOeWpCVWd0WTNReGQtTmJaV3NvWUNzR0ZaMlo3dzluMDRLRk1vX09aRFk0OTJyNmNwNmJCZExCWFFvTzVBLWR3eW1IR1dhcXlrdUxGcnI1eEFZOTEyYVpGVWxZa1FfY21veHByYVlhUmdvemhRQk80T3pMdUJOUG1vVHd3dmszSzRRRmM5Q3hSNFd6RFFzUVE?oc=5",
+        "fonte": "XBOX Wire",
+        "publicadaEmISO": "2026-08-13T15:06:11.000Z"
+      },
+      {
+        "titulo": "Xbox: Gears of War E‑Day e mais jogos ficam de graça neste final de semana - TechTudo",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVjZMUXZ6UVdmTC1UUWJ0UkNGbUJCdm1aV1dESlNkX3pxdDJYX0ZZUXc4Mmp3NUJGWDBZR3Z1RjYxa0hlSG0wSW5KajZ0TElNeGdDUWlLUTVnVjdqQzVZTk5fZVU1bjRZa3pSN1BLU0xlQkVBNXN5czVLVG5HWnNPUjdXNW1HbG9YaWtHYWEydHBYckl0aHJKX3I5WjdCTklnVTVsYVEtWktWVkMtM2Z5ekZkOHJETUlCeHMwbU1faFk3WkxFV2dWaUtOc9IB2gFBVV95cUxOazd0SEdzdUNWdFFFRC1nRkpmU1ZFRVVuNkk1S1hLZlNPUzFwSUJ4WDY0YTVObFNRWjlBa1JDei1NX2lVRTlXcTUzQVhBa3FzX3psbDNJTmlwVU5mTTd6d05SMGZJOExFTlJCX2lLWC1wcUFkQy14dGdwQUZ6MWh1OGZrX2FLN0Y2V1BYOXFfZkZmdlZGMmdJYUowSmVMVzhfOVRRQ003OG5weU5aU3RFRHlpLXJvZEozRXZmbnFTbXRxTE43eDVmY01nVzViQ2Y3aGVYcXk2bUFrdw?oc=5",
+        "fonte": "TechTudo",
+        "publicadaEmISO": "2026-08-14T03:00:56.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-playstation-1786595055000-3",
+    "titulo": "(For Southeast Asia) Ghost of Yōtei Complete Edition Comes to PS5 October 2",
+    "descricao": "PlayStation: We are so excited to announce that even more new content is coming to Ghost of Yōtei! On October 2, we’ll have a new narrative expansion, new single-player combat survival mode, and new quality of life updates all coming in Ghost of Yōtei Complete Edition!1 Before we dive in, we want to",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-13T04:24:15.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/12/20260813-goy/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/12/20260813-goy/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-playstation-1786594402000-4",
+    "titulo": "(For Southeast Asia) Helldivers 2 joins PlayStation Plus Game Catalog today, Devoid of Liberty update out now",
+    "descricao": "PlayStation: We have watched the Void stretch across the galaxy for too long. The threat posed to our Liberty is too great and we can no longer stand by as the Illuminate gain ground. Helldivers, you are needed on the battlefield of a new frontier–one more wild and uncertain than any we have faced p",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-13T04:13:22.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/12/20260813-helldivers2/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/12/20260813-helldivers2/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1786582986000-3",
+    "titulo": "「Hello! インディー」古銭を投げて、洞窟を探索『古銭プッシャー外伝』",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-13T01:03:06.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/22485bb8-0fdc-4466-bc8f-e3fc131d3bc0"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/22485bb8-0fdc-4466-bc8f-e3fc131d3bc0",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-playstation-1786563004000-5",
+    "titulo": "Kinetic Publishing Showcase recap: 5 new indie games coming to PS5",
+    "descricao": "PlayStation: You may have heard of Kinetic Games through our horror title, Phasmophobia. It’s sold over 27 million copies, and thanks to this success, in January of this year we established our very own publishing label, Kinetic Publishing. Our aim at Kinetic Publishing is to support and empower ind",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T19:30:04.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/12/kinetic-publishing-showcase-recap-5-new-indie-games-coming-to-ps5/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/12/kinetic-publishing-showcase-recap-5-new-indie-games-coming-to-ps5/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": [
+      {
+        "titulo": "PlayStation Store, PlayStation Blog Officially Launched in Brazil - PlayStation.Blog",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNOEVlM0lTaFNRNHAwbW1tc0s3aTUyQ0JVVENLeUNQSEpYWmxmcHZ5TlFhTS04VWsxdDBUMXEyU1VhYU9hTWg5YnNOYVU0RzJ1UEIycF80cHFEVmZjQXRsRmZxRDBNSDlBSUtMQWNfMTJoMk9RM25qcXZaamRtWDFsem9Qa0RHaEtYcHBaOEdtLTNHaGFuTklLQXc0RXpEdURjNzdESGdaSFk?oc=5",
+        "fonte": "PlayStation.Blog",
+        "publicadaEmISO": "2011-07-21T07:00:00.000Z"
+      },
+      {
+        "titulo": "Gran Turismo World Series 2024 begins with online qualifiers April 17 - PlayStation.Blog",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPdnA4YmlmNUVYVmYtaXo1UmZDSmtfWGVyV0MzTUFsNk42R1RpdEYyam95cVdDY0N5aTJNS3JUamhYeDRHQlljczBGT196aE9NUUZDSVdXR0dnVXV1MVFfU3FwUGRCem5IQWFmanBBSW90N21tcUM2ZjQyRkNSbFhjUG9SVDFfY25UR2kteHJKblRaRDhwN0h4U0FVN2ZDejM5MTRTbEpQLTBMeXgxaFVN?oc=5",
+        "fonte": "PlayStation.Blog",
+        "publicadaEmISO": "2024-04-04T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-xbox-1786563000000-5",
+    "titulo": "Kinetic Publishing Showcase Recap: Every Reveal, Including the New Sam Barlow Game",
+    "descricao": "Xbox Wire: Kinetic Publishing was built to empower indie creators with the level of support that our founder, Daniel Knight, would have benefitted from when he was first creating Phasmophobia. Today, we had the absolute pleasure of revealing Kinetic Publishing’s upcoming slate at the first-ever Kine",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T19:30:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://news.xbox.com/en-us/2026/08/12/kinetic-publishing-showcase-recap-sam-barlow/"
+      }
+    ],
+    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/12/kinetic-publishing-showcase-recap-sam-barlow/",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-xbox-1786557600000-6",
+    "titulo": "Dive Into What&#8217;s Next with Subnautica 2 Experimental",
+    "descricao": "Xbox Wire: We&#8217;re excited to announce that Subnautica 2 Experimental is now available through the XBOX Insider Program, giving players the opportunity to experience upcoming updates early and help shape the future of the game alongside the team at Unknown Worlds. Explore Tomorrow&#8217;s Update",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T18:00:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://news.xbox.com/en-us/2026/08/12/dive-into-whats-next-with-subnautica-2-experimental/"
+      }
+    ],
+    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/12/dive-into-whats-next-with-subnautica-2-experimental/",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-playstation-1786548645000-6",
+    "titulo": "PlayStation Plus Game Catalog for August: Helldivers 2, Kingdom Come Deliverance II, Vampire Survivors, Hell is Us and more",
+    "descricao": "PlayStation: This month, enlist in Super Earth’s premier military peacekeeping force and fight for freedom across a hostile galaxy in Helldivers 2, shape your destiny in a stunningly authentic rendition of 15th century Bohemia in Kingdom Come: Deliverance II, become the bullet hell and mow down thou",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T15:30:45.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/12/playstation-plus-game-catalog-for-august-helldivers-2-kingdom-come-deliverance-ii-vampire-survivors-hell-is-us-and-more/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/12/playstation-plus-game-catalog-for-august-helldivers-2-kingdom-come-deliverance-ii-vampire-survivors-hell-is-us-and-more/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": [
+      {
+        "titulo": "Novidades de agosto para o Catálogo de Jogos PlayStation Plus: Helldivers 2, Kingdom Come Deliverance 2, Vampire Survivors, Hell is Us e mais - PlayStation.Blog BR",
+        "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPOUlUS0ZZU2E2RVY2QmZUclhKZDlZRXJvc1ZkUWE3VURyQml5OGV6c3d1NVlLMmFMd1VkeHF0bFp1cDFOSzJsVmk5ei1JakRVMHVtUzZkWWhRNlpKUXc3NDM5UlJPMldpSmRKdndJajhOOWlUNTlhdmI2aU13S250eHdDaXNwQ3NMc18wWHd1eVVRZmcxeHM5dFVhS2dyelVwMzZvMjhuc1N6UGRMczYteHV5THlZUW5YRTVCbHN3TzJXLXpLNjNjb3Jvcmx3TDJJM3ZHUGczeVp0RnNRczNtTzJ6U1p0UVQ5Y0NlWnpFMmtGNEVMUVlIMU4tc2w5Z0VsMXEwSi1wd3RDdHlBT0E?oc=5",
+        "fonte": "PlayStation.Blog BR",
+        "publicadaEmISO": "2026-08-12T15:33:00.000Z"
+      },
+      {
+        "titulo": "Catálogo de Jogos do PlayStation Plus: Agosto de 2026 - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOME5xUXR0NGE1SU5LWS1qR2w4eXBCUGd4LXlYdjVqRHlYVXNyVnVxS2kzTDU5M2RwNXBFSnNCdGtWOXVVQnBBUjRRVWZBVnZ1U2F2RjMwZHJpWWpIRGtZM3A2V013S2pfd1NURDdUdnFidDdGampmcWZ3NzFTNUd2RVVjWXpEZGczT2U2VkdJYw?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-12T21:43:53.000Z"
+      },
+      {
+        "titulo": "Solitaire Grand Harvest: Moedas Grátis e Links Diários (Ago 2026) - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVkV4Y19MVGU4V25FZm40cUJPZHp0ZjJaNFJscFhlbFk2M3VwNmpBeE5BMmd3QkVTR2lveW4xRU9KRGRpZ1c3TWpLUTI2V281Y3RLd0VGMDNDeTBSXzRQd0k4U2txQUdEY0MxZHpPNVJiMHViM1E0cDcwWjJPeVNyNnNyMy1hc3FFVnpjaFJoVDZEMVp5NDMzY0tZYWNqQ254LVllZXRmaw?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-13T13:39:17.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-xbox-1786546800000-7",
+    "titulo": "Revisit the Arcade Racing Classic RIDGE RACER with ACA-Exclusive Features 30% Off Now",
+    "descricao": "Xbox Wire: Ridge Racer was released by Namco Limited (now Bandai Namco Entertainment Inc.) in 1993. Powered by the 3D CG arcade system System 22, it amazed racing game fans with its immersive sense of speed and realism. And, of course, when you think of Ridge Racer, you think of drifting! Its drifti",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T15:00:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://news.xbox.com/en-us/2026/08/12/arcade-archives-ridge-racer-features/"
+      }
+    ],
+    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/12/arcade-archives-ridge-racer-features/",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-xbox-1786543500000-8",
+    "titulo": "Prepare for Emergence Day with the Gears of War: E-Day Limited Edition XBOX Wireless Controllers",
+    "descricao": "Xbox Wire: To celebrate the launch of Gears of War: E-Day, we&#8217;re giving fans two new ways to immerse themselves in one of gaming&#8217;s most iconic universes. Starting today, fans can pre-order the Gears of War: E-Day Limited Edition XBOX Wireless Controller at participating retailers worldwi",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T14:05:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://news.xbox.com/en-us/2026/08/12/gears-of-war-eday-xbox-controllers/"
+      }
+    ],
+    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/12/gears-of-war-eday-xbox-controllers/",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": [
+      {
+        "titulo": "Prepare-se para o Dia da Emergência com o Controle Sem Fio Xbox Gears of War: E-Day Limited Edition - XBOX Wire",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQVGFrc2JldkZrN1d1bTlHTngweGpDRm9kWldNU2FLbXBydE5pUDhPano1LWxZSlNFVUpldkh4M1owWEZONEJJUVlGUkpwYTFkblR5dEJIT3RjTEhKV1M4TnlZT1lOTDVQQkJrNHEyWXRoOFVfWjlKTEVzTTlkN21GcDEzRHA5cFdxdTI3SXQzUE0tT0R4NW1TcXFRZzlyemhHckR5amttNmtZTV9SSVBwWjdBakdtXzNMMFhWNzF4Si1PMHd5UWJ5TDRJWlBmWlJfcDlZUg?oc=5",
+        "fonte": "XBOX Wire",
+        "publicadaEmISO": "2026-08-12T14:21:45.000Z"
+      },
+      {
+        "titulo": "Revelados os controles Xbox de Gears of War: E-Day Limited Edition - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeEtHRzJGX1pxVjNxMkdlcHMxa3dYZW1ybDcyRER5MGJSSE1xX2xlcm5JZzFkSjhqTmZpcDNRRktrVTJ4bWR6cUMyTnBXUFBKTHY3b2RwRTBxbld4aGpIOGdoSkZDaG56c3RvV0MwYVA5cGEySG00TFhad21kV1NkQWh5VV9TZXpRUk5wWjFmMzd6X0dldlhoMHJn?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-12T21:28:21.000Z"
+      },
+      {
+        "titulo": "CEO do Xbox elogia The Elder Scrolls 6 enquanto protesto ocorre na Bethesda - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWEJ5Y0dRanVWZjVSdTFkRDQ4TzlDSEhFYXN0T2k4WkE4X3dPbExNZjZaSmhSczdKZmFZMjRRQjFldUJRVXFGSWc3V3ZIWXk4YjNWR19RRFpIY25IUWJJdk1NMEJBUVFSSjVGM2hEeHR1X2h6RjVTNV9OSlZCRHBXV003MFFHV1dqUWxkT3lSRFlDM2ZkMkpNbnFEa0loTEVSSDA3RC1Fbw?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-13T13:20:31.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-nintendo-1786543262000-4",
+    "titulo": "Nintendo Switch 2 で発売されるソフトメーカータイトルの開発者にインタビューする「クリエイターズボイス」を更新しました。 『オービタルズ Orbitals』を開発されたShapefarmのおふたりにお話を伺いました。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T14:01:02.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/switch2/creators-voice/index.html"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/switch2/creators-voice/index.html",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-playstation-1786543238000-7",
+    "titulo": "Ghost of Yōtei Complete Edition Comes to PS5 October 1",
+    "descricao": "PlayStation: We are so excited to announce that even more new content is coming to Ghost of Yōtei! On October 1, we’ll have a new narrative expansion, new single-player combat survival mode, and new quality of life updates all coming in Ghost of Yōtei Complete Edition!1 Before we dive in, we want to",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T14:00:38.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/12/ghost-of-yotei-complete-edition-comes-to-ps5-october-1/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/12/ghost-of-yotei-complete-edition-comes-to-ps5-october-1/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": [
+      {
+        "titulo": "Ghost of Yōtei Edição Completa chega para PS5 em 1º de outubro - PlayStation.Blog BR",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQkpxdXNsQTFNNl9sa3JUb1FSOVFTdGZMZmZWMTQtdmNoWVBCRnUtRGNpelRTU3VjQkJUSFpJT0FkLVFJRnhpZnVVYVc4TXhGUnNiTDFacEtTNUxrQWJVdzh2d29mOUc0bHNPODZuVUhwYTctaHVyTzZkTllicjA1LVhmWGtIZC0xaXZzLVMwcEw5cnZzUHFvc3hGN21DRnJVTUNVMTJDaU00Zw?oc=5",
+        "fonte": "PlayStation.Blog BR",
+        "publicadaEmISO": "2026-08-12T14:05:20.000Z"
+      },
+      {
+        "titulo": "Ghost Of Yōtei Complete Edition: entenda o que muda na DLC gratuita - TechTudo",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPczR6WGZDcUJMWnI4VHRPTnFwaXpoanJCNlAwUUk3QWRnQTMybTd3RnU2bFhHeTlaeUNoSU1xUFIzS3Etd1FWdHhYSllZMnloTW5GZG1lOTVXOF93LXJ2NHVGVE5Ydm9faDVPdW1QaUFneEdIaU0zeFhMYUJNWW1PVFVIVmY3S0JmbzhyRG5wdnMyZmh1WXZTa3FtTTYwNkRKVk5JMnlCQ1pVdElxUTlBc1p3c242cVRJR0JCanF30gHMAUFVX3lxTE5mbXNieklCelFOUl93MlNTUl9SRDNDMnloeW82TWdHRlJNNGs1V0VLQ3FkeHNyV1I3T2NSMENCS0JJeGRNS1JWNWdydm5DV2tOaWtGTElBbGZ3ZjNvazBBNVNNVVRNV3JLRHBXWWZKSmd0Mk1hUG9UT0I4TVlzRE5fSzZ2aFNFN0tNZXBvQUR1dUtzVjVQWUhXR0FfUG9jY0RkWENzNHdZNHFtWENUdWl1UEdCNmVEQXhtZXB3ekMzb3FEc3lVbjZtbnJacA?oc=5",
+        "fonte": "TechTudo",
+        "publicadaEmISO": "2026-08-13T17:15:19.000Z"
+      },
+      {
+        "titulo": "Ghost of Yōtei ganha expansão e modo roguelike - gamehall.com.br",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBuM0g0VWNfblMxLUtFRDFWV2NBSWVnaXlqc3A2cGVNUkppMFJTTnlLREFhQ29lbV9qczFLNGpmQnpxajNqTXUtZEFNQnNTT19icmxvNno2d0xwSmRReW5DZC1mdFNwTU1QUjNkVHRHZU93MFBvOFYyWWxud9IBgwFBVV95cUxPTm1JWEhBYXZ0TmhqeXoxRFk5ZkpTeWFDb2FGNk9LYUpxdkxjM0t1Z0R3NE1zRVRPM05mNDNKdzBoOFNvRWRrNm56TTlsc3ZvVGUxQ1VsVEFkZ2ZRc2QxOTNZR1EtWEdoaDBxWkxtdHp1QlhVQkhMR0FDZGV6LUZPVHVUVQ?oc=5",
+        "fonte": "gamehall.com.br",
+        "publicadaEmISO": "2026-08-13T00:27:43.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-playstation-1786536004000-8",
+    "titulo": "Helldivers 2 joins PlayStation Plus Game Catalog today, Devoid of Liberty update out now",
+    "descricao": "PlayStation: We have watched the Void stretch across the galaxy for too long. The threat posed to our Liberty is too great and we can no longer stand by as the Illuminate gain ground. Helldivers, you are needed on the battlefield of a new frontier–one more wild and uncertain than any we have faced p",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T12:00:04.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/12/helldivers-2-joins-playstation-plus-game-catalog-today-devoid-of-liberty-update-out-now/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/12/helldivers-2-joins-playstation-plus-game-catalog-today-devoid-of-liberty-update-out-now/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": [
+      {
+        "titulo": "Catálogo de Jogos do PlayStation Plus: Agosto de 2026 - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOME5xUXR0NGE1SU5LWS1qR2w4eXBCUGd4LXlYdjVqRHlYVXNyVnVxS2kzTDU5M2RwNXBFSnNCdGtWOXVVQnBBUjRRVWZBVnZ1U2F2RjMwZHJpWWpIRGtZM3A2V013S2pfd1NURDdUdnFidDdGampmcWZ3NzFTNUd2RVVjWXpEZGczT2U2VkdJYw?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-12T21:43:53.000Z"
+      },
+      {
+        "titulo": "Pokémon GO: Ganhe um Mewtwo no nível máximo via Pesquisa - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOS1sR1ZOQ2tnSUFHQjg5OVJWaXY3RGgzdURwRUFDLWxSbUdzR2g5TlZOR0h2N2N3VEt6cmJJNGZpVGd5UHFkbkdDWXlLQ1NfRndiSHVLYkxaTGxOa3p4dktTNll4VUJ5TTZyNmdtZDZJYmk3ZzJ0d0VnMVctYWtUV0RJX2VUMk9SRklTNGoydXZYYXJIRzhfcGRfOTZOLWFMQmdldF9wZFFPcjd2RHlwSnhYaFJMMkU?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-12T21:43:53.000Z"
+      },
+      {
+        "titulo": "Terraria alcança 70 milhões de vendas e 15 anos com promessas de novidades - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONTNtRDlJZzlqM0lQZjFiUVZMc3VMaGx1WVAxYU5ONVJmNW4xMVd3dHdUb3NiT21TcTRRRzNBdnFYTXZhVTI2QXFOT0pGeDF6eG1vMnc2NGhHMzV2WG85ZU5RSkt6eE1qeTRJc1NUYk5hdzZQa3ZBbHp4SkhIQWx2ZmRQU2lic2xZckRhMW8tcm00RC03U2NkQzFOY2piN2ZXZVcwb0Q2SEcwQkxUOVQ2a29sOA?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-05-17T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-xbox-1786536000000-9",
+    "titulo": "Helldivers 2: Devoid of Liberty – Meet the SEAF Squad Assembled to Take on The Illuminate",
+    "descricao": "Xbox Wire: The blight of the Illuminate have expanded their war front with a strange new presence on the Galactic map. Assessed by our top Super Earth scientists, this area has been classified as Devoid of Liberty. From this Liberty forsaken place, we have received reports of twisted perversions of ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T12:00:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://news.xbox.com/en-us/2026/08/12/helldivers-2-devoid-of-liberty-update-xbox/"
+      }
+    ],
+    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/12/helldivers-2-devoid-of-liberty-update-xbox/",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-playstation-1786503405000-9",
+    "titulo": "(For Southeast Asia) First look at Marvel’s Wolverine Limited Edition PS5 Console bundle and accessories",
+    "descricao": "PlayStation: Last month, the team at Insomniac Games and Marvel Games shared lots of new details and reveals at San Diego Comic-Con for Marvel’s Wolverine. Today, we’re giving a first look at the PS5 Digital Edition &#8211; Marvel’s Wolverine Battle Yellow Limited Edition Bundle, which features a PS",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-12T02:56:45.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/11/20260812-ps5/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/11/20260812-ps5/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-tvmaze-93429",
+    "titulo": "State of Play with Peter Alexander",
+    "descricao": "State of Play focuses on authoritative and original reporting, thoughtful conversations, and in-depth analysis of the biggest political and national stories shaping the day, ",
+    "categoria": "series",
+    "dataLancamentoISO": "2026-08-10T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/635/1588433.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/93429/state-of-play-with-peter-alexander"
+      }
+    ],
+    "idExterno": "tvmaze-93429",
+    "fonte": "tvmaze",
+    "momento": "disponivel",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1786077124000-5",
+    "titulo": "ニンテンドーeショップ新作ソフト情報 8/7（金）号。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-07T04:32:04.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/8085b2d3-a798-4538-9e4d-1e26b3926cdf"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/8085b2d3-a798-4538-9e4d-1e26b3926cdf",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1786064521000-6",
+    "titulo": "「Nintendo Store」でご利用いただけるお支払い方法が増えました。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-07T01:02:01.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/ab5aebd2-e3b0-4918-a5b8-2a881f8cf24a"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/ab5aebd2-e3b0-4918-a5b8-2a881f8cf24a",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785998076000-7",
+    "titulo": "「2027年3月期 第1四半期 決算説明資料」を掲載しました。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-06T06:34:36.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.co.jp/ir/pdf/2026/260806_2.pdf"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.co.jp/ir/pdf/2026/260806_2.pdf",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785998040000-8",
+    "titulo": "「2027年3月期 第1四半期 決算短信」を掲載しました。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-06T06:34:00.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.co.jp/ir/pdf/2026/260806.pdf"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.co.jp/ir/pdf/2026/260806.pdf",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785996222000-9",
+    "titulo": "「Nintendo Switch Sports ゲーム運動会 シニアボウリングトーナメント2026」のページを更新しました。 トーナメント2回戦の試合日程と、1回戦の全試合の様子を公開しています。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-06T06:03:42.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/switch/as8sa/senior-bowling-2026/index.html"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/switch/as8sa/senior-bowling-2026/index.html",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785892083000-10",
+    "titulo": "「ファイアーエムブレム 万紫千紅 Direct 2026.8.4」を公開。楽曲配信やコミック連載などの最新情報も一挙ご紹介。 ※本作の対象年齢は「15歳以上」です。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-05T01:08:03.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/73213551-6815-4885-acdc-758a6dbdea31"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/73213551-6815-4885-acdc-758a6dbdea31",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785892007000-11",
+    "titulo": "ひとりでも、みんなでも冒険を楽しめるRPG『ファイナルファンタジーXIV』が、Nintendo Switch 2 で配信中。たっぷり遊べる無料体験版「フリートライアル」も。 ※本作の対象年齢は「17歳以上」です。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-05T01:06:47.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/450a3a8b-ca0c-41e2-b09b-7252c1611f3b"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/450a3a8b-ca0c-41e2-b09b-7252c1611f3b",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785853595000-12",
+    "titulo": "Nintendo Switch 2 ソフト『ファイアーエムブレム 万紫千紅』の公式サイトを公開しました。 4戦士の運命を導き、世界の救世主となれ。物語の舞台や勝利を導く2つの采配、世界の命運を握るキャラクターを紹介します。 ※本ソフトの対象年齢は「15歳以上」です。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-04T14:26:35.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/games/switch2/aacsa/index.html"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/games/switch2/aacsa/index.html",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785805460000-13",
+    "titulo": "テトリミノをシバいてオタカラ（コラボテーマ）をゲット。テト1カップ「スプラトゥーン レイダース コラボ祭！」開催。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-04T01:04:20.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/38824ff3-cb87-4e1d-b6ac-f37df73c7222"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/38824ff3-cb87-4e1d-b6ac-f37df73c7222",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785805385000-14",
+    "titulo": "「Hello! インディー」みんなで集まれる無人島『Big Walk』",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-04T01:03:05.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/0a0df31b-cdf9-4651-a3a2-d6116cdc7da0"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/0a0df31b-cdf9-4651-a3a2-d6116cdc7da0",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-tvmaze-93370",
+    "titulo": "Current with Christine Romans",
+    "descricao": "As markets open and the day's biggest stories take shape, anchor Christine Romans will translate breaking developments, politics, global news and the economy to help viewers stay informed and understand what's next. The two-hour program will also feature segments on finance, business, technology, AI",
+    "categoria": "series",
+    "dataLancamentoISO": "2026-08-03T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/93370/current-with-christine-romans"
+      }
+    ],
+    "idExterno": "tvmaze-93370",
+    "fonte": "tvmaze",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "‘Early Start’ Anchor Christine Romans Departs CNN After 24 Years - IMDb",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBkVnJrb0lkc0tYaVZNTTZQTXVzOGdBQnpjYlhDdDA0Y0NQQWw3dnZiQkVSR295WTVYUTJJTXhWeTBLbm8xMEJJTm82aUlqVThIUXc?oc=5",
+        "fonte": "IMDb",
+        "publicadaEmISO": "2026-02-17T03:27:59.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-nintendo-1785460551000-15",
+    "titulo": "【8月13日追加】「ニンテンドー ゲームキューブ Nintendo Classics」に『スーパーマリオサンシャイン』を追加。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-31T01:15:51.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/e6929d2c-38b1-47f1-b8dd-b020362f88ab"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/e6929d2c-38b1-47f1-b8dd-b020362f88ab",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785460479000-16",
+    "titulo": "【8月4日追加】「バーチャルボーイ Nintendo Classics」に当時未発売の2タイトルと「ゲーム画面のカラー変更機能」を追加。専用ハード（ペーパーモデル）のセールも期間限定で実施中。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-31T01:14:39.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/99f2d359-8ea3-4276-92b7-45f4af3dd9ef"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/99f2d359-8ea3-4276-92b7-45f4af3dd9ef",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785459980000-17",
+    "titulo": "「レゴ ドンキーコング アーケードゲーム」「レゴ どうぶつの森 まめきち＆つぶきち のんびりお散歩」が8月1日発売。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-31T01:06:20.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/1876020f-aab9-4c09-b189-9188395ca435"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/1876020f-aab9-4c09-b189-9188395ca435",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785459924000-18",
+    "titulo": "8月4日から、「ニンテンドーeショップ サマーセール」開催。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-31T01:05:24.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/b050f000-c6bd-4643-8e8b-4df6743f8bc9"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/b050f000-c6bd-4643-8e8b-4df6743f8bc9",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785459832000-19",
+    "titulo": "『カラオケJOYSOUND for Nintendo Switch』8月の無料開放デーと、夏のお得なチケットのお知らせ。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-31T01:03:52.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/f4756271-9f2a-4219-88fa-f47cfca489f7"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/f4756271-9f2a-4219-88fa-f47cfca489f7",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785459782000-20",
+    "titulo": "ニンテンドーeショップ新作ソフト情報 7/31（金）号。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-31T01:03:02.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/18bcece5-a98d-4890-b99b-255debb7702e"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/18bcece5-a98d-4890-b99b-255debb7702e",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785373723000-21",
+    "titulo": "楽園を目指す、少年と少女の物語。『ゼノブレイド2 Nintendo Switch 2 Edition』のダウンロード版・アップグレードパスが本日より配信開始。パッケージ版は10月1日発売。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-30T01:08:43.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/40568819-8ed2-46c1-bfc0-2c62ea1fff62"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/40568819-8ed2-46c1-bfc0-2c62ea1fff62",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785373667000-22",
+    "titulo": "『ぽこ あ ポケモン エキスパンションパス』有料追加コンテンツ第1弾と『ぽこ あ ポケモン』無料アップデート（Ver.2.0.0）を8月5日に配信。有料追加コンテンツ第2弾の最新情報も。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-30T01:07:47.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/e08c51f0-9682-4fa2-8c13-715020a759de"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/e08c51f0-9682-4fa2-8c13-715020a759de",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785373588000-23",
+    "titulo": "夏におすすめのインディーゲーム3本をご紹介",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-30T01:06:28.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/398600d4-c59c-4b34-804b-5b50e0e1bb3b"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/398600d4-c59c-4b34-804b-5b50e0e1bb3b",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785373433000-24",
+    "titulo": "忘れられない恋が、もう一度始まる。『テニスの王子様 も～っと 学園祭の王子様 ♡-40 and more...』と『テニスの王子様 ぎゅ～っと！ ドキドキサバイバル Tie break ♡ game』がNintendo Switch 2 / Nintendo Switchで本日発売。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-30T01:03:53.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/0c77f221-daf0-4d76-811d-6268dce0802b"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/0c77f221-daf0-4d76-811d-6268dce0802b",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785373372000-25",
+    "titulo": "「夜廻」シリーズスタッフが贈る生活シミュレーション『ほの暮しの庭』がNintendo Switch 2 / Nintendo Switchで本日発売。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-30T01:02:52.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/8657b63a-429d-4233-a64c-0e64535ad2ec"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/8657b63a-429d-4233-a64c-0e64535ad2ec",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785200615000-26",
+    "titulo": "「2026夏 トモダチコレクション わくわく生活 CM」を公開しました。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-28T01:03:35.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/switch/blfga/summer/index.html"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/switch/blfga/summer/index.html",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784882266000-27",
+    "titulo": "「制作企画系 オンラインセミナー」のお申し込み受付を開始しました。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-24T08:37:46.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.co.jp/jobs/recruit/event/planning_online.html"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.co.jp/jobs/recruit/event/planning_online.html",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784876730000-28",
+    "titulo": "「譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ」を掲載しました。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-24T07:05:30.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.co.jp/ir/pdf/2026/260724.pdf"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.co.jp/ir/pdf/2026/260724.pdf",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784856274000-29",
+    "titulo": "コラボテーマをお得に交換できる「テトリス® 99 コラボテーマ大放出キャンペーン」開催。いろいろなゲームの背景や音楽で『テトリス® 99』が楽しめる。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-24T01:24:34.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/cf281b72-e716-494c-812e-457d275b6a2a"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/cf281b72-e716-494c-812e-457d275b6a2a",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784856058000-30",
+    "titulo": "『Minecraft Dungeons』が7月27日から期間限定で遊び放題。Nintendo Switch Online加入者限定イベント「いっせいトライアル」開催。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-24T01:20:58.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/e692744e-c1f8-4e63-9cea-a3fca9e0b383"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/e692744e-c1f8-4e63-9cea-a3fca9e0b383",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784855155000-31",
+    "titulo": "Nintendo Switch 2 ソフト『Xenoblade2（ゼノブレイド2） Nintendo Switch 2 Edition』の紹介映像と公式サイトを公開しました。 新たなレアブレイド「M.O.M.O.」や、ブレイドを直接操作できるアクションモードが加わります。 ※本作の対象年齢は「15歳以上」です。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-24T01:05:55.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/games/switch2/adeng/index.html"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/games/switch2/adeng/index.html",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784854898000-32",
+    "titulo": "ニンテンドーeショップ新作ソフト情報 7/24（金）号。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-24T01:01:38.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/ad1db9d4-874a-4c09-a0af-f5a0aa3bc229"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/ad1db9d4-874a-4c09-a0af-f5a0aa3bc229",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784786819000-33",
+    "titulo": "スプラトゥーンシリーズのポータルサイト「スプラトゥーンベース」の「ヒストリー」ページを更新しました。 音楽ライブ「バンカライブ轟」や史上最大規模で行われた「グランドフェスティバル」、『スプラトゥーン レイダース』発売など3年間の歩みを追加しました。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-23T06:06:59.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/character/splatoon/history/index.html"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/character/splatoon/history/index.html",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784768985000-34",
+    "titulo": "『スプラトゥーン レイダース』は本日発売。TVCMや「開発者に訊きました」など最新情報もご紹介。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-23T01:09:45.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/8218bfaf-2760-4d5c-98ef-3dbf61edbe55"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/8218bfaf-2760-4d5c-98ef-3dbf61edbe55",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784638941000-35",
+    "titulo": "Nintendo Switch 2 ソフト『スプラトゥーン レイダース』の紹介映像を公開しました。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-21T13:02:21.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/games/switch2/aadla/index.html"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/games/switch2/aadla/index.html",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784638863000-36",
+    "titulo": "「開発者に訊きました：スプラトゥーン レイダース」を公開しました。 「気持ちの良い忙しさ」が感じられる遊びづくり、バンカラ街とは異なる舞台や無人島で過ごすキャラクターのデザインアイデアなど、開発者みずからの言葉でお届けします。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-21T13:01:03.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/interview/aadla/index.html"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/interview/aadla/index.html",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784250275000-37",
+    "titulo": "「Hello! インディー」深夜のコンビニで起こる恐怖体験『夜勤事件』 ※本作の対象年齢は「15歳以上」です。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-17T01:04:35.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/23883db7-452b-4142-aa18-d73dd7915c20"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/23883db7-452b-4142-aa18-d73dd7915c20",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784250223000-38",
+    "titulo": "「Hello! インディー」手をつないで、ゴールを目指せ『Heave Ho 2（ヒーブホー 2）』",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-17T01:03:43.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/893c1e9b-1631-4088-9bfd-cac43a5c454b"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/893c1e9b-1631-4088-9bfd-cac43a5c454b",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1784250127000-39",
+    "titulo": "ニンテンドーeショップ新作ソフト情報 7/17（金）号。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-07-17T01:02:07.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/212681aa-7d80-4553-850a-04b56bf1c0de"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/212681aa-7d80-4553-850a-04b56bf1c0de",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-tvmaze-91903",
+    "titulo": "Money, Power, Politics with Stephanie Ruhle",
+    "descricao": "Money, Power, Politics with Stephanie Ruhle, utilizing her extensive Wall Street background to analyze the high-stakes intersection of money, power, and politics, Stephanie Ruhle delivers original reporting and hard-hitting interviews on the stories that directly affect Americans' lives. The program",
+    "categoria": "series",
+    "dataLancamentoISO": "2026-06-15T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/629/1572501.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/91903/money-power-politics-with-stephanie-ruhle"
+      }
+    ],
+    "idExterno": "tvmaze-91903",
+    "fonte": "tvmaze",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "The Weekend (Série de TV 2024– ) ⭐ 4.3 | Notícias - IMDb",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1QZHpsZVM1R2pmZHprdlFZTDFzaVVPNXRTanZ3SnFHNy1IRWY1Vm9qbEEyYW9rSHktYm9VNklPV2tjektsdHdJcjVwX3FFRDhMSndZ?oc=5",
+        "fonte": "IMDb",
+        "publicadaEmISO": "2024-12-23T15:57:14.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-tvmaze-91902",
+    "titulo": "On the Line with Alicia Menendez",
+    "descricao": "On the Line with Alicia Menendez moves beyond the headlines to examine the stories shaping the nation, featuring one-on-one conversations with newsmakers and a focus on voices often left out of the political discourse",
+    "categoria": "series",
+    "dataLancamentoISO": "2026-06-15T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/628/1572499.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/91902/on-the-line-with-alicia-menendez"
+      }
+    ],
+    "idExterno": "tvmaze-91902",
+    "fonte": "tvmaze",
+    "momento": "disponivel",
+    "noticias": []
+  },
+  {
+    "id": "sug-tvmaze-91901",
+    "titulo": "The Moment with Katy Tur",
+    "descricao": "The Moment with Katy Tur is designed to move beyond the immediate headlines to provide deeper context and understanding of the political and national stories shaping the day.",
+    "categoria": "series",
+    "dataLancamentoISO": "2026-06-15T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/628/1571887.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/91901/the-moment-with-katy-tur"
+      }
+    ],
+    "idExterno": "tvmaze-91901",
+    "fonte": "tvmaze",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Taylor Swift anuncia regravação de ‘Speak Now’ (Taylor’s Version) durante The Eras Tour - Rolling Stone Brasil",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOSWhRS01jSUpMZ0pmYjFFRkwzV25JRERCUW0yVThOZGNKWXA4UHoyTnV2WnQwTnJETTRqNUNscGFhM05sYjJ1UlJLNkZVMmF2cC1OTmJRV045bnNjRDIwUTJSRmIzVkxrQ1hFMDhDeWxNMmNWRFBSMUxxRVp2U05NZmJNdmg3dlNocXNpZ044dG82Q29PN2FwOTlKQks0Z05XWHlkT1ZiQjlfOHJPRXVTR3c5VDhual9aSFE?oc=5",
+        "fonte": "Rolling Stone Brasil",
+        "publicadaEmISO": "2023-05-06T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q133126730",
+    "titulo": "That Time I Got Reincarnated as a Slime: The Movie – Tears of the Azure Sea",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q133126730"
+      }
+    ],
+    "idExterno": "wikidata-Q133126730",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea - Crunchyroll",
+        "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNX3RMT2FwQnJSZDRrSWlWVmV6c1FRazhXUjFFSm9TckU3S1pZV2MyaktMT3htNUdPYlN5dTNBOHRwOFVVdExRSkN1OGY1WENCcjVyV202RWdrZWNIOTBTM1RpVnVqMHdWN3dLR0ZtYnozWjFmWGxOeVRNSHJwZHdhMjF1QnJ3bnlPTUMxWHVHaDlYbTJtTFQxS0tFZXQ3TXREdXNCMW8tX21NNklENURURmRjTjNNOWNacVV4NmFGM0daTmswQXdycFZ1aWNXWFZuTEVSTFNoLW5PTkljVkNPVFc3dVM3aUEzRjVoMEtMaXZjZw?oc=5",
+        "fonte": "Crunchyroll",
+        "publicadaEmISO": "2026-07-30T07:00:00.000Z"
+      },
+      {
+        "titulo": "That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea parte para férias em novo clipe - Crunchyroll",
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQd2tpaXB5dW1IcU4wbzI1Zzg1OGJpXzhOc2ZWRl9YTGczOVJVYjhFYW9sRzV4RTdGWXdqeVV1VXdtV2djN21EWERpazFZLWhCeGZ2RXFYdE1CLWdoZ20yWVJSV29yczYwVV9TSVlFLWFWYTVaeXpaenNPeExXNDdCSlI0RWx4aElSS1BnYXNSYXJUY1R6RXItU1FYRUNCOGFMX0h1WVljWDd2M2dtQjhKc0tna0N4UkhnT0hoa1FDYksteG82RFY0bzI3Tm9zRm5IMDFvb1Z4Ri1rTmJWSVVFcQ?oc=5",
+        "fonte": "Crunchyroll",
+        "publicadaEmISO": "2026-02-12T08:00:00.000Z"
+      },
+      {
+        "titulo": "‘That Time I Got Reincarnated as a Slime - O Filme’ ganha trailer e data de estreia no Brasil - Ingresso.com",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUF9WR0owVG0xd2J5b3pvMHFNODJBdGFwR0wyNGlMYnNsQ0N3YlZoM0k3Vy15NjdfM2h3Y0Vaa2Z5d183MjJRMnFhdFpqM19XRU45dm5IdlJKRUlzWEphbGlaRWNubm84cUhmMS12MjM3amxuY0RyM0VOVG1WM3RpODNCYUFKLTNBaHloekVDS3NtR2NicUw5enJpR2ZBanBsN2VGRXRMaTlzdFJHem50M1J0aw?oc=5",
+        "fonte": "Ingresso.com",
+        "publicadaEmISO": "2026-02-25T08:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q126930033",
+    "titulo": "The Magic Faraway Tree",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q126930033"
+      }
+    ],
+    "idExterno": "wikidata-Q126930033",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "A Maravilhosa Árvore Encantada - AdoroCinema",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB0bkplMXIwWVd5bHhTZjlYbk5tMTFHVHdWUkl3dDAxUXU0c1pyUXNTbzMtTTZZZnFldnUxX0FnZzVnX1hhMjk0blBxSjdqTDZYTmplaTBEREFGWnl0?oc=5",
+        "fonte": "AdoroCinema",
+        "publicadaEmISO": "2026-02-27T00:23:43.000Z"
+      },
+      {
+        "titulo": "A Maravilhosa Árvore Encantada | Andrew Garfield fala sobre novo filme; Confira! - Estação Nerd",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQVRjUHdwazJ6ZlJWcm1NTjdCLVA2RTlNbzZ0d3dldjhYbXJWOWl6NkFIYm44SzhWLUpzN3lrVGVrR1ZmWjFQV3ZHeEFpZnJNV2k4OUVyanBXVG9rNjd4QzBCRGxadExfMVJ5VmhIZGpzWHp4OTlQajNCQnkxdEctSGs3bnJHMEpKaVk3Zk9hLWliYjUyaEp0MzNoUjlyd045ZHZv?oc=5",
+        "fonte": "Estação Nerd",
+        "publicadaEmISO": "2026-08-12T11:30:00.000Z"
+      },
+      {
+        "titulo": "'The Magic Faraway Tree': Aventura estrelada por Andrew Garfield ganha primeiro trailer; Confira! - cinepop.com.br",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNQTlrM0tqbVBSeGI0OERJUnVYSDdJM1ktSzdBaHpzVURTbUhXLUZwQXdSbE53S1RaMFJMSXpQOC03UThfTEtzV2k2XzlzVlM5Njc1UEZpV3YtMVpoY29SbEdVRjhtalpWTV9GZ1Ria1NsRFRpekt3OG1vS1BUc3pLc3BvdDFKRmNRNG5kZGt5TzhPYVpMODYyVS15VTNpSXF1QnV6OV9lUFZ5U2xSeEF3eU56Sk5NWlc2Nk9qM1g5em8?oc=5",
+        "fonte": "cinepop.com.br",
+        "publicadaEmISO": "2025-12-08T08:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q134906322",
+    "titulo": "Kokuho (filme)",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q134906322"
+      }
+    ],
+    "idExterno": "wikidata-Q134906322",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Kokuho – O Preço Da Perfeição - Ingresso.com",
+        "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNc0t6RGlNdTRQeTFoZlJib0hHS0F1dFFRVmV2QWpHZzY2WXBTY0tEQjVJd2NqZEpSQUtYNlZnMnNGQWh2ZURPWkUwSWJQUlQwVTFndjQtYU1iNmZMV0NsNVZfQXJzUEtyQTVZMTRMUTMxTk9tU3RseG0yUWc0Rjd6aHVuSUdtUGJ3dEJLV2h2NzUwdWQ2V3hmbkhXSEhnR3A3MmJUYjlDSGN1a1ozVktoWE02a2pwakNsdGJraER3MVAwZFNkYWV6eDlkcklMRWVVeDhsLVdtcVVLSURkQlVQTmduWl9xU29jQlNtUFI3a01tencwSWhHb3ZPcEpGdVRsNE9rNFVEVThFVzhZR1p3eG1xemU?oc=5",
+        "fonte": "Ingresso.com",
+        "publicadaEmISO": "2026-08-14T14:18:04.000Z"
+      },
+      {
+        "titulo": "Kokuho | Filme japonês indicado ganha data no Brasil - Omelete",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNel82bkNZTmxHUUZ5SFNUMy1OQzlrNFZwQkFwLUcza3kzMHc0bWF4T1VBcUJsTkw3SmpOMUFTRGVhVkFTYlIxWG11Sm4xYUlSdW90ZzNoTzI1MVZ0RVdsUjBDbGY5eExxd2NhZzdCaFpYVmxoei1XTklQZzA4SU92TnMzdlYxVDM3X2ZEVg?oc=5",
+        "fonte": "Omelete",
+        "publicadaEmISO": "2026-01-22T08:00:00.000Z"
+      },
+      {
+        "titulo": "Kokuho (2025) | Crítica - OCA-UFF",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBTMmpUUWJNU0ljb1hnVnE0ZnZQUnhUOGdBTjhXVGlTVm0tU1E4cmxPNjBob1VhTDBRXzNXa0FHY2dVSHV2TWdUV3VCUm44WWFLX3c?oc=5",
+        "fonte": "OCA-UFF",
+        "publicadaEmISO": "2026-03-14T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q133871350",
+    "titulo": "A Pale View of Hills",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "imagemUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/MKr377530%20Y%C5%8D%20Yoshida%2C%20Camalla%20Aiko%2C%20Szu%20Hirose%2C%20K%C5%8Dhei%20Matsushita%20and%20Tomokazu%20Miura%20%28A%20Pale%20View%20of%20Hills%2C%20Cannes%202025%29.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q133871350"
+      }
+    ],
+    "idExterno": "wikidata-Q133871350",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "A Pale View of Hills - Filme 2025 - AdoroCinema",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBFQjM5WTVwRUpNcExCSVlRZzRqVGNVbHZSUkxvUGdBeS1hUEwwM2h5LWtLbVI5S2dYZGxPLXlrdDNPR19LZ09MbEw0TE83UDRLakhWckVrNmwwb0doeWpBS2Nn?oc=5",
+        "fonte": "AdoroCinema",
+        "publicadaEmISO": "2025-08-06T07:00:00.000Z"
+      },
+      {
+        "titulo": "British Independent Film Awards 2025 | Drama gay BDSM 'Pillion' é o grande vencedor da premiação; Confira a lista! - cinepop.com.br",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxORG5ZQ19ZWkRhNTNNU3A4QXNmVGpLVFdmcXY1YU9vUlJkcXB1UGJGdUF2ZFd3emtWVm16QkcwUkx6cUlGcDFITHg2aXhLUHducm9TTmRhRnVYeXV6Q2lqZkoxdFM5WE8wYVV2RWpPUE9pQzZoN0RyWXJYNk9YNmQzc0YtZW9VUDltM0pCTlEwQkhqMmQxSFVtTkxIeTdEVnF6TUlwTHhDaUhobWVlajAwTFhXZ1dtX0h3dlk4c0l5el9LSzl0YjQ1SWxQQWVZRlh6ckNHUGpR?oc=5",
+        "fonte": "cinepop.com.br",
+        "publicadaEmISO": "2025-11-30T08:00:00.000Z"
+      },
+      {
+        "titulo": "Crítica | Uma Visão Pálida das Colinas, de Kazuo Ishiguro - Plano Crítico",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLWxadlNkWDN5WE1XM1lqYUJjelJyd1NHRU5fdzhLS0RoR2h1MjlQQ0ZBbHVobDhMdmR0T29oTm9ORGRBaHZwU05kZFprTDBWa2phYldIQTNYSFZZNWVldk1KZml2dVNOTHRJQkZsalZLdGVHN004cWlkMUtnSkt4NmNVNWxyVlpVR0JOSA?oc=5",
+        "fonte": "Plano Crítico",
+        "publicadaEmISO": "2025-05-07T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q134280292",
+    "titulo": "O Estrangeiro (2025)",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q134280292"
+      }
+    ],
+    "idExterno": "wikidata-Q134280292",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Nova adaptação de 'O estrangeiro', de Albert Camus, chega aos cinemas brasileiros em abril - PublishNews",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMU4wOEtYVzFHdjFUUktTMTVwVlpvRF9rdnhIcVYtVXVuTkZ5TDQ1SEN2YWNDdzc4YWNWeWZFWXFsQmFnMWxNN2ZFRUpuQXpkSkYwWlFnTmFDbVhKdXJzUXhGRkE2ckozRzhncTdhVVFPM0lQQktQbENibjRpSEhIS1lGR1FyX0NqOEpEdHdRWHNHSjBqZFcxMHFQWjVWY0N1bGJDOG1aVG5iNE5sYk1NVS1EMGFrNVdGdDhOc1NfN25XYkotYnZ3U3lB?oc=5",
+        "fonte": "PublishNews",
+        "publicadaEmISO": "2026-03-16T07:00:00.000Z"
+      },
+      {
+        "titulo": "O Estrangeiro (2025) - Meio Amargo",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9LbW5EQVFmTWxfTEdGam9vQ1pFRENrTmxFX0lZLVVuZHlLRU5PWEEwMEJCNDJDM1B2djhKT1Z2TW9ycC1TNzRLdW8tdy1jbU9FcHE1c1FhdkUtaHVEY1lV?oc=5",
+        "fonte": "Meio Amargo",
+        "publicadaEmISO": "2026-04-13T18:26:40.000Z"
+      },
+      {
+        "titulo": "Cine Paredão: ‘O Estrangeiro’ (2025) - Notícias da UFSC",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOcVhKczdHSlJiZms1TWlXQTdPbWVWVTFDMkdMWjF2MTlUZkgwc2plTUYwMkRnZFpQd0kwZHhRQVBRU0pWTktGNXFtNHhnUnpVdGJDZElSWmlkVVhqbTg5eHV0Z3lkR3ZkN0F3aEZWVGdlNzA3SkRvMlE3OWZxR2Q1dHdNanJGN3c?oc=5",
+        "fonte": "Notícias da UFSC",
+        "publicadaEmISO": "2026-05-05T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q134281431",
+    "titulo": "Nino",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q134281431"
+      }
+    ],
+    "idExterno": "wikidata-Q134281431",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "NINO , UM OÁSIS DE DELICADEZA EM PARIS - revista piauí",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA3X3JlZURWZVk5M05ULXM3UWhTRUFLTDJXSkhhQ1JXc1ZPU1pfX1BpbXdKSWNFdDVxVDM0YXdtX0g0b1lZUzZ0YzcxWHhHNGV0ZURSVE9oeXZVejY5U1huYTh0cE53bFhnM1B5T2NWTHh2SlVU?oc=5",
+        "fonte": "revista piauí",
+        "publicadaEmISO": "2026-05-06T07:00:00.000Z"
+      },
+      {
+        "titulo": "Nino de Sexta a Segunda - Filme 2025 - AdoroCinema",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE54VGFLVnpZRDBfdmdITm1CWGJrbE9mY0pLdlpfRGQ3d2UwUjZONnNFY3JkMEs0UGhXcVNGUks4RE1pTUluMlJUazBOWjFHYko0YndOX010NGU5Unl3?oc=5",
+        "fonte": "AdoroCinema",
+        "publicadaEmISO": "2025-10-22T07:00:00.000Z"
+      },
+      {
+        "titulo": "‘Nino de Sexta a Segunda’ equilibra humor e drama com atuação sensível | Filmes e Séries - Por Mattheus Goto - VEJA SÃO PAULO",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNZEl6TUw1VmNYTk9fX3lyRUk0ai1SaEVSTUJOaXRzSFVESHZiT1R0MXZoQWNDX3dnejRWV3ZnMUZuclhCZU90bTVkczRfdUFnTjNOd0JUZTI2SGJKR0xqRThYeHdXbnYtRlU4ZktCM0ZjYkhrdnJPS1ZYOVFQNThpdHRGcWhrbVg4ckdqY2pub3N1YUJJLWc0QlJwWWI?oc=5",
+        "fonte": "VEJA SÃO PAULO",
+        "publicadaEmISO": "2026-05-10T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q136163095",
+    "titulo": "Yellow Letters",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q136163095"
+      }
+    ],
+    "idExterno": "wikidata-Q136163095",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Drama político, ‘Yellow letters’ vence o Festival de Berlim - O GLOBO",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSlZCMzlTXzNUazJzaGRidlktS1ZjSW9yQUJZaW1QNlU0UkRvNXQtMlg5QlBoNmJpcU95LVBYQmRtUHdlMEdBQ1JfLUZYX0dDMVVMcHdBODZpS1UzUmFHVGpiV1VJclRWU1g4UHcySktTZHUwTU1wbHB2YXFFWEU0MmMteFlnajZCNnhxTXJESnJ2ZllSbC1MWjItc0VBWmY3TlpQT2M1RnVxbERGbGthRXc2TmbSAcMBQVVfeXFMUE5IRVN3ZlNwalVqTlJxMnRVVWswbWgyMjBoTkRlUk5QMGR2RlhGTmdkZ0IwODFTcng3eUdrd2p3bmIxdHltWWM2QnE2dDVVa1NBMDJ4TW1KLXR6NmZIQ1JTLURpc2lrLWtsa3JjVEI0STRnQlVSTV9XY3Q2Q0VUVThPcm9SQzVSdUpjand6RGdBdk5zZDFkTm5yOGRXdXBTSVRJQ0ljUG5vOWt0bS1OSWJyc2U5RUdUZGFBQlhnMzJFSHJv?oc=5",
+        "fonte": "O GLOBO",
+        "publicadaEmISO": "2026-02-21T08:00:00.000Z"
+      },
+      {
+        "titulo": "Drama político vence Berlinale em edição tomada por polêmica - dw.com",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQMVZSTW5GcU4waDd0VUhZVUY2NExyZzBmS0o3dkJYd1JxMDNXN0tqbTJQd09ualJYMk9LNDIzT0NpVElGdVpQTHhPODBCQ1YzNUg5OGdNRWlsUWNwMlkwTGlvbk5uNTdqbWZmSXpUbG9HTlVxLUxzODlVWGpsM1lEV05oeTR5cE9QSHBaNHFsWkVOV3JwSlFRdEpmLTRiSlhjTW9hYjJrTXA3WUV2dnppdzdoM0txcU9xVENvNzFBcVRoa0ktc2dLZjNJX3HSAcwBQVVfeXFMTUxJVmhvS3FfZXdnejM1X0w3dTFwZnBta2g5MlRxdS03OXlPQmZxN0V0TWJvWThBTUdBV2czRUNISVN4YnU5eE43ZXRBRXZSeTU1d2hwbC1NblVDRlViZFR4NGo3OXNVcUE5aXZPaGR0UEpXYUdBYlhYYlF6dUhKS2FkQUxxMEZHbHNFc0tqX3FpT1RtV2tHNVhtb09GQ1pKT0ZzTDBsTXctanFZQUh6QVVBLWl5djM1dEZVbTZEX2dQX1hyUTNjdWhuUEhC?oc=5",
+        "fonte": "dw.com",
+        "publicadaEmISO": "2026-02-21T08:00:00.000Z"
+      },
+      {
+        "titulo": "Filme da semana: 'Gelbe Briefe' merece o Urso de Ouro? - Euronews.com",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWnJtbms1b3VEV3pSVkQ5SkRGRG1CTzVVa0VxX1dEUm1xT01xWllVR3lBbnAyRFVmakZoa3BvcnFzVnZJeFpnWkl1VUFqVGctUW9MVmg3UVEwVVlocGp0SHBHazVYQ2Q1dnQyanNmMlRqX1NDMEF0dk9TSDhJRTlwd2gxTDVMelc0OUhPS2pxamhfeGhQR1lYNGhaMU1ZYUM0Skg1cHVuZ0gwQ1A5OGhzTEEwQQ?oc=5",
+        "fonte": "Euronews.com",
+        "publicadaEmISO": "2026-04-10T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q138786095",
+    "titulo": "Girls Don't Cry",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138786095"
+      }
+    ],
+    "idExterno": "wikidata-Q138786095",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Filipiñana (2026) ⭐ 6.5 | Drama - IMDb",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9oWDJ2bDRuSGE5aVFmMk1vZnp4b0U1QmEwc2Nhd29tWUpxSGtnRlhuTnhDU1YyNjc5OXloYmZZUHRqSWczaUItVjJZVDRpSEUwaksw?oc=5",
+        "fonte": "IMDb",
+        "publicadaEmISO": "2026-02-02T12:32:12.000Z"
+      },
+      {
+        "titulo": "Anitta fez referência a estes 9 filmes em \"Boys Don't Cry\". Você encontrou todas? - purebreak.com.br",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMThYbUxMQ1p0NjRpY1YxWDFfbTRrYXp4UjRWZlRpbUJwOFJuRXhTWFFfNG9ab1hpMVc4V2x3UDdMQTBveFRVZzBGclBKZ1hNTFNfeXR1TmI4TURFZFRKTXFydHd6V1UzdzVleWRqVFhMNm1Vd2N1R202R1J2VWR1b2ZTejhwNTFTbUdNNW5oRWNKcGNlOVFB?oc=5",
+        "fonte": "purebreak.com.br",
+        "publicadaEmISO": "2022-01-28T08:00:00.000Z"
+      },
+      {
+        "titulo": "Filme mostra lado obscuro da vida de ídolos do pop asiático - G1",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQUFc1aXVUR0hDdW5GZWZIZXh5YzVtZ1RJUmdJWjRVWV9yU1ZGT05qUGdEX2k2c0xCYl9SYUI2U3JRRFV6YlhlZF9oX096cEJHbm5rdF9mZlVpdU1MUTczb1otM092aFBhZWJZQk95dnJhM1ZsN2dQcXU1T0lzYURQa0NKX2FUWE5DcXpNNEt2N3BOZ0MwNWphaDF6THJveEoxSEhQVU96UFdBMVdhcmlvM1pjU2hjZXlFM0NKS09OWdIBzgFBVV95cUxQYUxjNGd0UjB1bVlMZl9DeUE5LUpQVGZ3dUVUMC1OZVllelVQYWdvTXo0VGdVc3BKbzY2NnpPX3FFc1ZpNFpaMmM1UjI3U1hZTHVMbzFIWFl6UlVhSVNQQXZrM2p6VEZHM1JkSHdBOVhnTW5HZmFUMzlod1VzVUVsbnhwWWE0bXk3RXNJZE5nblAwaWhVOHpqU1lvZW1KanpCRTU1cVBrd3lQbk96bDQ2eXFOOFBzVGJYaDMtaUdXbjBpcFRJRm9kMHFMYmV4dw?oc=5",
+        "fonte": "G1",
+        "publicadaEmISO": "2018-10-10T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q138835503",
+    "titulo": "Gohan",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138835503"
+      }
+    ],
+    "idExterno": "wikidata-Q138835503",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Filme de 'Dragon Ball' que aposta na nostalgia com a dupla Gohan e Piccolo estreia em 2º lugar no Prime Video - cinepop.com.br",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOUTdQZFRiV2dWVWN1ZnRmTmpkakhvZnZpVDktcjNOQk1RdGNfaUdSTUpHZVVDVDY3bFd1SEhNZnRkX3JvWkNpVTB6UHhLdm50Q3d4c2lydnExTWVINE9HLW9WbTRqRTBoUzJrZmtoWmlMVG5MX3V0VTdYallrdzV0VE9kQ1NieU1JbnVYV1M4RHUyNEoydjl5Y2hiWmNmT2VKS3Myc3h4V0lvbDVGSzJtZThhU1IzeUY5dFVENDlWUVdEazJNTkJBTTN4bWhBdVlzN1RkeQ?oc=5",
+        "fonte": "cinepop.com.br",
+        "publicadaEmISO": "2023-12-05T08:00:00.000Z"
+      },
+      {
+        "titulo": "Dragon Ball | Trailer do novo filme mostra Gohan levado ao limite - O Vício",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNVVF1RXlrcTFvZkplbE1xTVRwcmxwV3RyN1hCaTBUbS1jVENiU2dQUEdrUlcxUXdJWFFtdUx5WDljWl90dUZyTE1MemxsbHB0UVNHYlVDWmlycjluNkstNFEzUW54OTZSczVwODV2N19VQnIyUjI4aUhJUEl3Tk1zNm5XN1hXakVUYjBYLUlKQQ?oc=5",
+        "fonte": "O Vício",
+        "publicadaEmISO": "2022-05-27T07:00:00.000Z"
+      },
+      {
+        "titulo": "Dragon Ball: Novo filme confirma que Gohan é mais forte que Goku - IGN Brasil",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPM0FCWjJDUkl6UHdBV1VwdkV6T0JCVVpnTm1VeElWN0FZcmxodmtfMklXUTlLZDRFV2lxblh3UmFSd0VOODA1UC0zc0dvcmJxd1FZemJFbmNQbHNab0t1WGxHVDFVRlhZZmVrcVRER0ZuLUdxMjBROThLTS1IajBkMEM5ZXp6cmUxX2x4ZGZ0RmFGNTZHZlNRYWUzU3dObWtoUC03WFVtbkZQTjI0M19VX1pWVGdLUGVYRy1VMUpwcw?oc=5",
+        "fonte": "IGN Brasil",
+        "publicadaEmISO": "2021-12-22T08:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q138843090",
+    "titulo": "Q138843090",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138843090"
+      }
+    ],
+    "idExterno": "wikidata-Q138843090",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": []
+  },
+  {
+    "id": "sug-wikidata-Q138843993",
+    "titulo": "Hell Trotter",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138843993"
+      }
+    ],
+    "idExterno": "wikidata-Q138843993",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Southeast Asian Horror Leads Mockingbird Pictures’ Diverse Slate at Hong Kong FilMart (Exclusive) - IMDb",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE50bEdaRUVFaVVZMTVYSGwyUnpQMVlWNUZmNVFQNzVNU2xyQ2t5OVE2SUp0dWIzcEVneFphdE9LbzA1MDM1VUFkbHpZUGk1U2w5NGpZbm1rTGhnOXp2Y2NlcUV0eUc?oc=5",
+        "fonte": "IMDb",
+        "publicadaEmISO": "2026-08-01T19:04:09.000Z"
+      },
+      {
+        "titulo": "Cidade Maldita (1980) - Boca do Inferno",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBoZll1ekw5blJOc3VoSlB2d1pOMUVoUDlwNmljNHlqMFZyUUJmdEJtRlE5aVk1MllRbFowRnZlUjFwQ3hpT2R3RGh0bHNCVHRvOVBzVjNyLTZJNy1JaVh0SHR3aGlRT3ZjTVM3a1AxOTc4bGhn?oc=5",
+        "fonte": "Boca do Inferno",
+        "publicadaEmISO": "2022-10-29T07:00:00.000Z"
+      },
+      {
+        "titulo": "O Silêncio (2019) - Boca do Inferno",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB0RkVPbmotZEZsbU41M1JGVzdHY2NwZmt0LTl2ZWFTNC1iYjc0RERNRFpQbDd0NDFTN2doM2NTR1U2OFUxdXNfNGI0NVdaeXZIVk1RQS1LTXRmWlJWUmY0bXRlZ01maDZFa0N5NlZKTQ?oc=5",
+        "fonte": "Boca do Inferno",
+        "publicadaEmISO": "2019-05-05T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q137686379",
+    "titulo": "Q137686379",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q137686379"
+      }
+    ],
+    "idExterno": "wikidata-Q137686379",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": []
+  },
+  {
+    "id": "sug-wikidata-Q139496302",
+    "titulo": "Kara",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139496302"
+      }
+    ],
+    "idExterno": "wikidata-Q139496302",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "‘Supergirl’: conheça ‘Mulher do Amanhã’, HQ que serviu de inspiração para o filme da Garota de Aço - Ingresso.com",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVXJPei1La29GZ25iVHNNemhmay04ekFHS19TQWFEcVBLZE92eUlwYTY0ZXpOdDhZXy03YWZWMVJpalBQU2N6VVkzX1UtMVpVYmdrY1FwNXBNU3dGMzZvWW1OeUdsaVRtb0VRWENTX1JxZDZaVWVDR3NBLWJtU2hFWVc0c3VzNmRIWS01c0ppc0lSZVM4NTFGcGNKWUxaaEhjVkg5cg?oc=5",
+        "fonte": "Ingresso.com",
+        "publicadaEmISO": "2026-06-26T07:00:00.000Z"
+      },
+      {
+        "titulo": "Supergirl: trailer final mostra o verdadeiro poder de Kara Zor-El - TudoCelular.com",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZWhxa2lBVG1GaExqVlcxc1NkbnpNTEVuWDZhUEJrR2s1b0NpbFhtazd4cFZXM1BCbmYzWGJvSDg0YmFmNVBFMXBqSTI4aXFSajFQamJNRjlEQS1FS2g2WDBiSk5ZQnNJdHdMQ3pHRXI3NC1lZGZjVk9kbDRnWUstc0JfNmphODJibUJuZUZRZGJjUUtSRE94end6dFllUXAwbkd2Yg?oc=5",
+        "fonte": "TudoCelular.com",
+        "publicadaEmISO": "2026-06-03T07:00:00.000Z"
+      },
+      {
+        "titulo": "Supergirl | Kara Zor-El precisa salvar Krypto no novo trailer do filme do DCU — assista - Cinema com Rapadura",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOG83eHhiOW8tel9ETGdrdW03RHRqZWNqS3gyY05sUGZaX2hDMmVJaWFnUEpTcVNpSTY1WHdHd2VJYno1NjhwRlFIQXhyT2JKWk9McUZlZDdtMnVlY3NpaDFvM2ZXV0o4QkpXNGUycFZOLUJlaUFDM0NQeGVLVGNHV1A2ai1CcmJ6THNOVk1hcnIxLXYzN3NQNmFXWG55Q05ncEFVS205TG45bHVKLTVzUXdOWHg2a0hZOUY2TEk5RXRrVzVOR25hbFR2bXAwQQ?oc=5",
+        "fonte": "Cinema com Rapadura",
+        "publicadaEmISO": "2026-03-31T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q139584110",
+    "titulo": "Kairos",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139584110"
+      }
+    ],
+    "idExterno": "wikidata-Q139584110",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Congresso Kairós reúne fiéis da Renovação Carismática em Petrolina - G1",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQVUd3VzlNbG9uOE9vTTM5aVB6M1VKRzJQLTVEQTIycmdQSU1BOXp5bzJQYkhmWndnZDN6ZkIyNVlzeTFua0JwbGd0cFY1dnBfd1FITUxCdHdEZjhGNmtfc1ZmUzlhZmxPNjdDOE9LTWxVZlFmNXhMY0pmMWtoYmx1UUwxOUdrZHRaMUdKT1l2c2RxQXBlUUVNNEc2T29BdVVSQm9qSTJMYXBZNFM3UnRiZEdPSExQMmNGcXUwb1NNcTdrZkxQV0tXOHdIRE82c29NZkFDSVUyUTZUdG50OUJxTEhsVdIB8gFBVV95cUxPVlhEUGxLbmVNRm55bFVIUWlZYXByUm51LWZLV0hnVjMyM21URXg0WmRNcmZ0dkRxZkNGazNtYlBFSTBLNmt5R0xnZ3lHWjl0bjJjUWlNckhSc3VvOUdVbFFFMVNCdF9VelFRUFY5TElSWG0wenhCN0FROTdrbmhudERGdEVvckx3aTFhMlpyOHBrLXBFZ3FweThDQU9HR1ZjOTFmd1p6Mm1RRGh4TDkwd2d2S2ZmMGxHNXlCOHhmN0VfWWlRN0hfVVI4bTlvN3hEMGNwY0E0WVdYU1lPQ1dkMk1qZG9LYnU2MmF2MHl4RkZmUQ?oc=5",
+        "fonte": "G1",
+        "publicadaEmISO": "2026-07-04T07:00:00.000Z"
+      },
+      {
+        "titulo": "A mitologia que inspirou filme do reencontro do BTS - Rolling Stone Brasil",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbzZvZDFLYy1tTXpibDJ4Mm4wcXhoR2hmMXdqN2Zza09kVWlvYW1PSUQ1RHNXMjlKWHRhVjhBUkVXRlBzQW5BUHAzLU9lWHNjUzFKejVuR2c4cmRWWHJZaV96V3ROWFU2ZldEYlNybU5MblAwM3JYZWdtcDRHOUszbE5kNjUwaGhEM01tb0RkVUE?oc=5",
+        "fonte": "Rolling Stone Brasil",
+        "publicadaEmISO": "2026-03-25T07:00:00.000Z"
+      },
+      {
+        "titulo": "Kairos (2019) ⭐ 6.2 | Drama - IMDb",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE14RTZDZkI1MVZZRmRpZExfazlEWGJWMGcyclY5bDNpb0JkZmxKLTc0MUVTcy1ZcXByX2M3VW9HV3RIQXRjcFoydXFPWXZxcWxXOVE?oc=5",
+        "fonte": "IMDb",
+        "publicadaEmISO": "2024-12-13T11:33:55.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q139592698",
+    "titulo": "The Warmth of Dance",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139592698"
+      }
+    ],
+    "idExterno": "wikidata-Q139592698",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139679997",
+    "titulo": "Dear You",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "imagemUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%BB%99%E9%98%BF%E5%AC%B7%E7%9A%84%E6%83%85%E4%B9%A6.png",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139679997"
+      }
+    ],
+    "idExterno": "wikidata-Q139679997",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q140078860",
+    "titulo": "Zico, O Samurai de Quintino",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140078860"
+      }
+    ],
+    "idExterno": "wikidata-Q140078860",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q140360595",
+    "titulo": "Blood Curse",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140360595"
+      }
+    ],
+    "idExterno": "wikidata-Q140360595",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q137396843",
+    "titulo": "Everybody To Kenmure Street",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q137396843"
+      }
+    ],
+    "idExterno": "wikidata-Q137396843",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138755498",
+    "titulo": "A Balcony in Limoges",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-29T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138755498"
+      }
+    ],
+    "idExterno": "wikidata-Q138755498",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139492491",
+    "titulo": "The Silent Run",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-29T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139492491"
+      }
+    ],
+    "idExterno": "wikidata-Q139492491",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139571144",
+    "titulo": "Sauvons les meubles",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-29T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139571144"
+      }
+    ],
+    "idExterno": "wikidata-Q139571144",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q140373924",
+    "titulo": "Who You Picking? F1TV",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-29T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140373924"
+      }
+    ],
+    "idExterno": "wikidata-Q140373924",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q3549652",
+    "titulo": "A Crazy Night",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-28T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q3549652"
+      }
+    ],
+    "idExterno": "wikidata-Q3549652",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q59644269",
+    "titulo": "Which of the Nine?",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-28T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q59644269"
+      }
+    ],
+    "idExterno": "wikidata-Q59644269",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139547616",
+    "titulo": "The Step Daddy",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-28T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139547616"
+      }
+    ],
+    "idExterno": "wikidata-Q139547616",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q140158827",
+    "titulo": "Q140158827",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-28T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140158827"
+      }
+    ],
+    "idExterno": "wikidata-Q140158827",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q117830073",
+    "titulo": "Mortal Kombat II",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-27T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q117830073"
+      }
+    ],
+    "idExterno": "wikidata-Q117830073",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q135579925",
+    "titulo": "Q135579925",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-26T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q135579925"
+      }
+    ],
+    "idExterno": "wikidata-Q135579925",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138843691",
+    "titulo": "Cold War 1994",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-26T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138843691"
+      }
+    ],
+    "idExterno": "wikidata-Q138843691",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139807357",
+    "titulo": "Swapna Sundari",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-26T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139807357"
+      }
+    ],
+    "idExterno": "wikidata-Q139807357",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139547630",
+    "titulo": "Casa Grande",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-25T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139547630"
+      }
+    ],
+    "idExterno": "wikidata-Q139547630",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q131290710",
+    "titulo": "Over Your Dead Body",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q131290710"
+      }
+    ],
+    "idExterno": "wikidata-Q131290710",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q131506100",
+    "titulo": "Omaha",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q131506100"
+      }
+    ],
+    "idExterno": "wikidata-Q131506100",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q132672651",
+    "titulo": "Apex (filme)",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q132672651"
+      }
+    ],
+    "idExterno": "wikidata-Q132672651",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138326461",
+    "titulo": "Dirty Hands",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138326461"
+      }
+    ],
+    "idExterno": "wikidata-Q138326461",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138808930",
+    "titulo": "Blood Moon Rite 8",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138808930"
+      }
+    ],
+    "idExterno": "wikidata-Q138808930",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q137832534",
+    "titulo": "Nina Roza",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q137832534"
+      }
+    ],
+    "idExterno": "wikidata-Q137832534",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138033538",
+    "titulo": "Kraken. The Black Book of Hours",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138033538"
+      }
+    ],
+    "idExterno": "wikidata-Q138033538",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139382106",
+    "titulo": "Behrupiyo",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139382106"
+      }
+    ],
+    "idExterno": "wikidata-Q139382106",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139525809",
+    "titulo": "The Wolf and the Lamb",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139525809"
+      }
+    ],
+    "idExterno": "wikidata-Q139525809",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139573821",
+    "titulo": "Clouds Move with Great Speed",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139573821"
+      }
+    ],
+    "idExterno": "wikidata-Q139573821",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139862589",
+    "titulo": "Love on a Tightrope",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139862589"
+      }
+    ],
+    "idExterno": "wikidata-Q139862589",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139719116",
+    "titulo": "Trum So",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139719116"
+      }
+    ],
+    "idExterno": "wikidata-Q139719116",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q124806421",
+    "titulo": "Super Mario Galaxy: O Filme",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q124806421"
+      }
+    ],
+    "idExterno": "wikidata-Q124806421",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q124353890",
+    "titulo": "Four Mothers",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q124353890"
+      }
+    ],
+    "idExterno": "wikidata-Q124353890",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q127324468",
+    "titulo": "Fuze",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q127324468"
+      }
+    ],
+    "idExterno": "wikidata-Q127324468",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q125422670",
+    "titulo": "Who Let the Dog Bite?",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q125422670"
+      }
+    ],
+    "idExterno": "wikidata-Q125422670",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q130284179",
+    "titulo": "Valor Sentimental",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q130284179"
+      }
+    ],
+    "idExterno": "wikidata-Q130284179",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q131139556",
+    "titulo": "The Little Sister",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q131139556"
+      }
+    ],
+    "idExterno": "wikidata-Q131139556",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q131782650",
+    "titulo": "Eagles of the Republic",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q131782650"
+      }
+    ],
+    "idExterno": "wikidata-Q131782650",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q135114584",
+    "titulo": "Class Reunion",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q135114584"
+      }
+    ],
+    "idExterno": "wikidata-Q135114584",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q134246490",
+    "titulo": "Um Pai em Apuros",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q134246490"
+      }
+    ],
+    "idExterno": "wikidata-Q134246490",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q134456626",
+    "titulo": "Love Me Tender",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q134456626"
+      }
+    ],
+    "idExterno": "wikidata-Q134456626",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138751903",
+    "titulo": "Q138751903",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138751903"
+      }
+    ],
+    "idExterno": "wikidata-Q138751903",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138786124",
+    "titulo": "Wir Erben",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138786124"
+      }
+    ],
+    "idExterno": "wikidata-Q138786124",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138835073",
+    "titulo": "The Desert Child",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138835073"
+      }
+    ],
+    "idExterno": "wikidata-Q138835073",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139525796",
+    "titulo": "Antidiva: The Carole Pope Confessions",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139525796"
+      }
+    ],
+    "idExterno": "wikidata-Q139525796",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q116677364",
+    "titulo": "Michael",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q116677364"
+      }
+    ],
+    "idExterno": "wikidata-Q116677364",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q134457176",
+    "titulo": "Drunken Noodles",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q134457176"
+      }
+    ],
+    "idExterno": "wikidata-Q134457176",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138795776",
+    "titulo": "A Fire There",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138795776"
+      }
+    ],
+    "idExterno": "wikidata-Q138795776",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138013977",
+    "titulo": "In a Whisper",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138013977"
+      }
+    ],
+    "idExterno": "wikidata-Q138013977",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139386982",
+    "titulo": "Q139386982",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139386982"
+      }
+    ],
+    "idExterno": "wikidata-Q139386982",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139388783",
+    "titulo": "The Con Artist",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139388783"
+      }
+    ],
+    "idExterno": "wikidata-Q139388783",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139393712",
+    "titulo": "Q139393712",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139393712"
+      }
+    ],
+    "idExterno": "wikidata-Q139393712",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139502219",
+    "titulo": "Orangutan",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139502219"
+      }
+    ],
+    "idExterno": "wikidata-Q139502219",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139591664",
+    "titulo": "Café y comando",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "imagemUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Poster%20cafeycomando.png",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139591664"
+      }
+    ],
+    "idExterno": "wikidata-Q139591664",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q140482918",
+    "titulo": "Q140482918",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140482918"
+      }
+    ],
+    "idExterno": "wikidata-Q140482918",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q136945628",
+    "titulo": "The Doll",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q136945628"
+      }
+    ],
+    "idExterno": "wikidata-Q136945628",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q131011104",
+    "titulo": "Killhouse",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-21T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q131011104"
+      }
+    ],
+    "idExterno": "wikidata-Q131011104",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139573777",
+    "titulo": "The Illusion of a Quiet Night",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-21T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139573777"
+      }
+    ],
+    "idExterno": "wikidata-Q139573777",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q134611972",
+    "titulo": "O Diabo Veste Prada 2",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-20T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q134611972"
+      }
+    ],
+    "idExterno": "wikidata-Q134611972",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139382827",
+    "titulo": "Q139382827",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-20T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139382827"
+      }
+    ],
+    "idExterno": "wikidata-Q139382827",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q140695988",
+    "titulo": "Q140695988",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-19T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140695988"
+      }
+    ],
+    "idExterno": "wikidata-Q140695988",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138497911",
+    "titulo": "The Candy World Movie",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-19T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138497911"
+      }
+    ],
+    "idExterno": "wikidata-Q138497911",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139569998",
+    "titulo": "Detective Jia an: Flame of Score",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-19T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139569998"
+      }
+    ],
+    "idExterno": "wikidata-Q139569998",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q28730465",
+    "titulo": "A Munkászubbony",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q28730465"
+      }
+    ],
+    "idExterno": "wikidata-Q28730465",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q120735817",
+    "titulo": "Mother Mary",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q120735817"
+      }
+    ],
+    "idExterno": "wikidata-Q120735817",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q131926269",
+    "titulo": "Mad Bills to Pay",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q131926269"
+      }
+    ],
+    "idExterno": "wikidata-Q131926269",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q133505340",
+    "titulo": "Lee Cronin's The Mummy",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q133505340"
+      }
+    ],
+    "idExterno": "wikidata-Q133505340",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q133833407",
+    "titulo": "Brothers Under Fire",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q133833407"
+      }
+    ],
+    "idExterno": "wikidata-Q133833407",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q136187174",
+    "titulo": "Bhooth Bangla",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q136187174"
+      }
+    ],
+    "idExterno": "wikidata-Q136187174",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q136266306",
+    "titulo": "Thimmarajupalli TV",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q136266306"
+      }
+    ],
+    "idExterno": "wikidata-Q136266306",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q136458718",
+    "titulo": "Q136458718",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q136458718"
+      }
+    ],
+    "idExterno": "wikidata-Q136458718",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138566602",
+    "titulo": "Roommates",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138566602"
+      }
+    ],
+    "idExterno": "wikidata-Q138566602",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138589517",
+    "titulo": "Lorne",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138589517"
+      }
+    ],
+    "idExterno": "wikidata-Q138589517",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q138835565",
+    "titulo": "Hive",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138835565"
+      }
+    ],
+    "idExterno": "wikidata-Q138835565",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139042785",
+    "titulo": "Mabel",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139042785"
+      }
+    ],
+    "idExterno": "wikidata-Q139042785",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139327777",
+    "titulo": "Hold to Death: Hand in Hand",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139327777"
+      }
+    ],
+    "idExterno": "wikidata-Q139327777",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139374441",
+    "titulo": "Busboys",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139374441"
+      }
+    ],
+    "idExterno": "wikidata-Q139374441",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q137176843",
+    "titulo": "The Quiet Beekeper",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q137176843"
+      }
+    ],
+    "idExterno": "wikidata-Q137176843",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q137570236",
+    "titulo": "Bindusagar",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q137570236"
+      }
+    ],
+    "idExterno": "wikidata-Q137570236",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q132456673",
+    "titulo": "Goat",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q132456673"
+      }
+    ],
+    "idExterno": "wikidata-Q132456673",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q139041324",
+    "titulo": "Q139041324",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-04-17T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139041324"
+      }
+    ],
+    "idExterno": "wikidata-Q139041324",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-90929",
+    "titulo": "Morning Call",
+    "descricao": "Morning Call, anchored by Morgan Brennan, delivers the essential market intelligence that drives the trading day ahead. The program captures breaking business news as it unfolds and tracks pre‑market equity moves, commodity swings, U.S. futures, and overnight action across global markets.",
+    "categoria": "series",
+    "dataLancamentoISO": "2026-03-23T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/618/1546715.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/90929/morning-call"
+      }
+    ],
+    "idExterno": "tvmaze-90929",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-88879",
+    "titulo": "TODAY with Jenna & Sheinelle",
+    "descricao": "America's feel-good morning show with big stars and sweet surprises; Jenna Bush Hager and Sheinelle Jones host an hour of heartfelt connection, inspirational stories, fun and laughs.",
+    "categoria": "series",
+    "dataLancamentoISO": "2026-01-12T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/608/1520440.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/88879/today-with-jenna-sheinelle"
+      }
+    ],
+    "idExterno": "tvmaze-88879",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-87855",
+    "titulo": "The Story Is with Elex Michaelson",
+    "descricao": "The Story Is will feature live nightly panels and debates on set featuring a range of voices including attorneys Gloria Allred and Areva Martin, conservative talk radio hosts Larry Elder and Jennifer Horn, progressive podcast host Brian Tyler Cohen, former California GOP chair Jessica Millan Patters",
+    "categoria": "series",
+    "dataLancamentoISO": "2025-10-27T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536142.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/87855/the-story-is-with-elex-michaelson"
+      }
+    ],
+    "idExterno": "tvmaze-87855",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-86410",
+    "titulo": "Wake Up America Early",
+    "descricao": "Wake up to reliable reporting that delivers the essential facts you need to start your day informed, along with expert commentary and thoughtful analysis. Get an early look at the top stories shaping national and global conversations. Whether it's politics, business, culture, or breaking news, you'l",
+    "categoria": "series",
+    "dataLancamentoISO": "2025-08-05T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/86410/wake-up-america-early"
+      }
+    ],
+    "idExterno": "tvmaze-86410",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-85938",
+    "titulo": "Bloomberg The Opening Trade",
+    "descricao": "Everything you need to know as markets open across Europe. With analysis you won't find anywhere else, we break down the biggest stories of the day and speak to top guests who have skin in the game. Hosted by Anna Edwards, Guy Johnson and Kriti Gupta.",
+    "categoria": "series",
+    "dataLancamentoISO": "2024-07-01T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/578/1445883.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/85938/bloomberg-the-opening-trade"
+      }
+    ],
+    "idExterno": "tvmaze-85938",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-76916",
+    "titulo": "National Report",
+    "descricao": "National Report with Shaun Kraisman and Emma Rechenberg for live breaking news from NY and Washington, on politics, health, finance, and lifestyle that impact you.",
+    "categoria": "series",
+    "dataLancamentoISO": "2024-01-01T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/518/1297264.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/76916/national-report"
+      }
+    ],
+    "idExterno": "tvmaze-76916",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-76216",
+    "titulo": "ABC News Live First",
+    "descricao": "ABC News Live First will bring streaming viewers the latest headlines, compelling stories, interviews and roundtable discussions.",
+    "categoria": "series",
+    "dataLancamentoISO": "2024-01-01T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/605/1514714.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/76216/abc-news-live-first"
+      }
+    ],
+    "idExterno": "tvmaze-76216",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-77453",
+    "titulo": "CBS News 24/7",
+    "descricao": "Live news and top stories on CBS News 24/7.",
+    "categoria": "series",
+    "dataLancamentoISO": "2024-01-01T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/77453/cbs-news-247"
+      }
+    ],
+    "idExterno": "tvmaze-77453",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-76217",
+    "titulo": "ABC News Live",
+    "descricao": "ABC News Live will bring streaming viewers the latest headlines, compelling stories, interviews and roundtable discussions.",
+    "categoria": "series",
+    "dataLancamentoISO": "2024-01-01T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/514/1286715.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/76217/abc-news-live"
+      }
+    ],
+    "idExterno": "tvmaze-76217",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-71790",
+    "titulo": "CNN News Central (PM)",
+    "descricao": "News from around the world with Brianna Keilar and Boris Sanchez.",
+    "categoria": "series",
+    "dataLancamentoISO": "2023-09-27T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/485/1213494.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/71790/cnn-news-central-pm"
+      }
+    ],
+    "idExterno": "tvmaze-71790",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-84705",
+    "titulo": "Bloomberg Brief",
+    "descricao": "Delivers the market news, data and analysis you need to set your agenda.",
+    "categoria": "series",
+    "dataLancamentoISO": "2023-09-18T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/84705/bloomberg-brief"
+      }
+    ],
+    "idExterno": "tvmaze-84705",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-76885",
+    "titulo": "NewsNation Live with Nichole Berlie",
+    "descricao": "The day's top news headlines with reports from correspondents around the country.",
+    "categoria": "series",
+    "dataLancamentoISO": "2023-04-24T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/519/1297795.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/76885/newsnation-live-with-nichole-berlie"
+      }
+    ],
+    "idExterno": "tvmaze-76885",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-67443",
+    "titulo": "CNN News Central",
+    "descricao": "Anchored by John Berman, Kate Bolduan and Sara Sidner, CNN News Central is the core hub of the network's best-in-class newsgathering operation during the day, bringing stories to viewers in real time, while offering perspective and context to key issues. Modeled after CNN's special election programm",
+    "categoria": "series",
+    "dataLancamentoISO": "2023-04-03T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/454/1137080.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/67443/cnn-news-central"
+      }
+    ],
+    "idExterno": "tvmaze-67443",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-76779",
+    "titulo": "The Big Money Show",
+    "descricao": "Taylor Riggs, Brian Brenberg and Jackie DeAngelis host an informative and fast-paced hour filled with business topics that impact everyone from Wall Street to the average person.",
+    "categoria": "series",
+    "dataLancamentoISO": "2023-01-23T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536233.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/76779/the-big-money-show"
+      }
+    ],
+    "idExterno": "tvmaze-76779",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-76884",
+    "titulo": "NewsNation Live with Marni Hughes",
+    "descricao": "NewsNation Live with Marni Hughes brings you a fast-paced look at the latest from the border to Main Street to the White House and around the globe.",
+    "categoria": "series",
+    "dataLancamentoISO": "2022-09-19T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/519/1297796.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/76884/newsnation-live-with-marni-hughes"
+      }
+    ],
+    "idExterno": "tvmaze-76884",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-73192",
+    "titulo": "NBC News Daily",
+    "descricao": "NBC News provides viewers with up-to-the-minute national and international news.",
+    "categoria": "series",
+    "dataLancamentoISO": "2022-09-12T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/497/1243761.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/73192/nbc-news-daily"
+      }
+    ],
+    "idExterno": "tvmaze-73192",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-62742",
+    "titulo": "Sleeping with a Killer",
+    "descricao": "Follows people who have tragic endings at the hands of husbands, wives, former friends, and lovers.",
+    "categoria": "series",
+    "dataLancamentoISO": "2022-06-06T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/413/1034954.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/62742/sleeping-with-a-killer"
+      }
+    ],
+    "idExterno": "tvmaze-62742",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-86122",
+    "titulo": "FOX Weather First",
+    "descricao": "Waking up at 5 am to the first live national forecast of the day; all the latest weather news and everything one needs to prepare for the day ahead.",
+    "categoria": "series",
+    "dataLancamentoISO": "2021-10-25T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/86122/fox-weather-first"
+      }
+    ],
+    "idExterno": "tvmaze-86122",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-76534",
+    "titulo": "Morning in America",
+    "descricao": "Morning in America is NewsNation's live national morning newscast hosted by Markie Martin. ",
+    "categoria": "series",
+    "dataLancamentoISO": "2021-09-27T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/519/1297794.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/76534/morning-in-america"
+      }
+    ],
+    "idExterno": "tvmaze-76534",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-66084",
+    "titulo": "CBS Mornings",
+    "descricao": "CBS Mornings offers a thoughtful, substantive and insightful source of news and information to a daily audience of 3 million viewers. The Emmy Award-winning broadcast presents a mix of daily news, coverage of developing stories of national and global significance, and interviews with leading figures",
+    "categoria": "series",
+    "dataLancamentoISO": "2021-09-07T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/605/1514144.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/66084/cbs-mornings"
+      }
+    ],
+    "idExterno": "tvmaze-66084",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-75842",
+    "titulo": "The Faulkner Focus",
+    "descricao": "Emmy-winning journalist Harris Faulkner provides the latest news driving the day with insightful analysis and interviews with top newsmakers.",
+    "categoria": "series",
+    "dataLancamentoISO": "2021-01-18T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536204.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/75842/the-faulkner-focus"
+      }
+    ],
+    "idExterno": "tvmaze-75842",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-75854",
+    "titulo": "America Reports",
+    "descricao": "A look at the latest news and headlines with Sandra Smith and John Roberts",
+    "categoria": "series",
+    "dataLancamentoISO": "2021-01-18T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536216.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/75854/america-reports"
+      }
+    ],
+    "idExterno": "tvmaze-75854",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-76913",
+    "titulo": "Wake Up America",
+    "descricao": "Start your day and weekend with real news and analysis from Rob Finnerty, Michael Grimm &amp; Sarah Williamson and team.",
+    "categoria": "series",
+    "dataLancamentoISO": "2020-11-09T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/522/1306601.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/76913/wake-up-america"
+      }
+    ],
+    "idExterno": "tvmaze-76913",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-76967",
+    "titulo": "Bianca Across the Nation",
+    "descricao": "Bianca de la Garza tackles the big news from D.C., N.Y., across America, and around the world!",
+    "categoria": "series",
+    "dataLancamentoISO": "2020-09-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/76967/bianca-across-the-nation"
+      }
+    ],
+    "idExterno": "tvmaze-76967",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-72930",
+    "titulo": "GMA3",
+    "descricao": "GMA3 is a news, health, lifestyle and shopping program.",
+    "categoria": "series",
+    "dataLancamentoISO": "2020-06-15T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/586/1465552.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/72930/gma3"
+      }
+    ],
+    "idExterno": "tvmaze-72930",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-77766",
+    "titulo": "The Exchange",
+    "descricao": "Anchor Kelly Evans reports on the most important stories to today's markets and investors.",
+    "categoria": "series",
+    "dataLancamentoISO": "2019-01-07T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/579/1447579.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/77766/the-exchange"
+      }
+    ],
+    "idExterno": "tvmaze-77766",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-72466",
+    "titulo": "Today 3rd Hour",
+    "descricao": "A news program intended to inform, entertain, inspire and set the agenda each morning. Each daily live broadcast provides current domestic and international news, weather reports, and interviews with newsmakers from the worlds of politics, business, media, entertainment and sports.",
+    "categoria": "series",
+    "dataLancamentoISO": "2018-10-29T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/608/1520443.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/72466/today-3rd-hour"
+      }
+    ],
+    "idExterno": "tvmaze-72466",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-21738",
+    "titulo": "Good Morning Football",
+    "descricao": "Prior to the start of the 2016 NFL regular season, NFL Network has announced a new daily morning show, Good Morning Football, premiering Monday, August 1. Hosted by Kay Adams, Nate Burleson, Peter Schrager and Kyle Brandt, and Executive Produced by Michael Davies, Good Morning Football airs live Mon",
+    "categoria": "series",
+    "dataLancamentoISO": "2016-08-01T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/78/195574.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/21738/good-morning-football"
+      }
+    ],
+    "idExterno": "tvmaze-21738",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-15680",
+    "titulo": "The Pulse",
+    "descricao": "Francine Lacqua provides commentary and analysis on the developing stories from around Europe along with a look-ahead to what's likely to dominate the US business agenda.",
+    "categoria": "series",
+    "dataLancamentoISO": "2015-08-13T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/53/132577.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/15680/the-pulse"
+      }
+    ],
+    "idExterno": "tvmaze-15680",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-71565",
+    "titulo": "Mornings with Maria",
+    "descricao": "Veteran business journalist Maria Bartiromo brings her knowledge of the financial industry to this early show that features a roundtable of rotating industry experts alongside the host. Bartiromo and her guests discuss news stories -- domestic and international -- and other topics that are expected ",
+    "categoria": "series",
+    "dataLancamentoISO": "2015-06-01T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536222.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/71565/mornings-with-maria"
+      }
+    ],
+    "idExterno": "tvmaze-71565",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-18862",
+    "titulo": "Outnumbered",
+    "descricao": "Featuring an ensemble of four female panelists and one rotating male, Outnumbered examines the top news stories as well as the leading pop culture and relationship issues dominating the headlines. FNC's Harris Faulkner, Kayleigh McEnany and Emily Compagno lead the program's coverage, while alternati",
+    "categoria": "series",
+    "dataLancamentoISO": "2014-04-28T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536198.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/18862/outnumbered"
+      }
+    ],
+    "idExterno": "tvmaze-18862",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-73175",
+    "titulo": "Inside Politics",
+    "descricao": "Dana Bash features the top political stories, sourced by the best reporters.",
+    "categoria": "series",
+    "dataLancamentoISO": "2014-02-02T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/510/1275917.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/73175/inside-politics"
+      }
+    ],
+    "idExterno": "tvmaze-73175",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-9697",
+    "titulo": "Bloomberg Daybreak: Europe",
+    "descricao": "Bloomberg Daybreak: Europe covers all the breaking business news and top stories in the lead-up to the opening of the European markets!",
+    "categoria": "series",
+    "dataLancamentoISO": "2012-11-01T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/82/205762.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/9697/bloomberg-daybreak-europe"
+      }
+    ],
+    "idExterno": "tvmaze-9697",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-9966",
+    "titulo": "FOX & Friends First",
+    "descricao": "Kicking off the day, FOX &amp; Friends First delivers all the headlines viewers may have missed overnight, along with a preview of upcoming news events. Presented two hours before FOX &amp; Friends, the first hour of the program is hosted by Todd Piro and Carley Shimkus",
+    "categoria": "series",
+    "dataLancamentoISO": "2012-03-05T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536193.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/9966/fox-friends-first"
+      }
+    ],
+    "idExterno": "tvmaze-9966",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-74888",
+    "titulo": "CNN This Morning",
+    "descricao": "Start your day with Audie Cornish bringing you the latest headlines and analysis.",
+    "categoria": "series",
+    "dataLancamentoISO": "2012-01-02T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536133.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/74888/cnn-this-morning"
+      }
+    ],
+    "idExterno": "tvmaze-74888",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-11890",
+    "titulo": "Fast Money Halftime Report",
+    "descricao": "The hot trades in the market from the floor of the New York Stock Exchange.",
+    "categoria": "series",
+    "dataLancamentoISO": "2010-02-16T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/579/1447577.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/11890/fast-money-halftime-report"
+      }
+    ],
+    "idExterno": "tvmaze-11890",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-10598",
+    "titulo": "Varney & Company",
+    "descricao": "Varney &amp; Company is hosted by veteran business journalist Stuart Varney, noted for his distinctive British accent, hosts this weekday morning program on which he and his guests discuss the implications of political news on the business world, and also how the news of the day affects personal fin",
+    "categoria": "series",
+    "dataLancamentoISO": "2010-01-18T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536223.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/10598/varney-company"
+      }
+    ],
+    "idExterno": "tvmaze-10598",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-14277",
+    "titulo": "Bloomberg Surveillance",
+    "descricao": "Bloomberg Surveillance is presented by Tom Keene, Scarlet Fu and Adam John. The show will bring an insight of business stories from economics, finance and investments.",
+    "categoria": "series",
+    "dataLancamentoISO": "2009-08-17T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/48/121388.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/14277/bloomberg-surveillance"
+      }
+    ],
+    "idExterno": "tvmaze-14277",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-15308",
+    "titulo": "Way Too Early",
+    "descricao": "The fast-paced program brings viewers everything they need to know to start their days--from news and politics to sports and pop culture.",
+    "categoria": "series",
+    "dataLancamentoISO": "2009-07-27T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/619/1549472.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/15308/way-too-early"
+      }
+    ],
+    "idExterno": "tvmaze-15308",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-15309",
+    "titulo": "Morning Joe",
+    "descricao": "On Morning Joe, the hosts Joe Scarborough, Mika Brzezinski, and Willie Geist engage in dynamic discussion about political news and issues important to all Americans. Morning Joe attracts a variety of guests, including top newsmakers, politicians and cultural influencers.",
+    "categoria": "series",
+    "dataLancamentoISO": "2007-04-09T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/619/1549478.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/15309/morning-joe"
+      }
+    ],
+    "idExterno": "tvmaze-15309",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-10093",
+    "titulo": "America's Newsroom",
+    "descricao": "Watch 'America's Newsroom' on Fox News Channel - follow Bill Hemmer and Dana Perino Weekdays 9 a.m. - 11 a.m. ET as they bring you the news that matters to you.",
+    "categoria": "series",
+    "dataLancamentoISO": "2007-02-12T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536195.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/10093/americas-newsroom"
+      }
+    ],
+    "idExterno": "tvmaze-10093",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-9064",
+    "titulo": "Squawk on the Street",
+    "descricao": "Squawk on the Street is headquartered live on the floor of the New York Stock Exchange. We are there when the all-important opening bell rings every day. With our exclusive \"Eye on the Floor\" wireless cameras at the NYSE we take the viewer onto the floor of the exchange, right to the posts where the",
+    "categoria": "series",
+    "dataLancamentoISO": "2005-12-19T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/619/1549333.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/9064/squawk-on-the-street"
+      }
+    ],
+    "idExterno": "tvmaze-9064",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-9073",
+    "titulo": "The Situation Room",
+    "descricao": "The Situation Room with Wolf Blitzer and Pamela Brown: The command center for breaking news, politics and extraordinary reports from around the world.",
+    "categoria": "series",
+    "dataLancamentoISO": "2005-08-08T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536149.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/9073/the-situation-room"
+      }
+    ],
+    "idExterno": "tvmaze-9073",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-9965",
+    "titulo": "FOX & Friends",
+    "descricao": "FOX &amp; Friends is a conservative American early-morning news and opinion talk show on the Fox News Channel. It begins at 6:00 a.m. Eastern Time with the latest Fox News Live headlines and news of the morning and continues with a variety of segments including current events, interviews, updates of",
+    "categoria": "series",
+    "dataLancamentoISO": "1996-10-07T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/614/1536192.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/9965/fox-friends"
+      }
+    ],
+    "idExterno": "tvmaze-9965",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-10562",
+    "titulo": "Squawk Box",
+    "descricao": "Squawk Box is a business news television program that airs at breakfast time on the CNBC network. The program is currently co-hosted by Joe Kernen, Rebecca Quick, and Andrew Ross Sorkin. Since debuting in 1995, the show has spawned a number of versions across CNBC's international channels, many of w",
+    "categoria": "series",
+    "dataLancamentoISO": "1995-10-18T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/619/1549334.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/10562/squawk-box"
+      }
+    ],
+    "idExterno": "tvmaze-10562",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-16699",
+    "titulo": "ABC World News Now",
+    "descricao": "ABC World News Now gives viewers up-to-date information on current events and news from around the world, airing in the overnight hours. Its tone is somewhat lighter than a regular news broadcast, though reports are filed from the usual ABC News correspondents. Weather and pop culture stories round ",
+    "categoria": "series",
+    "dataLancamentoISO": "1992-01-06T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/55/139375.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/16699/abc-world-news-now"
+      }
+    ],
+    "idExterno": "tvmaze-16699",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-806",
+    "titulo": "The Bold and the Beautiful",
+    "descricao": "They created a dynasty where passion rules, they are the Forresters, the first name in Fashion. The Bold and the Beautiful, a world of fashion, glamor and romance. A place where power, money and success are there for the taking in a city where dreams really do come true. Follow the lives and loves o",
+    "categoria": "series",
+    "dataLancamentoISO": "1987-03-23T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/593/1482536.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/806/the-bold-and-the-beautiful"
+      }
+    ],
+    "idExterno": "tvmaze-806",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-8566",
+    "titulo": "Good Morning America",
+    "descricao": "Good Morning America is a two-hour, live program anchored by Robin Roberts, George Stephanopoulos and Michael Strahan. Lara Spencer is the entertainmnt anchor, and Ginger Zee is the chief meteorologist. ",
+    "categoria": "series",
+    "dataLancamentoISO": "1975-11-03T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/449/1122639.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/8566/good-morning-america"
+      }
+    ],
+    "idExterno": "tvmaze-8566",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-4344",
+    "titulo": "The Young and the Restless",
+    "descricao": "The Young and the Restless revolves around the rivalries, romances, hopes and fears of the residents of the fictional Midwestern metropolis, Genoa City. The lives and loves of a wide variety of characters mingle through the generations, dominated by the Newman, Abbott, Chancellor, Baldwin and Winter",
+    "categoria": "series",
+    "dataLancamentoISO": "1973-03-26T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/593/1482522.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/4344/the-young-and-the-restless"
+      }
+    ],
+    "idExterno": "tvmaze-4344",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-10354",
+    "titulo": "The 700 Club",
+    "descricao": "The 700 Club is a talk show featuring guests, news and spiritual stories from a Christian perspective. News stories are often related to Bible passages. Fundamentalist preacher and one-time presidential candidate Pat Robertson hosts this long-running religious show.",
+    "categoria": "series",
+    "dataLancamentoISO": "1966-04-01T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/475/1188585.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/10354/the-700-club"
+      }
+    ],
+    "idExterno": "tvmaze-10354",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-tvmaze-9564",
+    "titulo": "Today",
+    "descricao": "Today is an American news and talk morning television show that airs on NBC. The program debuted on January 14, 1952. It was the first of its genre on American television and in the world, and is the fifth-longest-running American television series.",
+    "categoria": "series",
+    "dataLancamentoISO": "1952-01-14T00:00:00.000Z",
+    "imagemUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/564/1410938.jpg",
+    "linksOficiais": [
+      {
+        "label": "Ver na TVmaze",
+        "url": "https://www.tvmaze.com/shows/9564/today"
+      }
+    ],
+    "idExterno": "tvmaze-9564",
+    "fonte": "tvmaze",
+    "momento": "disponivel"
+  }
+]
