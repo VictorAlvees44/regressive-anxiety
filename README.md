@@ -14,7 +14,6 @@ PWA pessoal e privado para acompanhar estreias de **jogos, filmes e séries** �
 - [Arquitetura](#arquitetura)
 - [Estrutura de pastas](#estrutura-de-pastas)
 - [Como executar](#como-executar)
-- [Como rodar os testes](#como-rodar-os-testes)
 - [Como publicar no GitHub Pages](#como-publicar-no-github-pages)
 - [Como funciona a sincronização automática](#como-funciona-a-sincronização-automática)
 - [Como atualizar as APIs](#como-atualizar-as-apis)
@@ -41,7 +40,6 @@ PWA pessoal e privado para acompanhar estreias de **jogos, filmes e séries** �
 - **Firebase Authentication (Google) + Firestore** — login e dados compartilhados do casal.
 - **Firebase Cloud Messaging + Cloud Functions** — notificações push reais.
 - **vite-plugin-pwa (estratégia `injectManifest`)** — manifesto + service worker próprio (offline + push).
-- **Vitest + Testing Library** — testes automatizados.
 - Hospedagem: **GitHub Pages** (site 100% estático).
 
 O único "backend" de fato é uma única Cloud Function agendada (`functions/`), usada exclusivamente para disparar as notificações push — algo que não é possível fazer de forma confiável só no cliente. Todo o resto (autenticação, dados, hospedagem) continua serverless/estático como no desenho original.
@@ -85,11 +83,10 @@ src/
   styles/         globals.css (tokens de design Tailwind v4)
   types/          tipos centrais do domínio (fonte única de verdade)
   sw.ts           service worker customizado (cache offline + push em segundo plano)
-  test/           setup dos testes automatizados
 scripts/
   sincronizar-dados.mjs   script executado pela GitHub Action diária
 functions/                Cloud Function que envia as notificações push agendadas
-  index.js                função agendada + endpoint HTTP de teste manual
+  index.js                função agendada de notificações
   notificacoes.js         motor de templates (espelha src/data/notificacoes.ts)
 .github/workflows/
   sincronizar-dados.yml   sincronização diária das sugestões
@@ -110,21 +107,6 @@ npm run dev
 ```
 
 O app abre em `http://localhost:5173`. Sem um `.env.local` preenchido, a tela de login não autentica de fato, mas o restante do app funciona no [modo de demonstração](#modo-de-demonstração-sem-firebase-configurado).
-
-## Como rodar os testes
-
-```bash
-npm run test          # roda a suíte uma vez (CI-friendly)
-npm run test:watch    # modo watch, para desenvolvimento
-```
-
-Os testes cobrem principalmente lógica pura (a parte mais valiosa de testar e menos frágil a mudanças visuais):
-
-- `src/lib/utils.test.ts` — `cn`, `formatarData`, `gerarId`.
-- `src/data/notificacoes.test.ts` — motor de geração de mensagens de notificação.
-- `src/hooks/useEventosFiltrados.test.ts` — filtros, ordenação e `useProximosEventos`.
-- `src/hooks/useCountdown.test.ts` — cálculo da contagem regressiva e o hook (com timers falsos).
-- `functions/notificacoes.test.js` — motor de templates do lado da Cloud Function.
 
 ## Como publicar no GitHub Pages
 
@@ -157,7 +139,7 @@ Fluxo completo, do dispositivo até o envio:
 2. **Recebimento em segundo plano** (`src/sw.ts`): o service worker escuta `onBackgroundMessage` e exibe a notificação do sistema, mesmo com o app fechado.
 3. **Envio** (`functions/index.js`): uma Cloud Function agendada roda 1x/dia (09h, horário de Brasília), verifica quais eventos estão a 7, 3 ou 1 dia de distância (ou são hoje), monta a mensagem com `functions/notificacoes.js` (mesmos templates de `src/data/notificacoes.ts`) e envia via `admin.messaging().sendEachForMulticast`. Toda segunda-feira também envia um resumo semanal consolidado. A mesma execução também verifica `dataPreVendaISO` (veja [Pré-venda de ingressos](#pré-venda-de-ingressos-filmes)). Tokens inválidos são removidos automaticamente do Firestore.
 
-Deploy da função: `firebase deploy --only functions` (detalhado no GUIA-DEPLOY.md). Para testar sem esperar o agendamento, use o endpoint HTTP `testarNotificacoes` com um Firebase ID token de uma conta administradora; ele não aceita mais chamadas anônimas.
+Deploy da função: `firebase deploy --only functions` (detalhado no GUIA-DEPLOY.md).
 
 > Nota de arquitetura: notificações push exigem um disparo do lado do servidor em algum ponto — não é possível agendar de forma confiável com o app fechado usando apenas JavaScript no navegador. Por isso esta é a única peça do projeto que roda fora do GitHub Pages (uma Cloud Function do Firebase, plano gratuito Spark/Blaze conforme volume).
 
@@ -187,7 +169,7 @@ Edite `src/data/frases.ts` e adicione novas strings no array da categoria deseja
 
 Edite **os dois** arquivos (mantidos em espelho por serem executados em ambientes diferentes — navegador vs. Cloud Function):
 
-- `src/data/notificacoes.ts` (usado apenas como referência/testes no frontend hoje)
+- `src/data/notificacoes.ts` (referência dos templates usados no frontend)
 - `functions/notificacoes.js` (usado de fato no envio)
 
 Adicione strings com os placeholders `{titulo}` e `{dias}` no array do tipo desejado.
@@ -213,11 +195,11 @@ Tokens de design em `src/styles/globals.css` (`@theme`, Tailwind v4). Tema claro
 - Mantenha `src/types/index.ts` como fonte única de verdade do domínio.
 - UI genérica em `components/ui`; UI de domínio em `components/events`.
 - Toda fonte de dados nova passa por `src/lib/*Repositorio.ts` — nunca acesse `fetch`/Firestore direto em componentes.
-- Rode `npm run test` e `npm run build` antes de abrir um PR.
+- Rode `npm run build` antes de abrir um PR.
 - **Atualize este README a cada mudança relevante de arquitetura** — ele deve sempre refletir o estado real do código.
 
 ## Histórico de mudanças
 
 - **v0.3** — Pré-venda de ingressos para filmes: campo manual `dataPreVendaISO` (não existe API pública para isso — Ingresso.com/Cinemark não expõem essa informação), selo/contagem no `EventCard`, campo condicional no `EventForm` (só aparece para categoria "Filmes"), notificação push própria no dia em que a pré-venda abre (`functions/index.js` + templates dedicados em `src/data/notificacoes.ts` e `functions/notificacoes.js`).
-- **v0.2** — Migração de `localStorage` para Firestore (coleções compartilhadas `eventos`/`listaDesejos`), notificações push reais (FCM + Cloud Function agendada + service worker customizado via `injectManifest`), suíte de testes automatizados (Vitest), guia de deploy passo a passo (`GUIA-DEPLOY.md`).
+- **v0.2** — Migração de `localStorage` para Firestore (coleções compartilhadas `eventos`/`listaDesejos`), notificações push reais (FCM + Cloud Function agendada + service worker customizado via `injectManifest`) e guia de deploy passo a passo (`GUIA-DEPLOY.md`).
 - **v0.1** — Scaffold inicial: React + TypeScript + Vite + Tailwind v4 + Framer Motion, todas as páginas e componentes, autenticação Google, Firestore Security Rules, sincronização diária via GitHub Actions, PWA básico, deploy automático no GitHub Pages.

@@ -14,7 +14,7 @@ function FundoAmbiente() {
 
 export function AppShell() {
   return (
-    <div className="flex min-h-screen w-full gap-4 p-3 sm:p-4">
+    <div className="app-shell flex min-h-[100dvh] w-full gap-4 overflow-x-clip sm:p-4">
       <FundoAmbiente />
       <Sidebar />
       <main className="mx-auto w-full max-w-6xl flex-1 pb-24 sm:pb-6">

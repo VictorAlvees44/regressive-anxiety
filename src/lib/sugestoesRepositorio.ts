@@ -10,7 +10,10 @@ import type { SugestaoLancamento } from "../types";
  */
 export async function listarSugestoes(): Promise<SugestaoLancamento[]> {
   try {
-    const resposta = await fetch("/data/sugestoes.json", { cache: "no-store" });
+    // `BASE_URL` preserva o nome do repositório no GitHub Pages. Usar uma
+    // barra inicial aqui apontava para `github.io/data/...`, fora do app,
+    // e fazia o PWA cair nos três itens de demonstração.
+    const resposta = await fetch(`${import.meta.env.BASE_URL}data/sugestoes.json`, { cache: "no-store" });
     if (resposta.ok) {
       const dados = (await resposta.json()) as SugestaoLancamento[];
       if (dados.length > 0) return dados;

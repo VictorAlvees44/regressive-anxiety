@@ -1,5 +1,4 @@
 const { onSchedule } = require("firebase-functions/v2/scheduler");
-const { onRequest } = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 const admin = require("firebase-admin");
 const { gerarMensagemNotificacao, categoriaParaTipoTemplate, hashString } = require("./notificacoes");
@@ -56,9 +55,7 @@ async function registrarLog(dados) {
 }
 
 /**
- * Lógica principal, extraída em função separada para poder ser
- * reutilizada tanto pela execução agendada quanto pelo endpoint HTTP
- * de teste manual (`testarNotificacoes`).
+ * Lógica principal usada pela execução agendada diária.
  */
 async function executarVerificacaoDeNotificacoes() {
   const agora = new Date();
@@ -130,38 +127,3 @@ exports.verificarNotificacoesDiarias = onSchedule(
     }
   },
 );
-
-/**
- * Endpoint HTTP para disparar a verificação manualmente durante testes.
- * Exige um Firebase ID token de um administrador: sem isso, a URL pública
- * da Cloud Function poderia ser usada para disparar notificações indevidas.
- */
-exports.testarNotificacoes = onRequest(async (req, res) => {
-  try {
-    const cabecalho = req.get("Authorization");
-    const token = cabecalho?.startsWith("Bearer ") ? cabecalho.slice(7) : null;
-    if (!token) {
-      res.status(401).send("Autenticação necessária.");
-      return;
-    }
-
-    let usuario;
-    try {
-      usuario = await admin.auth().verifyIdToken(token);
-    } catch {
-      res.status(401).send("Token inválido ou expirado.");
-      return;
-    }
-    const administradores = ["chavosso16@gmail.com", "gabrielly.gsena@gmail.com"];
-    if (!usuario.email || !administradores.includes(usuario.email.toLowerCase())) {
-      res.status(403).send("Apenas administradores podem disparar notificações.");
-      return;
-    }
-
-    const total = await executarVerificacaoDeNotificacoes();
-    res.status(200).send(`OK: ${total} notificações enviadas.`);
-  } catch (erro) {
-    logger.error(erro);
-    res.status(500).send(`Erro: ${String(erro)}`);
-  }
-});

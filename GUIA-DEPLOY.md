@@ -277,15 +277,13 @@ cd ..
 firebase deploy --only functions
 ```
 
-Esse comando pode levar alguns minutos na primeira vez. Ao final, o terminal mostra os endereços das funções publicadas, algo como:
+Esse comando pode levar alguns minutos na primeira vez. Ao final, o terminal confirma a publicação da função agendada, algo como:
 
 ```
 ✔  functions[verificarNotificacoesDiarias(us-central1)] Successful create operation.
-✔  functions[testarNotificacoes(us-central1)] Successful create operation.
-Function URL (testarNotificacoes): https://us-central1-regressive-anxiety-a1b2c.cloudfunctions.net/testarNotificacoes
 ```
 
-A função `verificarNotificacoesDiarias` roda sozinha, todo dia às 9h (horário de Brasília). A `testarNotificacoes` é um endpoint protegido para teste manual: ela exige um Firebase ID token de uma conta administradora, portanto não deve ser aberta diretamente no navegador.
+A função `verificarNotificacoesDiarias` roda sozinha, todo dia às 9h (horário de Brasília).
 
 ### 8.4 Ativar as notificações no app
 
@@ -501,7 +499,7 @@ No Console do Firebase → Authentication → Settings → "Domínios autorizado
 Confira se as regras do Firestore foram publicadas (`firebase deploy --only firestore:rules`) e se ambos estão logados com os e-mails corretos. Tente atualizar a página (F5) no outro dispositivo.
 
 **"As notificações não chegam."**
-Confirme: (1) plano Blaze ativado, (2) `VITE_FIREBASE_VAPID_KEY` preenchida antes do build, (3) a função foi publicada (`firebase deploy --only functions`), (4) você clicou em "Ativar" no cartão de notificações **depois** do site publicado com a chave VAPID correta, (5) para teste manual, use `testarNotificacoes` apenas com um Firebase ID token de administrador.
+Confirme: (1) plano Blaze ativado, (2) `VITE_FIREBASE_VAPID_KEY` preenchida antes do build, (3) a função foi publicada (`firebase deploy --only functions`) e (4) você clicou em "Ativar" no cartão de notificações **depois** do site publicado com a chave VAPID correta.
 
 **"Mudei o `.env.local` mas o site publicado não refletiu a mudança."**
 `.env.local` só afeta o `npm run dev` local. Para produção, os valores vêm dos **Secrets do GitHub** (passo 11) — atualize-os lá e faça um novo commit/push (ou re-rode a Action manualmente em **Actions → Publicar no GitHub Pages → Run workflow**).
