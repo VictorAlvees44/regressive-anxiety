@@ -61,7 +61,131 @@
     "tipoConteudo": "lancamento"
   },
   {
-    "id": "sug-nintendo-1786929020000-0",
+    "id": "sug-playstation-1787022705000-0",
+    "titulo": "(For Southeast Asia) PlayStation Store: July 2026’s top downloads",
+    "descricao": "PlayStation: It&#8217;s time to see which PS5, PS4, PS VR2, and free-to-play games topped last month&#8217;s download charts in Asia.&#160; In July, EA SPORTS FC 26 and Assassin’s Creed Black Flag Resynced topped Asia PS5 download charts, while Call of Duty: Black Ops II dominated the charts for PS5",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-18T03:11:45.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/17/20260818-top/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/17/20260818-top/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-playstation-1787019754000-1",
+    "titulo": "Phantom Blade Zero State of Play dives deep into combat and the Wulin world",
+    "descricao": "PlayStation: Phantom Blade Zero is set to release on October 29*. In our deep dive gameplay State of Play episode, we share more about the world of Phantom Blade Zero, its gameplay systems, and the involvement of kung fu legend Donnie Yen. We’ve kept some of our deeper gameplay systems under wraps u",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-18T02:22:34.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/17/phantom-blade-zero-state-of-play-dives-deep-into-combat-and-the-wulin-world/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/17/phantom-blade-zero-state-of-play-dives-deep-into-combat-and-the-wulin-world/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1787016418000-0",
+    "titulo": "スマートフォン向けアプリ『Pictonico!』で無料で遊べるミニゲームが増量。",
+    "descricao": "Nintendo: ",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-18T01:26:58.000Z",
+    "plataformas": [
+      "Nintendo"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Nintendo",
+        "url": "https://www.nintendo.com/jp/topics/article/6a26688b-4da9-4b82-8655-94bbe6ebef59"
+      }
+    ],
+    "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/6a26688b-4da9-4b82-8655-94bbe6ebef59",
+    "fonte": "nintendo",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-xbox-1786978800000-0",
+    "titulo": "TCG Card Shop Simulator’s Biggest 1.0 Feature: How to Dominate Tetramon Duel Master",
+    "descricao": "Xbox Wire: TCG Card Shop Simulator puts you behind the counter of your own trading card store. From ordering booster packs, stocking shelves, and cracking open packs of Tetramon cards to sell for profit or keep for your own collection, what started as a solo Game Preview project from OPNeon Games ha",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-17T15:00:00.000Z",
+    "plataformas": [
+      "Xbox Series X|S"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no Xbox Wire",
+        "url": "https://news.xbox.com/en-us/2026/08/17/tcg-card-shop-simulator-tetramon-duel-masters-guide/"
+      }
+    ],
+    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/17/tcg-card-shop-simulator-tetramon-duel-masters-guide/",
+    "fonte": "xbox",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": []
+  },
+  {
+    "id": "sug-playstation-1786968025000-2",
+    "titulo": "New It Happens on PS5 campaign highlights the biggest moments of play",
+    "descricao": "PlayStation: There’s never been a better time to play on PS5. With a lineup of iconic games available now and coming soon, players have plenty of unforgettable experiences to look forward to. From new stories featuring legendary Marvel characters in Marvel’s Wolverine as well as 007 First Light, and",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-17T12:00:25.000Z",
+    "plataformas": [
+      "PlayStation 5"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Abrir no PlayStation",
+        "url": "https://blog.playstation.com/2026/08/17/new-it-happens-on-ps5-campaign-highlights-the-biggest-moments-of-play/"
+      }
+    ],
+    "idExterno": "playstation-https://blog.playstation.com/2026/08/17/new-it-happens-on-ps5-campaign-highlights-the-biggest-moments-of-play/",
+    "fonte": "playstation",
+    "momento": "disponivel",
+    "tipoConteudo": "atualizacao-oficial",
+    "noticias": [
+      {
+        "titulo": "Essential Picks promotion comes to PlayStation Store - PlayStation.Blog",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSlZ3U2hfZnotVkpobW1UYjVWNDU1azBCRjRmNEJYRDJsQlBrU1RfMVZySkd6RkdOclRjTGFFR0x6RWdRZk5VSWJWRmhVQmpIZThWVV95WFJKYkVKMkk1Z2RfVjJSUE1ROURJaVlaeFprVmhxTlE4TVRQcHFyTVQxTG1HS25VRkN3MEl4OW1CYzNxYS1iN1ZPWFlzOA?oc=5",
+        "fonte": "PlayStation.Blog",
+        "publicadaEmISO": "2023-07-05T07:00:00.000Z"
+      },
+      {
+        "titulo": "Cosmic chaos descends upon Fortnite in Chapter 2 Season 7: Invasion - PlayStation.Blog",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZ2pYVGtXWDdOVnNLSWRpelFtYkZHd19IMVQ0XzRlRGVLcDdqN3dsaURvWURxSTg2Rnl2N0lpT05vbUJaOVpsRWJZOGJQZUNSS2lBUVhMN3p3dC1rVFBNZTI0c1FDZ0NGMExPVUVSaVpDTU1HenJ0ZDdaMVhhV2NaYnM0YVROcmZ3bnZTdWlQZ2hWN3NKMmRFTjdfX0ZtWTRCc1VEUkJfMU1QMWM?oc=5",
+        "fonte": "PlayStation.Blog",
+        "publicadaEmISO": "2021-06-08T07:00:00.000Z"
+      },
+      {
+        "titulo": "The Monsters of God of War: Ascension — The Satyr Captain - PlayStation.Blog",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTjRCbDZSbFBPLWRsR0FPZVE0LU80NnpTaV9oaFFWTDBFWVBXd3c1QTFKREFHZm9rWFJtR3drdU1mdUNEMXZLNGlkY3FYVFBFQ1cyTjlpNEVpQTdHZTJ1OHdZdk1aanpZdmgtVEl4Q0ktRzNXNU5GNEJCZ0xhaUFJWk1HSHpGanQ5NFlwWTJ2Qk54UXZjT3gybUNsVQ?oc=5",
+        "fonte": "PlayStation.Blog",
+        "publicadaEmISO": "2012-08-24T07:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-nintendo-1786929020000-1",
     "titulo": "セブン‐イレブンで『スプラトゥーン レイダース』のグッズがもらえるキャンペーンを実施。『スプラトゥーン3』の新作一番くじも発売決定。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -82,7 +206,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1786928423000-1",
+    "id": "sug-nintendo-1786928423000-2",
     "titulo": "Nintendo Switch 2 ソフト『ファイアーエムブレム 万紫千紅』のCMを公開しました。 ※本ソフトの対象年齢は「15歳以上」です。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -103,7 +227,7 @@
     "noticias": []
   },
   {
-    "id": "sug-xbox-1786730400000-0",
+    "id": "sug-xbox-1786730400000-1",
     "titulo": "Whisper of the House Unpacks Cozy Xbox Preorders Today",
     "descricao": "Xbox Wire: Hello, XBOX community! I am Zhicheng, Producer at GD Studio. I work with a small, tight-knit indie team of fewer than ten people who pour our hearts into making warm, meaningful games. Today, I am incredibly excited to announce that my pixel-art cozy game, Whisper of the House, is officia",
     "categoria": "jogos",
@@ -124,7 +248,7 @@
     "noticias": []
   },
   {
-    "id": "sug-playstation-1786726290000-0",
+    "id": "sug-playstation-1786726290000-3",
     "titulo": "Official PlayStation Podcast Episode 545: Walk and Talk",
     "descricao": "PlayStation: Email us at PSPodcast@sony.com! Subscribe via Apple Podcasts, Spotify, or download here Hey, everybody! Sid, Tim, Kristen, and I are back this week to discuss a major milestone for No Man’s Sky, which got its start on PlayStation 4, new content for Ghost of Yōtei, exploring Big Walk, an",
     "categoria": "jogos",
@@ -145,7 +269,7 @@
     "noticias": []
   },
   {
-    "id": "sug-playstation-1786723205000-1",
+    "id": "sug-playstation-1786723205000-4",
     "titulo": "Share of the Week: Big Walk",
     "descricao": "PlayStation: Last week, we asked you to grab some friends and explore the world of Big Walk, available now as a PlayStation Plus Monthly Game, using #PSshare #PSBlog. Here are this week’s highlights: rorottino shares them and some friends standing in a circular window by the sea darc262000 shares tw",
     "categoria": "jogos",
@@ -173,7 +297,7 @@
     ]
   },
   {
-    "id": "sug-xbox-1786716000000-1",
+    "id": "sug-xbox-1786716000000-2",
     "titulo": "Next Week on XBOX: New Games for August 17 to 21",
     "descricao": "Xbox Wire: Welcome to Next Week on XBOX! In this weekly feature we cover all the games coming soon to XBOX Series X&#124;S, XBOX One, XBOX on PC, and Game Pass! Get more details on these upcoming games below and click their profiles for further info (release dates subject to change). Let’s jump in! ",
     "categoria": "jogos",
@@ -201,7 +325,7 @@
     ]
   },
   {
-    "id": "sug-nintendo-1786687372000-2",
+    "id": "sug-nintendo-1786687372000-3",
     "titulo": "「コーポレートIT職種全体説明会」の参加申込締切は8月21日（金）12:00（JST）までです。参加を希望される方は締切までにご応募ください。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -222,7 +346,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1786669502000-3",
+    "id": "sug-nintendo-1786669502000-4",
     "titulo": "【8/17（月）まで】終了迫る、「ニンテンドーeショップ サマーセール」開催中。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -243,7 +367,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1786669443000-4",
+    "id": "sug-nintendo-1786669443000-5",
     "titulo": "ニンテンドーeショップ新作ソフト情報 8/14（金）号。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -264,7 +388,7 @@
     "noticias": []
   },
   {
-    "id": "sug-xbox-1786658400000-2",
+    "id": "sug-xbox-1786658400000-3",
     "titulo": "Skatesterre: Where Classic Arcade Skateboarding Meets a New Generation",
     "descricao": "Xbox Wire: I’m Dieter from Headup, and together with Goon Squad we created Skatesterre, an arcade skateboarding game that takes you back to the golden era of the genre. Today, I will tell you about how the game came to be, why we chose to work with Sterre Meijer on this project, and where the journe",
     "categoria": "jogos",
@@ -285,7 +409,7 @@
     "noticias": []
   },
   {
-    "id": "sug-xbox-1786647600000-3",
+    "id": "sug-xbox-1786647600000-4",
     "titulo": "The Gears of War: E-Day Open Beta is Available Now for Everyone",
     "descricao": "Xbox Wire: The post The Gears of War: E-Day Open Beta is Available Now for Everyone appeared first on XBOX Wire.",
     "categoria": "jogos",
@@ -305,27 +429,27 @@
     "tipoConteudo": "atualizacao-oficial",
     "noticias": [
       {
-        "titulo": "Revelados os controles Xbox de Gears of War: E-Day Limited Edition - games.gg",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeEtHRzJGX1pxVjNxMkdlcHMxa3dYZW1ybDcyRER5MGJSSE1xX2xlcm5JZzFkSjhqTmZpcDNRRktrVTJ4bWR6cUMyTnBXUFBKTHY3b2RwRTBxbld4aGpIOGdoSkZDaG56c3RvV0MwYVA5cGEySG00TFhad21kV1NkQWh5VV9TZXpRUk5wWjFmMzd6X0dldlhoMHJn?oc=5",
-        "fonte": "games.gg",
-        "publicadaEmISO": "2026-08-12T21:28:21.000Z"
-      },
-      {
         "titulo": "XBOX Game Pass anuncia beta aberto de Gears of War: E-Day, Date Everything! e mais - TudoCelular.com",
         "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOU3R3STdtV0REVkNYY05aZ0x6Rk5MNUVET3UySGJaQmMxM3k2X1NXdVRoeXk4SndiZ1ZucGNDOUU5UExma2ZCUWo5SDhBUnV6NXZnOUZJTHlRUlU1d2hKd3lPV1NaaUwwMlYyWTc0SWRBeFBJMXh5YUM0WXJVSWtocEpMdzlMYTdmMFdUbjNJRGxNZkZ1dURGSlFaV2N1cnhPUUc2VWQ1M3NJcDl4c1E?oc=5",
         "fonte": "TudoCelular.com",
         "publicadaEmISO": "2026-08-04T07:00:00.000Z"
       },
       {
-        "titulo": "Xbox Game Pass Update Adds More Games You Can Play Right Now - IMDb",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBsUW5QRHZ6QmZnRlFLSHhZU2E4V3o3TThucDhjLXFwNEE5SUhnMUxlTTNROGVkanFPbFRqU2FDX0E0RGZyZkRFXzNrMDJEMk9jZmtrSllzbFVYeVNtYkdhNGx4eDFfWW8?oc=5",
-        "fonte": "IMDb",
-        "publicadaEmISO": "2026-08-10T21:36:42.000Z"
+        "titulo": "Revelados os controles Xbox de Gears of War: E-Day Limited Edition - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeEtHRzJGX1pxVjNxMkdlcHMxa3dYZW1ybDcyRER5MGJSSE1xX2xlcm5JZzFkSjhqTmZpcDNRRktrVTJ4bWR6cUMyTnBXUFBKTHY3b2RwRTBxbld4aGpIOGdoSkZDaG56c3RvV0MwYVA5cGEySG00TFhad21kV1NkQWh5VV9TZXpRUk5wWjFmMzd6X0dldlhoMHJn?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-12T21:28:21.000Z"
+      },
+      {
+        "titulo": "Requisitos de Gears of War: E-day foram revelados - Insider Gaming",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNd1lfczROQmdROTRzREs4RDRIekwzNmYyV3pWdkI5dS00Z09NLWZDTS11RkVUTWpYMFhwU2x5djR6cTI3Ujl0LTR0cGhCNkFnR3JncW5WV2dzSjVsZXhKdHY0SkFQYkRIWW5ETkE3RHZaUXducmp3NWJmdzBoWE1yYTlSeF9zQQ?oc=5",
+        "fonte": "Insider Gaming",
+        "publicadaEmISO": "2026-06-15T07:00:00.000Z"
       }
     ]
   },
   {
-    "id": "sug-playstation-1786633203000-2",
+    "id": "sug-playstation-1786633203000-5",
     "titulo": "Hands-on report: Marvel’s Wolverine",
     "descricao": "PlayStation: It’s been a big week for fans of Marvel’s Wolverine, starting with the announcement of sharp-looking PS5 hardware and accessories. Now, with just over a month away until its September 15 launch, Insomniac is sharing a deep dive on the game’s story, combat, and exploration thanks to an e",
     "categoria": "jogos",
@@ -365,7 +489,7 @@
     ]
   },
   {
-    "id": "sug-xbox-1786633200000-4",
+    "id": "sug-xbox-1786633200000-5",
     "titulo": "Free Play Days – Gears of War: E-Day Open Beta, Sunderfolk and Asdivine Cross",
     "descricao": "Xbox Wire: Cross paths with adventure with a new Free&#160;Play&#160;Days this weekend! The Gears of War:&#160;E‑Day&#160;online multiplayer beta is open from August 13 at 12pm PT until August 17 at 10am PT, available on XBOX PC and console for players with Xbox Game Pass Essential or higher. Sunder",
     "categoria": "jogos",
@@ -385,12 +509,6 @@
     "tipoConteudo": "atualizacao-oficial",
     "noticias": [
       {
-        "titulo": "Gears of War: E-Day inicia beta aberto com novo modo de 12 jogadores - Última Ficha",
-        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNa1BhSV84ZWh2aFRFNTVtRGkxeG1DQ0VjNXZoVFJOcHFWUC10VnJhNXZmY1VZRTBRazhaRzhtUU9wbHVNTFNOX1JwMm84a2tEbksyMUp6M3BQbHVYZktwU1IzTXNKSTRGMmYyY2tUNUE5dFROYjl6R0dmbFF5cnNWN1J5dw?oc=5",
-        "fonte": "Última Ficha",
-        "publicadaEmISO": "2026-08-13T15:30:08.000Z"
-      },
-      {
         "titulo": "Dias para Jogar de Graça: beta aberto de Gears of War: E-Day e mais - XBOX Wire",
         "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQazlZeUlkVzQtd1pFNDNFZjdOeWpCVWd0WTNReGQtTmJaV3NvWUNzR0ZaMlo3dzluMDRLRk1vX09aRFk0OTJyNmNwNmJCZExCWFFvTzVBLWR3eW1IR1dhcXlrdUxGcnI1eEFZOTEyYVpGVWxZa1FfY21veHByYVlhUmdvemhRQk80T3pMdUJOUG1vVHd3dmszSzRRRmM5Q3hSNFd6RFFzUVE?oc=5",
         "fonte": "XBOX Wire",
@@ -401,11 +519,17 @@
         "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOa1lFMmYxV1dpQ0wyVWV2OG1IMG9pU05oU2lVcnhlalRlWmZ6czFLRVBrcHBfWUg3T3RXTURrY2lRRHZkZ2ozd3F1a1IzbFhTd2YydUtoVFRyejdzc0M4X0JEQmJTaVpHc0xlLWJiU1RmOEFXWGVVUXlXUU42Z2JJaHJOTkxueXhXYjlWLU1CTU1naFhCeEFpdDlYQXdwaUFHLWVyNXM5V3FYOHEzRWc4cU5pYlk?oc=5",
         "fonte": "Adrenaline",
         "publicadaEmISO": "2026-08-13T16:20:46.000Z"
+      },
+      {
+        "titulo": "Xbox Game Pass oferece acesso gratuito a Gears of War: E-Day, Sunderfolk e Asdivine Cross - Mix Vale",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYWlOLThpY3RQWjJpbzVqM2tEUkdNb1hZZHpGWUpzNlFzVWZzSnQxdEVTaVUyTWRrZG1KTXltSEszOUU5M2owNnZ3SkFLaWdLNGJ6LW1UQXlkZ3gwMXotbDE2cy1QaDlsMFlydnlzV3kybVpBY01NSXVmMTE1MGEyQVhaa3JTc2VuVUhYamN6NVlsT2d2M2lYN2pEVzNkV3k0T2M4S0lrUlJJYmRBMDRVWUtnNGpMam91cEZQREo5bjNzNXRYZG81eFF30gHKAUFVX3lxTE1haU4tOGljdFBaMmlvNWoza0RSR01vWFlkekZZSnM2UXNVZnNKdDF0RVNpVTJNZGtkbUpNeW1ISzM5RTkzajA2dndKQUtpZ0s0YnotbVRBeWRneDAxei1sMTZzLVBoOWwwWXJ2eXNXeTJtWkFjTU1JdWYxMTUwYTJBWFprclNzZW5VSFhqY3o1WWxPZ3YzaVg3akRXM2RXeTRPYzhLSWtSUkliZEEwNFVZS2c0akxqb3VwRlBESjluM3M1dFhkbzV4UXc?oc=5",
+        "fonte": "Mix Vale",
+        "publicadaEmISO": "2026-08-16T16:32:28.000Z"
       }
     ]
   },
   {
-    "id": "sug-playstation-1786595055000-3",
+    "id": "sug-playstation-1786595055000-6",
     "titulo": "(For Southeast Asia) Ghost of Yōtei Complete Edition Comes to PS5 October 2",
     "descricao": "PlayStation: We are so excited to announce that even more new content is coming to Ghost of Yōtei! On October 2, we’ll have a new narrative expansion, new single-player combat survival mode, and new quality of life updates all coming in Ghost of Yōtei Complete Edition!1 Before we dive in, we want to",
     "categoria": "jogos",
@@ -426,7 +550,7 @@
     "noticias": []
   },
   {
-    "id": "sug-playstation-1786594402000-4",
+    "id": "sug-playstation-1786594402000-7",
     "titulo": "(For Southeast Asia) Helldivers 2 joins PlayStation Plus Game Catalog today, Devoid of Liberty update out now",
     "descricao": "PlayStation: We have watched the Void stretch across the galaxy for too long. The threat posed to our Liberty is too great and we can no longer stand by as the Illuminate gain ground. Helldivers, you are needed on the battlefield of a new frontier–one more wild and uncertain than any we have faced p",
     "categoria": "jogos",
@@ -447,7 +571,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1786582986000-5",
+    "id": "sug-nintendo-1786582986000-6",
     "titulo": "「Hello! インディー」古銭を投げて、洞窟を探索『古銭プッシャー外伝』",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -468,7 +592,7 @@
     "noticias": []
   },
   {
-    "id": "sug-playstation-1786563004000-5",
+    "id": "sug-playstation-1786563004000-8",
     "titulo": "Kinetic Publishing Showcase recap: 5 new indie games coming to PS5",
     "descricao": "PlayStation: You may have heard of Kinetic Games through our horror title, Phasmophobia. It’s sold over 27 million copies, and thanks to this success, in January of this year we established our very own publishing label, Kinetic Publishing. Our aim at Kinetic Publishing is to support and empower ind",
     "categoria": "jogos",
@@ -502,7 +626,7 @@
     ]
   },
   {
-    "id": "sug-xbox-1786563000000-5",
+    "id": "sug-xbox-1786563000000-6",
     "titulo": "Kinetic Publishing Showcase Recap: Every Reveal, Including the New Sam Barlow Game",
     "descricao": "Xbox Wire: Kinetic Publishing was built to empower indie creators with the level of support that our founder, Daniel Knight, would have benefitted from when he was first creating Phasmophobia. Today, we had the absolute pleasure of revealing Kinetic Publishing’s upcoming slate at the first-ever Kine",
     "categoria": "jogos",
@@ -523,7 +647,7 @@
     "noticias": []
   },
   {
-    "id": "sug-xbox-1786557600000-6",
+    "id": "sug-xbox-1786557600000-7",
     "titulo": "Dive Into What&#8217;s Next with Subnautica 2 Experimental",
     "descricao": "Xbox Wire: We&#8217;re excited to announce that Subnautica 2 Experimental is now available through the XBOX Insider Program, giving players the opportunity to experience upcoming updates early and help shape the future of the game alongside the team at Unknown Worlds. Explore Tomorrow&#8217;s Update",
     "categoria": "jogos",
@@ -544,7 +668,7 @@
     "noticias": []
   },
   {
-    "id": "sug-playstation-1786548645000-6",
+    "id": "sug-playstation-1786548645000-9",
     "titulo": "PlayStation Plus Game Catalog for August: Helldivers 2, Kingdom Come Deliverance II, Vampire Survivors, Hell is Us and more",
     "descricao": "PlayStation: This month, enlist in Super Earth’s premier military peacekeeping force and fight for freedom across a hostile galaxy in Helldivers 2, shape your destiny in a stunningly authentic rendition of 15th century Bohemia in Kingdom Come: Deliverance II, become the bullet hell and mow down thou",
     "categoria": "jogos",
@@ -576,15 +700,15 @@
         "publicadaEmISO": "2026-08-12T16:51:00.000Z"
       },
       {
-        "titulo": "PS Plus de Agosto Desembarca com Helldivers 2 e RPGs de Peso no Catálogo! - Gamerscore Brasil",
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8tUjJwZW1tXzJ2VE9KY1NYTDgweFUtcXduOW82dU1La1JiejN2dm5QWXJDUG5WOXB5Z1NUeDJtekdIenowaW14SG9mMmV0X3M?oc=5",
-        "fonte": "Gamerscore Brasil",
-        "publicadaEmISO": "2026-08-16T15:02:46.000Z"
+        "titulo": "PlayStation Plus recebe 9 jogos em agosto - jwave.com.br",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcFJ6LWp5V1FTZnRfSmkyb3FzRzhUTFdPVFJFWDh5SjZuT3NnUlloaGkzU3l2ZUlWOXRJRllMZkJDaGpKZDZLczNkcDkzWThabUx3WklnQzNCSzVXY1FwT1pjM3kyc0ZIUkhWanNzZ21FM3duOGpkUDFqOW9oQ1ZXMw?oc=5",
+        "fonte": "jwave.com.br",
+        "publicadaEmISO": "2026-08-15T11:05:46.000Z"
       }
     ]
   },
   {
-    "id": "sug-xbox-1786546800000-7",
+    "id": "sug-xbox-1786546800000-8",
     "titulo": "Revisit the Arcade Racing Classic RIDGE RACER with ACA-Exclusive Features 30% Off Now",
     "descricao": "Xbox Wire: Ridge Racer was released by Namco Limited (now Bandai Namco Entertainment Inc.) in 1993. Powered by the 3D CG arcade system System 22, it amazed racing game fans with its immersive sense of speed and realism. And, of course, when you think of Ridge Racer, you think of drifting! Its drifti",
     "categoria": "jogos",
@@ -605,7 +729,7 @@
     "noticias": []
   },
   {
-    "id": "sug-xbox-1786543500000-8",
+    "id": "sug-xbox-1786543500000-9",
     "titulo": "Prepare for Emergence Day with the Gears of War: E-Day Limited Edition XBOX Wireless Controllers",
     "descricao": "Xbox Wire: To celebrate the launch of Gears of War: E-Day, we&#8217;re giving fans two new ways to immerse themselves in one of gaming&#8217;s most iconic universes. Starting today, fans can pre-order the Gears of War: E-Day Limited Edition XBOX Wireless Controller at participating retailers worldwi",
     "categoria": "jogos",
@@ -625,16 +749,16 @@
     "tipoConteudo": "atualizacao-oficial",
     "noticias": [
       {
-        "titulo": "Revelados os controles Xbox de Gears of War: E-Day Limited Edition - games.gg",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeEtHRzJGX1pxVjNxMkdlcHMxa3dYZW1ybDcyRER5MGJSSE1xX2xlcm5JZzFkSjhqTmZpcDNRRktrVTJ4bWR6cUMyTnBXUFBKTHY3b2RwRTBxbld4aGpIOGdoSkZDaG56c3RvV0MwYVA5cGEySG00TFhad21kV1NkQWh5VV9TZXpRUk5wWjFmMzd6X0dldlhoMHJn?oc=5",
-        "fonte": "games.gg",
-        "publicadaEmISO": "2026-08-12T21:28:21.000Z"
-      },
-      {
         "titulo": "Prepare-se para o Dia da Emergência com o Controle Sem Fio Xbox Gears of War: E-Day Limited Edition - XBOX Wire",
         "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQVGFrc2JldkZrN1d1bTlHTngweGpDRm9kWldNU2FLbXBydE5pUDhPano1LWxZSlNFVUpldkh4M1owWEZONEJJUVlGUkpwYTFkblR5dEJIT3RjTEhKV1M4TnlZT1lOTDVQQkJrNHEyWXRoOFVfWjlKTEVzTTlkN21GcDEzRHA5cFdxdTI3SXQzUE0tT0R4NW1TcXFRZzlyemhHckR5amttNmtZTV9SSVBwWjdBakdtXzNMMFhWNzF4Si1PMHd5UWJ5TDRJWlBmWlJfcDlZUg?oc=5",
         "fonte": "XBOX Wire",
         "publicadaEmISO": "2026-08-12T14:21:45.000Z"
+      },
+      {
+        "titulo": "Revelados os controles Xbox de Gears of War: E-Day Limited Edition - games.gg",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeEtHRzJGX1pxVjNxMkdlcHMxa3dYZW1ybDcyRER5MGJSSE1xX2xlcm5JZzFkSjhqTmZpcDNRRktrVTJ4bWR6cUMyTnBXUFBKTHY3b2RwRTBxbld4aGpIOGdoSkZDaG56c3RvV0MwYVA5cGEySG00TFhad21kV1NkQWh5VV9TZXpRUk5wWjFmMzd6X0dldlhoMHJn?oc=5",
+        "fonte": "games.gg",
+        "publicadaEmISO": "2026-08-12T21:28:21.000Z"
       },
       {
         "titulo": "CEO do Xbox elogia The Elder Scrolls 6 enquanto protesto ocorre na Bethesda - games.gg",
@@ -645,7 +769,7 @@
     ]
   },
   {
-    "id": "sug-nintendo-1786543262000-6",
+    "id": "sug-nintendo-1786543262000-7",
     "titulo": "Nintendo Switch 2 で発売されるソフトメーカータイトルの開発者にインタビューする「クリエイターズボイス」を更新しました。 『オービタルズ Orbitals』を開発されたShapefarmのおふたりにお話を伺いました。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -661,128 +785,6 @@
     ],
     "idExterno": "nintendo-https://www.nintendo.com/jp/switch2/creators-voice/index.html",
     "fonte": "nintendo",
-    "momento": "disponivel",
-    "tipoConteudo": "atualizacao-oficial",
-    "noticias": []
-  },
-  {
-    "id": "sug-playstation-1786543238000-7",
-    "titulo": "Ghost of Yōtei Complete Edition Comes to PS5 October 1",
-    "descricao": "PlayStation: Update (Aug 14, 2026): New tracks for Watanabe Mode were previously listed here as features in the CompleteEdition, but this blog has been updated to reflect that the tracks are included in the free patch on October 1, evenwithout purchasing the Complete Edition Upgrade. Original Story:",
-    "categoria": "jogos",
-    "dataLancamentoISO": "2026-08-12T14:00:38.000Z",
-    "plataformas": [
-      "PlayStation 5"
-    ],
-    "linksOficiais": [
-      {
-        "label": "Abrir no PlayStation",
-        "url": "https://blog.playstation.com/2026/08/12/ghost-of-yotei-complete-edition-comes-to-ps5-october-1/"
-      }
-    ],
-    "idExterno": "playstation-https://blog.playstation.com/2026/08/12/ghost-of-yotei-complete-edition-comes-to-ps5-october-1/",
-    "fonte": "playstation",
-    "momento": "disponivel",
-    "tipoConteudo": "atualizacao-oficial",
-    "noticias": [
-      {
-        "titulo": "Ghost of Yōtei Edição Completa chega para PS5 em 1º de outubro - PlayStation.Blog BR",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQkpxdXNsQTFNNl9sa3JUb1FSOVFTdGZMZmZWMTQtdmNoWVBCRnUtRGNpelRTU3VjQkJUSFpJT0FkLVFJRnhpZnVVYVc4TXhGUnNiTDFacEtTNUxrQWJVdzh2d29mOUc0bHNPODZuVUhwYTctaHVyTzZkTllicjA1LVhmWGtIZC0xaXZzLVMwcEw5cnZzUHFvc3hGN21DRnJVTUNVMTJDaU00Zw?oc=5",
-        "fonte": "PlayStation.Blog BR",
-        "publicadaEmISO": "2026-08-12T14:05:20.000Z"
-      },
-      {
-        "titulo": "Grounded 2 recebe Into The Abyss, a sua próxima grande atualização - Instant Gaming News",
-        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxObFZWZEcxUGczUkdVcGUybWFTanRXM3lwLTVsUjhjcVVFOVRLTFo4bS14MzVDUUIyZTUxQ2lpUHBxNElPYmd4a0NEaFZjMDF5M3lnRl9mbzR5NUhoaHZoU2k2LTBUOHNCYjVyZldBVWVhMDZHZHhjSUFtUmVLdllEa0lUbTVWVjBKdVVOeVJlX29iLXFpS1RDWUFWbE44MlZoNXVaemFpX1FudlBTLUFoSUNIUGI?oc=5",
-        "fonte": "Instant Gaming News",
-        "publicadaEmISO": "2026-08-13T10:59:44.000Z"
-      },
-      {
-        "titulo": "Ghost of Yōtei recebe uma edição completa com novas expansões em outubro - Echo Boomer",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQN3lUZ0o5Zng4dHhKR0JuSThZREZaY1JfYzNHcVdrN01tT1RHMEM3QTU1MTFac1BTOTgtUWtDNUFpSkFzd2diMnFRTjNpMHVOZ2VMeHdlRHJMcWlJWDZHZ0xhb3ItWlQ1MkRrMGVqTGtRUldseEFKalpmR1BkQ1dSVnU5cDQyZDQ0dU5BTg?oc=5",
-        "fonte": "Echo Boomer",
-        "publicadaEmISO": "2026-08-12T14:00:09.000Z"
-      }
-    ]
-  },
-  {
-    "id": "sug-playstation-1786536004000-8",
-    "titulo": "Helldivers 2 joins PlayStation Plus Game Catalog today, Devoid of Liberty update out now",
-    "descricao": "PlayStation: We have watched the Void stretch across the galaxy for too long. The threat posed to our Liberty is too great and we can no longer stand by as the Illuminate gain ground. Helldivers, you are needed on the battlefield of a new frontier–one more wild and uncertain than any we have faced p",
-    "categoria": "jogos",
-    "dataLancamentoISO": "2026-08-12T12:00:04.000Z",
-    "plataformas": [
-      "PlayStation 5"
-    ],
-    "linksOficiais": [
-      {
-        "label": "Abrir no PlayStation",
-        "url": "https://blog.playstation.com/2026/08/12/helldivers-2-joins-playstation-plus-game-catalog-today-devoid-of-liberty-update-out-now/"
-      }
-    ],
-    "idExterno": "playstation-https://blog.playstation.com/2026/08/12/helldivers-2-joins-playstation-plus-game-catalog-today-devoid-of-liberty-update-out-now/",
-    "fonte": "playstation",
-    "momento": "disponivel",
-    "tipoConteudo": "atualizacao-oficial",
-    "noticias": [
-      {
-        "titulo": "Catálogo de Jogos do PlayStation Plus: Agosto de 2026 - games.gg",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOME5xUXR0NGE1SU5LWS1qR2w4eXBCUGd4LXlYdjVqRHlYVXNyVnVxS2kzTDU5M2RwNXBFSnNCdGtWOXVVQnBBUjRRVWZBVnZ1U2F2RjMwZHJpWWpIRGtZM3A2V013S2pfd1NURDdUdnFidDdGampmcWZ3NzFTNUd2RVVjWXpEZGczT2U2VkdJYw?oc=5",
-        "fonte": "games.gg",
-        "publicadaEmISO": "2026-08-12T21:43:53.000Z"
-      },
-      {
-        "titulo": "Códigos de Presente Misterioso de Pokémon Champions Ativos em Abril 2026 - games.gg",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMEhtX2U0NndqNndFSkViUDVwbzJMSFFuaWlzYjZlUWdHajQzMHQ2WldXbTFZbHdYdWpQbFRkek9KZTFPVW5JTjYwRFlrYnJ4S1dMc0REdVFVUXItSWo2N09oSE1fUTZpZl9rN09LZ2tzNnl0OFJGTU11QXdXRHRraTdEVjhLWi1BbnBndmMxaHVTRVo5R1FYOXBpTldWYzBlVjRzeDEwM2F0UFhVUDI3Xw?oc=5",
-        "fonte": "games.gg",
-        "publicadaEmISO": "2026-04-08T07:00:00.000Z"
-      },
-      {
-        "titulo": "Rhythm Heaven Groove: Pré-venda disponível por $39.99 - games.gg",
-        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOT3ZNSUlPZzdzcGN1WjlsMEFBajFPeS1lQndEdnRLaDRaU2ZkTkRXUHRlRFI2WGdZWWJTWUJha0I2dXVFQlZzVC16dS1fUGZvZXhINXlaR0lxZVFjSXR4UWlUQ0tnWnFzekltMXVSYzNRNlVCcFBxREJUelBmbzdvU1loa295MFlwTm5nQW5nc1I2OFU?oc=5",
-        "fonte": "games.gg",
-        "publicadaEmISO": "2026-04-12T07:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "id": "sug-xbox-1786536000000-9",
-    "titulo": "Helldivers 2: Devoid of Liberty – Meet the SEAF Squad Assembled to Take on The Illuminate",
-    "descricao": "Xbox Wire: The blight of the Illuminate have expanded their war front with a strange new presence on the Galactic map. Assessed by our top Super Earth scientists, this area has been classified as Devoid of Liberty. From this Liberty forsaken place, we have received reports of twisted perversions of ",
-    "categoria": "jogos",
-    "dataLancamentoISO": "2026-08-12T12:00:00.000Z",
-    "plataformas": [
-      "Xbox Series X|S"
-    ],
-    "linksOficiais": [
-      {
-        "label": "Abrir no Xbox Wire",
-        "url": "https://news.xbox.com/en-us/2026/08/12/helldivers-2-devoid-of-liberty-update-xbox/"
-      }
-    ],
-    "idExterno": "xbox-https://news.xbox.com/en-us/2026/08/12/helldivers-2-devoid-of-liberty-update-xbox/",
-    "fonte": "xbox",
-    "momento": "disponivel",
-    "tipoConteudo": "atualizacao-oficial",
-    "noticias": []
-  },
-  {
-    "id": "sug-playstation-1786503405000-9",
-    "titulo": "(For Southeast Asia) First look at Marvel’s Wolverine Limited Edition PS5 Console bundle and accessories",
-    "descricao": "PlayStation: Last month, the team at Insomniac Games and Marvel Games shared lots of new details and reveals at San Diego Comic-Con for Marvel’s Wolverine. Today, we’re giving a first look at the PS5 Digital Edition &#8211; Marvel’s Wolverine Battle Yellow Limited Edition Bundle, which features a PS",
-    "categoria": "jogos",
-    "dataLancamentoISO": "2026-08-12T02:56:45.000Z",
-    "plataformas": [
-      "PlayStation 5"
-    ],
-    "linksOficiais": [
-      {
-        "label": "Abrir no PlayStation",
-        "url": "https://blog.playstation.com/2026/08/11/20260812-ps5/"
-      }
-    ],
-    "idExterno": "playstation-https://blog.playstation.com/2026/08/11/20260812-ps5/",
-    "fonte": "playstation",
     "momento": "disponivel",
     "tipoConteudo": "atualizacao-oficial",
     "noticias": []
@@ -806,7 +808,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1786077124000-7",
+    "id": "sug-nintendo-1786077124000-8",
     "titulo": "ニンテンドーeショップ新作ソフト情報 8/7（金）号。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -827,7 +829,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1786064521000-8",
+    "id": "sug-nintendo-1786064521000-9",
     "titulo": "「Nintendo Store」でご利用いただけるお支払い方法が増えました。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -848,7 +850,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785998076000-9",
+    "id": "sug-nintendo-1785998076000-10",
     "titulo": "「2027年3月期 第1四半期 決算説明資料」を掲載しました。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -869,7 +871,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785998040000-10",
+    "id": "sug-nintendo-1785998040000-11",
     "titulo": "「2027年3月期 第1四半期 決算短信」を掲載しました。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -890,7 +892,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785996222000-11",
+    "id": "sug-nintendo-1785996222000-12",
     "titulo": "「Nintendo Switch Sports ゲーム運動会 シニアボウリングトーナメント2026」のページを更新しました。 トーナメント2回戦の試合日程と、1回戦の全試合の様子を公開しています。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1000,22 +1002,22 @@
     "momento": "disponivel",
     "noticias": [
       {
-        "titulo": "Eu & Você Na Toscana - adorocinema.com",
+        "titulo": "Eu & Você Na Toscana - AdoroCinema",
         "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5YOEJPM0FOS3RMbXBxdUdIeFB3Z1ktM1VQR3VaNUo4RFBqTVlVZWtoZjRGVndGZ2NWYzFyTHllRHBvaUtwN183dUpqN1ZpWldTNEpScE5ybFJaRDk2T21CQWhn?oc=5",
-        "fonte": "adorocinema.com",
+        "fonte": "AdoroCinema",
         "publicadaEmISO": "2025-12-09T08:00:00.000Z"
-      },
-      {
-        "titulo": "Crítica: “Eu e Você na Toscana” (You, Me & Tuscany) - Caderno Pop",
-        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1lXy1tNjl6TnRlM0ljRk1LRVZTankxOHpiV2I0dzdXZEZGWFMyZEo3R000R3Y4R2QtTkR5ZHlJYy1UaW1kNzd0Y01BVVlHTnlXdHhWQ3hlbU5JMGNlbmcxNmltdDFuTUZuNE5tZlRSeVZtZ3lhWkxDNlp3?oc=5",
-        "fonte": "Caderno Pop",
-        "publicadaEmISO": "2026-06-11T07:00:00.000Z"
       },
       {
         "titulo": "Eu e Você na Toscana é uma soma de clichês – para o bem e para o mal - Omelete",
         "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOWRyeVpncFEzT2x6VFZVOWFKeXpUaWE0Q3phWWJ3cm04TjNiUDZlUlhoMjM3cVZabS13bGF6ejhaWnk1ZDZyVGlRWHRhSVVxMi1UX1lmZTVpZ2RjMEp1am1Oa3hxdnlDU2p2eXFISWVOdXBoYXh1Nl9RbGhpSTIzS2g0ZnhOV0tMaWxzLWtscDdXTXJ1MnE5eGVCWFlvSTQ4?oc=5",
         "fonte": "Omelete",
         "publicadaEmISO": "2026-06-12T07:00:00.000Z"
+      },
+      {
+        "titulo": "Crítica: “Eu e Você na Toscana” (You, Me & Tuscany) - cadernopop.com.br",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1lXy1tNjl6TnRlM0ljRk1LRVZTankxOHpiV2I0dzdXZEZGWFMyZEo3R000R3Y4R2QtTkR5ZHlJYy1UaW1kNzd0Y01BVVlHTnlXdHhWQ3hlbU5JMGNlbmcxNmltdDFuTUZuNE5tZlRSeVZtZ3lhWkxDNlp3?oc=5",
+        "fonte": "cadernopop.com.br",
+        "publicadaEmISO": "2026-06-11T07:00:00.000Z"
       }
     ]
   },
@@ -1047,10 +1049,10 @@
         "publicadaEmISO": "2026-04-27T07:00:00.000Z"
       },
       {
-        "titulo": "Maldição da Múmia: O que acontece no final do filme de terror? - adorocinema.com",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1PY3lteEtlOXZfXzFYRkRGRWZNcHhRbUVPblFKMjVPSTlYN2x2UTNCN0ZSckFzQkVNNHZDT3NBV0JtS1Y1NFk1WG5tczhKbDAxSmNyVEdBX0hPZHhyVFQ5NHpMUFRmZEQtRFhwVEJsbFo?oc=5",
-        "fonte": "adorocinema.com",
-        "publicadaEmISO": "2026-04-16T07:00:00.000Z"
+        "titulo": "Dia D explicado: Qual é a mensagem dos alienígenas no final do filme? - Observatório do Cinema",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBtQnFnb295QlZjbV9ZLUNZQXZxMmlqQm9ndUJkQUlONGFRcFFQUjhMVzJMcTdUcFI4ZnNUdlExR2NkbF9LOWhUZEowUGNWSUoxa2dSeHVScVlZa0tsazRUb0M4V2stZXY2dTQtQ1ByQXNCUDjSAXhBVV95cUxNUEdPSkFfTXVINnVNYU05RXVLbHFQV3JmUksyRWx2aEhsa0NtVHVZQTE2WGVBSm9vZGVqaEt4ZmR1T09ySUhxUEZpVFZ6enJUODVJb0hfbUJsZml6R2NCUVVMaEZUYmNhcElRb0h0SkJYUWs1ZE1PbVk?oc=5",
+        "fonte": "Observatório do Cinema",
+        "publicadaEmISO": "2026-06-11T07:00:00.000Z"
       }
     ]
   },
@@ -1070,16 +1072,16 @@
     "momento": "disponivel",
     "noticias": [
       {
-        "titulo": "O Sorveteiro - Filme 2026 - adorocinema.com",
+        "titulo": "O Sorveteiro - AdoroCinema",
         "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBUTHd0XzVNOWw5ckxWdS01clJ1VWN0aFpXQVNTZUkzVEpSblJKTkRkdDlWUTJFMm1QakdkZ0dtbzRxcWoxMW51RktXWjRyOWxBcEtlR0Y0MjdVeVdfMG1kTFJR?oc=5",
-        "fonte": "adorocinema.com",
+        "fonte": "AdoroCinema",
         "publicadaEmISO": "2026-02-26T08:25:22.000Z"
       },
       {
-        "titulo": "O Sorveteiro | Novo filme de Eli Roth ganha trailer nojento; confira - Omelete",
-        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQejE2S2l3dnE3WTdsYzJlLUNlMEtYTWExRUdHM3JqWWptVkNFRDZzbjFlSnRYZWZPRHBDLWdXc2FfNnZjMFNkUmRJdjl6VmxCQ3luMnpRT2lvdUQ0MXdmT2k1N3pJS01kUzR3UThwbUZ6Sjdwak5KN0JwcUVDZkdBZ1RaYUZnci1zbnJ3TmZacDFheUtWbFl0TDZneHk4R1pu?oc=5",
+        "titulo": "Ice Cream Man | Terror de Eli Roth com crianças assassinas ganha trailer - Omelete",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFA2eFR5NF9STEZITXV4R3ZEajc4UEhKa3AxV25QRWZLZnhlZDhnSVItNlpDeHBaZ3Vpc19JdzRuZTN0dzRZeDREVU9RT19vNjhsWVJVdkljSThVcHR2M0lBcU0wa0FCb1VwMnBMVzV6aw?oc=5",
         "fonte": "Omelete",
-        "publicadaEmISO": "2026-06-22T07:00:00.000Z"
+        "publicadaEmISO": "2026-04-13T07:00:00.000Z"
       },
       {
         "titulo": "Eli Roth promete o filme mais violento da carreira com Ice Cream Man: \"Tem mais mortes do que todos os meus filmes juntos\" - Cinema de Buteco",
@@ -1111,84 +1113,16 @@
         "publicadaEmISO": "2026-01-31T08:00:00.000Z"
       },
       {
-        "titulo": "▶️ Meu Irmão é um Problema - Trailer - IMDb",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1kWHJnSTBESTljVFpIMlBSU1Z5VVJJMTBXYWRQUG1fTS1Nb2pqMmxxZlJUS2RDVmVqc0hkNDZINkFmeGYzdVBmcVhCLVBQTGFZNGFMWHNn?oc=5",
-        "fonte": "IMDb",
-        "publicadaEmISO": "2026-06-26T16:31:35.000Z"
-      },
-      {
         "titulo": "‘The Secret Agent’, by Kleber Mendonça, will represent Brazil at the 2026 Oscars - Brasil de Fato",
         "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNYmtuRUR4Q2xtZ25EN1hmaV90ckhOcTA5aldtRXB2SkUyZHB3Vlh4ZUVkMUxiNFRmbmY4VDluZlZaWEljS015NjFwT3Nvdlg0U1FmaUp3UC1CdElGYkMwTU9TVFBQNWcwZjZpaHBIOUxieGtrdk16Y0dDWGRWYXlFZVdnOWVqdFRYUDRmVTlpYzVHVk9TeUJMaHV3N19fZV9NVy1jV2huUngtZ0QxRldESktkQ3lnTXRNVFY0Yw?oc=5",
         "fonte": "Brasil de Fato",
         "publicadaEmISO": "2025-09-16T07:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "id": "sug-wikidata-Q138303059",
-    "titulo": "Q138303059",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-08-06T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q138303059"
-      }
-    ],
-    "idExterno": "wikidata-Q138303059",
-    "fonte": "wikidata",
-    "momento": "disponivel",
-    "noticias": []
-  },
-  {
-    "id": "sug-wikidata-Q139573975",
-    "titulo": "Hotel «Sokolyne siajvo»",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-08-06T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q139573975"
-      }
-    ],
-    "idExterno": "wikidata-Q139573975",
-    "fonte": "wikidata",
-    "momento": "disponivel",
-    "noticias": []
-  },
-  {
-    "id": "sug-wikidata-Q139679997",
-    "titulo": "Dear You",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-08-06T00:00:00.000Z",
-    "imagemUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%BB%99%E9%98%BF%E5%AC%B7%E7%9A%84%E6%83%85%E4%B9%A6.png",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q139679997"
-      }
-    ],
-    "idExterno": "wikidata-Q139679997",
-    "fonte": "wikidata",
-    "momento": "disponivel",
-    "noticias": [
-      {
-        "titulo": "Filme chinês “Dear You” supera US$ 300 milhões nas bilheterias e ganha trailer para lançamento nos EUA - Times Brasil | CNBC",
-        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPM1ZfN3JWbzNONnI2NVdOQ0RDb2R5WHNHMUU5a0J3M3lmMmRwVjVubVVaemFPX2hYRmgtYnUySVBkWkp3V1Rwb1ZXMWFWSXhhelhMU2tidGNGNU0tM2JyOEpRZUgtTm9lYlRoRG5HMWhjc3diX0RER3RIZFlxbjBvbHFRbC13SE9NS0JfYjUwVjJRSW9PY0Q5MV9ITmZSazJmNFB0VTZyemxoSkhVVVpWY1htRUFGZlZiSmV3dGtpSlVTYkl3NUowcHlTaDZPTFJXZ21MS0w0RE1pR0hhck5aSDVlZjVXdUc1OWc?oc=5",
-        "fonte": "Times Brasil | CNBC",
-        "publicadaEmISO": "2026-08-17T04:00:00.000Z"
       },
       {
-        "titulo": "Longa chinês filmado em língua minoritária arrecada R$ 1,3 bilhão - Poder360",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdFZlM0xwVzVzOUVZYWRaZml2VnFfR0ZfalhjUXptcmNnSlFkT2xOT3VlSmtob3oxMi1nWDdfZW5HR1ZibFRlejU1Y0kzaUVhendRR1hJQk5IX1VXNjNZVmE0eXN6WVdxaFlJdUplY1NTNExMcHE3M05ReW5wSWpYS2dPUlZYVG9rS19hZ3hWVnQ4bUtuUXNaUmFqdklTSzdTVEtKT2Fn?oc=5",
-        "fonte": "Poder360",
-        "publicadaEmISO": "2026-06-27T07:00:00.000Z"
-      },
-      {
-        "titulo": "Miss You, Love You - Filme 2026 - adorocinema.com",
-        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5TN3l5QUYxN0hDdlpMbG9SME44dVI5TmN6U3VwbVJycld6N2FGdERPWlE2Mm9ad0l1TmhvU0dnck5yYkYyRTduZnJsbHRVc2o0Y0RUTmpjMFFDQW5E?oc=5",
-        "fonte": "adorocinema.com",
-        "publicadaEmISO": "2026-05-20T07:00:00.000Z"
+        "titulo": "▶️ Todos Os Tons Do Prazer - Official Trailer - IMDb",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBLQWJSQU5KOG10VERTcnNpb0QwSGZJQjdnWUhzNFZiQXN0cXBEYXhtYkc0bHRsblVEOUJONHF4elduakNrSTk1M1EyVlJWOXU3NVBxajB3?oc=5",
+        "fonte": "IMDb",
+        "publicadaEmISO": "2026-02-17T01:24:09.000Z"
       }
     ]
   },
@@ -1208,9 +1142,9 @@
     "momento": "disponivel",
     "noticias": [
       {
-        "titulo": "Everytime - Filme 2026 - adorocinema.com",
+        "titulo": "Everytime - Filme 2026 - AdoroCinema",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5QeXhIajFhRUF1Q1dSRkI4emZHcGxReGFMMDFFVTdoWEN6bW52eDJWS1NWVlUzdmR6Z2ZvZURydDZfek1iUG5BMWd3N3hqX2x4Ump0N1ZHSHJxSWsw?oc=5",
-        "fonte": "adorocinema.com",
+        "fonte": "AdoroCinema",
         "publicadaEmISO": "2026-05-26T07:00:00.000Z"
       },
       {
@@ -1228,7 +1162,100 @@
     ]
   },
   {
-    "id": "sug-nintendo-1785892083000-12",
+    "id": "sug-wikidata-Q139573975",
+    "titulo": "Hotel «Sokolyne siajvo»",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-08-06T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q139573975"
+      }
+    ],
+    "idExterno": "wikidata-Q139573975",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": []
+  },
+  {
+    "id": "sug-wikidata-Q138303059",
+    "titulo": "Q138303059",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-08-06T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q138303059"
+      }
+    ],
+    "idExterno": "wikidata-Q138303059",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": []
+  },
+  {
+    "id": "sug-wikidata-Q140315525",
+    "titulo": "Hotel \"Falcon Glow\"",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-08-06T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140315525"
+      }
+    ],
+    "idExterno": "wikidata-Q140315525",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": []
+  },
+  {
+    "id": "sug-wikidata-Q140472994",
+    "titulo": "Rehmat",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-08-06T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140472994"
+      }
+    ],
+    "idExterno": "wikidata-Q140472994",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "'Rehmat' marca retorno de Gurvinder Singh ao circuito europeu - correiodamanha.com.br",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNaXFKc0FfbjJxSHpOYTRTcVRQeGdJbzhRT2Fyd1IzMGwwWFhkZU5Wc1JKTnMta3pDa2kyYjlkZWJ0RDBTcWxaYnJsQzhBcEZlU2dnQm44MHZSbE1mdmdWdThNNTFONHpTcFZrVDRUNzh4UjZIZENrVWxqZUVUdU80ejV5azBZWlI0eDNFbWxXTlo0dE01NTAzZDlqYjFDTmJxVW1rd05vb3FwYTNqeWMyZHpZTHZHLTNPVWk2cGY2Y1p6UmNPelhJ?oc=5",
+        "fonte": "correiodamanha.com.br",
+        "publicadaEmISO": "2026-08-07T04:00:00.000Z"
+      },
+      {
+        "titulo": "Dangal (2016) ⭐ 8.3 | Ação, Biografia, Drama - IMDb",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBuUnhBZExVLXMtYk9xaHF0dzljOGl6M25Da3NvTjczVEdrUWpWV1hGNlgyeS1kTnFlNElCTlZMR2l6TWp4dENzNWxjRDRoNW85eGc?oc=5",
+        "fonte": "IMDb",
+        "publicadaEmISO": "2024-12-12T05:27:44.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q140902004",
+    "titulo": "The Last Warrior: Kolobok",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-08-06T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140902004"
+      }
+    ],
+    "idExterno": "wikidata-Q140902004",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": []
+  },
+  {
+    "id": "sug-nintendo-1785892083000-13",
     "titulo": "「ファイアーエムブレム 万紫千紅 Direct 2026.8.4」を公開。楽曲配信やコミック連載などの最新情報も一挙ご紹介。 ※本作の対象年齢は「15歳以上」です。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1249,7 +1276,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785892007000-13",
+    "id": "sug-nintendo-1785892007000-14",
     "titulo": "ひとりでも、みんなでも冒険を楽しめるRPG『ファイナルファンタジーXIV』が、Nintendo Switch 2 で配信中。たっぷり遊べる無料体験版「フリートライアル」も。 ※本作の対象年齢は「17歳以上」です。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1333,27 +1360,27 @@
     "momento": "disponivel",
     "noticias": [
       {
-        "titulo": "O filme de animação \"Niu Lai\" é péssimo, então por que é um sucesso de bilheteria na China? - Vietnam.vn",
-        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOWjE1TFNPQU0taGJWODVwWlM0ZWtieUZxQUlLTGw0bWtPQjdtcU1MYWxTLWdkYXhjLXQ3NFhWejFJVEtyaDhFSE53VHA5S3NRbnJEYXViWHBRckZSQjJ4Rko1SVN5R2stTGlrWnMzNm9hdmkzbGUwaUhLY2d6NjFNeEhDWGxPQQ?oc=5",
-        "fonte": "Vietnam.vn",
-        "publicadaEmISO": "2026-08-17T03:54:59.000Z"
+        "titulo": "Niu Lai: o filme chinês que virou meme e clássico cult em resistência contra a IA - Revista Fórum",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1JSWx0bEJtMjFqX3JySWQxVWJQTFRBVUI4VkdjSzZZXzhpTzdJeDdVTE5kOUczb3NEdHBVZUY4d2NrQ3llWlBlYlFsR1U5VEx3bC1IMVRmUWxhS3FGdzFfOUR3QmdjZW1IYTZubmZoV2Y?oc=5",
+        "fonte": "Revista Fórum",
+        "publicadaEmISO": "2026-08-17T13:54:19.000Z"
       },
       {
-        "titulo": "Animação abstrata 'Niu Lai' gera aumento de 3000x em moeda meme em 3 dias - KuCoin",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTDRkN01yU3BHdGJVMGZxZ05GanRGU0F4bzdiZ0RlZU5CUmtYcEtIdlBldnFhbDlib2VIaHhuMkxmX2x4ak03UDlzQW5Udm05RmFoZjlKOFEtNGZpenMwQVFxYXh3ZGV0YzEtZ0U4RTZQUk1KTzVvSzByY0U2V2NvTWpnSl9zcUtnaTIzSWRsMXphRWY3RGpJbk5JMDZOZFI3ay1icw?oc=5",
-        "fonte": "KuCoin",
-        "publicadaEmISO": "2026-08-16T06:53:37.000Z"
+        "titulo": "A animação independente chinesa 'Niu Lai' passa de alvo de piadas a campeã de bilheteria - Animation Magazine",
+        "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNM3pEdlNsRVNGSWxEQzVnT2dHaVNjSFhUamlybV9XMHlSNWt6V25UUTFydnRnYUFDQ2hKendWUzl3RWZTcGhvSDNZdmNraWQwRVJoUmhLcTJaOHp0TVdVTVpYbDZiWWlRaEFEaGtDdEFGbVM5NC14TFV4bWF0X3pJNnJHbHJ0bXhmZXVFaE5VMjUxMGN0bVVBN1pNTDVOcW9PalVQakpGTktEQXIwTDJaU0hPUkxoRXlkRFVKTF9UM2twVWJHRkNPVWtNTF83TTVnWWFkVGRCeHBKSWtFSGloVmtxNEVRVnR1Y2I3MVREamdDVzFq?oc=5",
+        "fonte": "Animation Magazine",
+        "publicadaEmISO": "2026-08-17T23:24:06.000Z"
       },
       {
-        "titulo": "Filme de animação chinês de baixo orçamento viral dispara nas bilheteiras - RTP",
-        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNTU5sZmM3QmhwN0pmUjNFejdrUTdDdHNGSXZyRjV6M0ZYRENLZUxnc21Uc3A1LVc2akNhM2hZenF3OEY5cVlMYTEwb3E0ZlZ0LW9kd2xlanFRSEVNNGFRaGxhMnVwV0JHTVVCQmlNemVZSTYyNEJkbmE1b2RSdkxDMHp5OU1aZmdNR0daSlYxdEZNWlYwcjB6bE5fM0trUnlQbVQ2UlpiUHU4OEZnQ1JtNHhHbXhBQTF3ckE?oc=5",
-        "fonte": "RTP",
-        "publicadaEmISO": "2026-08-17T04:46:44.000Z"
+        "titulo": "Filme de animação que viralizou por ser 'ruim' supera R$ 8 milhões em bilheteira e vira fenômeno na China - Tribuna do Sertão",
+        "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNczJFZFJIVU1qWFN6NlV1Tms4N3RWeUI4QWxHY2xBR19nU0RMWkI3bFNsOWNlZl95NDRaN2FIZHNNVVZkdjlMeVl4RTduakhlNEN0MGlENGRfaXAzeldkRU1QSVpxX19nb1R6d1NyU194ZG5Wek1CTXViLVRVV2xHYzRrQ1ZwYXFwZkNWSHhwUmh3YkhvR3QwWjI3MWJyaklvZFNsb09JQUtJWTNKSlJxUHFvY3RjemdOTlIxT2daelpZVUFIcTFFNVJkREFRZFNGczVBeE1KWTNJMlRIbEtTQmRoTE5KUml3b2l6UTVGNHlLSDJPaGFj?oc=5",
+        "fonte": "Tribuna do Sertão",
+        "publicadaEmISO": "2026-08-17T14:03:00.000Z"
       }
     ]
   },
   {
-    "id": "sug-nintendo-1785853595000-14",
+    "id": "sug-nintendo-1785853595000-15",
     "titulo": "Nintendo Switch 2 ソフト『ファイアーエムブレム 万紫千紅』の公式サイトを公開しました。 4戦士の運命を導き、世界の救世主となれ。物語の舞台や勝利を導く2つの采配、世界の命運を握るキャラクターを紹介します。 ※本ソフトの対象年齢は「15歳以上」です。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1374,7 +1401,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785805460000-15",
+    "id": "sug-nintendo-1785805460000-16",
     "titulo": "テトリミノをシバいてオタカラ（コラボテーマ）をゲット。テト1カップ「スプラトゥーン レイダース コラボ祭！」開催。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1395,7 +1422,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785805385000-16",
+    "id": "sug-nintendo-1785805385000-17",
     "titulo": "「Hello! インディー」みんなで集まれる無人島『Big Walk』",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1431,21 +1458,21 @@
     "momento": "disponivel",
     "noticias": [
       {
+        "titulo": "Lucky Strike - Filme 2026 - AdoroCinema",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5qWDMxMHdrQzVyYVZjVHRVYTNITGVQdV9Cc0VrOGlGazh4TkE2WFJyUzFqRGxWSmpjMlBnMjdqbTFZY3ZmSUZmZE1pbHFqdVJqeDNvMEdQSUpOVE1j?oc=5",
+        "fonte": "AdoroCinema",
+        "publicadaEmISO": "2026-07-01T07:00:00.000Z"
+      },
+      {
         "titulo": "Lucky Strike – Filme de Guerra com Scott Eastwood ganha trailer - cinemaeafins.com.br",
         "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8yYUUxcS12aUExQ0ZZdEdDaUswdXBCRHhwdXVDek41czd0RkMwSi1USDAzek1heXpvU2p2RDNlb0dOOVRPOHlCbnZOQW8wYlRRT3haOTVoTEZNQQ?oc=5",
         "fonte": "cinemaeafins.com.br",
         "publicadaEmISO": "2026-05-21T07:00:00.000Z"
       },
       {
-        "titulo": "Lucky Strike - adorocinema.com",
-        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5qWDMxMHdrQzVyYVZjVHRVYTNITGVQdV9Cc0VrOGlGazh4TkE2WFJyUzFqRGxWSmpjMlBnMjdqbTFZY3ZmSUZmZE1pbHFqdVJqeDNvMEdQSUpOVE1j?oc=5",
-        "fonte": "adorocinema.com",
-        "publicadaEmISO": "2026-07-01T07:00:00.000Z"
-      },
-      {
-        "titulo": "Todo o elenco do filme Lucky Strike - adorocinema.com",
+        "titulo": "Todo o elenco do filme Lucky Strike - AdoroCinema",
         "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9uNmJVSlZibVFzZ0RIeU9hMUtuWW1TSHpob3lUemRVYzNRX1puXy1STng0VGR2NE1DUFY1ZnBDRl9LZUpkZXFxb2tGdXdURDB0allRSDR5aE1XdUU4cUZkX2QyUkl6S1pF?oc=5",
-        "fonte": "adorocinema.com",
+        "fonte": "AdoroCinema",
         "publicadaEmISO": "2026-07-02T20:07:32.000Z"
       }
     ]
@@ -1472,16 +1499,16 @@
         "publicadaEmISO": "2026-03-07T08:00:00.000Z"
       },
       {
-        "titulo": "Cindy Moon, a Teia de Seda, aparece em Homem-Aranha: Um Novo Dia - O Vício",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVVdBaEFFZGMxWk55WjdGYUFFNmpqWjFoRnpZMzlTWHltOXFFNTJIYWV6OXlZU1hIME8zZmZUT183ZWh5MXl6WmJDSkZjY3MzY0VSbmxadWdseVBzWnpQMjNHVGthSXVqY2NEeTloYmlPcjRmeW1UaldTYm02cTRWUjFSTG1DZUdnQ05pcdIBkgFBVV95cUxQQ0VVRDdkakU5b1NjeVBVeFpJUDF6VDZtS2NibU5vNDVPbm8tQVBvUWhib2tDcXNZZ25CVDhiWXdTNGFUcE5NZWY5cm5QQTJybFYtbk54TWVXZ3didkIwMzJ0ZklPblhhUUtHTjdKbnd5U0NjTWcyb2RwR21PV21fLXBLU25XWGk3MHp4OVZ4azJVdw?oc=5",
-        "fonte": "O Vício",
-        "publicadaEmISO": "2026-08-02T07:00:00.000Z"
-      },
-      {
         "titulo": "Oscar: Blue Moon lança Ethan Hawke como azarão a melhor ator - Agência de Notícias CEUB",
         "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSGNLMGNVWmZUN1BKWnBTUzlEa09STUs0aVQyYXFsTEdpdzYtMGE1OXVta3dNVEt5YkpOSFd3ZXNSMDQ5RV9YZC1yZHVHbUZPLTBqUldHb2F0ZGZEY2tOdXNOTXk2R3lFWWZucU11UHFsVlJzdWpQQU40TlM1S2VtLXplQWx1VUp6aENfYXlzWkZaZWwtLUpQWGQzOE1URW5mMVc0bmkzNF8?oc=5",
         "fonte": "Agência de Notícias CEUB",
         "publicadaEmISO": "2026-03-05T08:00:00.000Z"
+      },
+      {
+        "titulo": "Cindy Moon, a Teia de Seda, aparece em Homem-Aranha: Um Novo Dia - O Vício",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVVdBaEFFZGMxWk55WjdGYUFFNmpqWjFoRnpZMzlTWHltOXFFNTJIYWV6OXlZU1hIME8zZmZUT183ZWh5MXl6WmJDSkZjY3MzY0VSbmxadWdseVBzWnpQMjNHVGthSXVqY2NEeTloYmlPcjRmeW1UaldTYm02cTRWUjFSTG1DZUdnQ05pcdIBkgFBVV95cUxQQ0VVRDdkakU5b1NjeVBVeFpJUDF6VDZtS2NibU5vNDVPbm8tQVBvUWhib2tDcXNZZ25CVDhiWXdTNGFUcE5NZWY5cm5QQTJybFYtbk54TWVXZ3didkIwMzJ0ZklPblhhUUtHTjdKbnd5U0NjTWcyb2RwR21PV21fLXBLU25XWGk3MHp4OVZ4azJVdw?oc=5",
+        "fonte": "O Vício",
+        "publicadaEmISO": "2026-08-02T07:00:00.000Z"
       }
     ]
   },
@@ -1592,22 +1619,57 @@
     "momento": "disponivel",
     "noticias": [
       {
-        "titulo": "Tony - Ingresso.com",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQaTYwUGluX2JibVVncmw0RmNYOUdLY0FYVU9CXzViMkVzTVNfS2VodENaSWY5aVZ3X29xVFNpaXFVYVRMTmt4UllMLU91MEFiV3g4S3F6YkFOaUItbk1vckNfWHQzbTdXS2djQjN2clFaY19vLTdfZXRJZUEtVmJuNWRTWVVpeGxTdmRnZQ?oc=5",
+        "titulo": "Sobre o filme Tony - Ingresso.com",
+        "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPOFBwc0gwcVR5UVZxUUZWcWhKdkZ5cVpNTmFNc0I4MldmOXA5TkZBOEJEdUVkTXNsOGdkSTQ2VjZNS2RkQ2JCaEpPQlNQRGFBei1qTjVheWQ2Zkh5ZUFLajlaeTVHOG9yMEhhSnRWdkdZRDk0UEZVNVR2WEtIMjlhSkNocHlrSUpxQUF1QnNFbldPZDNSaHhoVlNhNUtXWnA0bXdBdl9lRGpIUTMxeUFGVlhTNlZ4ZGNlSldpNmk1eW00OHNqeFZxbTQzd1JSYmJ3MFRaRlI2dVNfRzd6aFdSdXZiOFZzTWZLMkFQNjQ5WEs5c29sVjhVTW4yaTlDa3FST0VuSHFXeWxSZF9RRHRoTTZDeTdjN3VIaW5KZS1NNU94TXNNQlE?oc=5",
         "fonte": "Ingresso.com",
         "publicadaEmISO": "2026-08-13T00:00:00.000Z"
       },
       {
-        "titulo": "Tony Ramos fala de filme que fez usando a camisa do Palmeiras - band.com.br",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVTlYMUpJalRVdDhiT2c4cTVpRnRYX0Q5SnlmYXZIX0E2X0xhSnBGc0RxVFc2cHp4NFoxYWFJajV2ZE45NGpGcXp4RzdEdWh1cG1BeXN4Yk1SbjhPZjJjUmZhRDJCNjBxZmJfeHRYMXFBMFdEMkV0YXBheDAyYV9vTThYX2wtYVNKbThZb1NMRENvTFI3QTFGazhjWjVwbzZBalo4V1J0aFVpY3IxV20wZDctTEpCd2taOHJTZ3NwMC15dw?oc=5",
-        "fonte": "band.com.br",
-        "publicadaEmISO": "2026-08-16T14:01:11.000Z"
+        "titulo": "Tony | A24 lança trailer da cinebiografia de Anthony Bourdain - Omelete",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8zSERKQ3ZGSkNvTGt0RDVCZTNxNmpoSFF1YWV6QmZMYkVyX3R2c3AwU0dEeFhLWU9GelhNWVpraWI3NEkwU3ljeGhQYWxRYVhCMmh3NFF3V2ZEUXRwbXBnZU1tdGJwWGRVZERQMEpXWnM5Zl9yall2RlFFYlZmZw?oc=5",
+        "fonte": "Omelete",
+        "publicadaEmISO": "2026-05-05T07:00:00.000Z"
       },
       {
         "titulo": "4 livros essenciais para conhecer Anthony Bourdain antes de assistir a 'Tony' - Exame",
         "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNVTNjN0NOUV9xdVFpNTlzbW8ycjFHWVgwcnhDT1phQ2R6UFk5MXFKM3g5d0V2NHF5ZldscDZvRDZHTXhaMTMzYWJlWlQzZnZMRWsyOGh0QnBkRTVucEpLRzZuWHJzdXQ5VjB6aTgtN1kzU01sdUhWMEg2RjJxYzREcU9ha1RyWWhZN29SazBoM2luV19udWVTS2I5NEpiTm8?oc=5",
         "fonte": "Exame",
         "publicadaEmISO": "2026-08-13T12:03:08.000Z"
+      }
+    ]
+  },
+  {
+    "id": "sug-wikidata-Q140187828",
+    "titulo": "Romin",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-08-01T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140187828"
+      }
+    ],
+    "idExterno": "wikidata-Q140187828",
+    "fonte": "wikidata",
+    "momento": "disponivel",
+    "noticias": [
+      {
+        "titulo": "Scott Foley comenta sobre retorno como Roman Bridger em ‘Pânico 7’ - cinepop.com.br",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdVlWb2NmM1l6Z25zc0o5M2xnYWxWZUdFcHJJX1pWTkJiajJST0hiZEJ3Sm4yRXhYVEVzV0lTRm91N3c2MVlLZHRrM2NlYzJCTUNlOGgtNUV0TjBoYjBCLVkzVmp2TU5ZTVgyU0lwM1ZUZVp3OTF4eUhiVkwxR1RWQURnaEQzTEJ0UHVzbV9FZmdKclc4NEY3dVVmWQ?oc=5",
+        "fonte": "cinepop.com.br",
+        "publicadaEmISO": "2026-01-20T08:00:00.000Z"
+      },
+      {
+        "titulo": "Romi-Isetta: o primeiro automóvel fabricado no Brasil completa 70 anos - Motor1.com Brasil",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQa0oyVmVDLTlpdEIxbzctMXJ3RzA2M05Uel9ZZ0xoMVI2Q1BBN2QzSmFUVUQ5NzFqUlhkeHktTi16ZVFFTDBWUEk5bkpXTmt0aEkwaEpfZUtNWFNIQUpiLVlGa25FelIweUo2YUZyQ0lVNnl4NEF1LXluRGlKYzFzZzRrV2JVUG1IOWdr?oc=5",
+        "fonte": "Motor1.com Brasil",
+        "publicadaEmISO": "2026-07-12T07:00:00.000Z"
+      },
+      {
+        "titulo": "Filme indicado ao Oscar com Denzel Washington é lançado diretamente em VOD no Brasil - AdoroCinema",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9MUVNMU0MxQWxRaWJtYklOZ1ptS2hOV2s2RXJuMDR3U1JGWlJXcjYxR1dySC14S3IxcF9yOXVvMFFaRTVPOFVoUVF6a3Z4RHQxd0NjbGtubWtwOGJ0YWNzY0p0UVJDYlpfVUdZ?oc=5",
+        "fonte": "AdoroCinema",
+        "publicadaEmISO": "2018-03-09T08:00:00.000Z"
       }
     ]
   },
@@ -1627,6 +1689,12 @@
     "momento": "disponivel",
     "noticias": [
       {
+        "titulo": "'CANGAÇO NOVO' 🎬 Uma das senhas para entender a segunda temporada da série 'Cangaço Novo', que estreou no Prime Video na sexta-feira, 24, está no último episódio da temporada inicial: um incêndio criminoso no arraial da família Vaqueiro é mostrad - instagram.com",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1COGNOTkhnYnkwWUlOT2RHTzZnYUpNUE9pWTV1VVdLV1FFT2VyYjRuWXN2d2NRQWsyM1o1X2xYZFd1Sl9ORWV6OEhQVnBiTkp3ekE4WGlB?oc=5",
+        "fonte": "instagram.com",
+        "publicadaEmISO": "2026-04-28T07:00:00.000Z"
+      },
+      {
         "titulo": "OPINIÃO | Raquel Landim: \"Na véspera do Natal, morreu Tainara Souza dos Santos, aos 31 anos, mãe de 2 filhos, vítima de feminicídio.⁣ ⁣ Ela sofreu por quase um mês, após ter sido atropelada e arrastada por quase um quilômetro na Marginal Tietê, ter as - instagram.com",
         "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9kN3NCa204WEg3YzctaVZ6bnlFUWZTYWotNWpzaHVqeUFxcW01X2JSRkc0cllHX0Nta2wyS0ZJMjlqZHQ4YlpOQUZfNEZldHNidDdIbUdR?oc=5",
         "fonte": "instagram.com",
@@ -1637,12 +1705,6 @@
         "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbGJCWnlyb0lWUmd1RTRhOERvMExMY0JvdUZPNHFoc1hhTEUxRC0tcDRNS0VzQkIyWkJSc0dIVHFUVEtvMHRwcWFGbHhSX3R4MERBT2hmNmR5eTlTWlNFQ1BFODg4ci1FajNFc2g1MUVtYmhaS2FpTld5YXh4cDNaSU9sLVgtZUpuZVVQZy01OFMwQUxNcTc3Y0N3TjFMUQ?oc=5",
         "fonte": "VEJA",
         "publicadaEmISO": "2020-03-27T07:00:00.000Z"
-      },
-      {
-        "titulo": "Homem Morto (1995) ⭐ 7.5 | Aventura, Drama, Faroeste - IMDb",
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5PY3N1Y2xnTWJQQnl4RnhmcGVFYVhoam5LSmJCMWluOHd5dnptQWltaWpZWktNLU1mbXh3SXZ4QjVXV28wdkZZa2gtaWlLZTBjN1E?oc=5",
-        "fonte": "IMDb",
-        "publicadaEmISO": "2024-12-14T00:10:39.000Z"
       }
     ]
   },
@@ -1662,9 +1724,9 @@
     "momento": "disponivel",
     "noticias": [
       {
-        "titulo": "Pôster do filme The Last Sunrise - adorocinema.com",
+        "titulo": "Pôster do filme The Last Sunrise - AdoroCinema",
         "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPT0JqSTd2TEI1eWp1UHJldGRIb3Uyd2RSWTJIZDFWS1JfbVpJTEtPZHZTSTNOVThUWDkyT09TOXptejJkaEQ5S3F5SWVNN21qTzlBRlhGX2o5dGNBanRUaW0yZnZfWmtRSU5EbUt1LUtWX1ZVcVZ0d3RGUmMybDhWUm94bmgzbk9iZTQxek9za0V2Zw?oc=5",
-        "fonte": "adorocinema.com",
+        "fonte": "AdoroCinema",
         "publicadaEmISO": "2026-07-28T07:00:00.000Z"
       },
       {
@@ -1682,7 +1744,7 @@
     ]
   },
   {
-    "id": "sug-nintendo-1785460551000-17",
+    "id": "sug-nintendo-1785460551000-18",
     "titulo": "【8月13日追加】「ニンテンドー ゲームキューブ Nintendo Classics」に『スーパーマリオサンシャイン』を追加。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1703,7 +1765,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785460479000-18",
+    "id": "sug-nintendo-1785460479000-19",
     "titulo": "【8月4日追加】「バーチャルボーイ Nintendo Classics」に当時未発売の2タイトルと「ゲーム画面のカラー変更機能」を追加。専用ハード（ペーパーモデル）のセールも期間限定で実施中。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1724,7 +1786,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785459980000-19",
+    "id": "sug-nintendo-1785459980000-20",
     "titulo": "「レゴ ドンキーコング アーケードゲーム」「レゴ どうぶつの森 まめきち＆つぶきち のんびりお散歩」が8月1日発売。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1745,7 +1807,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785459924000-20",
+    "id": "sug-nintendo-1785459924000-21",
     "titulo": "8月4日から、「ニンテンドーeショップ サマーセール」開催。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1766,7 +1828,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785459832000-21",
+    "id": "sug-nintendo-1785459832000-22",
     "titulo": "『カラオケJOYSOUND for Nintendo Switch』8月の無料開放デーと、夏のお得なチケットのお知らせ。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1787,7 +1849,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785459782000-22",
+    "id": "sug-nintendo-1785459782000-23",
     "titulo": "ニンテンドーeショップ新作ソフト情報 7/31（金）号。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -1823,21 +1885,21 @@
     "momento": "disponivel",
     "noticias": [
       {
-        "titulo": "Novo trailer do 33º filme anime de Crayon Shin-chan - OtakuPT",
+        "titulo": "Novo trailer do 33º filme anime de Crayon Shin-chan - otakupt.com",
         "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMmxDZEZ2Tmo3eGV3WG9GOUZCR29mWW9CUERGMHJHdkJfVUwyaTZHcmFjOFBvWkplSVFnbmhDNU1HZkhVRVRDVmtBWjFTNlZzNF9UUnota0VDZ1hDTlpfM3hRMDNYbktxWkJIV290MWgxcUJYZlgzdE5YWHVjeEdfTWh2RDUtSFRZRXc?oc=5",
-        "fonte": "OtakuPT",
+        "fonte": "otakupt.com",
         "publicadaEmISO": "2026-06-05T07:00:00.000Z"
       },
       {
-        "titulo": "33º filme anime de Crayon Shin-chan no Verão 2026 - OtakuPT",
+        "titulo": "33º filme anime de Crayon Shin-chan no Verão 2026 - otakupt.com",
         "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOa1RsR09IZk02VW1nYWZPWEhxVWwxOGFOUFhKVlVUakxudVJveWhyNEhRZ0hiajZ4dm9qWjgwR0xKWHpHSFVIaUpqem9xWmJSanlrcS0wOWQ2RG5vVDV3dERtSVpGRFE2c2hsXy1NdFJPR0hVcnl2dzZhWkZFSWt3am1CVUtyWkk?oc=5",
-        "fonte": "OtakuPT",
+        "fonte": "otakupt.com",
         "publicadaEmISO": "2025-12-13T08:00:00.000Z"
       },
       {
-        "titulo": "33º filme anime de Crayon Shin-chan já tem data de estreia - OtakuPT",
+        "titulo": "33º filme anime de Crayon Shin-chan já tem data de estreia - otakupt.com",
         "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZnZnYV9iSDY5ak1WeXYzQ0ladzJHYmNJYmlrVHM0cHdzSGxwRFd4WUo1OHpsMmh5eGQxeEtsZU5Sckx4UHloTGRLeHNibmFESGEzLUFZeDgwUUpoakhqR20xekRPU3VKaldFaGFoUFcta0lrb05OTXNET2RhYU94emh6SjN1ME02SEQxWnJNM2hHY1U?oc=5",
-        "fonte": "OtakuPT",
+        "fonte": "otakupt.com",
         "publicadaEmISO": "2026-02-20T08:00:00.000Z"
       }
     ]
@@ -1859,21 +1921,21 @@
     "noticias": [
       {
         "titulo": "Trailers do filme Moana - Ingresso.com",
-        "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxNaXFDSXBBQXZPbGdDTEdsV0RFOVdGX1daYm9FdTUyT19vNUNSWHBNYnlpcnNWN0tyYmRmRnlnYVJaX01acDRkV2EtQXRQZVhWQ2loUm94OHdoVnlIM2VGR0s5bWl4X1BYYkFWOVNRNVlQZ1ZGUjN4Uk9rTUQyazZnZE1PRUc2ZVg2S3VVYjhzTmo5UEFDWjBfRjFacDlsNlZLMkZqNW03N0pVc3JDY08ydDY3VldIdzZvcy1WbnJqaFhxTi1jOVM4ZW5BQ0NZLVB6czZDeTRhcEFRbEcwQVU3T2p4YkhrNlQzSGU4YTVpd0lzaEgteHpyajV5dG1ZOWg3SFprcUp0VktlZnRURkx2NlUtY0x3YUZG?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQdEV5WndhZlhlQU50MnZqTVRRMHB0ZWRIekctVXppUUppeDlJNEpSVjJKU19yR01Gam01WG5iVjlPdmlZdG5UWUhtQmVkSF9RYXg2TWdtOFIxeHRnZlM0a05lcThJMDc3eHJrenNQVkdRT0RtUHdGMFg3SThPbF9NUUdhQ1FMNW53QXFYVVdVRHJGdjFvNkpnRjJNUGhBcnJGT1JiMlB5dGlsamozOEtWaktTWTFlWGs3YV9oZUJIRUJiY0cwalFQRmRVajNyY19wSVkwUWFVaTNxSGRGYzJPcnA3b2wwZWNVRDkzVnozQXkyYldtYl9nU2VwOW1fcHYtSW1HQzJ5el9GY01OUUZVUnhySQ?oc=5",
         "fonte": "Ingresso.com",
-        "publicadaEmISO": "2026-08-17T03:07:01.000Z"
+        "publicadaEmISO": "2026-08-18T03:01:08.000Z"
       },
       {
         "titulo": "Trailers do filme Moana 2 - Ingresso.com",
-        "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOMDVGZFpzS0htdVFWYVlCaV9GSkVSUHNMM1R0TUQ3UG1SNWxUZVp2bXJSOG1rc2p4UlFGU25MeDUyRl9QRnUwVTJzVjNScTdrWjdwREc5NHJjUnVWNjRFdkliX3diaGZrcy1kTGJ1X1RXLUxhaTZvTV9ERE5yNG44UzJzbUdLb3F6TE9Gb1pINTY4UkVLNm9DZmJ6bm55NGItdDM0b3FiUFFzU3lhaklsa2EwT2J2a0tfRnNRc1VaeW5kTEdUM3pTNHRVeUpobHF4ekF6TjloeEVuajFCeVFodEVmdnIyTTNuYUlkZ0dGM05iUnBURHJJaQ?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9EbENBLTdpcHNVbmZYUzh5VVVVc2J4LXI0c2JCQ0JLLUtqWlJFUXlpZzFwVWpUNGJ0dTRDWlVZSGRXbmVFZy10bmJwOWlSWkxJZ3JZTEx3LTVWZUN5alBRT0tWdkktQ002SnhjbVFva2hDWGlDR2k0V3FB?oc=5",
         "fonte": "Ingresso.com",
-        "publicadaEmISO": "2026-08-16T16:17:39.000Z"
+        "publicadaEmISO": "2026-08-16T17:53:44.000Z"
       },
       {
-        "titulo": "Sobre o filme Moana - Ingresso.com",
-        "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxNQkRmb1ozcHBWdGVvRkJDSXNEcTY4ZElrTXdTcFkyUmVXQTg0el9idXNXYlY3YjdYQ1liZlRmQUlDdHhMOE9QWlRYSUt6T0lvOXNMQjlQMFJTVjI5LXVwb0s4VzhYSHhRdERzX0hwOWVDbmlEYVFBLVpJYWN1M1V3RkF1OXVsZWRkUnAwWkhqdWcxYXNXcnNiSlZQT3RfT3BLVFhVbVFpNWZEZjIzMVRDRFB2M3FlM2s5TUNfVzRocENBSWRtSWtpckI3Nzgydkx0eUhBMnlLMGtVRGFKRnVqR2VBeEktcE1qQ2JOQ244VVRPbV95YUwzcEZwZFphQTltdlJYVTBDcUpEQWtPdHZoMDA5NmNCZ1ZvdWdTZFlQSmhRNVdHSUtLYkNjeXJTTl9vZzZhcDVublQtdmR5RlZHRmVjcmtMUjQ2ZEZpcm5qNXpEMzdaUmZqMw?oc=5",
+        "titulo": "Moana - Ingresso.com",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBKZzNtQlVKOWdRcFpiMUh5RXM1RWo1TXVJWXZPXzk3ZHhYYUdGZnhPaWZ0cjl4b1AzY3Uzd25nMzN4bXQyQUZqQk05a0l4bTlBcVpMN3VRUFdyOWRlR3hxNkhvVERfY3BqRWNudTVFLVE5NlpJVFE?oc=5",
         "fonte": "Ingresso.com",
-        "publicadaEmISO": "2026-08-12T02:09:19.000Z"
+        "publicadaEmISO": "2026-08-12T19:10:14.000Z"
       }
     ]
   },
@@ -1928,6 +1990,12 @@
     "momento": "disponivel",
     "noticias": [
       {
+        "titulo": "I Want Your Sex | Coordenador de intimidade do longa fala sobre cenas de sexo - Omelete",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQMFdZZ1paUGVadEZleUQzVjZ1aEdXRS1Eamdzb3NRSjVNUTRnTml2al9tcVFFNEVObExMN0FFLTdhLVdsNy00UEhoZWFSdDFjcHI0ckdjd0c3OFlKdlZsMXZTM19WS3REcnAwTzhtWlVxLXZ3N19xTXZaNW13ejdBUkRB?oc=5",
+        "fonte": "Omelete",
+        "publicadaEmISO": "2026-08-02T07:00:00.000Z"
+      },
+      {
         "titulo": "Ator revela obsessão por Olivia Wilde, colega de I Want Your Sex, na infância - cinebuzz.com.br",
         "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOeG1WWTU1U1czSVlsdEg1RGlTZm1ZRGhmc1hnTGI3bF9RZ1BlNTFmdTNDcVl2RG5QX29rQ3lKQkJjcjBhZVFUZEhTQXFIQ0FtMERaX1gzWFF1a0VxZzkyZjBIdVpmbjBjV2hnQWc1MVJvbXY0STZYVnhTSTdCclZFZjZtc0NWbFEtX2s3ODh1OFh2bXBRUlkwVE16YzFUTlpMbTFwR0dDdzVSakN0S190QVQzM01TX3hFZ1Jpaktn?oc=5",
         "fonte": "cinebuzz.com.br",
@@ -1938,12 +2006,6 @@
         "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNa3NOczJGUGpORlEtVC1CTFdjVTlUS3I5RjRiUlJSaHJxMzYtU2lMdE1HMzZ6R0w0cXFCNHlIQlR2M1kwdjV0T1FPVU9LUW51RkVkcEFWSDZZUmlMTXBfSmhmazVTcGwwenBOQlRuOG45QzdzOVo1b21tcndKZ2RHbGtHNEpIYm5DclVxR2Q5RHVHNXl1M0FjYk9FMjh6TnFlU3BmZ1RGUzFmUHQ3RTBHQw?oc=5",
         "fonte": "Público",
         "publicadaEmISO": "2026-08-05T07:00:00.000Z"
-      },
-      {
-        "titulo": "I Want Your Sex | Coordenador de intimidade do longa fala sobre cenas de sexo - Omelete",
-        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQMFdZZ1paUGVadEZleUQzVjZ1aEdXRS1Eamdzb3NRSjVNUTRnTml2al9tcVFFNEVObExMN0FFLTdhLVdsNy00UEhoZWFSdDFjcHI0ckdjd0c3OFlKdlZsMXZTM19WS3REcnAwTzhtWlVxLXZ3N19xTXZaNW13ejdBUkRB?oc=5",
-        "fonte": "Omelete",
-        "publicadaEmISO": "2026-08-02T07:00:00.000Z"
       }
     ]
   },
@@ -1983,7 +2045,7 @@
     ]
   },
   {
-    "id": "sug-nintendo-1785373723000-23",
+    "id": "sug-nintendo-1785373723000-24",
     "titulo": "楽園を目指す、少年と少女の物語。『ゼノブレイド2 Nintendo Switch 2 Edition』のダウンロード版・アップグレードパスが本日より配信開始。パッケージ版は10月1日発売。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2004,7 +2066,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785373667000-24",
+    "id": "sug-nintendo-1785373667000-25",
     "titulo": "『ぽこ あ ポケモン エキスパンションパス』有料追加コンテンツ第1弾と『ぽこ あ ポケモン』無料アップデート（Ver.2.0.0）を8月5日に配信。有料追加コンテンツ第2弾の最新情報も。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2025,7 +2087,7 @@
     "noticias": []
   },
   {
-    "id": "sug-nintendo-1785373588000-25",
+    "id": "sug-nintendo-1785373588000-26",
     "titulo": "夏におすすめのインディーゲーム3本をご紹介",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2042,11 +2104,10 @@
     "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/398600d4-c59c-4b34-804b-5b50e0e1bb3b",
     "fonte": "nintendo",
     "momento": "disponivel",
-    "tipoConteudo": "atualizacao-oficial",
-    "noticias": []
+    "tipoConteudo": "atualizacao-oficial"
   },
   {
-    "id": "sug-nintendo-1785373433000-26",
+    "id": "sug-nintendo-1785373433000-27",
     "titulo": "忘れられない恋が、もう一度始まる。『テニスの王子様 も～っと 学園祭の王子様 ♡-40 and more...』と『テニスの王子様 ぎゅ～っと！ ドキドキサバイバル Tie break ♡ game』がNintendo Switch 2 / Nintendo Switchで本日発売。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2063,11 +2124,10 @@
     "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/0c77f221-daf0-4d76-811d-6268dce0802b",
     "fonte": "nintendo",
     "momento": "disponivel",
-    "tipoConteudo": "atualizacao-oficial",
-    "noticias": []
+    "tipoConteudo": "atualizacao-oficial"
   },
   {
-    "id": "sug-nintendo-1785373372000-27",
+    "id": "sug-nintendo-1785373372000-28",
     "titulo": "「夜廻」シリーズスタッフが贈る生活シミュレーション『ほの暮しの庭』がNintendo Switch 2 / Nintendo Switchで本日発売。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2084,8 +2144,7 @@
     "idExterno": "nintendo-https://www.nintendo.com/jp/topics/article/8657b63a-429d-4233-a64c-0e64535ad2ec",
     "fonte": "nintendo",
     "momento": "disponivel",
-    "tipoConteudo": "atualizacao-oficial",
-    "noticias": []
+    "tipoConteudo": "atualizacao-oficial"
   },
   {
     "id": "sug-wikidata-Q130598211",
@@ -2100,27 +2159,7 @@
     ],
     "idExterno": "wikidata-Q130598211",
     "fonte": "wikidata",
-    "momento": "disponivel",
-    "noticias": [
-      {
-        "titulo": "Uma Musume Pretty Derby: Beginning of a New Era ganha novo trailer - Anime United",
-        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNc09rcWlZRkNfWEhCTHVMZEV5WGcwY2RsOGNLTWU3RG5IT01id0I3NHFiTW16Q21RM3NQRWZYRnk2dF93OGZ0b2w3aDdaVUNWN3NNTFFHNk9BaGNScThoczF5YTBIdm53cmtGMHBDRnlVUk1XOGNzeHdyaE5FTFp4MGVDOHdoRWxlUm93YXRTd3BZenYxY1d4T2lNQ19VVTJlRFBpTkpYSlZMRTZTdjlRT05hT28?oc=5",
-        "fonte": "Anime United",
-        "publicadaEmISO": "2026-08-14T03:12:19.000Z"
-      },
-      {
-        "titulo": "Filme Umamusume: Pretty Derby Beginning of a New Era ganha trailer focado na personagem T.M. Opera O - Crunchyroll",
-        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOSWl0MWxIOTFHM0hnaWMzYmVZNGlTYUVEajV0Z0d6WVhmanJlUFV5SGFrVUdMSExYcXlkZVlpVDNyQzdGTFhDdnFWclZPejNjcTMtaGJKY29tVEl2SjFxSlpWWm4wakFrRFB0eXJrdFp2eDlURDVJU3BMSkd0RmtlQVNoR3BsbVZUcXUwbGdjUnQxcFEzMjE0TUFUMkd5M3A3M3plSWM2N0dyUGM4Q0JtMzhNSVBnMllaZjdfTWVIOWVsS01tbHQ5ZDJjSWxpeERTWjlaelJTVTlhNFdw?oc=5",
-        "fonte": "Crunchyroll",
-        "publicadaEmISO": "2024-05-13T07:00:00.000Z"
-      },
-      {
-        "titulo": "Uma Musume: Pretty Derby - Beginning of a New Era (2024) ⭐ 7.7 | Animação, Comédia, Drama - IMDb",
-        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1DNjNNYW00cDNHaF9kRXNERTVReWFOeFB5N1cxV095dXU3YmtDczRhX3ZObW9tN1RnVGhZaEw5VHZuandsZk5wQlZhYU4wTFZsTjNN?oc=5",
-        "fonte": "IMDb",
-        "publicadaEmISO": "2024-12-13T12:43:01.000Z"
-      }
-    ]
+    "momento": "disponivel"
   },
   {
     "id": "sug-wikidata-Q5920563",
@@ -2134,6 +2173,21 @@
       }
     ],
     "idExterno": "wikidata-Q5920563",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q134083296",
+    "titulo": "The Invite",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-07-30T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q134083296"
+      }
+    ],
+    "idExterno": "wikidata-Q134083296",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -2169,17 +2223,17 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q134083296",
-    "titulo": "The Invite",
+    "id": "sug-wikidata-Q136242929",
+    "titulo": "The Money Maker",
     "categoria": "filmes",
     "dataLancamentoISO": "2026-07-30T00:00:00.000Z",
     "linksOficiais": [
       {
         "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q134083296"
+        "url": "http://www.wikidata.org/entity/Q136242929"
       }
     ],
-    "idExterno": "wikidata-Q134083296",
+    "idExterno": "wikidata-Q136242929",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -2195,21 +2249,6 @@
       }
     ],
     "idExterno": "wikidata-Q135472680",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q136242929",
-    "titulo": "The Money Maker",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-07-30T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q136242929"
-      }
-    ],
-    "idExterno": "wikidata-Q136242929",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -2349,17 +2388,17 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q139736526",
-    "titulo": "Q139736526",
+    "id": "sug-wikidata-Q140484495",
+    "titulo": "Above & Below",
     "categoria": "filmes",
     "dataLancamentoISO": "2026-07-29T00:00:00.000Z",
     "linksOficiais": [
       {
         "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q139736526"
+        "url": "http://www.wikidata.org/entity/Q140484495"
       }
     ],
-    "idExterno": "wikidata-Q139736526",
+    "idExterno": "wikidata-Q140484495",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -2379,22 +2418,22 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q140484495",
-    "titulo": "Above & Below",
+    "id": "sug-wikidata-Q139736526",
+    "titulo": "Q139736526",
     "categoria": "filmes",
     "dataLancamentoISO": "2026-07-29T00:00:00.000Z",
     "linksOficiais": [
       {
         "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140484495"
+        "url": "http://www.wikidata.org/entity/Q139736526"
       }
     ],
-    "idExterno": "wikidata-Q140484495",
+    "idExterno": "wikidata-Q139736526",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
   {
-    "id": "sug-nintendo-1785200615000-28",
+    "id": "sug-nintendo-1785200615000-29",
     "titulo": "「2026夏 トモダチコレクション わくわく生活 CM」を公開しました。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2489,7 +2528,7 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-nintendo-1784882266000-29",
+    "id": "sug-nintendo-1784882266000-30",
     "titulo": "「制作企画系 オンラインセミナー」のお申し込み受付を開始しました。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2509,7 +2548,7 @@
     "tipoConteudo": "atualizacao-oficial"
   },
   {
-    "id": "sug-nintendo-1784876730000-30",
+    "id": "sug-nintendo-1784876730000-31",
     "titulo": "「譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ」を掲載しました。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2529,7 +2568,7 @@
     "tipoConteudo": "atualizacao-oficial"
   },
   {
-    "id": "sug-nintendo-1784856274000-31",
+    "id": "sug-nintendo-1784856274000-32",
     "titulo": "コラボテーマをお得に交換できる「テトリス® 99 コラボテーマ大放出キャンペーン」開催。いろいろなゲームの背景や音楽で『テトリス® 99』が楽しめる。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2549,7 +2588,7 @@
     "tipoConteudo": "atualizacao-oficial"
   },
   {
-    "id": "sug-nintendo-1784856058000-32",
+    "id": "sug-nintendo-1784856058000-33",
     "titulo": "『Minecraft Dungeons』が7月27日から期間限定で遊び放題。Nintendo Switch Online加入者限定イベント「いっせいトライアル」開催。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2569,7 +2608,7 @@
     "tipoConteudo": "atualizacao-oficial"
   },
   {
-    "id": "sug-nintendo-1784855155000-33",
+    "id": "sug-nintendo-1784855155000-34",
     "titulo": "Nintendo Switch 2 ソフト『Xenoblade2（ゼノブレイド2） Nintendo Switch 2 Edition』の紹介映像と公式サイトを公開しました。 新たなレアブレイド「M.O.M.O.」や、ブレイドを直接操作できるアクションモードが加わります。 ※本作の対象年齢は「15歳以上」です。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2589,7 +2628,7 @@
     "tipoConteudo": "atualizacao-oficial"
   },
   {
-    "id": "sug-nintendo-1784854898000-34",
+    "id": "sug-nintendo-1784854898000-35",
     "titulo": "ニンテンドーeショップ新作ソフト情報 7/24（金）号。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2700,36 +2739,6 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q140745390",
-    "titulo": "Insectasy",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-07-24T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140745390"
-      }
-    ],
-    "idExterno": "wikidata-Q140745390",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q140942126",
-    "titulo": "Katukutu Buro",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-07-24T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140942126"
-      }
-    ],
-    "idExterno": "wikidata-Q140942126",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
     "id": "sug-wikidata-Q140158820",
     "titulo": "Hadestown: The Musical",
     "categoria": "filmes",
@@ -2805,6 +2814,36 @@
     "momento": "disponivel"
   },
   {
+    "id": "sug-wikidata-Q140745390",
+    "titulo": "Insectasy",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-07-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140745390"
+      }
+    ],
+    "idExterno": "wikidata-Q140745390",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q140942126",
+    "titulo": "Katukutu Buro",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-07-24T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140942126"
+      }
+    ],
+    "idExterno": "wikidata-Q140942126",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
     "id": "sug-wikidata-Q111946852",
     "titulo": "Animal Farm",
     "categoria": "filmes",
@@ -2835,7 +2874,7 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-nintendo-1784786819000-35",
+    "id": "sug-nintendo-1784786819000-36",
     "titulo": "スプラトゥーンシリーズのポータルサイト「スプラトゥーンベース」の「ヒストリー」ページを更新しました。 音楽ライブ「バンカライブ轟」や史上最大規模で行われた「グランドフェスティバル」、『スプラトゥーン レイダース』発売など3年間の歩みを追加しました。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2855,7 +2894,7 @@
     "tipoConteudo": "atualizacao-oficial"
   },
   {
-    "id": "sug-nintendo-1784768985000-36",
+    "id": "sug-nintendo-1784768985000-37",
     "titulo": "『スプラトゥーン レイダース』は本日発売。TVCMや「開発者に訊きました」など最新情報もご紹介。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -2965,21 +3004,6 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q131699191",
-    "titulo": "Kraken",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-07-23T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q131699191"
-      }
-    ],
-    "idExterno": "wikidata-Q131699191",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
     "id": "sug-wikidata-Q131873041",
     "titulo": "The Opera!",
     "categoria": "filmes",
@@ -2995,17 +3019,17 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q135726447",
-    "titulo": "Homo Argentum",
+    "id": "sug-wikidata-Q131699191",
+    "titulo": "Kraken",
     "categoria": "filmes",
     "dataLancamentoISO": "2026-07-23T00:00:00.000Z",
     "linksOficiais": [
       {
         "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q135726447"
+        "url": "http://www.wikidata.org/entity/Q131699191"
       }
     ],
-    "idExterno": "wikidata-Q135726447",
+    "idExterno": "wikidata-Q131699191",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -3021,6 +3045,21 @@
       }
     ],
     "idExterno": "wikidata-Q136687441",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q135726447",
+    "titulo": "Homo Argentum",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-07-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q135726447"
+      }
+    ],
+    "idExterno": "wikidata-Q135726447",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -3051,6 +3090,36 @@
       }
     ],
     "idExterno": "wikidata-Q139382781",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q140233896",
+    "titulo": "I Rarely Wake Up Dreaming",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-07-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140233896"
+      }
+    ],
+    "idExterno": "wikidata-Q140233896",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q140461397",
+    "titulo": "Bad Counselors",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-07-23T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140461397"
+      }
+    ],
+    "idExterno": "wikidata-Q140461397",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -3100,32 +3169,17 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q140233896",
-    "titulo": "I Rarely Wake Up Dreaming",
+    "id": "sug-wikidata-Q141112267",
+    "titulo": "Polis",
     "categoria": "filmes",
     "dataLancamentoISO": "2026-07-23T00:00:00.000Z",
     "linksOficiais": [
       {
         "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140233896"
+        "url": "http://www.wikidata.org/entity/Q141112267"
       }
     ],
-    "idExterno": "wikidata-Q140233896",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q140461397",
-    "titulo": "Bad Counselors",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-07-23T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140461397"
-      }
-    ],
-    "idExterno": "wikidata-Q140461397",
+    "idExterno": "wikidata-Q141112267",
     "fonte": "wikidata",
     "momento": "disponivel"
   },
@@ -3160,36 +3214,6 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-wikidata-Q140524489",
-    "titulo": "Elize: Sombras de uma Mulher",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-07-22T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140524489"
-      }
-    ],
-    "idExterno": "wikidata-Q140524489",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q140770843",
-    "titulo": "A Toxic Love Story",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-07-22T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140770843"
-      }
-    ],
-    "idExterno": "wikidata-Q140770843",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
     "id": "sug-wikidata-Q140447668",
     "titulo": "Ancestral Beasts",
     "categoria": "filmes",
@@ -3220,7 +3244,37 @@
     "momento": "disponivel"
   },
   {
-    "id": "sug-nintendo-1784638941000-37",
+    "id": "sug-wikidata-Q140524489",
+    "titulo": "Elize: Sombras de uma Mulher",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-07-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140524489"
+      }
+    ],
+    "idExterno": "wikidata-Q140524489",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-wikidata-Q140770843",
+    "titulo": "A Toxic Love Story",
+    "categoria": "filmes",
+    "dataLancamentoISO": "2026-07-22T00:00:00.000Z",
+    "linksOficiais": [
+      {
+        "label": "Ficha do filme",
+        "url": "http://www.wikidata.org/entity/Q140770843"
+      }
+    ],
+    "idExterno": "wikidata-Q140770843",
+    "fonte": "wikidata",
+    "momento": "disponivel"
+  },
+  {
+    "id": "sug-nintendo-1784638941000-38",
     "titulo": "Nintendo Switch 2 ソフト『スプラトゥーン レイダース』の紹介映像を公開しました。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -3240,7 +3294,7 @@
     "tipoConteudo": "atualizacao-oficial"
   },
   {
-    "id": "sug-nintendo-1784638863000-38",
+    "id": "sug-nintendo-1784638863000-39",
     "titulo": "「開発者に訊きました：スプラトゥーン レイダース」を公開しました。 「気持ちの良い忙しさ」が感じられる遊びづくり、バンカラ街とは異なる舞台や無人島で過ごすキャラクターのデザインアイデアなど、開発者みずからの言葉でお届けします。",
     "descricao": "Nintendo: ",
     "categoria": "jogos",
@@ -3271,51 +3325,6 @@
       }
     ],
     "idExterno": "wikidata-Q136339220",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q140933712",
-    "titulo": "Dori Lagichhi Kalia Pakhe",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-07-19T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140933712"
-      }
-    ],
-    "idExterno": "wikidata-Q140933712",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q140938371",
-    "titulo": "Chithi Lekhichi Mo Chaka Akhiku",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-07-19T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140938371"
-      }
-    ],
-    "idExterno": "wikidata-Q140938371",
-    "fonte": "wikidata",
-    "momento": "disponivel"
-  },
-  {
-    "id": "sug-wikidata-Q140373840",
-    "titulo": "Sweet Rogue Killer: The Killer's Game",
-    "categoria": "filmes",
-    "dataLancamentoISO": "2026-07-19T00:00:00.000Z",
-    "linksOficiais": [
-      {
-        "label": "Ficha do filme",
-        "url": "http://www.wikidata.org/entity/Q140373840"
-      }
-    ],
-    "idExterno": "wikidata-Q140373840",
     "fonte": "wikidata",
     "momento": "disponivel"
   }
