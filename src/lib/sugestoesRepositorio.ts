@@ -25,6 +25,11 @@ export async function listarSugestoes(): Promise<SugestaoLancamento[]> {
           .filter((item) => item.categoria !== "filmes" || (item.fonte === "tmdb" && (item.plataformas?.length ?? 0) > 0))
           .map((item) => ({
             ...item,
+            descricao: item.tipoConteudo === "atualizacao-oficial"
+              ? `Novidade oficial publicada pela ${item.fonte === "xbox" ? "Xbox" : "PlayStation"}. Abra para conferir os detalhes.`
+              : item.fonte === "tvmaze"
+                ? "Série em exibição. Confira a programação e os episódios disponíveis."
+                : item.descricao,
             imagemUrl: item.imagemUrl?.replace(/^http:/i, "https:"),
             bannerUrl: item.bannerUrl?.replace(/^http:/i, "https:"),
           }));

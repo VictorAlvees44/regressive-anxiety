@@ -102,6 +102,35 @@ async function buscarTmdbDescoberta(tipo, categoria, dataInicial) {
   }).filter(Boolean);
 }
 
+/** Reserva de séries quando a chave do TMDB não estiver disponível. */
+async function buscarSeriesTvmaze() {
+  const hoje = new Date();
+  const datas = Array.from({ length: 14 }, (_, indice) => {
+    const data = new Date(hoje.getTime() - indice * DIA);
+    return data.toISOString().slice(0, 10);
+  });
+  const agendas = await Promise.all(datas.map((data) => json(`https://api.tvmaze.com/schedule/web?date=${data}`)));
+  const porSerie = new Map();
+  agendas.flat().filter(Boolean).forEach((episodio) => {
+    const serie = episodio.show;
+    const data = iso(serie?.premiered || episodio.airdate);
+    if (!serie?.id || !serie.name || !data || porSerie.has(serie.id)) return;
+    porSerie.set(serie.id, {
+      id: `sug-tvmaze-${serie.id}`,
+      titulo: serie.name,
+      descricao: "Série em exibição. Confira a programação e os episódios disponíveis.",
+      categoria: "series",
+      dataLancamentoISO: data,
+      imagemUrl: serie.image?.original ?? serie.image?.medium,
+      linksOficiais: [{ label: "Ver programação", url: serie.url }],
+      idExterno: `tvmaze-${serie.id}`,
+      fonte: "tvmaze",
+      momento: "disponivel",
+    });
+  });
+  return [...porSerie.values()].slice(0, 60);
+}
+
 const CATALOGOS_BR = [
   { rotulo: "Netflix", nomes: ["Netflix"] },
   { rotulo: "Prime Video", nomes: ["Amazon Prime Video", "Prime Video"] },
@@ -155,6 +184,17 @@ function valorXml(bloco, tag) {
   return decodificarXml(bloco.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`))?.[1] ?? "");
 }
 
+async function buscarImagemDaPagina(url) {
+  try {
+    const resposta = await fetch(url, { headers: { "User-Agent": "RegressiveAnxiety/1.0" } });
+    if (!resposta.ok) return undefined;
+    const html = await resposta.text();
+    const meta = html.match(/<meta[^>]+(?:property|name)=["']og:image["'][^>]+content=["']([^"']+)["'][^>]*>/i)
+      ?? html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']og:image["'][^>]*>/i);
+    return meta?.[1]?.replace(/&amp;/g, "&");
+  } catch { return undefined; }
+}
+
 /** Comunicados diretos das fabricantes; data é a publicação, nunca uma data de lançamento presumida. */
 async function buscarAtualizacoesOficiais({ fonte, nome, plataforma, url, baseUrl }) {
   try {
@@ -162,7 +202,7 @@ async function buscarAtualizacoesOficiais({ fonte, nome, plataforma, url, baseUr
     if (!resposta.ok) return [];
     const xml = await resposta.text();
     const entradas = [...xml.matchAll(/<(?:item|entry)>([\s\S]*?)<\/(?:item|entry)>/g)].slice(0, 40);
-    return entradas.map(([, entrada], indice) => {
+    return Promise.all(entradas.slice(0, 20).map(async ([, entrada], indice) => {
       const titulo = removerHtml(valorXml(entrada, "title"));
       const data = iso(valorXml(entrada, "pubDate") || valorXml(entrada, "published") || valorXml(entrada, "updated"));
       const linkDireto = valorXml(entrada, "link");
@@ -170,8 +210,9 @@ async function buscarAtualizacoesOficiais({ fonte, nome, plataforma, url, baseUr
       const link = linkDireto || linkAtom;
       if (!titulo || !data || !link || new Date(data).getTime() < agora - 30 * DIA) return null;
       const urlCompleta = /^https?:\/\//i.test(link) ? link : new URL(link, baseUrl).toString();
-      return { id: `sug-${fonte}-${new Date(data).getTime()}-${indice}`, titulo, descricao: `Novidade oficial publicada pela ${nome}. Abra para conferir os detalhes.`, categoria: "jogos", dataLancamentoISO: data, plataformas: [plataforma], linksOficiais: [{ label: `Abrir no ${nome}`, url: urlCompleta }], idExterno: `${fonte}-${urlCompleta}`, fonte, momento: "disponivel", tipoConteudo: "atualizacao-oficial", relevancia: 20_000 };
-    }).filter(Boolean);
+      const imagemUrl = await buscarImagemDaPagina(urlCompleta);
+      return { id: `sug-${fonte}-${new Date(data).getTime()}-${indice}`, titulo, descricao: `Novidade oficial publicada pela ${nome}. Abra para conferir os detalhes.`, categoria: "jogos", dataLancamentoISO: data, imagemUrl, plataformas: [plataforma], linksOficiais: [{ label: `Abrir no ${nome}`, url: urlCompleta }], idExterno: `${fonte}-${urlCompleta}`, fonte, momento: "disponivel", tipoConteudo: "atualizacao-oficial", relevancia: 20_000 };
+    })).then((itens) => itens.filter(Boolean));
   } catch { return []; }
 }
 
@@ -225,16 +266,16 @@ function deduplicar(itens) {
 }
 
 async function main() {
-  const [igdb, steam, epic, rawg, playstation, xbox, filmesStreaming, filmesCinema, seriesTmdb] = await Promise.all([
+  const [igdb, steam, epic, rawg, playstation, xbox, filmesStreaming, filmesCinema, seriesTmdb, seriesTvmaze] = await Promise.all([
     buscarJogosIgdb(),
     buscarJogosSteam(),
     buscarJogosEpic(),
     buscarJogosRawg(),
     buscarAtualizacoesOficiais({ fonte: "playstation", nome: "PlayStation", plataforma: "PlayStation 5", url: "https://blog.playstation.com/feed/", baseUrl: "https://blog.playstation.com" }),
     buscarAtualizacoesOficiais({ fonte: "xbox", nome: "Xbox Wire", plataforma: "Xbox Series X|S", url: "https://news.xbox.com/en-us/feed/", baseUrl: "https://news.xbox.com" }),
-    buscarFilmesDosCatalogosBr(), buscarFilmesEmCartazNoBrasil(), buscarTmdbDescoberta("tv", "series", haUmMes),
+    buscarFilmesDosCatalogosBr(), buscarFilmesEmCartazNoBrasil(), buscarTmdbDescoberta("tv", "series", haUmMes), buscarSeriesTvmaze(),
   ]);
-  const sugestoes = deduplicar([...buscarDestaquesConfirmados(), ...igdb, ...steam, ...epic, ...rawg, ...playstation, ...xbox, ...filmesStreaming, ...filmesCinema, ...seriesTmdb])
+  const sugestoes = deduplicar([...buscarDestaquesConfirmados(), ...igdb, ...steam, ...epic, ...rawg, ...playstation, ...xbox, ...filmesStreaming, ...filmesCinema, ...seriesTmdb, ...seriesTvmaze])
     .sort((a, b) => {
       const aData = new Date(a.dataLancamentoISO).getTime();
       const bData = new Date(b.dataLancamentoISO).getTime();

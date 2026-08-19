@@ -2,9 +2,8 @@
  * Motor de geração de mensagens de notificação.
  *
  * Esta é a versão CommonJS usada pela Cloud Function de envio
- * (ambiente Node isolado do frontend). O conteúdo dos templates é
- * mantido em espelho com `src/data/notificacoes.ts` — ao adicionar
- * uma frase em um dos dois arquivos, replique no outro.
+ * (ambiente Node isolado do frontend). Os templates vivem aqui para
+ * que a função permaneça independente do bundle do navegador.
  */
 
 const TEMPLATES = {

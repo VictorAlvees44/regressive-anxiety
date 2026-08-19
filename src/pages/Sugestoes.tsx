@@ -167,7 +167,13 @@ export function Sugestoes() {
 
       {!carregando && sugestoes.length === 0 && <GlassCard className="text-center text-sm text-base-900/55 dark:text-base-50/55">A estante está vazia por enquanto. Na próxima atualização ela ganha vida.</GlassCard>}
 
-      {!carregando && sugestoes.length > 0 && sugestoesVisiveis.length === 0 && <GlassCard className="text-center text-sm text-base-900/55 dark:text-base-50/55">Nada encontrado neste filtro. Experimente outra categoria.</GlassCard>}
+      {!carregando && sugestoes.length > 0 && sugestoesVisiveis.length === 0 && (
+        <GlassCard className="text-center text-sm text-base-900/55 dark:text-base-50/55">
+          {filtroCategoria === "filmes"
+            ? "O catálogo brasileiro de filmes está sendo atualizado. Rode a sincronização diária após conferir a chave TMDB."
+            : "Nada encontrado neste filtro. Experimente outra categoria."}
+        </GlassCard>
+      )}
 
       {!carregando && sugestoesVisiveis.length > 0 && <p className="px-1 text-sm text-base-900/55 dark:text-base-50/55">{sugestoesVisiveis.length} opções para explorar sem ficar caçando o controle remoto.</p>}
 
@@ -184,7 +190,8 @@ export function Sugestoes() {
               <GlassCard className="h-full overflow-hidden p-0">
                 <div className="flex min-h-44">
                   <div className="relative w-28 shrink-0 overflow-hidden bg-base-900/10 sm:w-32">
-                    <div className="absolute inset-0 flex items-center justify-center text-base-900/45 dark:text-base-50/45"><IconeCategoria categoria={sugestao.categoria} /></div>
+                    <img src={`${import.meta.env.BASE_URL}icons/icon-192.png`} alt="" className="absolute inset-0 h-full w-full object-cover opacity-70" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-base-950/20 text-base-50/80"><IconeCategoria categoria={sugestao.categoria} /></div>
                     {sugestao.imagemUrl ? <img src={sugestao.imagemUrl} alt={`Capa de ${sugestao.titulo}`} className="relative h-full w-full object-cover" loading="lazy" onError={(evento) => { evento.currentTarget.remove(); }} /> : null}
                   </div>
                   <div className="flex min-w-0 flex-1 flex-col p-4">
