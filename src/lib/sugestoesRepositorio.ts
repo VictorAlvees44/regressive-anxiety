@@ -22,14 +22,12 @@ export async function listarSugestoes(): Promise<SugestaoLancamento[]> {
           // pertencem à curadoria brasileira atual.
           .filter((item) => item.fonte !== "nintendo")
           .filter((item) => !/[\u3040-\u30ff]/.test(item.titulo))
-          .filter((item) => item.categoria !== "filmes" || (item.fonte === "tmdb" && (item.plataformas?.length ?? 0) > 0))
+          .filter((item) => !["filmes", "series"].includes(item.categoria) || (item.fonte === "tmdb" && (item.plataformas?.length ?? 0) > 0))
           .map((item) => ({
             ...item,
             descricao: item.tipoConteudo === "atualizacao-oficial"
               ? `Novidade oficial publicada pela ${item.fonte === "xbox" ? "Xbox" : "PlayStation"}. Abra para conferir os detalhes.`
-              : item.fonte === "tvmaze"
-                ? "Série em exibição. Confira a programação e os episódios disponíveis."
-                : item.descricao,
+              : item.descricao,
             imagemUrl: item.imagemUrl?.replace(/^http:/i, "https:"),
             bannerUrl: item.bannerUrl?.replace(/^http:/i, "https:"),
           }));

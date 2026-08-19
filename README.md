@@ -43,7 +43,7 @@ O navegador não conversa diretamente com serviços externos. Uma Action do GitH
 | --- | --- |
 | Jogos | RAWG, IGDB, Steam, Epic, PlayStation e Xbox |
 | Filmes | TMDB, limitado à disponibilidade brasileira e cinema |
-| Séries | TMDB e TVmaze como reserva |
+| Séries | TMDB, limitado à disponibilidade brasileira dos catálogos selecionados |
 | Notícias | Google News em português do Brasil |
 
 Os segredos abaixo ficam em **Settings → Secrets and variables → Actions** no GitHub:

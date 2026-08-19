@@ -14,7 +14,6 @@ const RAWG_API_KEY = process.env.RAWG_API_KEY;
 const DIA = 86_400_000;
 const agora = Date.now();
 const emDoisAnos = new Date(agora + 730 * DIA).toISOString().slice(0, 10);
-const haUmMes = new Date(agora - 30 * DIA).toISOString().slice(0, 10);
 const haUmAno = new Date(agora - 365 * DIA).toISOString().slice(0, 10);
 const PLATAFORMAS_PREFERIDAS = /steam|playstation 5|ps5|xbox series/i;
 
@@ -92,45 +91,6 @@ async function buscarJogosRawg() {
   }).filter(Boolean);
 }
 
-async function buscarTmdbDescoberta(tipo, categoria, dataInicial) {
-  if (!TMDB_API_KEY) return [];
-  const campoData = tipo === "movie" ? "primary_release_date" : "first_air_date";
-  const paginas = await Promise.all([1, 2, 3, 4, 5].map((pagina) => json(`https://api.themoviedb.org/3/discover/${tipo}?api_key=${TMDB_API_KEY}&language=pt-BR&sort_by=popularity.desc&page=${pagina}&${campoData}.gte=${dataInicial}&${campoData}.lte=${emDoisAnos}`)));
-  return paginas.flatMap((dados) => dados?.results ?? []).map((item) => {
-    const data = iso(item.release_date || item.first_air_date);
-    return data && { id: `sug-tmdb-${tipo}-${item.id}`, titulo: item.title ?? item.name, descricao: item.overview?.slice(0, 300), categoria, dataLancamentoISO: data, imagemUrl: item.poster_path ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : undefined, bannerUrl: item.backdrop_path ? `https://image.tmdb.org/t/p/w780${item.backdrop_path}` : undefined, linksOficiais: [{ label: "Ver no TMDB", url: `https://www.themoviedb.org/${tipo}/${item.id}` }], idExterno: `tmdb-${tipo}-${item.id}`, fonte: "tmdb", momento: momento(data) };
-  }).filter(Boolean);
-}
-
-/** Reserva de séries quando a chave do TMDB não estiver disponível. */
-async function buscarSeriesTvmaze() {
-  const hoje = new Date();
-  const datas = Array.from({ length: 14 }, (_, indice) => {
-    const data = new Date(hoje.getTime() - indice * DIA);
-    return data.toISOString().slice(0, 10);
-  });
-  const agendas = await Promise.all(datas.map((data) => json(`https://api.tvmaze.com/schedule/web?date=${data}`)));
-  const porSerie = new Map();
-  agendas.flat().filter(Boolean).forEach((episodio) => {
-    const serie = episodio.show;
-    const data = iso(serie?.premiered || episodio.airdate);
-    if (!serie?.id || !serie.name || !data || porSerie.has(serie.id)) return;
-    porSerie.set(serie.id, {
-      id: `sug-tvmaze-${serie.id}`,
-      titulo: serie.name,
-      descricao: "Série em exibição. Confira a programação e os episódios disponíveis.",
-      categoria: "series",
-      dataLancamentoISO: data,
-      imagemUrl: serie.image?.original ?? serie.image?.medium,
-      linksOficiais: [{ label: "Ver programação", url: serie.url }],
-      idExterno: `tvmaze-${serie.id}`,
-      fonte: "tvmaze",
-      momento: "disponivel",
-    });
-  });
-  return [...porSerie.values()].slice(0, 60);
-}
-
 const CATALOGOS_BR = [
   { rotulo: "Netflix", nomes: ["Netflix"] },
   { rotulo: "Prime Video", nomes: ["Amazon Prime Video", "Prime Video"] },
@@ -156,10 +116,32 @@ function sugestaoTmdbFilme(item, plataforma) {
   };
 }
 
+function sugestaoTmdbSerie(item, plataforma) {
+  const data = iso(item.first_air_date);
+  return data && {
+    id: `sug-tmdb-tv-${plataforma.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${item.id}`,
+    titulo: item.name,
+    descricao: item.overview?.slice(0, 300) || "Série disponível no Brasil.",
+    categoria: "series",
+    dataLancamentoISO: data,
+    imagemUrl: item.poster_path ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : undefined,
+    bannerUrl: item.backdrop_path ? `https://image.tmdb.org/t/p/w780${item.backdrop_path}` : undefined,
+    plataformas: [plataforma],
+    linksOficiais: [{ label: "Ver detalhes", url: `https://www.themoviedb.org/tv/${item.id}?language=pt-BR` }],
+    idExterno: `tmdb-tv-${item.id}`,
+    fonte: "tmdb",
+    momento: "disponivel",
+  };
+}
+
 /** Filmes que de fato estão disponíveis no Brasil pelos catálogos escolhidos. */
 async function buscarFilmesDosCatalogosBr() {
   if (!TMDB_API_KEY) return [];
   const provedores = await json(`https://api.themoviedb.org/3/watch/providers/movie?api_key=${TMDB_API_KEY}&language=pt-BR`);
+  if (!provedores?.results?.length) {
+    console.warn("TMDB não retornou os provedores de filmes do Brasil. Confira a chave TMDB_API_KEY.");
+    return [];
+  }
   const porNome = new Map((provedores?.results ?? []).map((item) => [item.provider_name, item.provider_id]));
   const buscas = CATALOGOS_BR.map(async ({ rotulo, nomes }) => {
     const id = nomes.map((nome) => porNome.get(nome)).find(Boolean);
@@ -182,6 +164,24 @@ function decodificarXml(texto = "") { return texto.replace(/<!\[CDATA\[([\s\S]*?
 function removerHtml(texto = "") { return decodificarXml(texto).replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim(); }
 function valorXml(bloco, tag) {
   return decodificarXml(bloco.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`))?.[1] ?? "");
+}
+
+/** Séries disponíveis no Brasil pelos mesmos catálogos escolhidos para filmes. */
+async function buscarSeriesDosCatalogosBr() {
+  if (!TMDB_API_KEY) return [];
+  const provedores = await json(`https://api.themoviedb.org/3/watch/providers/tv?api_key=${TMDB_API_KEY}&language=pt-BR`);
+  if (!provedores?.results?.length) {
+    console.warn("TMDB não retornou os provedores de séries do Brasil. Confira a chave TMDB_API_KEY.");
+    return [];
+  }
+  const porNome = new Map((provedores?.results ?? []).map((item) => [item.provider_name, item.provider_id]));
+  const buscas = CATALOGOS_BR.map(async ({ rotulo, nomes }) => {
+    const id = nomes.map((nome) => porNome.get(nome)).find(Boolean);
+    if (!id) return [];
+    const paginas = await Promise.all([1, 2, 3].map((pagina) => json(`https://api.themoviedb.org/3/discover/tv?api_key=${TMDB_API_KEY}&language=pt-BR&watch_region=BR&with_watch_monetization_types=flatrate&with_watch_providers=${id}&sort_by=popularity.desc&page=${pagina}`)));
+    return paginas.flatMap((dados) => dados?.results ?? []).map((item) => sugestaoTmdbSerie(item, rotulo)).filter(Boolean);
+  });
+  return (await Promise.all(buscas)).flat();
 }
 
 async function buscarImagemDaPagina(url) {
@@ -217,17 +217,20 @@ async function buscarAtualizacoesOficiais({ fonte, nome, plataforma, url, baseUr
 }
 
 /** Destaques de lançamento confirmados pelas próprias publicadoras. */
-function buscarDestaquesConfirmados() {
+async function buscarDestaquesConfirmados() {
   const gtaVI = "2026-11-19T05:00:00.000Z";
   if (new Date(gtaVI).getTime() < agora - 30 * DIA || new Date(gtaVI).getTime() > agora + 730 * DIA) return [];
+  const siteOficial = "https://www.rockstargames.com/VI";
+  const imagemUrl = await buscarImagemDaPagina(siteOficial);
   return [{
     id: "sug-rockstar-gta-vi",
     titulo: "Grand Theft Auto VI",
     descricao: "A volta a Vice City chega primeiro ao PlayStation 5 e Xbox Series X|S.",
     categoria: "jogos",
     dataLancamentoISO: gtaVI,
+    imagemUrl,
     plataformas: ["PlayStation 5", "Xbox Series X|S"],
-    linksOficiais: [{ label: "Site oficial", url: "https://www.rockstargames.com/VI" }],
+    linksOficiais: [{ label: "Site oficial", url: siteOficial }],
     idExterno: "rockstar-gta-vi",
     fonte: "rockstar",
     momento: momento(gtaVI),
@@ -266,16 +269,18 @@ function deduplicar(itens) {
 }
 
 async function main() {
-  const [igdb, steam, epic, rawg, playstation, xbox, filmesStreaming, filmesCinema, seriesTmdb, seriesTvmaze] = await Promise.all([
+  if (!TMDB_API_KEY) console.warn("TMDB_API_KEY não configurada: filmes e séries do Brasil ficarão fora desta atualização.");
+  const [destaques, igdb, steam, epic, rawg, playstation, xbox, filmesStreaming, filmesCinema, seriesBrasil] = await Promise.all([
+    buscarDestaquesConfirmados(),
     buscarJogosIgdb(),
     buscarJogosSteam(),
     buscarJogosEpic(),
     buscarJogosRawg(),
     buscarAtualizacoesOficiais({ fonte: "playstation", nome: "PlayStation", plataforma: "PlayStation 5", url: "https://blog.playstation.com/feed/", baseUrl: "https://blog.playstation.com" }),
     buscarAtualizacoesOficiais({ fonte: "xbox", nome: "Xbox Wire", plataforma: "Xbox Series X|S", url: "https://news.xbox.com/en-us/feed/", baseUrl: "https://news.xbox.com" }),
-    buscarFilmesDosCatalogosBr(), buscarFilmesEmCartazNoBrasil(), buscarTmdbDescoberta("tv", "series", haUmMes), buscarSeriesTvmaze(),
+    buscarFilmesDosCatalogosBr(), buscarFilmesEmCartazNoBrasil(), buscarSeriesDosCatalogosBr(),
   ]);
-  const sugestoes = deduplicar([...buscarDestaquesConfirmados(), ...igdb, ...steam, ...epic, ...rawg, ...playstation, ...xbox, ...filmesStreaming, ...filmesCinema, ...seriesTmdb, ...seriesTvmaze])
+  const sugestoes = deduplicar([...destaques, ...igdb, ...steam, ...epic, ...rawg, ...playstation, ...xbox, ...filmesStreaming, ...filmesCinema, ...seriesBrasil])
     .sort((a, b) => {
       const aData = new Date(a.dataLancamentoISO).getTime();
       const bData = new Date(b.dataLancamentoISO).getTime();
@@ -290,6 +295,7 @@ async function main() {
   await Promise.all(comNoticias.slice(0, 80).map(async (sugestao) => { sugestao.noticias = await buscarNoticias(sugestao); }));
   await mkdir(path.dirname(SAIDA), { recursive: true });
   await writeFile(SAIDA, JSON.stringify(sugestoes, null, 2), "utf-8");
-  console.log(`Sincronização concluída: ${sugestoes.length} sugestões salvas em ${SAIDA}`);
+  const resumo = Object.fromEntries(["jogos", "filmes", "series"].map((categoria) => [categoria, sugestoes.filter((item) => item.categoria === categoria).length]));
+  console.log(`Sincronização concluída: ${sugestoes.length} sugestões salvas em ${SAIDA}. Jogos: ${resumo.jogos}; filmes: ${resumo.filmes}; séries: ${resumo.series}.`);
 }
 main().catch((erro) => { console.error("Falha na sincronização de dados:", erro); process.exitCode = 1; });
