@@ -88,7 +88,7 @@ async function buscarJogosRawg() {
     const data = iso(jogo.released);
     if (!data || !jogo.name) return null;
     const plataformas = (jogo.parent_platforms ?? []).map((item) => item.platform?.name).filter(Boolean);
-    return { id: `sug-rawg-${jogo.id}`, titulo: jogo.name, categoria: "jogos", dataLancamentoISO: data, imagemUrl: jogo.background_image ?? undefined, plataformas, linksOficiais: [{ label: "Ver detalhes", url: `https://rawg.io/games/${jogo.slug}` }], idExterno: `rawg-${jogo.id}`, fonte: "rawg", momento: momento(data), relevancia: prioridadeJogo({ rating_count: jogo.ratings_count, platforms }) + Number(jogo.metacritic ?? 0) * 1_000 };
+    return { id: `sug-rawg-${jogo.id}`, titulo: jogo.name, categoria: "jogos", dataLancamentoISO: data, imagemUrl: jogo.background_image ?? undefined, plataformas, linksOficiais: [{ label: "Ver detalhes", url: `https://rawg.io/games/${jogo.slug}` }], idExterno: `rawg-${jogo.id}`, fonte: "rawg", momento: momento(data), relevancia: prioridadeJogo({ rating_count: jogo.ratings_count, platforms: plataformas }) + Number(jogo.metacritic ?? 0) * 1_000 };
   }).filter(Boolean);
 }
 
