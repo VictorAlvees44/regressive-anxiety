@@ -24,7 +24,7 @@ export default defineConfig({
         globPatterns: ["**/*.{js,css,html}"],
       },
       registerType: "autoUpdate",
-      includeAssets: ["favicon.svg", "icons/*.png"],
+      includeAssets: ["favicon.png", "icons/*.png"],
       manifest: {
         name: "Regressive Anxiety",
         short_name: "Reg. Anxiety",

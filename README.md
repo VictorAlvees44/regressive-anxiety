@@ -49,7 +49,7 @@ O único "backend" de fato é uma única Cloud Function agendada (`functions/`),
 O projeto combina três fontes de dados:
 
 ```
-APIs externas e feeds oficiais (IGDB/Steam/Epic/Nintendo/PlayStation/Xbox/TMDB/Wikidata/TVmaze)  Firestore (Auth + dados do casal)  Cloud Function agendada
+APIs externas e feeds oficiais (IGDB/RAWG/Steam/Epic/PlayStation/Xbox/TMDB)  Firestore (Auth + dados do casal)  Cloud Function agendada
         |  1x/dia via Actions                |  tempo real, leitura p/ visitantes    |  1x/dia, 09h
         v                                     v  escrita só p/ os 2 admins            v
 public/data/sugestoes.json          coleções `eventos` e `listaDesejos`     lê `eventos` + tokens FCM
@@ -59,7 +59,7 @@ public/data/sugestoes.json          coleções `eventos` e `listaDesejos`     l�
                           consome as três fontes conforme a tela
 ```
 
-- **Dados públicos** (sugestões de lançamentos e notícias): nunca buscados em tempo real pelo navegador. O workflow `sincronizar-dados.yml` roda uma vez por dia, consulta IGDB, Steam/Valve, Epic Games Store, os feeds oficiais da Nintendo, PlayStation e Xbox, TMDB, Wikidata, TVmaze e o feed do Google News e grava `public/data/sugestoes.json`. O app só lê esse arquivo (`src/lib/sugestoesRepositorio.ts`).
+- **Dados públicos** (sugestões de lançamentos e notícias): nunca buscados em tempo real pelo navegador. O workflow `sincronizar-dados.yml` roda uma vez por dia, consulta IGDB, RAWG, Steam/Valve, Epic Games Store, os feeds em inglês da PlayStation e Xbox, TMDB e o feed do Google News e grava `public/data/sugestoes.json`. Filmes são filtrados pelos catálogos brasileiros Netflix, Prime Video, Disney+, Max e cinema no Brasil. O app só lê esse arquivo (`src/lib/sugestoesRepositorio.ts`).
 - **Dados do casal** (eventos, favoritos, lista de desejos): vivem em coleções Firestore de nível raiz — **compartilhadas entre os dois administradores**, já que é o painel de um casal, não dados isolados por conta. Protegidas por `firestore.rules`: leitura para qualquer autenticado, escrita só para os dois e-mails admin.
 - **Notificações**: os tokens de dispositivo (FCM) ficam em `tokensNotificacao/{uid}/dispositivos/{token}` (privados por admin). Uma Cloud Function agendada (`functions/index.js`) roda 1x/dia, cruza os eventos com a data de hoje e envia os pushes correspondentes.
 
@@ -118,7 +118,7 @@ Veja o passo a passo completo em **[GUIA-DEPLOY.md](./GUIA-DEPLOY.md)**. Resumo:
 
 ## Como funciona a sincronização automática
 
-O workflow `.github/workflows/sincronizar-dados.yml` roda todos os dias às 05:00 UTC (ou manualmente em **Actions → Run workflow**). Executa `scripts/sincronizar-dados.mjs`, que busca jogos no IGDB, Steam/Valve e Epic Games Store — com destaque na tela para Steam, PlayStation 5 e Xbox Series — e inclui atualizações publicadas pela Nintendo, PlayStation e Xbox. Filmes vêm do TMDB e Wikidata, séries do TMDB e TVmaze, e as notícias do feed do Google News. Comunicados das fabricantes aparecem identificados como “Atualização oficial”, sem fingir que a data da notícia é uma estreia. Em seguida, grava `public/data/sugestoes.json` e comita o resultado. O app nunca chama essas fontes diretamente.
+O workflow `.github/workflows/sincronizar-dados.yml` roda todos os dias às 05:00 UTC (ou manualmente em **Actions → Run workflow**). Executa `scripts/sincronizar-dados.mjs`, que busca jogos no IGDB, RAWG, Steam/Valve e Epic Games Store — com destaque na tela para Steam, PlayStation 5 e Xbox Series — e inclui atualizações publicadas pela PlayStation e Xbox. Filmes vêm do TMDB, já limitados à disponibilidade brasileira em Netflix, Prime Video, Disney+, Max e salas de cinema; séries vêm do TMDB em português do Brasil. Em seguida, grava `public/data/sugestoes.json` e comita o resultado. O app nunca chama essas fontes diretamente.
 
 ## Como atualizar as APIs
 

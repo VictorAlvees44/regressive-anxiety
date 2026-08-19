@@ -13,6 +13,7 @@ import type { SugestaoLancamento } from "../types";
 type FiltroCategoria = "todos" | SugestaoLancamento["categoria"];
 type FiltroMomento = "todos" | SugestaoLancamento["momento"];
 type FiltroPlataforma = "todas" | "steam" | "playstation" | "xbox";
+type FiltroFilme = "todos-filmes" | "netflix" | "prime" | "disney" | "max" | "cinema";
 
 const FILTROS_CATEGORIA: { id: FiltroCategoria; rotulo: string }[] = [
   { id: "todos", rotulo: "Tudo" },
@@ -34,6 +35,15 @@ const FILTROS_PLATAFORMA: { id: FiltroPlataforma; rotulo: string }[] = [
   { id: "xbox", rotulo: "Xbox Series" },
 ];
 
+const FILTROS_FILME: { id: FiltroFilme; rotulo: string }[] = [
+  { id: "todos-filmes", rotulo: "Todos os lugares" },
+  { id: "cinema", rotulo: "Em cartaz no Brasil" },
+  { id: "netflix", rotulo: "Netflix" },
+  { id: "prime", rotulo: "Prime Video" },
+  { id: "disney", rotulo: "Disney+" },
+  { id: "max", rotulo: "Max" },
+];
+
 function IconeCategoria({ categoria }: { categoria: SugestaoLancamento["categoria"] }) {
   const Icone = categoria === "filmes" ? Film : categoria === "series" ? Tv : Gamepad2;
   return <Icone size={26} />;
@@ -51,6 +61,13 @@ function pertenceAPlataforma(sugestao: SugestaoLancamento, plataforma: FiltroPla
   return plataformas.includes("xbox series") || plataformas.includes("xbox series x") || plataformas.includes("xbox series s");
 }
 
+function pertenceAoCatalogoFilme(sugestao: SugestaoLancamento, catalogo: FiltroFilme): boolean {
+  if (catalogo === "todos-filmes" || sugestao.categoria !== "filmes") return true;
+  const locais = sugestao.plataformas?.join(" ").toLowerCase() ?? "";
+  if (catalogo === "cinema") return locais.includes("cinema");
+  return locais.includes(catalogo === "prime" ? "prime" : catalogo);
+}
+
 export function Sugestoes() {
   const { criarEvento, eventos } = useEventos();
   const [adicionados, setAdicionados] = useState<Set<string>>(new Set());
@@ -60,6 +77,7 @@ export function Sugestoes() {
   const [filtroCategoria, setFiltroCategoria] = useState<FiltroCategoria>("todos");
   const [filtroMomento, setFiltroMomento] = useState<FiltroMomento>("todos");
   const [filtroPlataforma, setFiltroPlataforma] = useState<FiltroPlataforma>("todas");
+  const [filtroFilme, setFiltroFilme] = useState<FiltroFilme>("todos-filmes");
 
   useEffect(() => {
     listarSugestoes().then(setSugestoes).finally(() => setCarregando(false));
@@ -74,9 +92,10 @@ export function Sugestoes() {
     () => sugestoes.filter((sugestao) =>
       (filtroCategoria === "todos" || sugestao.categoria === filtroCategoria) &&
       (filtroMomento === "todos" || sugestao.momento === filtroMomento) &&
-      pertenceAPlataforma(sugestao, filtroPlataforma),
+      pertenceAPlataforma(sugestao, filtroPlataforma) &&
+      pertenceAoCatalogoFilme(sugestao, filtroFilme),
     ),
-    [filtroCategoria, filtroMomento, filtroPlataforma, sugestoes],
+    [filtroCategoria, filtroFilme, filtroMomento, filtroPlataforma, sugestoes],
   );
 
   function adicionarComoEvento(sugestao: SugestaoLancamento) {
@@ -122,6 +141,18 @@ export function Sugestoes() {
               </div>
             </div>
           )}
+          {filtroCategoria === "filmes" && (
+            <div>
+              <p className="mb-2 px-1 text-xs font-medium text-base-900/55 dark:text-base-50/55">Onde assistir no Brasil</p>
+              <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-discreta">
+                {FILTROS_FILME.map((filtro) => (
+                  <button key={filtro.id} type="button" onClick={() => setFiltroFilme(filtro.id)} className={cn("shrink-0 rounded-full border px-3 py-1 text-xs font-medium transition-colors", filtroFilme === filtro.id ? "border-cat-rosa/40 bg-cat-rosa/10 text-cat-rosa" : "border-black/5 text-base-900/55 hover:bg-black/5 dark:border-white/10 dark:text-base-50/55 dark:hover:bg-white/10")}>
+                    {filtro.rotulo}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-discreta">
             {FILTROS_MOMENTO.map((filtro) => (
               <button key={filtro.id} type="button" onClick={() => setFiltroMomento(filtro.id)} className={cn("shrink-0 rounded-full border px-3 py-1 text-xs font-medium transition-colors", filtroMomento === filtro.id ? "border-accent-500/40 bg-accent-500/10 text-accent-600 dark:text-accent-400" : "border-black/5 text-base-900/55 hover:bg-black/5 dark:border-white/10 dark:text-base-50/55 dark:hover:bg-white/10")}>
@@ -138,6 +169,8 @@ export function Sugestoes() {
 
       {!carregando && sugestoes.length > 0 && sugestoesVisiveis.length === 0 && <GlassCard className="text-center text-sm text-base-900/55 dark:text-base-50/55">Nada encontrado neste filtro. Experimente outra categoria.</GlassCard>}
 
+      {!carregando && sugestoesVisiveis.length > 0 && <p className="px-1 text-sm text-base-900/55 dark:text-base-50/55">{sugestoesVisiveis.length} opções para explorar sem ficar caçando o controle remoto.</p>}
+
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
         {sugestoesVisiveis.map((sugestao) => {
           const jaAdicionado = adicionados.has(sugestao.id) || idsExternosJaAdicionados.has(sugestao.idExterno);
@@ -151,7 +184,8 @@ export function Sugestoes() {
               <GlassCard className="h-full overflow-hidden p-0">
                 <div className="flex min-h-44">
                   <div className="relative w-28 shrink-0 overflow-hidden bg-base-900/10 sm:w-32">
-                    {sugestao.imagemUrl ? <img src={sugestao.imagemUrl} alt={`Capa de ${sugestao.titulo}`} className="h-full w-full object-cover" loading="lazy" /> : <div className="flex h-full items-center justify-center text-base-900/45 dark:text-base-50/45"><IconeCategoria categoria={sugestao.categoria} /></div>}
+                    <div className="absolute inset-0 flex items-center justify-center text-base-900/45 dark:text-base-50/45"><IconeCategoria categoria={sugestao.categoria} /></div>
+                    {sugestao.imagemUrl ? <img src={sugestao.imagemUrl} alt={`Capa de ${sugestao.titulo}`} className="relative h-full w-full object-cover" loading="lazy" onError={(evento) => { evento.currentTarget.remove(); }} /> : null}
                   </div>
                   <div className="flex min-w-0 flex-1 flex-col p-4">
                     <div className="flex flex-wrap items-center gap-2">
@@ -160,7 +194,7 @@ export function Sugestoes() {
                         {atualizacaoOficial ? "Atualização oficial" : disponivel ? "Disponível agora" : "Em breve"}
                       </span>
                     </div>
-                    {sugestao.categoria === "jogos" && sugestao.plataformas?.length ? <p className="mt-2 line-clamp-1 text-xs text-base-900/45 dark:text-base-50/45">{sugestao.plataformas.join(" · ")}</p> : null}
+                    {sugestao.plataformas?.length ? <p className="mt-2 line-clamp-1 text-xs text-base-900/45 dark:text-base-50/45">{sugestao.categoria === "filmes" ? `Disponível em: ${sugestao.plataformas.join(" · ")}` : sugestao.plataformas.join(" · ")}</p> : null}
                     <h2 className="mt-2 line-clamp-2 font-semibold leading-snug">{sugestao.titulo}</h2>
                     {sugestao.descricao && <p className="mt-1 line-clamp-2 text-sm text-base-900/60 dark:text-base-50/60">{sugestao.descricao}</p>}
                     <p className="mt-2 text-xs text-base-900/45 dark:text-base-50/45">{atualizacaoOficial ? `Publicado em ${formatarData(sugestao.dataLancamentoISO)}` : disponivel ? `Lançado em ${formatarData(sugestao.dataLancamentoISO)}` : `Estreia em ${formatarData(sugestao.dataLancamentoISO)}`}</p>

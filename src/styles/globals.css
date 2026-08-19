@@ -6,7 +6,7 @@
 @theme {
   --font-sans: "SF Pro Display", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  /* Paleta neutra usada como base do glassmorphism em ambos os temas. */
+  /* Paleta neutra sólida para manter o foco nos lançamentos. */
   --color-base-0: #ffffff;
   --color-base-50: #f7f7f9;
   --color-base-100: #eef0f3;
@@ -76,21 +76,21 @@
 }
 
 @layer components {
-  /* Cartão de vidro (glassmorphism) — base de praticamente toda a UI. */
+  /* Superfícies sólidas: menos efeitos e leitura mais direta. */
   .vidro {
-    @apply rounded-[var(--radius-glass)] border border-white/40 bg-white/60 shadow-[var(--shadow-soft)] backdrop-blur-xl;
+    @apply rounded-[var(--radius-glass)] border border-base-100 bg-white shadow-[var(--shadow-soft)];
   }
 
   .dark .vidro {
-    @apply border-white/10 bg-white/[0.06] shadow-[var(--shadow-soft-dark)] backdrop-blur-xl;
+    @apply border-white/10 bg-base-900 shadow-[var(--shadow-soft-dark)];
   }
 
   .vidro-forte {
-    @apply rounded-[var(--radius-glass-lg)] border border-white/50 bg-white/75 shadow-[var(--shadow-soft)] backdrop-blur-2xl;
+    @apply rounded-[var(--radius-glass-lg)] border border-base-100 bg-base-0 shadow-[var(--shadow-soft)];
   }
 
   .dark .vidro-forte {
-    @apply border-white/10 bg-white/[0.08] shadow-[var(--shadow-soft-dark)] backdrop-blur-2xl;
+    @apply border-white/10 bg-base-900 shadow-[var(--shadow-soft-dark)];
   }
 }
 

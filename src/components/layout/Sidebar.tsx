@@ -17,9 +17,12 @@ export function Sidebar() {
   return (
     <aside className="hidden w-64 shrink-0 flex-col gap-1 p-4 sm:flex">
       <div className="vidro-forte flex h-full flex-col gap-1 p-3">
-        <div className="mb-4 px-2 pt-2">
-          <p className="text-lg font-semibold">Regressive Anxiety</p>
-          <p className="text-xs text-base-900/50 dark:text-base-50/50">Seus lançamentos, sem pressa.</p>
+        <div className="mb-4 flex items-center gap-3 px-2 pt-2">
+          <img src={`${import.meta.env.BASE_URL}icons/icon-192.png`} alt="" className="size-10 rounded-xl" />
+          <div>
+            <p className="text-lg font-semibold">Regressive Anxiety</p>
+            <p className="text-xs text-base-900/50 dark:text-base-50/50">Seus lançamentos, sem pressa.</p>
+          </div>
         </div>
 
         {ITENS_NAV.map(({ rota, rotulo, Icone }) => (

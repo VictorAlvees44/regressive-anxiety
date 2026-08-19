@@ -320,11 +320,17 @@ A IGDB usa autenticação via Twitch Developer:
 5. Após criar, copie o **Client ID**.
 6. Clique em **"Nova Chave Secreta"** (New Secret) e copie o **Client Secret**.
 
-### 9.3 Fontes adicionais sem chave
+### 9.3 RAWG (jogos) — opcional, amplia os destaques
 
-Além de IGDB e TMDB, a sincronização consulta Steam, Epic Games Store, TVmaze, Wikidata e o feed do Google News. Essas fontes não precisam de cadastro ou chave; só as credenciais de IGDB e TMDB são necessárias.
+1. Crie uma conta em [rawg.io](https://rawg.io/).
+2. Solicite uma chave em [rawg.io/apidocs](https://rawg.io/apidocs).
+3. Guarde a chave como `RAWG_API_KEY` para cadastrar no GitHub.
 
-Guarde as credenciais que for usar (TMDB, IGDB Client ID e IGDB Client Secret) — você vai colá-las no GitHub daqui a pouco.
+### 9.4 Fontes adicionais sem chave
+
+Além de IGDB, RAWG e TMDB, a sincronização consulta Steam, Epic Games Store e o feed do Google News. Essas fontes não precisam de cadastro ou chave.
+
+Guarde as credenciais que for usar (TMDB, RAWG, IGDB Client ID e IGDB Client Secret) — você vai colá-las no GitHub daqui a pouco.
 
 ---
 
@@ -384,6 +390,7 @@ Ao rodar `git push`, o GitHub pode abrir uma janela do navegador pedindo para vo
 | `IGDB_CLIENT_ID` | Twitch Developer Console (passo 9.2) |
 | `IGDB_CLIENT_SECRET` | Twitch Developer Console (passo 9.2) |
 | `TMDB_API_KEY` | TMDB (passo 9.1) |
+| `RAWG_API_KEY` | RAWG (passo 9.3) |
 
 > Repare que `VITE_FIREBASE_VAPID_KEY` também deve ser cadastrada se você configurou o passo 8, para o build de produção sair com as notificações push habilitadas:
 

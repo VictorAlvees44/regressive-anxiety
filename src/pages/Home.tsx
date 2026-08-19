@@ -19,9 +19,12 @@ export function Home() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between px-1 pb-1 pt-2 sm:hidden">
-        <div>
-          <p className="text-sm text-base-900/55 dark:text-base-50/55">{saudacao}</p>
-          <h1 className="text-2xl font-semibold tracking-tight">Regressive Anxiety</h1>
+        <div className="flex items-center gap-3">
+          <img src={`${import.meta.env.BASE_URL}icons/icon-192.png`} alt="" className="size-11 rounded-xl" />
+          <div>
+            <p className="text-sm text-base-900/55 dark:text-base-50/55">{saudacao}</p>
+            <h1 className="text-2xl font-semibold tracking-tight">Regressive Anxiety</h1>
+          </div>
         </div>
         <ThemeToggle />
       </div>

@@ -96,8 +96,10 @@ export interface SugestaoLancamento {
   bannerUrl?: string;
   trailerUrl?: string;
   linksOficiais?: LinkOficial[];
-  /** Plataformas em que o jogo pode ser acompanhado, quando informadas pela fonte. */
+  /** Plataformas dos jogos ou locais brasileiros onde o filme pode ser visto. */
   plataformas?: string[];
+  /** Pontuação interna para manter jogos de maior relevância em evidência após o lançamento. */
+  relevancia?: number;
   /** Notícias recentes, obtidas durante a sincronização diária. */
   noticias?: NoticiaSugestao[];
   /** Diferencia um lançamento rastreado de um comunicado da própria plataforma. */
@@ -105,7 +107,7 @@ export interface SugestaoLancamento {
   /** Itens já lançados continuam visíveis enquanto ainda são relevantes. */
   momento: "em-breve" | "disponivel";
   idExterno: string;
-  fonte: "igdb" | "steam" | "epic" | "nintendo" | "playstation" | "xbox" | "rockstar" | "tmdb" | "tvmaze" | "wikidata";
+  fonte: "igdb" | "steam" | "epic" | "rawg" | "nintendo" | "playstation" | "xbox" | "rockstar" | "tmdb" | "tvmaze" | "wikidata";
 }
 
 export interface NoticiaSugestao {

@@ -33,7 +33,7 @@ registerRoute(
 
 // Imagens de capa/banner externas: cache-first (não mudam com frequência).
 registerRoute(
-  /^https:\/\/(images\.unsplash\.com|image\.tmdb\.org)\/.*/,
+  /^https:\/\/(images\.unsplash\.com|image\.tmdb\.org|images\.igdb\.com|cdn\.cloudflare\.steamstatic\.com|shared\.akamai\.steamstatic\.com|cdn\d1\.epicgames\.com|cdn1\.epicgames\.com|media\.rawg\.io)\/.*/,
   new CacheFirst({
     cacheName: "imagens-externas",
     plugins: [new ExpirationPlugin({ maxEntries: 80, maxAgeSeconds: 60 * 60 * 24 * 30 })],
