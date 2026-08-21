@@ -33,8 +33,17 @@ export function Sugestoes() {
   const [adicionados, setAdicionados] = useState<Set<string>>(new Set());
   const [sugestoes, setSugestoes] = useState<SugestaoLancamento[]>([]);
   const [carregando, setCarregando] = useState(true);
-  const [aberto, setAberto] = useState<string | null>(null);
+   const [aberto, setAberto] = useState<string | null>(null);
   const [filtroCategoria, setFiltroCategoria] = useState<FiltroCategoria>("todos");
+  const [sinopsesExpandidas, setSinopsesExpandidas] = useState<Set<string>>(new Set());
+
+  function alternarSinopse(id: string) {
+    setSinopsesExpandidas((atual) => {
+      const proximo = new Set(atual);
+      proximo.has(id) ? proximo.delete(id) : proximo.add(id);
+      return proximo;
+    });
+  }
 
   useEffect(() => {
     listarSugestoes().then(setSugestoes).finally(() => setCarregando(false));
@@ -126,7 +135,16 @@ export function Sugestoes() {
                     </div>
                     {sugestao.plataformas?.length ? <p className="mt-2 line-clamp-1 text-xs text-base-900/45 dark:text-base-50/45">{sugestao.categoria === "jogos" ? sugestao.plataformas.join(" · ") : `Disponível no Brasil: ${sugestao.plataformas.join(" · ")}`}</p> : null}
                     <h2 className="mt-2 line-clamp-2 font-semibold leading-snug">{sugestao.titulo}</h2>
-                    {sugestao.descricao && <p className="mt-1 line-clamp-2 text-sm text-base-900/60 dark:text-base-50/60">{sugestao.descricao}</p>}
+                                        {sugestao.descricao && (
+                      <div className="mt-1">
+                        <p className={cn("text-sm text-base-900/60 dark:text-base-50/60", !sinopsesExpandidas.has(sugestao.id) && "line-clamp-2")}>{sugestao.descricao}</p>
+                        {sugestao.descricao.length > 90 && (
+                          <button type="button" onClick={() => alternarSinopse(sugestao.id)} className="mt-0.5 text-xs font-medium text-accent-600 hover:underline dark:text-accent-400">
+                            {sinopsesExpandidas.has(sugestao.id) ? "Ver menos" : "Ver mais"}
+                          </button>
+                        )}
+                      </div>
+                    )}
                     <p className="mt-2 text-xs text-base-900/45 dark:text-base-50/45">{atualizacaoOficial ? `Publicado em ${formatarData(sugestao.dataLancamentoISO)}` : disponivel ? `Lançado em ${formatarData(sugestao.dataLancamentoISO)}` : `Estreia em ${formatarData(sugestao.dataLancamentoISO)}`}</p>
                     <div className="mt-auto flex flex-wrap gap-2 pt-3">
                       <Button variante="secundario" tamanho="sm" aria-expanded={aberto === sugestao.id} aria-controls={`detalhes-${sugestao.id}`} icone={<ChevronDown className={aberto === sugestao.id ? "rotate-180 transition-transform" : "transition-transform"} size={16} />} onClick={() => setAberto((atual) => atual === sugestao.id ? null : sugestao.id)}>Novidades</Button>
