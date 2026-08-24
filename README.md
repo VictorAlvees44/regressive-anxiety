@@ -2,11 +2,16 @@
 
 Um PWA para não deixar jogo, filme, série ou aquela viagem tão esperada passar batido. É uma agenda de entretenimento com uma pitada saudável de “faltam quantos dias mesmo?”.
 
+O projeto está pronto para uso em <https://victoralvees44.github.io/regressive-anxiety/>.
+
 ## O que ele faz
 
 - Organiza contagens regressivas de jogos, filmes, séries e eventos pessoais.
 - Mostra sugestões atualizadas de jogos e entretenimento.
 - Mantém jogos relevantes visíveis mesmo depois do lançamento.
+- Prioriza escolhas pessoais de plataformas e serviços, salvas no próprio aparelho.
+- Exibe a saúde da última sincronização e permite recarregar o catálogo sem reinstalar o PWA.
+- Mostra 30 sugestões por vez, com botão para continuar explorando quando quiser.
 - Filtra filmes disponíveis no Brasil em Netflix, Prime Video, Disney+, Max e salas de cinema.
 - Permite acompanhar uma sugestão e transformá-la em evento.
 - Funciona como aplicativo instalado no celular, inclusive em iPhone.
@@ -24,7 +29,7 @@ npm run dev
 
 Abra o endereço informado no terminal. Sem as credenciais do Firebase, a navegação continua disponível em modo local — o app não faz drama por isso.
 
-## Antes de publicar
+## Verificação de manutenção
 
 Confira estes comandos:
 
@@ -33,7 +38,7 @@ npm run build
 npm run lint
 ```
 
-Se ambos terminarem sem erro, a mala está pronta para viajar ao GitHub.
+Se ambos terminarem sem erro, está tudo certo para uma manutenção tranquila.
 
 ## Catálogo de sugestões
 
@@ -41,7 +46,7 @@ O navegador não conversa diretamente com serviços externos. Uma Action do GitH
 
 | Tipo | Fontes |
 | --- | --- |
-| Jogos | RAWG, IGDB, Steam, Epic, PlayStation e Xbox |
+| Jogos | RAWG, IGDB, Steam, Epic, GOG, PlayStation e Xbox |
 | Filmes | TMDB, limitado à disponibilidade brasileira e cinema |
 | Séries | TMDB, limitado à disponibilidade brasileira dos catálogos selecionados |
 | Notícias | Google News em português do Brasil |
@@ -57,17 +62,7 @@ Os segredos abaixo ficam em **Settings → Secrets and variables → Actions** n
 
 Sem `TMDB_API_KEY`, filmes e a maior parte das séries não conseguem aparecer. Sem `RAWG_API_KEY`, o catálogo ainda funciona, só perde uma ótima fonte de jogos e imagens.
 
-Para atualizar agora, abra **Actions → Sincronizar dados públicos → Run workflow**. A Action cria um commit com o catálogo renovado. Em seguida, o GitHub Pages publica o resultado.
-
-## Publicação
-
-O deploy é automático: envie alterações para a branch `main` e aguarde a Action **Publicar no GitHub Pages** ficar verde.
-
-O endereço do projeto é:
-
-<https://victoralvees44.github.io/regressive-anxiety/>
-
-Para o passo a passo sem mistério, veja [GUIA-DEPLOY.md](./GUIA-DEPLOY.md).
+O catálogo se atualiza diariamente. Quando quiser conferir os dados mais recentes antes disso, use o botão **Atualizar** na tela de Sugestões.
 
 ## Estrutura do projeto
 
@@ -92,7 +87,7 @@ functions/
 
 ## Notificações
 
-As notificações dependem do Firebase Cloud Messaging e da Cloud Function em `functions/`. Elas checam os eventos diariamente às 9h, no horário de Brasília. Para ativá-las, configure o Firebase seguindo o guia de deploy e habilite o cartão de notificações no painel de administração.
+As notificações dependem do Firebase Cloud Messaging e da Cloud Function em `functions/`. Elas checam os eventos diariamente às 9h, no horário de Brasília. Para ativá-las, configure o Firebase e habilite o cartão de notificações no painel de administração.
 
 ## Limitações honestas
 
@@ -100,7 +95,7 @@ As notificações dependem do Firebase Cloud Messaging e da Cloud Function em `f
 - Capas dependem dos provedores. Se uma imagem sair do ar, o app mostra a capa padrão em vez de deixar um buraco feio no catálogo.
 - O PWA pode manter arquivos antigos em cache. Depois de uma publicação grande, feche e abra o app; no iPhone, se necessário, remova o atalho e adicione novamente.
 
-## Contribuindo sem estragar a festa
+## Manutenção sem estragar a festa
 
 - Use `npm run build` e `npm run lint` antes de enviar alterações.
 - Não coloque chaves de API no código ou no Git.

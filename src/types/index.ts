@@ -107,7 +107,7 @@ export interface SugestaoLancamento {
   /** Itens já lançados continuam visíveis enquanto ainda são relevantes. */
   momento: "em-breve" | "disponivel";
   idExterno: string;
-  fonte: "igdb" | "steam" | "epic" | "rawg" | "nintendo" | "playstation" | "xbox" | "rockstar" | "tmdb" | "tvmaze" | "wikidata";
+  fonte: "igdb" | "steam" | "epic" | "gog" | "rawg" | "nintendo" | "playstation" | "xbox" | "rockstar" | "tmdb" | "tvmaze" | "wikidata";
 }
 
 export interface NoticiaSugestao {

@@ -37,7 +37,7 @@ export async function ativarNotificacoesPush(uid: string): Promise<ResultadoAtiv
   if (!vapidKey) {
     return {
       sucesso: false,
-      motivo: "Chave VAPID não configurada (VITE_FIREBASE_VAPID_KEY). Veja o GUIA-DEPLOY.md.",
+      motivo: "Chave VAPID não configurada (VITE_FIREBASE_VAPID_KEY). Confira a configuração do Firebase.",
     };
   }
 

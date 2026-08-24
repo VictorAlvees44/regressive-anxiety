@@ -7,6 +7,7 @@ import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const SAIDA = path.resolve("public/data/sugestoes.json");
+const SAUDE_SAIDA = path.resolve("public/data/saude-sincronizacao.json");
 const IGDB_CLIENT_ID = process.env.IGDB_CLIENT_ID;
 const IGDB_CLIENT_SECRET = process.env.IGDB_CLIENT_SECRET;
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
@@ -15,7 +16,7 @@ const DIA = 86_400_000;
 const agora = Date.now();
 const emDoisAnos = new Date(agora + 730 * DIA).toISOString().slice(0, 10);
 const haUmAno = new Date(agora - 365 * DIA).toISOString().slice(0, 10);
-const PLATAFORMAS_PREFERIDAS = /steam|playstation 5|ps5|xbox series/i;
+const PLATAFORMAS_PREFERIDAS = /steam|gog|playstation|xbox|nintendo/i;
 
 function iso(data) {
   const valor = new Date(data).getTime();
@@ -79,10 +80,20 @@ async function buscarJogosEpic() {
   }).filter((jogo) => jogo?.titulo);
 }
 
+/** Catálogo da GOG para ampliar os jogos de PC sem depender da Steam. */
+async function buscarJogosGog() {
+  const dados = await json("https://catalog.gog.com/v1/catalog?limit=100&order=desc:trending&productType=game&country=BR&locale=pt-BR");
+  return (dados?.products ?? []).map((jogo) => {
+    const data = iso(jogo.storeReleaseDate || jogo.releaseDate);
+    if (!data || new Date(data).getTime() < agora - 365 * DIA || new Date(data).getTime() > agora + 730 * DIA || !jogo.title) return null;
+    return { id: `sug-gog-${jogo.id}`, titulo: jogo.title, descricao: jogo.developers?.length ? `Jogo para PC da ${jogo.developers.join(", ")}.` : "Jogo para PC disponível na GOG.", categoria: "jogos", dataLancamentoISO: data, imagemUrl: jogo.coverHorizontal ?? jogo.galleryBackgroundImage ?? jogo.coverVertical, plataformas: ["GOG", "PC"], linksOficiais: jogo.storeLink ? [{ label: "Ver na GOG", url: jogo.storeLink }] : undefined, idExterno: `gog-${jogo.id}`, fonte: "gog", momento: momento(data), relevancia: 25_000 + Number(jogo.reviewsCount ?? 0) };
+  }).filter(Boolean);
+}
+
 /** RAWG voltou a operar e complementa os jogos relevantes sem virar dependência única. */
 async function buscarJogosRawg() {
   if (!RAWG_API_KEY) return [];
-  const dados = await json(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=${haUmAno},${emDoisAnos}&ordering=-metacritic&page_size=40`);
+  const dados = await json(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=${haUmAno},${emDoisAnos}&ordering=-metacritic&page_size=100`);
   return (dados?.results ?? []).map((jogo) => {
     const data = iso(jogo.released);
     if (!data || !jogo.name) return null;
@@ -271,17 +282,18 @@ function deduplicar(itens) {
 
 async function main() {
   if (!TMDB_API_KEY) console.warn("TMDB_API_KEY não configurada: filmes e séries do Brasil ficarão fora desta atualização.");
-  const [destaques, igdb, steam, epic, rawg, playstation, xbox, filmesStreaming, filmesCinema, seriesBrasil] = await Promise.all([
+  const [destaques, igdb, steam, epic, gog, rawg, playstation, xbox, filmesStreaming, filmesCinema, seriesBrasil] = await Promise.all([
     buscarDestaquesConfirmados(),
     buscarJogosIgdb(),
     buscarJogosSteam(),
     buscarJogosEpic(),
+    buscarJogosGog(),
     buscarJogosRawg(),
     buscarAtualizacoesOficiais({ fonte: "playstation", nome: "PlayStation", plataforma: "PlayStation 5", url: "https://blog.playstation.com/feed/", baseUrl: "https://blog.playstation.com" }),
     buscarAtualizacoesOficiais({ fonte: "xbox", nome: "Xbox Wire", plataforma: "Xbox Series X|S", url: "https://news.xbox.com/en-us/feed/", baseUrl: "https://news.xbox.com" }),
     buscarFilmesDosCatalogosBr(), buscarFilmesEmCartazNoBrasil(), buscarSeriesDosCatalogosBr(),
   ]);
-  const sugestoes = deduplicar([...destaques, ...igdb, ...steam, ...epic, ...rawg, ...playstation, ...xbox, ...filmesStreaming, ...filmesCinema, ...seriesBrasil])
+  const sugestoes = deduplicar([...destaques, ...igdb, ...steam, ...epic, ...gog, ...rawg, ...playstation, ...xbox, ...filmesStreaming, ...filmesCinema, ...seriesBrasil])
     .sort((a, b) => {
       const aData = new Date(a.dataLancamentoISO).getTime();
       const bData = new Date(b.dataLancamentoISO).getTime();
@@ -302,6 +314,8 @@ async function main() {
   await mkdir(path.dirname(SAIDA), { recursive: true });
   await writeFile(SAIDA, JSON.stringify(sugestoes, null, 2), "utf-8");
   const resumo = Object.fromEntries(["jogos", "filmes", "series"].map((categoria) => [categoria, sugestoes.filter((item) => item.categoria === categoria).length]));
+  const porFonte = Object.fromEntries([...new Set(sugestoes.map((item) => item.fonte))].sort().map((fonte) => [fonte, sugestoes.filter((item) => item.fonte === fonte).length]));
+  await writeFile(SAUDE_SAIDA, JSON.stringify({ atualizadoEmISO: new Date().toISOString(), total: sugestoes.length, porCategoria: resumo, porFonte }, null, 2), "utf-8");
   console.log(`Sincronização concluída: ${sugestoes.length} sugestões salvas em ${SAIDA}. Jogos: ${resumo.jogos}; filmes: ${resumo.filmes}; séries: ${resumo.series}.`);
 }
 main().catch((erro) => { console.error("Falha na sincronização de dados:", erro); process.exitCode = 1; });

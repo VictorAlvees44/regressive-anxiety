@@ -1,6 +1,13 @@
 import sugestoesMock from "../data/sugestoes.mock.json";
 import type { SugestaoLancamento } from "../types";
 
+export interface SaudeSincronizacao {
+  atualizadoEmISO: string;
+  total: number;
+  porCategoria: Record<"jogos" | "filmes" | "series", number>;
+  porFonte: Record<string, number>;
+}
+
 /**
  * Em produção, o app consome apenas `public/data/sugestoes.json`,
  * gerado uma vez por dia pelo workflow `sincronizar-dados.yml`
@@ -37,4 +44,13 @@ export async function listarSugestoes(): Promise<SugestaoLancamento[]> {
     // Ignorado propositalmente: cai para o mock abaixo.
   }
   return sugestoesMock as SugestaoLancamento[];
+}
+
+export async function carregarSaudeSincronizacao(): Promise<SaudeSincronizacao | null> {
+  try {
+    const resposta = await fetch(`${import.meta.env.BASE_URL}data/saude-sincronizacao.json`, { cache: "no-store" });
+    return resposta.ok ? resposta.json() as Promise<SaudeSincronizacao> : null;
+  } catch {
+    return null;
+  }
 }

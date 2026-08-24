@@ -36,6 +36,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/sugestoes.json
+          git add public/data/sugestoes.json public/data/saude-sincronizacao.json
           git diff --cached --quiet || git commit -m "chore: sincronizar sugestões de lançamentos"
           git push
