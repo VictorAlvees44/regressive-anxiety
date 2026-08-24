@@ -16,7 +16,7 @@ const DIA = 86_400_000;
 const agora = Date.now();
 const emDoisAnos = new Date(agora + 730 * DIA).toISOString().slice(0, 10);
 const haUmAno = new Date(agora - 365 * DIA).toISOString().slice(0, 10);
-const PLATAFORMAS_PREFERIDAS = /steam|gog|playstation|xbox|nintendo/i;
+const PLATAFORMAS_PREFERIDAS = /steam|gog|playstation|xbox/i;
 
 function iso(data) {
   const valor = new Date(data).getTime();

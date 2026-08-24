@@ -17,7 +17,7 @@ type ChavePreferencia = keyof PreferenciasSugestoes;
 const ITENS_POR_PAGINA = 30;
 const FILTROS_CATEGORIA: { id: FiltroCategoria; rotulo: string }[] = [{ id: "todos", rotulo: "Tudo" }, { id: "filmes", rotulo: "Filmes" }, { id: "series", rotulo: "Séries" }, { id: "jogos", rotulo: "Jogos" }];
 const CATEGORIAS_PREFERIDAS: { id: SugestaoLancamento["categoria"]; rotulo: string }[] = [{ id: "jogos", rotulo: "Jogos" }, { id: "filmes", rotulo: "Filmes" }, { id: "series", rotulo: "Séries" }];
-const PLATAFORMAS_PREFERIDAS = ["Steam", "GOG", "PlayStation", "Xbox", "Nintendo"];
+const PLATAFORMAS_PREFERIDAS = ["Steam", "GOG", "PlayStation", "Xbox"];
 const SERVICOS_PREFERIDOS = ["Em cartaz nos cinemas do Brasil", "Netflix", "Prime Video", "Disney+", "Max"];
 
 function IconeCategoria({ categoria }: { categoria: SugestaoLancamento["categoria"] }) { const Icone = categoria === "filmes" ? Film : categoria === "series" ? Tv : Gamepad2; return <Icone size={26} />; }
