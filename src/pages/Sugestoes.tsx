@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Check, ChevronDown, ExternalLink, Film, Gamepad2, Newspaper, Plus, Tv } from "lucide-react";
+import { Check, ExternalLink, Film, Gamepad2, Newspaper, Plus, Tv } from "lucide-react";
 import { Header } from "../components/layout/Header";
 import { GlassCard } from "../components/ui/GlassCard";
 import { CategoriaBadge } from "../components/ui/CategoriaBadge";
@@ -28,19 +28,37 @@ function urlSegura(url: string): boolean {
   return /^https?:\/\//i.test(url);
 }
 
+function ordenarJogosPorDestaque(sugestoes: SugestaoLancamento[]): SugestaoLancamento[] {
+  const porRelevancia = [...sugestoes].sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0));
+  const destaques = porRelevancia.slice(0, 12);
+  const idsDestaques = new Set(destaques.map((sugestao) => sugestao.id));
+  const restantes = sugestoes
+    .filter((sugestao) => !idsDestaques.has(sugestao.id))
+    .sort((a, b) => {
+      const dataA = new Date(a.dataLancamentoISO).getTime();
+      const dataB = new Date(b.dataLancamentoISO).getTime();
+      const aFuturo = dataA >= Date.now();
+      const bFuturo = dataB >= Date.now();
+      if (aFuturo !== bFuturo) return aFuturo ? -1 : 1;
+      return aFuturo ? dataA - dataB : dataB - dataA;
+    });
+
+  return [...destaques, ...restantes];
+}
+
 export function Sugestoes() {
   const { criarEvento, eventos } = useEventos();
   const [adicionados, setAdicionados] = useState<Set<string>>(new Set());
   const [sugestoes, setSugestoes] = useState<SugestaoLancamento[]>([]);
   const [carregando, setCarregando] = useState(true);
-   const [aberto, setAberto] = useState<string | null>(null);
   const [filtroCategoria, setFiltroCategoria] = useState<FiltroCategoria>("todos");
   const [sinopsesExpandidas, setSinopsesExpandidas] = useState<Set<string>>(new Set());
 
   function alternarSinopse(id: string) {
     setSinopsesExpandidas((atual) => {
       const proximo = new Set(atual);
-      proximo.has(id) ? proximo.delete(id) : proximo.add(id);
+      if (proximo.has(id)) proximo.delete(id);
+      else proximo.add(id);
       return proximo;
     });
   }
@@ -55,9 +73,12 @@ export function Sugestoes() {
   );
 
   const sugestoesVisiveis = useMemo(
-    () => sugestoes.filter((sugestao) =>
-      filtroCategoria === "todos" || sugestao.categoria === filtroCategoria,
-    ),
+    () => {
+      const filtradas = sugestoes.filter((sugestao) =>
+        filtroCategoria === "todos" || sugestao.categoria === filtroCategoria,
+      );
+      return filtroCategoria === "jogos" ? ordenarJogosPorDestaque(filtradas) : filtradas;
+    },
     [filtroCategoria, sugestoes],
   );
 
@@ -146,20 +167,21 @@ export function Sugestoes() {
                       </div>
                     )}
                     <p className="mt-2 text-xs text-base-900/45 dark:text-base-50/45">{atualizacaoOficial ? `Publicado em ${formatarData(sugestao.dataLancamentoISO)}` : disponivel ? `Lançado em ${formatarData(sugestao.dataLancamentoISO)}` : `Estreia em ${formatarData(sugestao.dataLancamentoISO)}`}</p>
+                    <section className="mt-3 border-t border-black/5 pt-3 dark:border-white/10" aria-label={`Novidades sobre ${sugestao.titulo}`}>
+                      <p className="flex items-center gap-1.5 text-xs font-semibold text-base-900/70 dark:text-base-50/75"><Newspaper size={14} /> Novidades</p>
+                      {noticias.length > 0 ? (
+                        <ul className="mt-2 flex flex-col gap-1.5">
+                          {noticias.slice(0, 2).map((noticia) => <li key={noticia.url}><a className="flex items-start gap-1.5 text-xs leading-snug text-accent-600 hover:underline dark:text-accent-400" href={noticia.url} target="_blank" rel="noreferrer"><ExternalLink className="mt-0.5 shrink-0" size={12} /><span className="line-clamp-2">{noticia.titulo}{noticia.fonte ? ` · ${noticia.fonte}` : ""}</span></a></li>)}
+                        </ul>
+                      ) : links.length > 0 ? (
+                        <a className="mt-2 inline-flex items-center gap-1.5 text-xs text-accent-600 hover:underline dark:text-accent-400" href={links[0].url} target="_blank" rel="noreferrer"><ExternalLink size={12} /> {links[0].label}</a>
+                      ) : <p className="mt-2 text-xs text-base-900/45 dark:text-base-50/45">Ainda sem manchetes. O estagiário da pipoca já está procurando.</p>}
+                    </section>
                     <div className="mt-auto flex flex-wrap gap-2 pt-3">
-                      <Button variante="secundario" tamanho="sm" aria-expanded={aberto === sugestao.id} aria-controls={`detalhes-${sugestao.id}`} icone={<ChevronDown className={aberto === sugestao.id ? "rotate-180 transition-transform" : "transition-transform"} size={16} />} onClick={() => setAberto((atual) => atual === sugestao.id ? null : sugestao.id)}>Novidades</Button>
                       <Button variante={jaAdicionado ? "secundario" : "primario"} tamanho="sm" disabled={jaAdicionado} icone={jaAdicionado ? <Check size={16} /> : <Plus size={16} />} onClick={() => adicionarComoEvento(sugestao)}>{jaAdicionado ? "Na sua lista" : "Acompanhar"}</Button>
                     </div>
                 </div>
               </GlassCard>
-
-              {aberto === sugestao.id && (
-                <GlassCard id={`detalhes-${sugestao.id}`} className="mt-2">
-                  <div className="flex items-center gap-2 text-sm font-semibold"><Newspaper size={16} /> O que está rolando</div>
-                  {noticias.length ? <ul className="mt-3 flex flex-col gap-2">{noticias.map((noticia) => <li key={noticia.url}><a className="flex items-start gap-2 text-sm text-accent-600 hover:underline dark:text-accent-400" href={noticia.url} target="_blank" rel="noreferrer"><ExternalLink className="mt-0.5 shrink-0" size={14} /><span>{noticia.titulo}{noticia.fonte ? <span className="text-base-900/45 dark:text-base-50/45"> · {noticia.fonte}</span> : null}</span></a></li>)}</ul> : <p className="mt-2 text-sm text-base-900/55 dark:text-base-50/55">As notícias entram na próxima atualização diária.</p>}
-                  {links.length > 0 && <div className="mt-4 flex flex-wrap gap-2">{links.map((link) => <a key={link.url} className="inline-flex items-center gap-1.5 rounded-xl bg-black/5 px-3 py-1.5 text-xs font-medium text-base-900/70 hover:bg-black/10 dark:bg-white/10 dark:text-base-50/70 dark:hover:bg-white/15" href={link.url} target="_blank" rel="noreferrer"><ExternalLink size={13} /> {link.label}</a>)}</div>}
-                </GlassCard>
-              )}
             </motion.article>
           );
         })}

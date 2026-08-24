@@ -235,6 +235,7 @@ async function buscarDestaquesConfirmados() {
     fonte: "rockstar",
     momento: momento(gtaVI),
     tipoConteudo: "lancamento",
+    relevancia: 150_000,
   }];
 }
 async function buscarNoticias(sugestao) {
@@ -290,9 +291,14 @@ async function main() {
       if (aFuturo) return aData - bData;
       return (b.relevancia ?? 0) - (a.relevancia ?? 0) || bData - aData;
     });
-  // Notícias para os itens mais próximos da data atual: limita requisições e mantém o JSON leve.
-  const comNoticias = [...sugestoes].sort((a, b) => Math.abs(new Date(a.dataLancamentoISO).getTime() - agora) - Math.abs(new Date(b.dataLancamentoISO).getTime() - agora));
-  await Promise.all(comNoticias.slice(0, 80).map(async (sugestao) => { sugestao.noticias = await buscarNoticias(sugestao); }));
+  // Jogos de maior relevância têm prioridade nas notícias; o restante privilegia as datas próximas.
+  const jogosEmDestaque = sugestoes.filter((item) => item.categoria === "jogos").sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)).slice(0, 12);
+  const porDataProxima = [...sugestoes].sort((a, b) => Math.abs(new Date(a.dataLancamentoISO).getTime() - agora) - Math.abs(new Date(b.dataLancamentoISO).getTime() - agora));
+  const comNoticias = [...new Map([...jogosEmDestaque, ...porDataProxima].map((item) => [item.id, item])).values()];
+  const noticiasPriorizadas = comNoticias.slice(0, 160);
+  for (let inicio = 0; inicio < noticiasPriorizadas.length; inicio += 10) {
+    await Promise.all(noticiasPriorizadas.slice(inicio, inicio + 10).map(async (sugestao) => { sugestao.noticias = await buscarNoticias(sugestao); }));
+  }
   await mkdir(path.dirname(SAIDA), { recursive: true });
   await writeFile(SAIDA, JSON.stringify(sugestoes, null, 2), "utf-8");
   const resumo = Object.fromEntries(["jogos", "filmes", "series"].map((categoria) => [categoria, sugestoes.filter((item) => item.categoria === categoria).length]));
