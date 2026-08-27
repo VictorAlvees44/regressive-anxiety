@@ -31,6 +31,14 @@ function jogoApropriadoERelevante(sugestao: SugestaoLancamento) {
   // Steam e Epic entram no arquivo diário como fontes de apoio; a vitrine prioriza curadoria, não promoções aleatórias.
   return sugestao.fonte !== "steam" && sugestao.fonte !== "epic";
 }
+function dentroDaJanelaAtual(sugestao: SugestaoLancamento) {
+  const data = new Date(sugestao.dataLancamentoISO).getTime();
+  if (Number.isNaN(data)) return false;
+  const hoje = Date.now();
+  if (sugestao.categoria === "filmes") return data >= hoje - 183 * 86_400_000;
+  if (sugestao.categoria === "series") return data >= hoje - 548 * 86_400_000;
+  return true;
+}
 function correspondeBusca(sugestao: SugestaoLancamento, termo: string, campo: CampoBusca) {
   const consulta = textoNormalizado(termo.trim());
   if (!consulta) return true;
@@ -93,7 +101,7 @@ export function Sugestoes() {
 
   const idsExternosJaAdicionados = useMemo(() => new Set(eventos.map((evento) => evento.idExterno).filter(Boolean)), [eventos]);
   const sugestoesVisiveis = useMemo(() => {
-    const filtradas = sugestoes.filter((sugestao) => jogoApropriadoERelevante(sugestao) && (filtroCategoria === "todos" || sugestao.categoria === filtroCategoria) && correspondeBusca(sugestao, busca, campoBusca));
+    const filtradas = sugestoes.filter((sugestao) => dentroDaJanelaAtual(sugestao) && jogoApropriadoERelevante(sugestao) && (filtroCategoria === "todos" || sugestao.categoria === filtroCategoria) && correspondeBusca(sugestao, busca, campoBusca));
     if (filtroCategoria === "jogos") return ordenarJogosPorDestaque(filtradas, preferencias);
     if (filtroCategoria === "todos" && (preferencias.categorias.length || preferencias.plataformas.length || preferencias.servicos.length)) return [...filtradas].sort((a, b) => pontuacaoDasPreferencias(b, preferencias) - pontuacaoDasPreferencias(a, preferencias));
     return filtradas;
