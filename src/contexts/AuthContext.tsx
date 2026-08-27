@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { emailEhAdministrador, entrarComGoogle, firebaseConfigurado, observarUsuario, sair } from "../lib/firebase";
+import { entrarComGoogle, firebaseConfigurado, observarUsuario, sair, verificarSeEhAdministrador } from "../lib/firebase";
 import type { Perfil, UsuarioAutenticado } from "../types";
 
 interface AuthContextValor {
@@ -39,14 +39,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           return;
         }
 
-        setUsuario({
-          uid: firebaseUser.uid,
-          nome: firebaseUser.displayName ?? "Usuário",
-          email: firebaseUser.email ?? "",
-          fotoUrl: firebaseUser.photoURL ?? undefined,
-          perfil: emailEhAdministrador(firebaseUser.email) ? "administrador" : "visitante",
-        });
-        setCarregando(false);
+        // A checagem de admin é assíncrona: quem responde é a Firestore
+        // Security Rule (servidor), não uma lista de e-mails no bundle.
+        setCarregando(true);
+        verificarSeEhAdministrador()
+          .then((ehAdministrador) => {
+            setUsuario({
+              uid: firebaseUser.uid,
+              nome: firebaseUser.displayName ?? "Usuário",
+              email: firebaseUser.email ?? "",
+              fotoUrl: firebaseUser.photoURL ?? undefined,
+              perfil: ehAdministrador ? "administrador" : "visitante",
+            });
+          })
+          .finally(() => setCarregando(false));
       });
 
       return cancelarInscricao;

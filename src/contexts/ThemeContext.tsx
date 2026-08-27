@@ -13,10 +13,8 @@ const ThemeContext = createContext<ThemeContextValor | undefined>(undefined);
 
 function obterTemaInicial(): Tema {
   const salvo = window.localStorage.getItem(CHAVE_STORAGE) as Tema | null;
-  if (salvo === "claro" || salvo === "escuro") return salvo;
-
-  const prefereEscuro = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
-  return prefereEscuro ? "escuro" : "claro";
+  if (salvo === "escuro") return salvo;
+  return "escuro";
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {

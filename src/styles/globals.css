@@ -45,11 +45,12 @@
   }
 
   body {
-    @apply bg-base-50 text-base-900 antialiased;
+    @apply bg-base-950 text-base-50 antialiased;
     font-family: var(--font-sans);
     min-width: 320px;
     overflow-x: clip;
     -webkit-text-size-adjust: 100%;
+    color-scheme: dark;
   }
 
   .dark body {
@@ -65,7 +66,7 @@
 .app-shell {
   padding-top: max(0.75rem, env(safe-area-inset-top));
   padding-right: max(0.75rem, env(safe-area-inset-right));
-  padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
   padding-left: max(0.75rem, env(safe-area-inset-left));
 }
 
@@ -78,7 +79,7 @@
 @layer components {
   /* Superfícies sólidas: menos efeitos e leitura mais direta. */
   .vidro {
-    @apply rounded-[var(--radius-glass)] border border-base-100 bg-white shadow-[var(--shadow-soft)];
+    @apply rounded-[var(--radius-glass)] border border-white/10 bg-base-900 shadow-[var(--shadow-soft-dark)];
   }
 
   .dark .vidro {
@@ -86,7 +87,7 @@
   }
 
   .vidro-forte {
-    @apply rounded-[var(--radius-glass-lg)] border border-base-100 bg-base-0 shadow-[var(--shadow-soft)];
+    @apply rounded-[var(--radius-glass-lg)] border border-white/10 bg-base-900 shadow-[var(--shadow-soft-dark)];
   }
 
   .dark .vidro-forte {

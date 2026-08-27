@@ -16,7 +16,10 @@ const DIA = 86_400_000;
 const agora = Date.now();
 const emDoisAnos = new Date(agora + 730 * DIA).toISOString().slice(0, 10);
 const haUmAno = new Date(agora - 365 * DIA).toISOString().slice(0, 10);
+const haSeisMeses = new Date(agora - 183 * DIA).toISOString().slice(0, 10);
+const haDezoitoMeses = new Date(agora - 548 * DIA).toISOString().slice(0, 10);
 const PLATAFORMAS_PREFERIDAS = /steam|gog|playstation|xbox/i;
+const TERMOS_INADEQUADOS = /hentai|adult|erotic|sexual|nsfw|nudity|porn/i;
 
 function iso(data) {
   const valor = new Date(data).getTime();
@@ -28,6 +31,9 @@ function prioridadeJogo(jogo) {
   const base = Number(jogo.total_rating_count ?? jogo.rating_count ?? 0);
   const plataformas = (jogo.platforms ?? []).map((plataforma) => plataforma.name ?? plataforma).join(" ");
   return base + (PLATAFORMAS_PREFERIDAS.test(plataformas) ? 50_000 : 0);
+}
+function jogoIndesejado(jogo) {
+  return TERMOS_INADEQUADOS.test([jogo.name, jogo.title, jogo.summary, ...(jogo.tags ?? []).map((tag) => tag.name ?? tag)].filter(Boolean).join(" "));
 }
 
 async function json(url, opcoes) {
@@ -50,7 +56,7 @@ async function buscarJogosIgdb() {
   const fim = Math.floor((agora + 730 * DIA) / 1000);
   const corpo = `fields name, first_release_date, cover.url, screenshots.url, websites.url, platforms.name, total_rating_count; where first_release_date >= ${inicio} & first_release_date <= ${fim}; sort total_rating_count desc; limit 400;`;
   const jogos = await json("https://api.igdb.com/v4/games", { method: "POST", headers: { "Client-ID": IGDB_CLIENT_ID, Authorization: `Bearer ${token}`, "Content-Type": "text/plain" }, body: corpo });
-  return (jogos ?? []).map((jogo) => {
+  return (jogos ?? []).filter((jogo) => !jogoIndesejado(jogo) && Number(jogo.total_rating_count ?? 0) >= 10).map((jogo) => {
     const data = iso(jogo.first_release_date * 1000);
     return data && { id: `sug-igdb-${jogo.id}`, titulo: jogo.name, categoria: "jogos", dataLancamentoISO: data, imagemUrl: normalizarImagemIgdb(jogo.cover?.url), bannerUrl: normalizarImagemIgdb(jogo.screenshots?.[0]?.url), plataformas: jogo.platforms?.map((plataforma) => plataforma.name), linksOficiais: jogo.websites?.slice(0, 2).map((site) => ({ label: "Site oficial", url: site.url })), idExterno: `igdb-${jogo.id}`, fonte: "igdb", momento: momento(data), relevancia: prioridadeJogo(jogo) };
   }).filter(Boolean);
@@ -63,8 +69,8 @@ async function buscarJogosSteam() {
   return itens.map((jogo) => {
     const data = iso((jogo.release_date ?? 0) * 1000);
     if (!data || new Date(data).getTime() < agora - 365 * DIA || new Date(data).getTime() > agora + 730 * DIA) return null;
-    return { id: `sug-steam-${jogo.id}`, titulo: jogo.name, categoria: "jogos", dataLancamentoISO: data, imagemUrl: jogo.large_capsule_image ?? jogo.small_capsule_image, plataformas: ["Steam"], linksOficiais: [{ label: "Ver na Steam", url: `https://store.steampowered.com/app/${jogo.id}` }], idExterno: `steam-${jogo.id}`, fonte: "steam", momento: momento(data), relevancia: 40_000 };
-  }).filter(Boolean);
+    return { id: `sug-steam-${jogo.id}`, titulo: jogo.name, categoria: "jogos", dataLancamentoISO: data, imagemUrl: jogo.large_capsule_image ?? jogo.small_capsule_image, plataformas: ["Steam"], linksOficiais: [{ label: "Ver na Steam", url: `https://store.steampowered.com/app/${jogo.id}` }], idExterno: `steam-${jogo.id}`, fonte: "steam", momento: momento(data), relevancia: 5_000 };
+  }).filter((jogo) => jogo && !jogoIndesejado(jogo));
 }
 
 /** Catálogo público da Epic Games Store, sem depender de chave de API. */
@@ -76,14 +82,14 @@ async function buscarJogosEpic() {
     if (!data || new Date(data).getTime() < agora - 365 * DIA || new Date(data).getTime() > agora + 730 * DIA) return null;
     const imagem = jogo.keyImages?.find((item) => item.type === "OfferImageWide" || item.type === "DieselStoreFrontWide")?.url ?? jogo.keyImages?.[0]?.url;
     const slug = jogo.productSlug ?? jogo.urlSlug;
-    return { id: `sug-epic-${jogo.id}`, titulo: jogo.title, descricao: jogo.description?.slice(0, 300), categoria: "jogos", dataLancamentoISO: data, imagemUrl: imagem, plataformas: ["Epic Games Store"], linksOficiais: slug ? [{ label: "Ver na Epic", url: `https://store.epicgames.com/pt-BR/p/${slug}` }] : undefined, idExterno: `epic-${jogo.id}`, fonte: "epic", momento: momento(data), relevancia: 30_000 };
-  }).filter((jogo) => jogo?.titulo);
+    return { id: `sug-epic-${jogo.id}`, titulo: jogo.title, descricao: jogo.description?.slice(0, 300), categoria: "jogos", dataLancamentoISO: data, imagemUrl: imagem, plataformas: ["Epic Games Store"], linksOficiais: slug ? [{ label: "Ver na Epic", url: `https://store.epicgames.com/pt-BR/p/${slug}` }] : undefined, idExterno: `epic-${jogo.id}`, fonte: "epic", momento: momento(data), relevancia: 5_000 };
+  }).filter((jogo) => jogo?.titulo && !jogoIndesejado(jogo));
 }
 
 /** Catálogo da GOG para ampliar os jogos de PC sem depender da Steam. */
 async function buscarJogosGog() {
   const dados = await json("https://catalog.gog.com/v1/catalog?limit=100&order=desc:trending&productType=game&country=BR&locale=pt-BR");
-  return (dados?.products ?? []).map((jogo) => {
+  return (dados?.products ?? []).filter((jogo) => !jogoIndesejado(jogo)).map((jogo) => {
     const data = iso(jogo.storeReleaseDate || jogo.releaseDate);
     if (!data || new Date(data).getTime() < agora - 365 * DIA || new Date(data).getTime() > agora + 730 * DIA || !jogo.title) return null;
     return { id: `sug-gog-${jogo.id}`, titulo: jogo.title, descricao: jogo.developers?.length ? `Jogo para PC da ${jogo.developers.join(", ")}.` : "Jogo para PC disponível na GOG.", categoria: "jogos", dataLancamentoISO: data, imagemUrl: jogo.coverHorizontal ?? jogo.galleryBackgroundImage ?? jogo.coverVertical, plataformas: ["GOG", "PC"], linksOficiais: jogo.storeLink ? [{ label: "Ver na GOG", url: jogo.storeLink }] : undefined, idExterno: `gog-${jogo.id}`, fonte: "gog", momento: momento(data), relevancia: 25_000 + Number(jogo.reviewsCount ?? 0) };
@@ -94,7 +100,7 @@ async function buscarJogosGog() {
 async function buscarJogosRawg() {
   if (!RAWG_API_KEY) return [];
   const dados = await json(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=${haUmAno},${emDoisAnos}&ordering=-metacritic&page_size=100`);
-  return (dados?.results ?? []).map((jogo) => {
+  return (dados?.results ?? []).filter((jogo) => !jogoIndesejado(jogo) && (Number(jogo.metacritic ?? 0) >= 65 || Number(jogo.ratings_count ?? 0) >= 150)).map((jogo) => {
     const data = iso(jogo.released);
     if (!data || !jogo.name) return null;
     const plataformas = (jogo.parent_platforms ?? []).map((item) => item.platform?.name).filter(Boolean);
@@ -157,7 +163,7 @@ async function buscarFilmesDosCatalogosBr() {
   const buscas = CATALOGOS_BR.map(async ({ rotulo, nomes }) => {
     const id = nomes.map((nome) => porNome.get(nome)).find(Boolean);
     if (!id) return [];
-    const paginas = await Promise.all([1, 2, 3].map((pagina) => json(`https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}&language=pt-BR&watch_region=BR&with_watch_monetization_types=flatrate&with_watch_providers=${id}&sort_by=popularity.desc&page=${pagina}`)));
+    const paginas = await Promise.all([1, 2, 3].map((pagina) => json(`https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}&language=pt-BR&watch_region=BR&with_watch_monetization_types=flatrate&with_watch_providers=${id}&primary_release_date.gte=${haSeisMeses}&sort_by=popularity.desc&page=${pagina}`)));
     return paginas.flatMap((dados) => dados?.results ?? []).map((item) => sugestaoTmdbFilme(item, rotulo)).filter(Boolean);
   });
   return (await Promise.all(buscas)).flat();
@@ -166,7 +172,7 @@ async function buscarFilmesDosCatalogosBr() {
 /** Lançamentos recentes em salas brasileiras; a disponibilidade por rede varia por cidade. */
 async function buscarFilmesEmCartazNoBrasil() {
   if (!TMDB_API_KEY) return [];
-  const inicio = new Date(agora - 90 * DIA).toISOString().slice(0, 10);
+  const inicio = haSeisMeses;
   const dados = await json(`https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}&language=pt-BR&region=BR&with_release_type=2|3&primary_release_date.gte=${inicio}&primary_release_date.lte=${emDoisAnos}&sort_by=popularity.desc`);
   return (dados?.results ?? []).map((item) => sugestaoTmdbFilme(item, "Em cartaz nos cinemas do Brasil")).filter(Boolean);
 }
@@ -189,7 +195,7 @@ async function buscarSeriesDosCatalogosBr() {
   const buscas = CATALOGOS_BR.map(async ({ rotulo, nomes }) => {
     const id = nomes.map((nome) => porNome.get(nome)).find(Boolean);
     if (!id) return [];
-    const paginas = await Promise.all([1, 2, 3].map((pagina) => json(`https://api.themoviedb.org/3/discover/tv?api_key=${TMDB_API_KEY}&language=pt-BR&watch_region=BR&with_watch_monetization_types=flatrate&with_watch_providers=${id}&sort_by=popularity.desc&page=${pagina}`)));
+    const paginas = await Promise.all([1, 2, 3].map((pagina) => json(`https://api.themoviedb.org/3/discover/tv?api_key=${TMDB_API_KEY}&language=pt-BR&watch_region=BR&with_watch_monetization_types=flatrate&with_watch_providers=${id}&first_air_date.gte=${haDezoitoMeses}&sort_by=popularity.desc&page=${pagina}`)));
     return paginas.flatMap((dados) => dados?.results ?? []).map((item) => sugestaoTmdbSerie(item, rotulo)).filter(Boolean);
   });
   return (await Promise.all(buscas)).flat();
@@ -232,7 +238,10 @@ async function buscarDestaquesConfirmados() {
   const gtaVI = "2026-11-19T05:00:00.000Z";
   if (new Date(gtaVI).getTime() < agora - 30 * DIA || new Date(gtaVI).getTime() > agora + 730 * DIA) return [];
   const siteOficial = "https://www.rockstargames.com/VI";
-  const imagemUrl = await buscarImagemDaPagina(siteOficial);
+  const capaRawg = RAWG_API_KEY
+    ? await json(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&search=${encodeURIComponent("Grand Theft Auto VI")}&page_size=1`)
+    : null;
+  const imagemUrl = await buscarImagemDaPagina(siteOficial) ?? capaRawg?.results?.[0]?.background_image ?? undefined;
   return [{
     id: "sug-rockstar-gta-vi",
     titulo: "Grand Theft Auto VI",
@@ -280,6 +289,28 @@ function deduplicar(itens) {
   return [...porChave.values()];
 }
 
+/** Acrescenta elenco e gêneros aos títulos TMDB para a busca local, sem expor a chave ao navegador. */
+async function enriquecerMetadadosTmdb(itens) {
+  if (!TMDB_API_KEY) return;
+  const titulosTmdb = itens.filter((item) => item.fonte === "tmdb").slice(0, 140);
+  for (let inicio = 0; inicio < titulosTmdb.length; inicio += 8) {
+    await Promise.all(titulosTmdb.slice(inicio, inicio + 8).map(async (item) => {
+      const resultado = item.idExterno.match(/^tmdb-(movie|tv)-(\d+)$/);
+      if (!resultado) return;
+      const [, tipo, id] = resultado;
+      const detalhes = await json(`https://api.themoviedb.org/3/${tipo}/${id}?api_key=${TMDB_API_KEY}&language=pt-BR&append_to_response=credits`);
+      if (!detalhes) return;
+      item.generos = (detalhes.genres ?? []).map((genero) => genero.name).filter(Boolean);
+      item.elenco = (detalhes.credits?.cast ?? []).slice(0, 10).map((pessoa) => pessoa.name).filter(Boolean);
+    }));
+  }
+}
+
+function jogoRelevante(item) {
+  if (item.categoria !== "jogos") return true;
+  return (item.relevancia ?? 0) >= 20_000 || item.fonte === "rockstar";
+}
+
 async function main() {
   if (!TMDB_API_KEY) console.warn("TMDB_API_KEY não configurada: filmes e séries do Brasil ficarão fora desta atualização.");
   const [destaques, igdb, steam, epic, gog, rawg, playstation, xbox, filmesStreaming, filmesCinema, seriesBrasil] = await Promise.all([
@@ -294,6 +325,7 @@ async function main() {
     buscarFilmesDosCatalogosBr(), buscarFilmesEmCartazNoBrasil(), buscarSeriesDosCatalogosBr(),
   ]);
   const sugestoes = deduplicar([...destaques, ...igdb, ...steam, ...epic, ...gog, ...rawg, ...playstation, ...xbox, ...filmesStreaming, ...filmesCinema, ...seriesBrasil])
+    .filter(jogoRelevante)
     .sort((a, b) => {
       const aData = new Date(a.dataLancamentoISO).getTime();
       const bData = new Date(b.dataLancamentoISO).getTime();
@@ -303,6 +335,7 @@ async function main() {
       if (aFuturo) return aData - bData;
       return (b.relevancia ?? 0) - (a.relevancia ?? 0) || bData - aData;
     });
+  await enriquecerMetadadosTmdb(sugestoes);
   // Jogos de maior relevância têm prioridade nas notícias; o restante privilegia as datas próximas.
   const jogosEmDestaque = sugestoes.filter((item) => item.categoria === "jogos").sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)).slice(0, 12);
   const porDataProxima = [...sugestoes].sort((a, b) => Math.abs(new Date(a.dataLancamentoISO).getTime() - agora) - Math.abs(new Date(b.dataLancamentoISO).getTime() - agora));

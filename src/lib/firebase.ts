@@ -7,7 +7,7 @@ import {
   onAuthStateChanged,
   type User,
 } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 /**
  * Configuração do Firebase.
@@ -56,15 +56,25 @@ export const db = getFirestore(firebaseApp);
 
 const googleProvider = new GoogleAuthProvider();
 
-/** Os únicos e-mails com permissão de administrador. Mantido em sincronia com as Firestore Security Rules. */
-export const EMAILS_ADMINISTRADORES = [
-  "chavosso16@gmail.com",
-  "gabrielly.gsena@gmail.com",
-] as const;
-
-export function emailEhAdministrador(email: string | null | undefined): boolean {
-  if (!email) return false;
-  return EMAILS_ADMINISTRADORES.includes(email.toLowerCase() as (typeof EMAILS_ADMINISTRADORES)[number]);
+/**
+ * Verifica se o usuário logado é administrador.
+ *
+ * Propositalmente NÃO existe nenhuma lista de e-mails aqui no cliente:
+ * uma lista assim ficaria visível a qualquer pessoa que abrisse o
+ * DevTools e olhasse o JS publicado (bundle é código público, mesmo
+ * sem link divulgado). Em vez disso, perguntamos ao Firestore lendo
+ * `sistema/statusAdmin` — um documento que nem precisa existir — e
+ * quem decide "sim" ou "não" são as Security Rules, no servidor. Se a
+ * leitura for negada (permission-denied), o usuário é visitante.
+ */
+export async function verificarSeEhAdministrador(): Promise<boolean> {
+  if (!auth.currentUser) return false;
+  try {
+    await getDoc(doc(db, "sistema", "statusAdmin"));
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 /** Inicia o fluxo de login com Google (único método de autenticação suportado). */

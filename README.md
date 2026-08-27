@@ -12,7 +12,10 @@ O projeto está pronto para uso em <https://victoralvees44.github.io/regressive-
 - Prioriza escolhas pessoais de plataformas e serviços, salvas no próprio aparelho.
 - Exibe a saúde da última sincronização e permite recarregar o catálogo sem reinstalar o PWA.
 - Mostra 30 sugestões por vez, com botão para continuar explorando quando quiser.
-- Filtra filmes disponíveis no Brasil em Netflix, Prime Video, Disney+, Max e salas de cinema.
+- Pesquisa por título, ator, gênero ou plataforma.
+- Filtra filmes recentes (até seis meses) disponíveis no Brasil em Netflix, Prime Video, Disney+, Max e salas de cinema.
+- Mantém séries recentes disponíveis nos serviços brasileiros escolhidos.
+- Dá prioridade a jogos relevantes de PlayStation, Xbox e PC, sem encher a estante com conteúdo adulto ou promoções aleatórias.
 - Permite acompanhar uma sugestão e transformá-la em evento.
 - Funciona como aplicativo instalado no celular, inclusive em iPhone.
 - Envia notificações quando configurado com Firebase.
@@ -46,9 +49,9 @@ O navegador não conversa diretamente com serviços externos. Uma Action do GitH
 
 | Tipo | Fontes |
 | --- | --- |
-| Jogos | RAWG, IGDB, Steam, Epic, GOG, PlayStation e Xbox |
-| Filmes | TMDB, limitado à disponibilidade brasileira e cinema |
-| Séries | TMDB, limitado à disponibilidade brasileira dos catálogos selecionados |
+| Jogos | RAWG, IGDB, GOG, PlayStation e Xbox; Steam e Epic entram apenas como apoio |
+| Filmes | TMDB, limitado aos últimos seis meses, disponibilidade brasileira e cinema |
+| Séries | TMDB, com lançamentos recentes disponíveis no Brasil pelos catálogos selecionados |
 | Notícias | Google News em português do Brasil |
 
 Os segredos abaixo ficam em **Settings → Secrets and variables → Actions** no GitHub:
@@ -62,7 +65,7 @@ Os segredos abaixo ficam em **Settings → Secrets and variables → Actions** n
 
 Sem `TMDB_API_KEY`, filmes e a maior parte das séries não conseguem aparecer. Sem `RAWG_API_KEY`, o catálogo ainda funciona, só perde uma ótima fonte de jogos e imagens.
 
-O catálogo se atualiza diariamente. Quando quiser conferir os dados mais recentes antes disso, use o botão **Atualizar** na tela de Sugestões.
+O catálogo se atualiza diariamente às 2h da manhã (horário de Brasília). O botão **Atualizar** apenas recarrega a versão mais recente já publicada — ele não expõe chaves nem dispara uma coleta no seu celular, porque o app é curioso, mas não inconsequente.
 
 ## Estrutura do projeto
 

@@ -12,8 +12,8 @@ const ITENS_NAV = [
 
 export function TabBar() {
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-40 px-3 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] pt-2 sm:hidden">
-      <div className="vidro-forte mx-auto flex max-w-md items-center justify-between px-2 py-1.5">
+    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-base-950/95 pb-[env(safe-area-inset-bottom)] pt-1 shadow-[0_-8px_24px_rgba(0,0,0,0.28)] backdrop-blur sm:hidden">
+      <div className="mx-auto flex max-w-md items-center justify-between px-2 py-1.5">
         {ITENS_NAV.map(({ rota, rotulo, Icone }) => (
           <NavLink key={rota} to={rota} className="relative flex-1">
             {({ isActive }) => (

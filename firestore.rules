@@ -60,6 +60,16 @@ service cloud.firestore {
       allow write: if ehAdministrador();
     }
 
+    // Documento "sonda": não guarda nenhum dado real, existe só para o
+    // cliente perguntar "eu sou administrador?" sem precisar saber a
+    // lista de e-mails. O SDK tenta ler; a regra abaixo responde
+    // sim/não. Assim a lista de e-mails fica só aqui no servidor, nunca
+    // no bundle JS que qualquer visitante pode inspecionar.
+    match /sistema/statusAdmin {
+      allow read: if ehAdministrador();
+      allow write: if false;
+    }
+
     // Qualquer outra coleção não prevista explicitamente é negada por
     // padrão (nenhuma regra de "allow" corresponde a ela).
   }

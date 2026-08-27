@@ -98,6 +98,9 @@ export interface SugestaoLancamento {
   linksOficiais?: LinkOficial[];
   /** Plataformas dos jogos ou locais brasileiros onde o filme pode ser visto. */
   plataformas?: string[];
+  /** Metadados em português para a busca por gênero e elenco. */
+  generos?: string[];
+  elenco?: string[];
   /** Pontuação interna para manter jogos de maior relevância em evidência após o lançamento. */
   relevancia?: number;
   /** Notícias recentes, obtidas durante a sincronização diária. */
