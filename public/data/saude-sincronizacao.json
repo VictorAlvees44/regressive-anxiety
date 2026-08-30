@@ -1,15 +1,15 @@
 {
-  "atualizadoEmISO": "2026-08-29T11:30:30.584Z",
-  "total": 431,
+  "atualizadoEmISO": "2026-08-30T10:20:22.627Z",
+  "total": 430,
   "porCategoria": {
     "jogos": 21,
-    "filmes": 172,
+    "filmes": 171,
     "series": 238
   },
   "porFonte": {
     "playstation": 10,
     "rockstar": 1,
-    "tmdb": 410,
+    "tmdb": 409,
     "xbox": 10
   }
 }
