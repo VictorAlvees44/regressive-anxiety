@@ -8,7 +8,7 @@ import {
   doc,
   type DocumentData,
 } from "firebase/firestore";
-import { db } from "./firebase";
+import { db, firebaseConfigurado } from "./firebase";
 import eventosMock from "../data/eventos.mock.json";
 import type { Evento, StatusEvento } from "../types";
 import { gerarId } from "./utils";
@@ -134,6 +134,7 @@ function documentoParaEvento(id: string, dados: DocumentData): Evento {
 }
 
 export async function listarEventos(): Promise<Evento[]> {
+  if (!firebaseConfigurado) return carregarDemo().map(normalizar);
   try {
     const snapshot = await getDocs(collection(db, COLECAO_EVENTOS));
     return snapshot.docs.map((d) => documentoParaEvento(d.id, d.data()));
@@ -146,6 +147,7 @@ export async function listarEventos(): Promise<Evento[]> {
 export async function criarEvento(
   dados: Omit<Evento, "id" | "criadoEm" | "atualizadoEm" | "status">,
 ): Promise<Evento> {
+  if (!firebaseConfigurado) return criarEventoDemo(dados);
   const agora = new Date().toISOString();
   const documento = {
     ...removerIndefinidos(dados),
@@ -164,6 +166,10 @@ export async function criarEvento(
 }
 
 export async function atualizarEvento(id: string, alteracoes: Partial<Evento>): Promise<void> {
+  if (!firebaseConfigurado) {
+    atualizarEventoDemo(id, alteracoes);
+    return;
+  }
   try {
     await updateDoc(doc(db, COLECAO_EVENTOS, id), {
       ...prepararPayloadAtualizacao(alteracoes),
@@ -176,6 +182,10 @@ export async function atualizarEvento(id: string, alteracoes: Partial<Evento>): 
 }
 
 export async function excluirEvento(id: string): Promise<void> {
+  if (!firebaseConfigurado) {
+    excluirEventoDemo(id);
+    return;
+  }
   try {
     await deleteDoc(doc(db, COLECAO_EVENTOS, id));
   } catch (erro) {

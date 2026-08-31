@@ -6,7 +6,7 @@ import { GlassCard } from "../components/ui/GlassCard";
 import { Button } from "../components/ui/Button";
 import * as listaDesejosRepositorio from "../lib/listaDesejosRepositorio";
 import type { ItemListaDesejos } from "../types";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../hooks/useAuth";
 import { cn } from "../lib/utils";
 
 const CORES_PRIORIDADE: Record<ItemListaDesejos["prioridade"], string> = {

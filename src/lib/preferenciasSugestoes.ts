@@ -6,12 +6,14 @@ export interface PreferenciasSugestoes {
   categorias: SugestaoLancamento["categoria"][];
   plataformas: string[];
   servicos: string[];
+  generos: string[];
 }
 
 export const PREFERENCIAS_PADRAO: PreferenciasSugestoes = {
   categorias: [],
   plataformas: [],
   servicos: [],
+  generos: [],
 };
 
 export function carregarPreferenciasSugestoes(): PreferenciasSugestoes {
@@ -23,6 +25,7 @@ export function carregarPreferenciasSugestoes(): PreferenciasSugestoes {
       categorias: preferencias.categorias ?? [],
       plataformas: preferencias.plataformas ?? [],
       servicos: preferencias.servicos ?? [],
+      generos: preferencias.generos ?? [],
     };
   } catch {
     return PREFERENCIAS_PADRAO;
@@ -42,6 +45,7 @@ export function pontuacaoDasPreferencias(sugestao: SugestaoLancamento, preferenc
   const categoriaPreferida = preferencias.categorias.includes(sugestao.categoria);
   const plataformaPreferida = preferencias.plataformas.some((plataforma) => plataformas.includes(plataforma.toLocaleLowerCase("pt-BR")));
   const servicoPreferido = preferencias.servicos.some((servico) => plataformas.includes(servico.toLocaleLowerCase("pt-BR")));
+  const generoPreferido = sugestao.generos?.some((genero) => preferencias.generos.some((preferido) => genero.toLocaleLowerCase("pt-BR") === preferido.toLocaleLowerCase("pt-BR"))) ?? false;
 
-  return (categoriaPreferida ? 2_000 : 0) + (plataformaPreferida ? 5_000 : 0) + (servicoPreferido ? 5_000 : 0);
+  return (categoriaPreferida ? 2_000 : 0) + (plataformaPreferida ? 5_000 : 0) + (servicoPreferido ? 5_000 : 0) + (generoPreferido ? 4_000 : 0);
 }

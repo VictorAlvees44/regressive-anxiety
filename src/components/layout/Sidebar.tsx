@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Home, Sparkles, Calendar, Gift, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "../../lib/utils";
-import { useAuth } from "../../contexts/AuthContext";
+import { useAuth } from "../../hooks/useAuth";
 
 const ITENS_NAV = [
   { rota: "/", rotulo: "Início", Icone: Home },

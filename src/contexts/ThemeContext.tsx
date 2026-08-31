@@ -1,15 +1,8 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import type { Tema } from "../types";
+import { ThemeContext, type ThemeContextValor } from "./themeContextValue";
 
 const CHAVE_STORAGE = "regressive-anxiety:tema";
-
-interface ThemeContextValor {
-  tema: Tema;
-  alternarTema: () => void;
-  definirTema: (tema: Tema) => void;
-}
-
-const ThemeContext = createContext<ThemeContextValor | undefined>(undefined);
 
 function obterTemaInicial(): Tema {
   const salvo = window.localStorage.getItem(CHAVE_STORAGE) as Tema | null;
@@ -36,10 +29,4 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   );
 
   return <ThemeContext.Provider value={valor}>{children}</ThemeContext.Provider>;
-}
-
-export function useTheme(): ThemeContextValor {
-  const contexto = useContext(ThemeContext);
-  if (!contexto) throw new Error("useTheme deve ser usado dentro de um ThemeProvider");
-  return contexto;
 }

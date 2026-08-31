@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useSaudacao } from "../hooks/useSaudacao";
 import { useFraseDoDia } from "../hooks/useFraseDoDia";
-import { useEventos } from "../contexts/EventosContext";
+import { useEventos } from "../hooks/useEventos";
 import { useProximosEventos } from "../hooks/useEventosFiltrados";
 import { EventCard } from "../components/events/EventCard";
 import { EventList } from "../components/events/EventList";

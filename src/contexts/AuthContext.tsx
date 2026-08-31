@@ -1,16 +1,7 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { entrarComGoogle, firebaseConfigurado, observarUsuario, sair, verificarSeEhAdministrador } from "../lib/firebase";
-import type { Perfil, UsuarioAutenticado } from "../types";
-
-interface AuthContextValor {
-  usuario: UsuarioAutenticado | null;
-  carregando: boolean;
-  perfil: Perfil;
-  entrar: () => Promise<void>;
-  sair: () => Promise<void>;
-}
-
-const AuthContext = createContext<AuthContextValor | undefined>(undefined);
+import type { UsuarioAutenticado } from "../types";
+import { AuthContext, type AuthContextValor } from "./authContextValue";
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [usuario, setUsuario] = useState<UsuarioAutenticado | null>(null);
@@ -77,10 +68,4 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   );
 
   return <AuthContext.Provider value={valor}>{children}</AuthContext.Provider>;
-}
-
-export function useAuth(): AuthContextValor {
-  const contexto = useContext(AuthContext);
-  if (!contexto) throw new Error("useAuth deve ser usado dentro de um AuthProvider");
-  return contexto;
 }

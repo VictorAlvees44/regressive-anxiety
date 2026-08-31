@@ -1,19 +1,7 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import * as eventosRepositorio from "../lib/eventosRepositorio";
 import type { Evento } from "../types";
-
-interface EventosContextValor {
-  eventos: Evento[];
-  carregando: boolean;
-  erro: string | null;
-  recarregar: () => Promise<void>;
-  alternarFavorito: (id: string) => Promise<void>;
-  criarEvento: (dados: Omit<Evento, "id" | "criadoEm" | "atualizadoEm" | "status">) => Promise<void>;
-  editarEvento: (id: string, alteracoes: Partial<Evento>) => Promise<void>;
-  excluirEvento: (id: string) => Promise<void>;
-}
-
-const EventosContext = createContext<EventosContextValor | undefined>(undefined);
+import { EventosContext, type EventosContextValor } from "./eventosContextValue";
 
 export function EventosProvider({ children }: { children: ReactNode }) {
   const [eventos, setEventos] = useState<Evento[]>([]);
@@ -78,10 +66,4 @@ export function EventosProvider({ children }: { children: ReactNode }) {
   );
 
   return <EventosContext.Provider value={valor}>{children}</EventosContext.Provider>;
-}
-
-export function useEventos(): EventosContextValor {
-  const contexto = useContext(EventosContext);
-  if (!contexto) throw new Error("useEventos deve ser usado dentro de um EventosProvider");
-  return contexto;
 }

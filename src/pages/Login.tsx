@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { LogIn, ShieldAlert } from "lucide-react";
 import { GlassCard } from "../components/ui/GlassCard";
 import { Button } from "../components/ui/Button";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../hooks/useAuth";
 
 export function Login() {
   const { entrar } = useAuth();

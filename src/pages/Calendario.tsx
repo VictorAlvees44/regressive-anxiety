@@ -6,7 +6,7 @@ import { GlassCard } from "../components/ui/GlassCard";
 import { Button } from "../components/ui/Button";
 import { EventList } from "../components/events/EventList";
 import { useCalendarioMensal, NOMES_MES, NOMES_DIA_SEMANA } from "../hooks/useCalendarioMensal";
-import { useEventos } from "../contexts/EventosContext";
+import { useEventos } from "../hooks/useEventos";
 import { obterCategoria } from "../data/categorias";
 import { cn } from "../lib/utils";
 

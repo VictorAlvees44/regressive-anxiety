@@ -13,6 +13,8 @@ O projeto está pronto para uso em <https://victoralvees44.github.io/regressive-
 - Exibe a saúde da última sincronização e permite recarregar o catálogo sem reinstalar o PWA.
 - Mostra 30 sugestões por vez, com botão para continuar explorando quando quiser.
 - Pesquisa por título, ator, gênero ou plataforma.
+- Oferece uma curadoria inteligente e explicável, ajustada por preferências, eventos acompanhados, favoritos e feedback.
+- Mantém todo o histórico de recomendação no próprio aparelho, sem enviar hábitos pessoais para serviços externos.
 - Filtra filmes recentes (até seis meses) disponíveis no Brasil em Netflix, Prime Video, Disney+, Max e salas de cinema.
 - Mantém séries recentes disponíveis nos serviços brasileiros escolhidos.
 - Dá prioridade a jogos relevantes de PlayStation, Xbox e PC, sem encher a estante com conteúdo adulto ou promoções aleatórias.
@@ -66,6 +68,12 @@ Os segredos abaixo ficam em **Settings → Secrets and variables → Actions** n
 Sem `TMDB_API_KEY`, filmes e a maior parte das séries não conseguem aparecer. Sem `RAWG_API_KEY`, o catálogo ainda funciona, só perde uma ótima fonte de jogos e imagens.
 
 O catálogo se atualiza diariamente às 2h da manhã (horário de Brasília). O botão **Atualizar** apenas recarrega a versão mais recente já publicada — ele não expõe chaves nem dispara uma coleta no seu celular, porque o app é curioso, mas não inconsequente.
+
+## Curadoria inteligente
+
+A aba **Para você** usa um recomendador baseado em conteúdo. Ele cruza gênero, elenco, plataforma, categoria, proximidade do lançamento e relevância do catálogo com as preferências e os títulos que já foram acompanhados ou favoritados. Cada card explica os principais motivos da posição no ranking.
+
+O botão **Não é para mim** reduz a prioridade de itens parecidos e oculta aquela sugestão. Preferências e feedback ficam no `localStorage` do aparelho, e os itens dispensados podem ser reexibidos no radar de preferências. O recurso não depende de uma chave de IA, não aumenta o custo da hospedagem e continua funcionando offline.
 
 ## Estrutura do projeto
 

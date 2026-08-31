@@ -7,8 +7,8 @@ import { Button } from "../components/ui/Button";
 import { CategoriaBadge } from "../components/ui/CategoriaBadge";
 import { EventForm } from "../components/events/EventForm";
 import { NotificacoesCard } from "../components/layout/NotificacoesCard";
-import { useEventos } from "../contexts/EventosContext";
-import { useAuth } from "../contexts/AuthContext";
+import { useEventos } from "../hooks/useEventos";
+import { useAuth } from "../hooks/useAuth";
 import { formatarData } from "../lib/utils";
 import type { Evento } from "../types";
 

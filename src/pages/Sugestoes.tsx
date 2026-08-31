@@ -1,36 +1,58 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Activity, Check, ChevronDown, ExternalLink, Film, Gamepad2, Heart, Newspaper, Plus, RefreshCw, Search, Tv } from "lucide-react";
+import { Activity, Check, ChevronDown, ExternalLink, EyeOff, Film, Gamepad2, Heart, Newspaper, Plus, RefreshCw, RotateCcw, Search, Sparkles, Tv } from "lucide-react";
 import { Header } from "../components/layout/Header";
 import { GlassCard } from "../components/ui/GlassCard";
 import { CategoriaBadge } from "../components/ui/CategoriaBadge";
 import { Button } from "../components/ui/Button";
 import { formatarData, cn } from "../lib/utils";
-import { useEventos } from "../contexts/EventosContext";
+import { useEventos } from "../hooks/useEventos";
 import { carregarSaudeSincronizacao, listarSugestoes, type SaudeSincronizacao } from "../lib/sugestoesRepositorio";
 import { carregarPreferenciasSugestoes, pontuacaoDasPreferencias, salvarPreferenciasSugestoes, type PreferenciasSugestoes } from "../lib/preferenciasSugestoes";
+import { carregarFeedbackRecomendacoes, registrarDesinteresse, registrarInteresse, salvarFeedbackRecomendacoes } from "../lib/feedbackRecomendacoes";
+import { analisarRecomendacao, construirPerfilRecomendacoes } from "../lib/recomendacoesInteligentes";
 import type { SugestaoLancamento } from "../types";
 
-type FiltroCategoria = "todos" | SugestaoLancamento["categoria"];
+type FiltroCategoria = "para-voce" | "todos" | SugestaoLancamento["categoria"];
 type ChavePreferencia = keyof PreferenciasSugestoes;
 type CampoBusca = "tudo" | "nome" | "ator" | "genero" | "plataforma";
 
 const ITENS_POR_PAGINA = 30;
-const FILTROS_CATEGORIA: { id: FiltroCategoria; rotulo: string }[] = [{ id: "todos", rotulo: "Tudo" }, { id: "filmes", rotulo: "Filmes" }, { id: "series", rotulo: "Séries" }, { id: "jogos", rotulo: "Jogos" }];
-const CATEGORIAS_PREFERIDAS: { id: SugestaoLancamento["categoria"]; rotulo: string }[] = [{ id: "jogos", rotulo: "Jogos" }, { id: "filmes", rotulo: "Filmes" }, { id: "series", rotulo: "Séries" }];
+const FILTROS_CATEGORIA: { id: FiltroCategoria; rotulo: string }[] = [
+  { id: "para-voce", rotulo: "Para você" },
+  { id: "todos", rotulo: "Tudo" },
+  { id: "filmes", rotulo: "Filmes" },
+  { id: "series", rotulo: "Séries" },
+  { id: "jogos", rotulo: "Jogos" },
+];
+const CATEGORIAS_PREFERIDAS: { id: SugestaoLancamento["categoria"]; rotulo: string }[] = [
+  { id: "jogos", rotulo: "Jogos" },
+  { id: "filmes", rotulo: "Filmes" },
+  { id: "series", rotulo: "Séries" },
+];
 const PLATAFORMAS_PREFERIDAS = ["Steam", "GOG", "PlayStation", "Xbox"];
 const SERVICOS_PREFERIDOS = ["Em cartaz nos cinemas do Brasil", "Netflix", "Prime Video", "Disney+", "Max"];
 
-function IconeCategoria({ categoria }: { categoria: SugestaoLancamento["categoria"] }) { const Icone = categoria === "filmes" ? Film : categoria === "series" ? Tv : Gamepad2; return <Icone size={26} />; }
-function urlSegura(url: string): boolean { return /^https?:\/\//i.test(url); }
-function textoNormalizado(valor: string) { return valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR"); }
+function IconeCategoria({ categoria }: { categoria: SugestaoLancamento["categoria"] }) {
+  const Icone = categoria === "filmes" ? Film : categoria === "series" ? Tv : Gamepad2;
+  return <Icone size={26} />;
+}
+
+function urlSegura(url: string): boolean {
+  return /^https?:\/\//i.test(url);
+}
+
+function textoNormalizado(valor: string) {
+  return valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
+}
+
 function jogoApropriadoERelevante(sugestao: SugestaoLancamento) {
   if (sugestao.categoria !== "jogos") return true;
   const texto = textoNormalizado(`${sugestao.titulo} ${sugestao.descricao ?? ""}`);
   if (/hentai|adult|erotic|sexual|nsfw|nudity|porn/.test(texto)) return false;
-  // Steam e Epic entram no arquivo diário como fontes de apoio; a vitrine prioriza curadoria, não promoções aleatórias.
   return sugestao.fonte !== "steam" && sugestao.fonte !== "epic";
 }
+
 function dentroDaJanelaAtual(sugestao: SugestaoLancamento) {
   const data = new Date(sugestao.dataLancamentoISO).getTime();
   if (Number.isNaN(data)) return false;
@@ -39,6 +61,7 @@ function dentroDaJanelaAtual(sugestao: SugestaoLancamento) {
   if (sugestao.categoria === "series") return data >= hoje - 548 * 86_400_000;
   return true;
 }
+
 function correspondeBusca(sugestao: SugestaoLancamento, termo: string, campo: CampoBusca) {
   const consulta = textoNormalizado(termo.trim());
   if (!consulta) return true;
@@ -52,14 +75,17 @@ function correspondeBusca(sugestao: SugestaoLancamento, termo: string, campo: Ca
   return valores.some((valor) => textoNormalizado(valor).includes(consulta));
 }
 
-function ordenarJogosPorDestaque(sugestoes: SugestaoLancamento[], preferencias: PreferenciasSugestoes): SugestaoLancamento[] {
-  const pontuacao = (sugestao: SugestaoLancamento) => (sugestao.relevancia ?? 0) + pontuacaoDasPreferencias(sugestao, preferencias);
+function ordenarJogosPorDestaque(sugestoes: SugestaoLancamento[], preferencias: PreferenciasSugestoes) {
+  const pontuacao = (sugestao: SugestaoLancamento) =>
+    (sugestao.relevancia ?? 0) + pontuacaoDasPreferencias(sugestao, preferencias);
   const porRelevancia = [...sugestoes].sort((a, b) => pontuacao(b) - pontuacao(a));
   const destaques = porRelevancia.slice(0, 12);
   const idsDestaques = new Set(destaques.map((sugestao) => sugestao.id));
   const restantes = sugestoes.filter((sugestao) => !idsDestaques.has(sugestao.id)).sort((a, b) => {
-    const dataA = new Date(a.dataLancamentoISO).getTime(); const dataB = new Date(b.dataLancamentoISO).getTime();
-    const aFuturo = dataA >= Date.now(); const bFuturo = dataB >= Date.now();
+    const dataA = new Date(a.dataLancamentoISO).getTime();
+    const dataB = new Date(b.dataLancamentoISO).getTime();
+    const aFuturo = dataA >= Date.now();
+    const bFuturo = dataB >= Date.now();
     if (aFuturo !== bFuturo) return aFuturo ? -1 : 1;
     return aFuturo ? dataA - dataB : dataB - dataA;
   });
@@ -74,6 +100,19 @@ function textoDaAtualizacao(saude: SaudeSincronizacao) {
   return `atualizado em ${formatarData(saude.atualizadoEmISO)}`;
 }
 
+function generosMaisFrequentes(sugestoes: SugestaoLancamento[]) {
+  const contagens = new Map<string, { rotulo: string; quantidade: number }>();
+  sugestoes.forEach((sugestao) => sugestao.generos?.forEach((genero) => {
+    const chave = textoNormalizado(genero);
+    const atual = contagens.get(chave);
+    contagens.set(chave, { rotulo: genero, quantidade: (atual?.quantidade ?? 0) + 1 });
+  }));
+  return [...contagens.values()]
+    .sort((a, b) => b.quantidade - a.quantidade || a.rotulo.localeCompare(b.rotulo, "pt-BR"))
+    .slice(0, 12)
+    .map(({ rotulo }) => ({ id: rotulo, rotulo }));
+}
+
 export function Sugestoes() {
   const { criarEvento, eventos } = useEventos();
   const [adicionados, setAdicionados] = useState<Set<string>>(new Set());
@@ -81,35 +120,82 @@ export function Sugestoes() {
   const [saude, setSaude] = useState<SaudeSincronizacao | null>(null);
   const [carregando, setCarregando] = useState(true);
   const [atualizando, setAtualizando] = useState(false);
-  const [filtroCategoria, setFiltroCategoria] = useState<FiltroCategoria>("todos");
+  const [filtroCategoria, setFiltroCategoria] = useState<FiltroCategoria>("para-voce");
   const [busca, setBusca] = useState("");
   const [campoBusca, setCampoBusca] = useState<CampoBusca>("tudo");
   const [sinopsesExpandidas, setSinopsesExpandidas] = useState<Set<string>>(new Set());
   const [preferenciasAbertas, setPreferenciasAbertas] = useState(false);
   const [preferencias, setPreferencias] = useState<PreferenciasSugestoes>(() => carregarPreferenciasSugestoes());
+  const [feedback, setFeedback] = useState(() => carregarFeedbackRecomendacoes());
   const [limite, setLimite] = useState(ITENS_POR_PAGINA);
 
   async function atualizarCatalogo() {
     setAtualizando(true);
     const [catalogo, proximaSaude] = await Promise.all([listarSugestoes(), carregarSaudeSincronizacao()]);
-    setSugestoes(catalogo); setSaude(proximaSaude); setLimite(ITENS_POR_PAGINA); setAtualizando(false);
+    setSugestoes(catalogo);
+    setSaude(proximaSaude);
+    setLimite(ITENS_POR_PAGINA);
+    setAtualizando(false);
   }
 
   useEffect(() => { void atualizarCatalogo().finally(() => setCarregando(false)); }, []);
-  useEffect(() => { salvarPreferenciasSugestoes(preferencias); }, [preferencias]);
-  useEffect(() => { setLimite(ITENS_POR_PAGINA); }, [busca, campoBusca, filtroCategoria, preferencias]);
+  useEffect(() => salvarPreferenciasSugestoes(preferencias), [preferencias]);
+  useEffect(() => salvarFeedbackRecomendacoes(feedback), [feedback]);
+  useEffect(() => setLimite(ITENS_POR_PAGINA), [busca, campoBusca, filtroCategoria, preferencias]);
 
-  const idsExternosJaAdicionados = useMemo(() => new Set(eventos.map((evento) => evento.idExterno).filter(Boolean)), [eventos]);
+  const idsExternosJaAdicionados = useMemo(
+    () => new Set(eventos.map((evento) => evento.idExterno).filter(Boolean)),
+    [eventos],
+  );
+  const idsOcultados = useMemo(() => new Set(feedback.ocultadas), [feedback.ocultadas]);
+  const generosDisponiveis = useMemo(() => {
+    const frequentes = generosMaisFrequentes(sugestoes);
+    const chavesFrequentes = new Set(frequentes.map((genero) => textoNormalizado(genero.id)));
+    const selecionadosForaDoTopo = preferencias.generos
+      .filter((genero) => !chavesFrequentes.has(textoNormalizado(genero)))
+      .map((genero) => ({ id: genero, rotulo: genero }));
+    return [...frequentes, ...selecionadosForaDoTopo];
+  }, [preferencias.generos, sugestoes]);
+  const perfilRecomendacoes = useMemo(
+    () => construirPerfilRecomendacoes(sugestoes, eventos, feedback),
+    [eventos, feedback, sugestoes],
+  );
+  const analises = useMemo(
+    () => new Map(sugestoes.map((sugestao) => [sugestao.id, analisarRecomendacao(sugestao, perfilRecomendacoes, preferencias)])),
+    [perfilRecomendacoes, preferencias, sugestoes],
+  );
+  const temPreferencias = Object.values(preferencias).some((valores) => valores.length > 0);
+  const temPersonalizacao = temPreferencias || perfilRecomendacoes.quantidadeSinais > 0;
+
   const sugestoesVisiveis = useMemo(() => {
-    const filtradas = sugestoes.filter((sugestao) => dentroDaJanelaAtual(sugestao) && jogoApropriadoERelevante(sugestao) && (filtroCategoria === "todos" || sugestao.categoria === filtroCategoria) && correspondeBusca(sugestao, busca, campoBusca));
+    const filtradas = sugestoes.filter((sugestao) =>
+      dentroDaJanelaAtual(sugestao)
+      && jogoApropriadoERelevante(sugestao)
+      && !idsOcultados.has(sugestao.idExterno)
+      && (["todos", "para-voce"].includes(filtroCategoria) || sugestao.categoria === filtroCategoria)
+      && correspondeBusca(sugestao, busca, campoBusca));
+    if (filtroCategoria === "para-voce") {
+      return [...filtradas].sort((a, b) => (analises.get(b.id)?.pontuacao ?? 0) - (analises.get(a.id)?.pontuacao ?? 0));
+    }
     if (filtroCategoria === "jogos") return ordenarJogosPorDestaque(filtradas, preferencias);
-    if (filtroCategoria === "todos" && (preferencias.categorias.length || preferencias.plataformas.length || preferencias.servicos.length)) return [...filtradas].sort((a, b) => pontuacaoDasPreferencias(b, preferencias) - pontuacaoDasPreferencias(a, preferencias));
+    if (filtroCategoria === "todos" && temPreferencias) {
+      return [...filtradas].sort((a, b) => pontuacaoDasPreferencias(b, preferencias) - pontuacaoDasPreferencias(a, preferencias));
+    }
     return filtradas;
-  }, [busca, campoBusca, filtroCategoria, preferencias, sugestoes]);
+  }, [analises, busca, campoBusca, filtroCategoria, idsOcultados, preferencias, sugestoes, temPreferencias]);
+
   const sugestoesExibidas = sugestoesVisiveis.slice(0, limite);
   const restantes = Math.max(0, sugestoesVisiveis.length - sugestoesExibidas.length);
 
-  function alternarSinopse(id: string) { setSinopsesExpandidas((atual) => { const proximo = new Set(atual); if (proximo.has(id)) proximo.delete(id); else proximo.add(id); return proximo; }); }
+  function alternarSinopse(id: string) {
+    setSinopsesExpandidas((atual) => {
+      const proximo = new Set(atual);
+      if (proximo.has(id)) proximo.delete(id);
+      else proximo.add(id);
+      return proximo;
+    });
+  }
+
   function alternarPreferencia(chave: ChavePreferencia, valor: string) {
     setPreferencias((atual) => {
       const itens = atual[chave] as string[];
@@ -117,29 +203,166 @@ export function Sugestoes() {
       return { ...atual, [chave]: proximo } as PreferenciasSugestoes;
     });
   }
-  function adicionarComoEvento(sugestao: SugestaoLancamento) { criarEvento({ titulo: sugestao.titulo, descricao: sugestao.descricao, categoria: sugestao.categoria, dataHoraISO: sugestao.dataLancamentoISO, possuiHorario: false, imagemUrl: sugestao.imagemUrl, bannerUrl: sugestao.bannerUrl, trailerUrl: sugestao.trailerUrl, linksOficiais: sugestao.linksOficiais, favorito: false, origem: "sugestao-api", idExterno: sugestao.idExterno }); setAdicionados((atual) => new Set(atual).add(sugestao.id)); }
 
-  return <div className="flex flex-col gap-4">
-    <Header titulo="Descobrir" subtitulo="Cinema, séries e jogos bons demais para passar batido" acoesExtras={<Button variante="secundario" tamanho="sm" className="min-h-10 shrink-0" disabled={atualizando} onClick={() => void atualizarCatalogo()} icone={<RefreshCw size={16} className={atualizando ? "animate-spin" : ""} />}>{atualizando ? "Atualizando" : "Atualizar"}</Button>} />
-    {!carregando && saude && <GlassCard semAnimacao className="flex flex-col gap-2 p-3 sm:flex-row sm:items-center sm:justify-between"><div className="flex items-center gap-2 text-sm text-base-900/65 dark:text-base-50/65"><Activity size={16} className="shrink-0 text-cat-verde" /><span>Catálogo saudável: {textoDaAtualizacao(saude)}.</span></div><span className="text-xs text-base-900/45 dark:text-base-50/45">{saude.porCategoria.jogos} jogos · {saude.porCategoria.filmes} filmes · {saude.porCategoria.series} séries</span></GlassCard>}
-    {!carregando && sugestoes.length > 0 && <section aria-label="Categorias de sugestões" className="flex flex-col gap-3"><div className="flex gap-2 overflow-x-auto pb-1 scrollbar-discreta">{FILTROS_CATEGORIA.map((filtro) => <button key={filtro.id} type="button" onClick={() => setFiltroCategoria(filtro.id)} className={cn("min-h-10 shrink-0 rounded-full px-3 py-1.5 text-sm font-medium transition-colors", filtroCategoria === filtro.id ? "bg-accent-500 text-white" : "bg-black/5 text-base-900/70 hover:bg-black/10 dark:bg-white/10 dark:text-base-50/75 dark:hover:bg-white/15")}>{filtro.rotulo}</button>)}</div>
-      <div className="flex min-w-0 gap-2"><label className="flex min-w-0 flex-1 items-center gap-2 rounded-2xl border border-black/10 bg-white/70 px-3 text-base-900/70 shadow-sm dark:border-white/10 dark:bg-base-900 dark:text-base-50/75"><Search size={17} className="shrink-0 text-accent-500" /><input value={busca} onChange={(evento) => setBusca(evento.target.value)} className="min-w-0 flex-1 bg-transparent py-3 text-sm outline-none placeholder:text-base-900/40 dark:placeholder:text-base-50/40" placeholder="Buscar título, ator, gênero..." aria-label="Pesquisar sugestões" /></label><select value={campoBusca} onChange={(evento) => setCampoBusca(evento.target.value as CampoBusca)} aria-label="Filtrar tipo de busca" className="min-h-11 max-w-28 rounded-2xl border border-black/10 bg-white px-2 text-sm text-base-900 outline-none dark:border-white/10 dark:bg-base-900 dark:text-base-50"><option value="tudo">Tudo</option><option value="nome">Nome</option><option value="ator">Ator</option><option value="genero">Gênero</option><option value="plataforma">Plataforma</option></select></div>
-      <button type="button" aria-expanded={preferenciasAbertas} onClick={() => setPreferenciasAbertas((aberta) => !aberta)} className="flex min-h-11 items-center justify-between rounded-2xl border border-black/5 bg-black/[0.03] px-3 text-left text-sm font-medium text-base-900/70 dark:border-white/10 dark:bg-white/[0.04] dark:text-base-50/75"><span className="flex items-center gap-2"><Heart size={16} className="text-accent-500" /> Seu radar de preferências</span><ChevronDown size={16} className={preferenciasAbertas ? "rotate-180 transition-transform" : "transition-transform"} /></button>
-      {preferenciasAbertas && <GlassCard semAnimacao className="space-y-4 p-3"><p className="text-sm text-base-900/60 dark:text-base-50/60">Marque o que você curte. A lista dá prioridade a essas escolhas neste aparelho.</p><GrupoPreferencias titulo="Quero ver mais" opcoes={CATEGORIAS_PREFERIDAS} selecionadas={preferencias.categorias} aoAlternar={(valor) => alternarPreferencia("categorias", valor)} /><GrupoPreferencias titulo="Onde eu jogo" opcoes={PLATAFORMAS_PREFERIDAS.map((rotulo) => ({ id: rotulo, rotulo }))} selecionadas={preferencias.plataformas} aoAlternar={(valor) => alternarPreferencia("plataformas", valor)} /><GrupoPreferencias titulo="Onde eu assisto" opcoes={SERVICOS_PREFERIDOS.map((rotulo) => ({ id: rotulo, rotulo: rotulo.replace("Em cartaz nos cinemas do Brasil", "Cinema") }))} selecionadas={preferencias.servicos} aoAlternar={(valor) => alternarPreferencia("servicos", valor)} /></GlassCard>}
-    </section>}
-    {carregando && <GlassCard className="text-center text-sm text-base-900/50 dark:text-base-50/50">Preparando a pipoca e separando os controles...</GlassCard>}
-    {!carregando && sugestoes.length === 0 && <GlassCard className="text-center text-sm text-base-900/55 dark:text-base-50/55">A estante está vazia por enquanto. Na próxima atualização ela ganha vida.</GlassCard>}
-    {!carregando && sugestoes.length > 0 && sugestoesVisiveis.length === 0 && <GlassCard className="text-center text-sm text-base-900/55 dark:text-base-50/55">Nada encontrado nesta categoria. Tente outra prateleira.</GlassCard>}
-    {!carregando && sugestoesVisiveis.length > 0 && <p className="px-1 text-sm text-base-900/55 dark:text-base-50/55">Mostrando {sugestoesExibidas.length} de {sugestoesVisiveis.length} opções. Sem maratona de rolagem obrigatória.</p>}
-    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">{sugestoesExibidas.map((sugestao) => <CartaoSugestao key={sugestao.id} sugestao={sugestao} jaAdicionado={adicionados.has(sugestao.id) || idsExternosJaAdicionados.has(sugestao.idExterno)} sinopseExpandida={sinopsesExpandidas.has(sugestao.id)} aoAlternarSinopse={() => alternarSinopse(sugestao.id)} aoAcompanhar={() => adicionarComoEvento(sugestao)} />)}</div>
-    {!carregando && restantes > 0 && <div className="flex justify-center pt-1"><Button tamanho="md" className="min-h-12 w-full sm:w-auto" onClick={() => setLimite((atual) => atual + ITENS_POR_PAGINA)} icone={<Plus size={18} />}>Mostrar mais {Math.min(ITENS_POR_PAGINA, restantes)}</Button></div>}
-    {!carregando && sugestoesVisiveis.length > 0 && <p className="px-1 text-center text-xs text-base-900/40 dark:text-base-50/40">Atualizado diariamente com fontes de games, cinema e notícias. A fila de coisas boas nunca termina.</p>}
-  </div>;
+  function adicionarComoEvento(sugestao: SugestaoLancamento) {
+    void criarEvento({
+      titulo: sugestao.titulo,
+      descricao: sugestao.descricao,
+      categoria: sugestao.categoria,
+      dataHoraISO: sugestao.dataLancamentoISO,
+      possuiHorario: false,
+      imagemUrl: sugestao.imagemUrl,
+      bannerUrl: sugestao.bannerUrl,
+      trailerUrl: sugestao.trailerUrl,
+      linksOficiais: sugestao.linksOficiais,
+      favorito: false,
+      origem: "sugestao-api",
+      idExterno: sugestao.idExterno,
+    });
+    setAdicionados((atual) => new Set(atual).add(sugestao.id));
+    setFeedback((atual) => registrarInteresse(atual, sugestao.idExterno));
+  }
+
+  return (
+    <div className="flex flex-col gap-4">
+      <Header
+        titulo="Descobrir"
+        subtitulo="Cinema, séries e jogos bons demais para passar batido"
+        acoesExtras={<Button variante="secundario" tamanho="sm" className="min-h-10 shrink-0" disabled={atualizando} onClick={() => void atualizarCatalogo()} icone={<RefreshCw size={16} className={atualizando ? "animate-spin" : ""} />}>{atualizando ? "Atualizando" : "Atualizar"}</Button>}
+      />
+
+      {!carregando && saude && (
+        <GlassCard semAnimacao className="flex flex-col gap-2 p-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-2 text-sm text-base-900/65 dark:text-base-50/65">
+            <Activity size={16} className="shrink-0 text-cat-verde" />
+            <span>Catálogo saudável: {textoDaAtualizacao(saude)}.</span>
+          </div>
+          <span className="text-xs text-base-900/45 dark:text-base-50/45">{saude.porCategoria.jogos} jogos · {saude.porCategoria.filmes} filmes · {saude.porCategoria.series} séries</span>
+        </GlassCard>
+      )}
+
+      {!carregando && sugestoes.length > 0 && (
+        <section aria-label="Categorias de sugestões" className="flex flex-col gap-3">
+          <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-discreta">
+            {FILTROS_CATEGORIA.map((filtro) => (
+              <button key={filtro.id} type="button" onClick={() => setFiltroCategoria(filtro.id)} className={cn("min-h-10 shrink-0 rounded-full px-3 py-1.5 text-sm font-medium transition-colors", filtroCategoria === filtro.id ? "bg-accent-500 text-white" : "bg-black/5 text-base-900/70 hover:bg-black/10 dark:bg-white/10 dark:text-base-50/75 dark:hover:bg-white/15")}>
+                {filtro.id === "para-voce" && <Sparkles size={14} className="mr-1.5 inline" />}{filtro.rotulo}
+              </button>
+            ))}
+          </div>
+
+          {filtroCategoria === "para-voce" && (
+            <GlassCard semAnimacao className="flex items-start gap-3 border-accent-500/20 bg-accent-500/[0.04] p-3">
+              <span className="rounded-xl bg-accent-500/10 p-2 text-accent-500"><Sparkles size={18} /></span>
+              <div>
+                <h2 className="text-sm font-semibold">Curadoria inteligente</h2>
+                <p className="mt-0.5 text-xs leading-relaxed text-base-900/55 dark:text-base-50/55">
+                  {temPersonalizacao ? "O ranking combina seu radar com o que você acompanha, favorita ou dispensa." : "Escolha preferências ou acompanhe um título; a seleção melhora a cada sinal."} O aprendizado fica somente neste aparelho.
+                </p>
+              </div>
+            </GlassCard>
+          )}
+
+          <div className="flex min-w-0 gap-2">
+            <label className="flex min-w-0 flex-1 items-center gap-2 rounded-2xl border border-black/10 bg-white/70 px-3 text-base-900/70 shadow-sm dark:border-white/10 dark:bg-base-900 dark:text-base-50/75">
+              <Search size={17} className="shrink-0 text-accent-500" />
+              <input value={busca} onChange={(evento) => setBusca(evento.target.value)} className="min-w-0 flex-1 bg-transparent py-3 text-sm outline-none placeholder:text-base-900/40 dark:placeholder:text-base-50/40" placeholder="Buscar título, ator, gênero..." aria-label="Pesquisar sugestões" />
+            </label>
+            <select value={campoBusca} onChange={(evento) => setCampoBusca(evento.target.value as CampoBusca)} aria-label="Filtrar tipo de busca" className="min-h-11 max-w-28 rounded-2xl border border-black/10 bg-white px-2 text-sm text-base-900 outline-none dark:border-white/10 dark:bg-base-900 dark:text-base-50">
+              <option value="tudo">Tudo</option><option value="nome">Nome</option><option value="ator">Ator</option><option value="genero">Gênero</option><option value="plataforma">Plataforma</option>
+            </select>
+          </div>
+
+          <button type="button" aria-expanded={preferenciasAbertas} onClick={() => setPreferenciasAbertas((aberta) => !aberta)} className="flex min-h-11 items-center justify-between rounded-2xl border border-black/5 bg-black/[0.03] px-3 text-left text-sm font-medium text-base-900/70 dark:border-white/10 dark:bg-white/[0.04] dark:text-base-50/75">
+            <span className="flex items-center gap-2"><Heart size={16} className="text-accent-500" /> Seu radar de preferências</span>
+            <ChevronDown size={16} className={preferenciasAbertas ? "rotate-180 transition-transform" : "transition-transform"} />
+          </button>
+
+          {preferenciasAbertas && (
+            <GlassCard semAnimacao className="space-y-4 p-3">
+              <p className="text-sm text-base-900/60 dark:text-base-50/60">Marque o que você curte. A curadoria usa essas escolhas somente neste aparelho.</p>
+              <GrupoPreferencias titulo="Quero ver mais" opcoes={CATEGORIAS_PREFERIDAS} selecionadas={preferencias.categorias} aoAlternar={(valor) => alternarPreferencia("categorias", valor)} />
+              <GrupoPreferencias titulo="Gêneros favoritos" opcoes={generosDisponiveis} selecionadas={preferencias.generos} aoAlternar={(valor) => alternarPreferencia("generos", valor)} />
+              <GrupoPreferencias titulo="Onde eu jogo" opcoes={PLATAFORMAS_PREFERIDAS.map((rotulo) => ({ id: rotulo, rotulo }))} selecionadas={preferencias.plataformas} aoAlternar={(valor) => alternarPreferencia("plataformas", valor)} />
+              <GrupoPreferencias titulo="Onde eu assisto" opcoes={SERVICOS_PREFERIDOS.map((rotulo) => ({ id: rotulo, rotulo: rotulo.replace("Em cartaz nos cinemas do Brasil", "Cinema") }))} selecionadas={preferencias.servicos} aoAlternar={(valor) => alternarPreferencia("servicos", valor)} />
+              {feedback.ocultadas.length > 0 && (
+                <button type="button" onClick={() => setFeedback((atual) => ({ ...atual, ocultadas: [] }))} className="inline-flex min-h-10 items-center gap-2 text-xs font-medium text-base-900/55 hover:text-accent-600 dark:text-base-50/55 dark:hover:text-accent-400">
+                  <RotateCcw size={14} /> Reexibir {feedback.ocultadas.length} {feedback.ocultadas.length === 1 ? "sugestão dispensada" : "sugestões dispensadas"}
+                </button>
+              )}
+            </GlassCard>
+          )}
+        </section>
+      )}
+
+      {carregando && <GlassCard className="text-center text-sm text-base-900/50 dark:text-base-50/50">Preparando a pipoca e separando os controles...</GlassCard>}
+      {!carregando && sugestoes.length === 0 && <GlassCard className="text-center text-sm text-base-900/55 dark:text-base-50/55">A estante está vazia por enquanto. Na próxima atualização ela ganha vida.</GlassCard>}
+      {!carregando && sugestoes.length > 0 && sugestoesVisiveis.length === 0 && <GlassCard className="text-center text-sm text-base-900/55 dark:text-base-50/55">Nada encontrado nesta categoria. Tente outra prateleira ou redefina os itens dispensados.</GlassCard>}
+      {!carregando && sugestoesVisiveis.length > 0 && <p className="px-1 text-sm text-base-900/55 dark:text-base-50/55">Mostrando {sugestoesExibidas.length} de {sugestoesVisiveis.length} opções. Sem maratona de rolagem obrigatória.</p>}
+
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
+        {sugestoesExibidas.map((sugestao) => {
+          const jaAdicionado = adicionados.has(sugestao.id) || idsExternosJaAdicionados.has(sugestao.idExterno);
+          return <CartaoSugestao key={sugestao.id} sugestao={sugestao} jaAdicionado={jaAdicionado} motivos={filtroCategoria === "para-voce" ? analises.get(sugestao.id)?.motivos : undefined} sinopseExpandida={sinopsesExpandidas.has(sugestao.id)} aoAlternarSinopse={() => alternarSinopse(sugestao.id)} aoAcompanhar={() => adicionarComoEvento(sugestao)} aoOcultar={jaAdicionado ? undefined : () => setFeedback((atual) => registrarDesinteresse(atual, sugestao.idExterno))} />;
+        })}
+      </div>
+
+      {!carregando && restantes > 0 && <div className="flex justify-center pt-1"><Button tamanho="md" className="min-h-12 w-full sm:w-auto" onClick={() => setLimite((atual) => atual + ITENS_POR_PAGINA)} icone={<Plus size={18} />}>Mostrar mais {Math.min(ITENS_POR_PAGINA, restantes)}</Button></div>}
+      {!carregando && sugestoesVisiveis.length > 0 && <p className="px-1 text-center text-xs text-base-900/40 dark:text-base-50/40">Atualizado diariamente com fontes de games, cinema e notícias. A fila de coisas boas nunca termina.</p>}
+    </div>
+  );
 }
 
-function CartaoSugestao({ sugestao, jaAdicionado, sinopseExpandida, aoAlternarSinopse, aoAcompanhar }: { sugestao: SugestaoLancamento; jaAdicionado: boolean; sinopseExpandida: boolean; aoAlternarSinopse: () => void; aoAcompanhar: () => void }) {
-  const noticias = (sugestao.noticias ?? []).filter((noticia) => urlSegura(noticia.url)); const links = (sugestao.linksOficiais ?? []).filter((link) => urlSegura(link.url)); const disponivel = sugestao.momento === "disponivel"; const atualizacaoOficial = sugestao.tipoConteudo === "atualizacao-oficial"; const imagemPrincipal = sugestao.bannerUrl ?? sugestao.imagemUrl;
-  return <motion.article initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="min-w-0"><GlassCard className="h-full overflow-hidden p-0"><div className="relative aspect-video overflow-hidden bg-base-900/10"><img src={`${import.meta.env.BASE_URL}icons/icon-512.png`} alt="" className="absolute inset-0 h-full w-full object-cover opacity-70" /><div className="absolute inset-0 flex items-center justify-center bg-base-950/20 text-base-50/80"><IconeCategoria categoria={sugestao.categoria} /></div>{imagemPrincipal ? <img src={imagemPrincipal} alt={`Imagem de ${sugestao.titulo}`} className="relative h-full w-full object-cover" loading="lazy" onError={(evento) => { evento.currentTarget.remove(); }} /> : null}</div><div className="flex min-w-0 flex-1 flex-col p-3 sm:p-4"><div className="flex flex-wrap items-center gap-2"><CategoriaBadge categoriaId={sugestao.categoria} /><span className={cn("rounded-full px-2 py-0.5 text-xs font-medium", atualizacaoOficial ? "bg-cat-violeta/15 text-cat-violeta" : disponivel ? "bg-cat-verde/15 text-cat-verde" : "bg-accent-500/10 text-accent-600 dark:text-accent-400")}>{atualizacaoOficial ? "Atualização oficial" : disponivel ? "Disponível agora" : "Em breve"}</span></div>{sugestao.plataformas?.length ? <p className="mt-2 line-clamp-1 text-xs text-base-900/45 dark:text-base-50/45">{sugestao.categoria === "jogos" ? sugestao.plataformas.join(" · ") : `Disponível no Brasil: ${sugestao.plataformas.join(" · ")}`}</p> : null}<h2 className="mt-2 line-clamp-2 font-semibold leading-snug">{sugestao.titulo}</h2>{sugestao.descricao && <div className="mt-1"><p className={cn("text-sm text-base-900/60 dark:text-base-50/60", !sinopseExpandida && "line-clamp-2")}>{sugestao.descricao}</p>{sugestao.descricao.length > 90 && <button type="button" onClick={aoAlternarSinopse} className="mt-1 min-h-8 text-xs font-medium text-accent-600 hover:underline dark:text-accent-400">{sinopseExpandida ? "Ver menos" : "Ver mais"}</button>}</div>}<p className="mt-2 text-xs text-base-900/45 dark:text-base-50/45">{atualizacaoOficial ? `Publicado em ${formatarData(sugestao.dataLancamentoISO)}` : disponivel ? `Lançado em ${formatarData(sugestao.dataLancamentoISO)}` : `Estreia em ${formatarData(sugestao.dataLancamentoISO)}`}</p><section className="mt-3 border-t border-black/5 pt-3 dark:border-white/10" aria-label={`Novidades sobre ${sugestao.titulo}`}><p className="flex items-center gap-1.5 text-xs font-semibold text-base-900/70 dark:text-base-50/75"><Newspaper size={14} /> Novidades</p>{noticias.length > 0 ? <ul className="mt-2 flex flex-col gap-1.5">{noticias.slice(0, 2).map((noticia) => <li key={noticia.url}><a className="flex items-start gap-1.5 text-xs leading-snug text-accent-600 hover:underline dark:text-accent-400" href={noticia.url} target="_blank" rel="noreferrer"><ExternalLink className="mt-0.5 shrink-0" size={12} /><span className="line-clamp-2">{noticia.titulo}{noticia.fonte ? ` · ${noticia.fonte}` : ""}</span></a></li>)}</ul> : links.length > 0 ? <a className="mt-2 inline-flex min-h-8 items-center gap-1.5 text-xs text-accent-600 hover:underline dark:text-accent-400" href={links[0].url} target="_blank" rel="noreferrer"><ExternalLink size={12} /> {links[0].label}</a> : <p className="mt-2 text-xs text-base-900/45 dark:text-base-50/45">Ainda sem manchetes. O estagiário da pipoca já está procurando.</p>}</section><div className="mt-auto pt-3"><Button variante={jaAdicionado ? "secundario" : "primario"} tamanho="sm" className="min-h-10" disabled={jaAdicionado} icone={jaAdicionado ? <Check size={16} /> : <Plus size={16} />} onClick={aoAcompanhar}>{jaAdicionado ? "Na sua lista" : "Acompanhar"}</Button></div></div></GlassCard></motion.article>;
+interface CartaoSugestaoProps {
+  sugestao: SugestaoLancamento;
+  jaAdicionado: boolean;
+  motivos?: string[];
+  sinopseExpandida: boolean;
+  aoAlternarSinopse: () => void;
+  aoAcompanhar: () => void;
+  aoOcultar?: () => void;
+}
+
+function CartaoSugestao({ sugestao, jaAdicionado, motivos, sinopseExpandida, aoAlternarSinopse, aoAcompanhar, aoOcultar }: CartaoSugestaoProps) {
+  const noticias = (sugestao.noticias ?? []).filter((noticia) => urlSegura(noticia.url));
+  const links = (sugestao.linksOficiais ?? []).filter((link) => urlSegura(link.url));
+  const disponivel = sugestao.momento === "disponivel";
+  const atualizacaoOficial = sugestao.tipoConteudo === "atualizacao-oficial";
+  const imagemPrincipal = sugestao.bannerUrl ?? sugestao.imagemUrl;
+
+  return (
+    <motion.article initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="min-w-0">
+      <GlassCard className="h-full overflow-hidden p-0">
+        <div className="relative aspect-video overflow-hidden bg-base-900/10">
+          <img src={`${import.meta.env.BASE_URL}icons/icon-512.png`} alt="" className="absolute inset-0 h-full w-full object-cover opacity-70" />
+          <div className="absolute inset-0 flex items-center justify-center bg-base-950/20 text-base-50/80"><IconeCategoria categoria={sugestao.categoria} /></div>
+          {imagemPrincipal ? <img src={imagemPrincipal} alt={`Imagem de ${sugestao.titulo}`} className="relative h-full w-full object-cover" loading="lazy" onError={(evento) => evento.currentTarget.remove()} /> : null}
+        </div>
+        <div className="flex min-w-0 flex-1 flex-col p-3 sm:p-4">
+          <div className="flex flex-wrap items-center gap-2">
+            <CategoriaBadge categoriaId={sugestao.categoria} />
+            <span className={cn("rounded-full px-2 py-0.5 text-xs font-medium", atualizacaoOficial ? "bg-cat-violeta/15 text-cat-violeta" : disponivel ? "bg-cat-verde/15 text-cat-verde" : "bg-accent-500/10 text-accent-600 dark:text-accent-400")}>{atualizacaoOficial ? "Atualização oficial" : disponivel ? "Disponível agora" : "Em breve"}</span>
+          </div>
+          {sugestao.plataformas?.length ? <p className="mt-2 line-clamp-1 text-xs text-base-900/45 dark:text-base-50/45">{sugestao.categoria === "jogos" ? sugestao.plataformas.join(" · ") : `Disponível no Brasil: ${sugestao.plataformas.join(" · ")}`}</p> : null}
+          <h2 className="mt-2 line-clamp-2 font-semibold leading-snug">{sugestao.titulo}</h2>
+          {sugestao.descricao && <div className="mt-1"><p className={cn("text-sm text-base-900/60 dark:text-base-50/60", !sinopseExpandida && "line-clamp-2")}>{sugestao.descricao}</p>{sugestao.descricao.length > 90 && <button type="button" onClick={aoAlternarSinopse} className="mt-1 min-h-8 text-xs font-medium text-accent-600 hover:underline dark:text-accent-400">{sinopseExpandida ? "Ver menos" : "Ver mais"}</button>}</div>}
+          <p className="mt-2 text-xs text-base-900/45 dark:text-base-50/45">{atualizacaoOficial ? `Publicado em ${formatarData(sugestao.dataLancamentoISO)}` : disponivel ? `Lançado em ${formatarData(sugestao.dataLancamentoISO)}` : `Estreia em ${formatarData(sugestao.dataLancamentoISO)}`}</p>
+
+          {motivos && motivos.length > 0 && <p className="mt-3 flex items-start gap-1.5 rounded-xl bg-accent-500/[0.07] px-2.5 py-2 text-xs leading-relaxed text-accent-600 dark:text-accent-400"><Sparkles size={14} className="mt-0.5 shrink-0" /><span><strong>Para você:</strong> {motivos.join(" · ")}</span></p>}
+
+          <section className="mt-3 border-t border-black/5 pt-3 dark:border-white/10" aria-label={`Novidades sobre ${sugestao.titulo}`}>
+            <p className="flex items-center gap-1.5 text-xs font-semibold text-base-900/70 dark:text-base-50/75"><Newspaper size={14} /> Novidades</p>
+            {noticias.length > 0 ? <ul className="mt-2 flex flex-col gap-1.5">{noticias.slice(0, 2).map((noticia) => <li key={noticia.url}><a className="flex items-start gap-1.5 text-xs leading-snug text-accent-600 hover:underline dark:text-accent-400" href={noticia.url} target="_blank" rel="noreferrer"><ExternalLink className="mt-0.5 shrink-0" size={12} /><span className="line-clamp-2">{noticia.titulo}{noticia.fonte ? ` · ${noticia.fonte}` : ""}</span></a></li>)}</ul> : links.length > 0 ? <a className="mt-2 inline-flex min-h-8 items-center gap-1.5 text-xs text-accent-600 hover:underline dark:text-accent-400" href={links[0].url} target="_blank" rel="noreferrer"><ExternalLink size={12} /> {links[0].label}</a> : <p className="mt-2 text-xs text-base-900/45 dark:text-base-50/45">Ainda sem manchetes. O estagiário da pipoca já está procurando.</p>}
+          </section>
+
+          <div className="mt-auto flex items-center gap-2 pt-3">
+            <Button variante={jaAdicionado ? "secundario" : "primario"} tamanho="sm" className="min-h-10" disabled={jaAdicionado} icone={jaAdicionado ? <Check size={16} /> : <Plus size={16} />} onClick={aoAcompanhar}>{jaAdicionado ? "Na sua lista" : "Acompanhar"}</Button>
+            {aoOcultar && <button type="button" onClick={aoOcultar} aria-label={`Não recomendar ${sugestao.titulo}`} title="Não é para mim" className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-base-900/40 transition-colors hover:bg-black/5 hover:text-base-900/70 dark:text-base-50/40 dark:hover:bg-white/10 dark:hover:text-base-50/70"><EyeOff size={17} /></button>}
+          </div>
+        </div>
+      </GlassCard>
+    </motion.article>
+  );
 }
 
 function GrupoPreferencias({ titulo, opcoes, selecionadas, aoAlternar }: { titulo: string; opcoes: { id: string; rotulo: string }[]; selecionadas: string[]; aoAlternar: (valor: string) => void }) {

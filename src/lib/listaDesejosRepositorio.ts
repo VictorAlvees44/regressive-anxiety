@@ -1,5 +1,5 @@
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from "firebase/firestore";
-import { db } from "./firebase";
+import { db, firebaseConfigurado } from "./firebase";
 import type { ItemListaDesejos } from "../types";
 import { gerarId } from "./utils";
 
@@ -28,6 +28,7 @@ function salvarDemo(itens: ItemListaDesejos[]): void {
 }
 
 export async function listarItens(): Promise<ItemListaDesejos[]> {
+  if (!firebaseConfigurado) return carregarDemo();
   try {
     const snapshot = await getDocs(collection(db, COLECAO_LISTA_DESEJOS));
     return snapshot.docs.map((d) => ({ ...(d.data() as ItemListaDesejos), id: d.id }));
@@ -40,6 +41,12 @@ export async function listarItens(): Promise<ItemListaDesejos[]> {
 export async function criarItem(
   dados: Omit<ItemListaDesejos, "id" | "criadoEm" | "atualizadoEm">,
 ): Promise<ItemListaDesejos> {
+  if (!firebaseConfigurado) {
+    const agora = new Date().toISOString();
+    const novoItem: ItemListaDesejos = { ...dados, id: gerarId("desejo"), criadoEm: agora, atualizadoEm: agora };
+    salvarDemo([...carregarDemo(), novoItem]);
+    return novoItem;
+  }
   const agora = new Date().toISOString();
   const documento = { ...dados, criadoEm: agora, atualizadoEm: agora };
 
@@ -56,6 +63,10 @@ export async function criarItem(
 
 export async function atualizarItem(id: string, alteracoes: Partial<ItemListaDesejos>): Promise<void> {
   const payload = { ...alteracoes, atualizadoEm: new Date().toISOString() };
+  if (!firebaseConfigurado) {
+    salvarDemo(carregarDemo().map((item) => (item.id === id ? { ...item, ...payload } : item)));
+    return;
+  }
   try {
     await updateDoc(doc(db, COLECAO_LISTA_DESEJOS, id), payload);
   } catch (erro) {
@@ -65,6 +76,10 @@ export async function atualizarItem(id: string, alteracoes: Partial<ItemListaDes
 }
 
 export async function excluirItem(id: string): Promise<void> {
+  if (!firebaseConfigurado) {
+    salvarDemo(carregarDemo().filter((item) => item.id !== id));
+    return;
+  }
   try {
     await deleteDoc(doc(db, COLECAO_LISTA_DESEJOS, id));
   } catch (erro) {
