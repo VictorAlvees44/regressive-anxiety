@@ -1,6 +1,8 @@
-import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
 import { TabBar } from "./TabBar";
+import { AtualizacaoApp } from "./AtualizacaoApp";
 
 function FundoAmbiente() {
   return (
@@ -13,14 +15,17 @@ function FundoAmbiente() {
 }
 
 export function AppShell() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [pathname]);
   return (
     <div className="app-shell flex min-h-[100dvh] w-full gap-4 overflow-x-clip sm:p-4">
       <FundoAmbiente />
       <Sidebar />
-      <main className="mx-auto w-full max-w-6xl flex-1 pb-20 sm:pb-6">
+      <main className="mx-auto min-w-0 w-full max-w-6xl flex-1 pb-6">
         <Outlet />
       </main>
       <TabBar />
+      <AtualizacaoApp />
     </div>
   );
 }

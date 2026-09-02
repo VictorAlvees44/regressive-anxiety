@@ -30,6 +30,12 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
+      - name: Testes de regressão
+        run: npm test
+
+      - name: Verificar código
+        run: npm run lint
+
       - name: Build (com base path do GitHub Pages)
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
@@ -39,7 +45,12 @@ jobs:
           VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
           VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
           VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
+          VITE_FIREBASE_VAPID_KEY: ${{ secrets.VITE_FIREBASE_VAPID_KEY }}
+          VITE_BIBLIOTECA_NUVEM: ${{ vars.VITE_BIBLIOTECA_NUVEM }}
         run: npm run build
+
+      - name: Validar artefato publicado
+        run: npm run test:build
 
       - name: Upload do artefato do Pages
         uses: actions/upload-pages-artifact@v3

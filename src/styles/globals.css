@@ -45,16 +45,17 @@
   }
 
   body {
-    @apply bg-base-950 text-base-50 antialiased;
+    @apply bg-base-50 text-base-900 antialiased;
     font-family: var(--font-sans);
     min-width: 320px;
     overflow-x: clip;
     -webkit-text-size-adjust: 100%;
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   .dark body {
     @apply bg-base-950 text-base-50;
+    color-scheme: dark;
   }
 
   * {
@@ -70,7 +71,7 @@
   padding-left: max(0.75rem, env(safe-area-inset-left));
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .app-shell {
     padding: 1rem;
   }
@@ -79,7 +80,7 @@
 @layer components {
   /* Superfícies sólidas: menos efeitos e leitura mais direta. */
   .vidro {
-    @apply rounded-[var(--radius-glass)] border border-white/10 bg-base-900 shadow-[var(--shadow-soft-dark)];
+    @apply rounded-[var(--radius-glass)] border border-black/10 bg-white shadow-[var(--shadow-soft)];
   }
 
   .dark .vidro {
@@ -87,7 +88,7 @@
   }
 
   .vidro-forte {
-    @apply rounded-[var(--radius-glass-lg)] border border-white/10 bg-base-900 shadow-[var(--shadow-soft-dark)];
+    @apply rounded-[var(--radius-glass-lg)] border border-black/10 bg-white shadow-[var(--shadow-soft)];
   }
 
   .dark .vidro-forte {
@@ -96,6 +97,9 @@
 }
 
 @layer utilities {
+  .campo {
+    @apply min-h-11 rounded-xl border border-black/10 bg-white px-3 py-2 text-sm text-base-900 dark:border-white/10 dark:bg-base-900 dark:text-base-50;
+  }
   .scrollbar-discreta::-webkit-scrollbar {
     height: 4px;
     width: 4px;
@@ -106,4 +110,9 @@
   .dark .scrollbar-discreta::-webkit-scrollbar-thumb {
     @apply bg-white/15;
   }
+}
+
+:focus-visible { outline: 2px solid var(--color-accent-400); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }

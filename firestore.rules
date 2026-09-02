@@ -3,7 +3,7 @@ rules_version = '2';
 // Firestore Security Rules — Regressive Anxiety
 //
 // Princípios:
-// 1. Apenas os dois e-mails abaixo podem escrever qualquer dado.
+// 1. Apenas os dois e-mails abaixo podem escrever os dados compartilhados.
 // 2. Qualquer outro usuário autenticado é "visitante": apenas leitura
 //    dos dados compartilhados do casal (eventos, lista de desejos).
 // 3. Usuários não autenticados não têm acesso a nada no Firestore
@@ -11,6 +11,7 @@ rules_version = '2';
 //    JSON estáticos, não do Firestore).
 // 4. Toda validação de permissão acontece aqui — o frontend nunca é
 //    a fonte de verdade da autorização.
+// 5. A biblioteca é privada por UID: cada pessoa acessa somente a própria.
 service cloud.firestore {
   match /databases/{database}/documents {
 
@@ -38,6 +39,21 @@ service cloud.firestore {
     match /listaDesejos/{itemId} {
       allow read: if estaAutenticado();
       allow write: if ehAdministrador();
+    }
+
+    // Biblioteca pessoal: nunca mistura os dados privados com a agenda compartilhada.
+    match /bibliotecas/{uid}/itens/{itemId} {
+      allow read, delete: if estaAutenticado() && request.auth.uid == uid;
+      allow create, update: if estaAutenticado() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['sugestao', 'status', 'nota', 'criadoEm', 'atualizadoEm'])
+        && request.resource.data.status in ['quero', 'em-andamento', 'finalizado']
+        && (request.resource.data.nota == null || (request.resource.data.nota is int && request.resource.data.nota >= 1 && request.resource.data.nota <= 5))
+        && request.resource.data.sugestao is map
+        && request.resource.data.sugestao.idExterno is string
+        && request.resource.data.sugestao.titulo is string
+        && request.resource.data.sugestao.categoria in ['filmes', 'series', 'jogos']
+        && request.resource.data.criadoEm is string
+        && request.resource.data.atualizadoEm is string;
     }
 
     // Tokens de notificação push (Firebase Cloud Messaging): cada

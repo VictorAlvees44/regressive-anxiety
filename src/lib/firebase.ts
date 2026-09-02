@@ -51,6 +51,8 @@ function criarApp(): FirebaseApp {
 }
 
 export const firebaseApp = criarApp();
+// Só habilite após publicar as regras privadas da biblioteca no Firebase.
+export const bibliotecaNuvemConfigurada = firebaseConfigurado && import.meta.env.VITE_BIBLIOTECA_NUVEM === "true";
 export const auth = getAuth(firebaseApp);
 export const db = getFirestore(firebaseApp);
 

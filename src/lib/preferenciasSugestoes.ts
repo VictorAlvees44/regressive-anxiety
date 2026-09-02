@@ -16,16 +16,20 @@ export const PREFERENCIAS_PADRAO: PreferenciasSugestoes = {
   generos: [],
 };
 
+function listaDeTextos(valor: unknown): string[] {
+  return Array.isArray(valor) ? [...new Set(valor.filter((v): v is string => typeof v === "string" && v.length > 0))].slice(0, 100) : [];
+}
+
 export function carregarPreferenciasSugestoes(): PreferenciasSugestoes {
   try {
     const valor = localStorage.getItem(CHAVE_PREFERENCIAS);
     if (!valor) return PREFERENCIAS_PADRAO;
     const preferencias = JSON.parse(valor) as Partial<PreferenciasSugestoes>;
     return {
-      categorias: preferencias.categorias ?? [],
-      plataformas: preferencias.plataformas ?? [],
-      servicos: preferencias.servicos ?? [],
-      generos: preferencias.generos ?? [],
+      categorias: listaDeTextos(preferencias.categorias).filter((v): v is SugestaoLancamento["categoria"] => ["filmes", "series", "jogos"].includes(v)),
+      plataformas: listaDeTextos(preferencias.plataformas),
+      servicos: listaDeTextos(preferencias.servicos),
+      generos: listaDeTextos(preferencias.generos),
     };
   } catch {
     return PREFERENCIAS_PADRAO;

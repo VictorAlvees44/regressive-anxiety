@@ -5,9 +5,17 @@
     <link rel="icon" type="image/png" href="%BASE_URL%favicon.png" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <meta name="description" content="Painel pessoal de contagens regressivas para jogos, filmes, séries e outros eventos." />
+    <meta name="description" content="Descubra filmes, séries e jogos. Organize sua biblioteca, avalie suas descobertas e acompanhe os próximos lançamentos." />
+    <meta property="og:title" content="Regressive Anxiety" />
+    <meta property="og:description" content="Filmes, séries e jogos. Do seu jeito." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://victoralvees44.github.io/regressive-anxiety/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Regressive Anxiety" />
+    <meta name="twitter:description" content="Filmes, séries e jogos. Do seu jeito." />
+    <meta name="twitter:image" content="https://victoralvees44.github.io/regressive-anxiety/og.png" />
     <meta name="theme-color" content="#4f6bf0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -16,6 +24,14 @@
     <title>Regressive Anxiety</title>
   </head>
   <body>
+    <script>
+      const rota = new URLSearchParams(location.search).get("__route");
+      const base = "%BASE_URL%";
+      if (rota && !rota.startsWith("/") && !rota.includes("\\")) {
+        const destino = new URL(base + rota, location.origin);
+        if (destino.origin === location.origin && destino.pathname.startsWith(base)) history.replaceState(null, "", destino.pathname + destino.search + destino.hash);
+      }
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

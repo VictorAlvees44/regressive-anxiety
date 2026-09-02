@@ -1,21 +1,23 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { AuthProvider } from "./contexts/AuthContext";
 import { EventosProvider } from "./contexts/EventosContext";
+import { BibliotecaProvider } from "./contexts/BibliotecaContext";
 import { AppShell } from "./components/layout/AppShell";
 import { RotaProtegida } from "./components/layout/RotaProtegida";
-import { Home } from "./pages/Home";
 
-// Code splitting por rota: apenas a Home entra no bundle inicial.
-// As demais páginas (e o SDK do Firebase usado por Login/Admin) só são
-// baixadas quando o usuário efetivamente navega até elas.
+// Cada experiência carrega seu módulo sob demanda, incluindo a agenda antiga.
+const Home = lazy(() => import("./pages/Home").then((m) => ({ default: m.Home })));
 const Sugestoes = lazy(() => import("./pages/Sugestoes").then((m) => ({ default: m.Sugestoes })));
 const Calendario = lazy(() => import("./pages/Calendario").then((m) => ({ default: m.Calendario })));
 const ListaDesejos = lazy(() => import("./pages/ListaDesejos").then((m) => ({ default: m.ListaDesejos })));
 const Admin = lazy(() => import("./pages/Admin").then((m) => ({ default: m.Admin })));
 const Login = lazy(() => import("./pages/Login").then((m) => ({ default: m.Login })));
 const NaoEncontrada = lazy(() => import("./pages/NaoEncontrada").then((m) => ({ default: m.NaoEncontrada })));
+const Biblioteca = lazy(() => import("./pages/Biblioteca").then((m) => ({ default: m.Biblioteca })));
+const DetalhesTitulo = lazy(() => import("./pages/DetalhesTitulo").then((m) => ({ default: m.DetalhesTitulo })));
+const Mais = lazy(() => import("./pages/Mais").then((m) => ({ default: m.Mais })));
 
 function CarregandoPagina() {
   return (
@@ -34,11 +36,19 @@ export function App() {
     <ThemeProvider>
       <AuthProvider>
         <EventosProvider>
+          <BibliotecaProvider>
           <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Suspense fallback={<CarregandoPagina />}>
               <Routes>
                 <Route element={<AppShell />}>
-                  <Route path="/" element={<Home />} />
+                  <Route path="/" element={<Sugestoes key="filmes" categoria="filmes" />} />
+                  <Route path="/filmes" element={<Navigate to="/" replace />} />
+                  <Route path="/series" element={<Sugestoes key="series" categoria="series" />} />
+                  <Route path="/jogos" element={<Sugestoes key="jogos" categoria="jogos" />} />
+                  <Route path="/agenda" element={<Home />} />
+                  <Route path="/biblioteca" element={<Biblioteca />} />
+                  <Route path="/titulo/:id" element={<DetalhesTitulo />} />
+                  <Route path="/mais" element={<Mais />} />
                   <Route path="/sugestoes" element={<Sugestoes />} />
                   <Route path="/calendario" element={<Calendario />} />
                   <Route path="/lista-de-desejos" element={<ListaDesejos />} />
@@ -56,6 +66,7 @@ export function App() {
               </Routes>
             </Suspense>
           </BrowserRouter>
+          </BibliotecaProvider>
         </EventosProvider>
       </AuthProvider>
     </ThemeProvider>

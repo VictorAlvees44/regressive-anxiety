@@ -1,7 +1,7 @@
 /// <reference lib="webworker" />
 
-import { precacheAndRoute } from "workbox-precaching";
-import { registerRoute } from "workbox-routing";
+import { precacheAndRoute, cleanupOutdatedCaches, createHandlerBoundToURL } from "workbox-precaching";
+import { registerRoute, NavigationRoute } from "workbox-routing";
 import { NetworkFirst, CacheFirst } from "workbox-strategies";
 import { ExpirationPlugin } from "workbox-expiration";
 import { initializeApp } from "firebase/app";
@@ -19,6 +19,12 @@ declare const self: ServiceWorkerGlobalScope;
 
 // --- 1. Cache offline (gerado pelo vite-plugin-pwa via injectManifest) ---
 precacheAndRoute(self.__WB_MANIFEST);
+cleanupOutdatedCaches();
+registerRoute(new NavigationRoute(createHandlerBoundToURL(`${import.meta.env.BASE_URL}index.html`)));
+self.addEventListener("activate", (evento) => { evento.waitUntil(self.clients.claim()); });
+self.addEventListener("message", (evento) => {
+  if (evento.data?.type === "SKIP_WAITING") void self.skipWaiting();
+});
 
 // JSONs públicos sincronizados diariamente: tenta rede primeiro,
 // cai para o cache quando offline.
@@ -63,9 +69,9 @@ try {
 
     self.registration.showNotification(titulo, {
       body: corpo,
-      icon: "/icons/icon-192.png",
-      badge: "/icons/icon-192.png",
-      data: { url: payload.fcmOptions?.link ?? payload.data?.url ?? "/" },
+      icon: `${import.meta.env.BASE_URL}icons/icon-192.png`,
+      badge: `${import.meta.env.BASE_URL}icons/icon-192.png`,
+      data: { url: payload.fcmOptions?.link ?? payload.data?.url ?? import.meta.env.BASE_URL },
     });
   });
 } catch (erro) {
@@ -78,7 +84,8 @@ try {
 // Clique na notificação: foca uma aba existente ou abre uma nova.
 self.addEventListener("notificationclick", (evento) => {
   evento.notification.close();
-  const url = (evento.notification.data?.url as string) ?? "/";
+  const recebido = new URL((evento.notification.data?.url as string) ?? self.registration.scope, self.registration.scope);
+  const url = recebido.href.startsWith(self.registration.scope) ? recebido.href : self.registration.scope;
 
   evento.waitUntil(
     self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((listaClientes) => {
@@ -88,5 +95,3 @@ self.addEventListener("notificationclick", (evento) => {
     }),
   );
 });
-
-self.skipWaiting();

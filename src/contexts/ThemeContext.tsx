@@ -5,8 +5,10 @@ import { ThemeContext, type ThemeContextValor } from "./themeContextValue";
 const CHAVE_STORAGE = "regressive-anxiety:tema";
 
 function obterTemaInicial(): Tema {
-  const salvo = window.localStorage.getItem(CHAVE_STORAGE) as Tema | null;
-  if (salvo === "escuro") return salvo;
+  try {
+    const salvo = window.localStorage.getItem(CHAVE_STORAGE) as Tema | null;
+    if (salvo === "escuro" || salvo === "claro") return salvo;
+  } catch { /* Tema continua disponível quando o navegador bloqueia storage. */ }
   return "escuro";
 }
 
@@ -16,7 +18,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.classList.toggle("dark", tema === "escuro");
     document.documentElement.setAttribute("data-tema", tema);
-    window.localStorage.setItem(CHAVE_STORAGE, tema);
+    try { window.localStorage.setItem(CHAVE_STORAGE, tema); } catch { /* Preferência permanece nesta sessão. */ }
   }, [tema]);
 
   const valor = useMemo<ThemeContextValor>(

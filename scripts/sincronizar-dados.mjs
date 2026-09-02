@@ -3,8 +3,9 @@
  * Monta o catálogo público diário. As fontes são consultadas no servidor da
  * Action; nenhuma chave ou chamada de terceiros chega ao navegador.
  */
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, readFile } from "node:fs/promises";
 import path from "node:path";
+import { buscarJogosSteam } from "./catalogo-steam.mjs";
 
 const SAIDA = path.resolve("public/data/sugestoes.json");
 const SAUDE_SAIDA = path.resolve("public/data/saude-sincronizacao.json");
@@ -38,7 +39,7 @@ function jogoIndesejado(jogo) {
 
 async function json(url, opcoes) {
   try {
-    const resposta = await fetch(url, opcoes);
+    const resposta = await fetch(url, { signal: AbortSignal.timeout(20_000), ...opcoes });
     return resposta.ok ? resposta.json() : null;
   } catch { return null; }
 }
@@ -60,17 +61,6 @@ async function buscarJogosIgdb() {
     const data = iso(jogo.first_release_date * 1000);
     return data && { id: `sug-igdb-${jogo.id}`, titulo: jogo.name, categoria: "jogos", dataLancamentoISO: data, imagemUrl: normalizarImagemIgdb(jogo.cover?.url), bannerUrl: normalizarImagemIgdb(jogo.screenshots?.[0]?.url), plataformas: jogo.platforms?.map((plataforma) => plataforma.name), linksOficiais: jogo.websites?.slice(0, 2).map((site) => ({ label: "Site oficial", url: site.url })), idExterno: `igdb-${jogo.id}`, fonte: "igdb", momento: momento(data), relevancia: prioridadeJogo(jogo) };
   }).filter(Boolean);
-}
-
-/** Fonte sem credencial: catálogo de lançamentos recentes e próximos da Steam. */
-async function buscarJogosSteam() {
-  const dados = await json("https://store.steampowered.com/api/featuredcategories?cc=br&l=portuguese");
-  const itens = [...(dados?.coming_soon?.items ?? []), ...(dados?.specials?.items ?? [])];
-  return itens.map((jogo) => {
-    const data = iso((jogo.release_date ?? 0) * 1000);
-    if (!data || new Date(data).getTime() < agora - 365 * DIA || new Date(data).getTime() > agora + 730 * DIA) return null;
-    return { id: `sug-steam-${jogo.id}`, titulo: jogo.name, categoria: "jogos", dataLancamentoISO: data, imagemUrl: jogo.large_capsule_image ?? jogo.small_capsule_image, plataformas: ["Steam"], linksOficiais: [{ label: "Ver na Steam", url: `https://store.steampowered.com/app/${jogo.id}` }], idExterno: `steam-${jogo.id}`, fonte: "steam", momento: momento(data), relevancia: 5_000 };
-  }).filter((jogo) => jogo && !jogoIndesejado(jogo));
 }
 
 /** Catálogo público da Epic Games Store, sem depender de chave de API. */
@@ -285,6 +275,9 @@ function deduplicar(itens) {
     existente.relevancia = Math.max(existente.relevancia ?? 0, item.relevancia ?? 0);
     existente.imagemUrl ??= item.imagemUrl;
     existente.bannerUrl ??= item.bannerUrl;
+    existente.trailerUrl ??= item.trailerUrl;
+    existente.generos = [...new Set([...(existente.generos ?? []), ...(item.generos ?? [])])];
+    existente.linksOficiais = [...new Map([...(existente.linksOficiais ?? []), ...(item.linksOficiais ?? [])].map((link) => [link.url, link])).values()];
   });
   return [...porChave.values()];
 }
@@ -298,10 +291,12 @@ async function enriquecerMetadadosTmdb(itens) {
       const resultado = item.idExterno.match(/^tmdb-(movie|tv)-(\d+)$/);
       if (!resultado) return;
       const [, tipo, id] = resultado;
-      const detalhes = await json(`https://api.themoviedb.org/3/${tipo}/${id}?api_key=${TMDB_API_KEY}&language=pt-BR&append_to_response=credits`);
+      const detalhes = await json(`https://api.themoviedb.org/3/${tipo}/${id}?api_key=${TMDB_API_KEY}&language=pt-BR&append_to_response=credits,videos`);
       if (!detalhes) return;
       item.generos = (detalhes.genres ?? []).map((genero) => genero.name).filter(Boolean);
       item.elenco = (detalhes.credits?.cast ?? []).slice(0, 10).map((pessoa) => pessoa.name).filter(Boolean);
+      const trailer = detalhes.videos?.results?.find((video) => video.site === "YouTube" && video.type === "Trailer" && video.official && /^[\w-]+$/.test(video.key));
+      if (trailer) item.trailerUrl = `https://www.youtube.com/watch?v=${trailer.key}`;
     }));
   }
 }
@@ -312,6 +307,23 @@ function jogoRelevante(item) {
 }
 
 async function main() {
+  // Atualização parcial segura: não substitui cinema/séries quando não há chaves locais.
+  if (process.argv.includes("--somente-steam")) {
+    const novos = await buscarJogosSteam();
+    if (!novos.length) throw new Error("A Steam não retornou jogos válidos; o catálogo existente foi preservado.");
+    const anteriores = JSON.parse(await readFile(SAIDA, "utf8"));
+    const sugestoes = deduplicar([...anteriores.filter((item) => item.fonte !== "steam"), ...novos]);
+    await writeFile(SAIDA, JSON.stringify(sugestoes, null, 2), "utf8");
+    const saude = JSON.parse(await readFile(SAUDE_SAIDA, "utf8"));
+    saude.total = sugestoes.length;
+    saude.porCategoria = Object.fromEntries(["jogos", "filmes", "series"].map((c) => [c, sugestoes.filter((s) => s.categoria === c).length]));
+    saude.porFonte = Object.fromEntries([...new Set(sugestoes.map((s) => s.fonte))].map((f) => [f, sugestoes.filter((s) => s.fonte === f).length]));
+    // Não declare o restante do catálogo como atualizado por uma coleta parcial.
+    saude.steamAtualizadoEmISO = new Date().toISOString();
+    await writeFile(SAUDE_SAIDA, JSON.stringify(saude, null, 2), "utf8");
+    console.log(`Steam atualizada: ${novos.length} jogos válidos. Demais fontes preservadas.`);
+    return;
+  }
   if (!TMDB_API_KEY) console.warn("TMDB_API_KEY não configurada: filmes e séries do Brasil ficarão fora desta atualização.");
   const [destaques, igdb, steam, epic, gog, rawg, playstation, xbox, filmesStreaming, filmesCinema, seriesBrasil] = await Promise.all([
     buscarDestaquesConfirmados(),

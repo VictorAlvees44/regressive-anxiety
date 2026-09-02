@@ -120,6 +120,16 @@ export interface NoticiaSugestao {
   publicadaEmISO?: string;
 }
 
+/** Progresso de consumo, independente da data de lançamento/contagem. */
+export type StatusBiblioteca = "quero" | "em-andamento" | "finalizado";
+export interface ItemBiblioteca {
+  sugestao: SugestaoLancamento;
+  status: StatusBiblioteca;
+  nota: number | null;
+  criadoEm: string;
+  atualizadoEm: string;
+}
+
 /** Item da Lista de Desejos (módulo opcional). */
 export interface ItemListaDesejos {
   id: string;

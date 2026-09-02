@@ -1,5 +1,5 @@
-import type { Evento, SugestaoLancamento } from "../types";
-import { pontuacaoDasPreferencias, type PreferenciasSugestoes } from "./preferenciasSugestoes";
+import type { Evento, SugestaoLancamento, ItemBiblioteca } from "../types";
+import { pontuacaoDasPreferencias, type PreferenciasSugestoes } from "./preferenciasSugestoes.ts";
 import type { FeedbackRecomendacoes } from "./feedbackRecomendacoes";
 
 type Pesos = Map<string, number>;
@@ -13,6 +13,8 @@ export interface PerfilRecomendacoes {
   generosRejeitados: Pesos;
   termosRejeitados: Pesos;
   quantidadeSinais: number;
+  quantidadeAvaliacoes: number;
+  generosBemAvaliados: Pesos;
 }
 
 export interface AnaliseRecomendacao {
@@ -80,6 +82,7 @@ export function construirPerfilRecomendacoes(
   sugestoes: SugestaoLancamento[],
   eventos: Evento[],
   feedback: FeedbackRecomendacoes,
+  biblioteca: ItemBiblioteca[] = [],
 ): PerfilRecomendacoes {
   const perfil: PerfilRecomendacoes = {
     categorias: new Map(),
@@ -90,12 +93,23 @@ export function construirPerfilRecomendacoes(
     generosRejeitados: new Map(),
     termosRejeitados: new Map(),
     quantidadeSinais: 0,
+    quantidadeAvaliacoes: 0,
+    generosBemAvaliados: new Map(),
   };
   const porId = sugestaoPorId(sugestoes);
   const idsDeEventos = new Set<string>();
 
+  biblioteca.forEach((item) => {
+    // O snapshot preserva os gostos mesmo depois da janela pública de lançamentos.
+    idsDeEventos.add(item.sugestao.idExterno);
+    if (item.nota !== null) perfil.quantidadeAvaliacoes += 1;
+    if (item.nota !== null && item.nota >= 4) item.sugestao.generos?.forEach((g) => somar(perfil.generosBemAvaliados, g, item.nota!));
+    if (item.nota !== null && item.nota <= 2) aplicarSinal(perfil, item.sugestao, 3 - item.nota, true);
+    else aplicarSinal(perfil, item.sugestao, item.nota === 5 ? 5 : item.nota === 4 ? 4 : item.status === "quero" ? 1.5 : 2);
+  });
+
   eventos.forEach((evento) => {
-    if (!evento.idExterno) return;
+    if (!evento.idExterno || idsDeEventos.has(evento.idExterno)) return;
     idsDeEventos.add(evento.idExterno);
     const sugestao = porId.get(evento.idExterno);
     if (sugestao) aplicarSinal(perfil, sugestao, evento.favorito ? 3 : 2);
@@ -141,7 +155,7 @@ export function analisarRecomendacao(
   pontuacao += Math.min(4_200, genero.peso * 850) - Math.min(3_500, generoRejeitado.peso * 900);
   const generoPreferido = sugestao.generos?.find((item) => preferencias.generos.some((genero) => normalizar(genero) === normalizar(item)));
   if (generoPreferido) motivos.push(`seu radar inclui ${generoPreferido}`);
-  else if (genero.melhor && genero.peso >= 1.5) motivos.push(`você costuma escolher ${genero.melhor}`);
+  else if (genero.melhor && genero.peso >= 1.5) motivos.push(perfil.generosBemAvaliados.has(normalizar(genero.melhor)) ? `combina com suas avaliações de ${genero.melhor}` : `você costuma escolher ${genero.melhor}`);
 
   const plataforma = pesoCorrespondente(perfil.plataformas, sugestao.plataformas);
   pontuacao += Math.min(2_400, plataforma.peso * 500);

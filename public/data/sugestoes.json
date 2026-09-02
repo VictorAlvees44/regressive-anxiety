@@ -13702,5 +13702,179 @@
     "idExterno": "tmdb-tv-202555",
     "fonte": "tmdb",
     "momento": "disponivel"
+  },
+  {
+    "id": "sug-steam-1174180",
+    "titulo": "Red Dead Redemption 2",
+    "descricao": "Listado na Steam por Rockstar Games. Consulte a página oficial para detalhes e requisitos.",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2019-12-05T00:00:00.000Z",
+    "imagemUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1759502961",
+    "bannerUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/page_bg_raw.jpg?t=1759502961",
+    "plataformas": [
+      "Steam",
+      "PC"
+    ],
+    "generos": [
+      "Ação",
+      "Aventura"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Ver na Steam",
+        "url": "https://store.steampowered.com/app/1174180"
+      }
+    ],
+    "idExterno": "steam-1174180",
+    "fonte": "steam",
+    "momento": "disponivel",
+    "relevancia": 59300
+  },
+  {
+    "id": "sug-steam-108600",
+    "titulo": "Project Zomboid",
+    "descricao": "Listado na Steam por The Indie Stone. Consulte a página oficial para detalhes e requisitos.",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2013-11-08T00:00:00.000Z",
+    "imagemUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/header.jpg?t=1787740093",
+    "bannerUrl": "https://store.akamai.steamstatic.com/images/storepagebackground/app/108600?t=1787740093",
+    "plataformas": [
+      "Steam",
+      "PC"
+    ],
+    "generos": [
+      "Indie",
+      "RPG",
+      "Simulação",
+      "Early Access"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Ver na Steam",
+        "url": "https://store.steampowered.com/app/108600"
+      }
+    ],
+    "idExterno": "steam-108600",
+    "fonte": "steam",
+    "momento": "disponivel",
+    "relevancia": 50000
+  },
+  {
+    "id": "sug-steam-4001890",
+    "titulo": "How to Fish",
+    "descricao": "Listado na Steam por Dazed Games. Consulte a página oficial para detalhes e requisitos.",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-08-20T00:00:00.000Z",
+    "imagemUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/45c4ddff4901e32c4b8b643e1b97d0d01898d299/header.jpg?t=1788160834",
+    "bannerUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/8a80b025cd91f2c005f4f814b86cab2c3277f100/page_bg_raw.jpg?t=1788160834",
+    "plataformas": [
+      "Steam",
+      "PC"
+    ],
+    "generos": [
+      "Ação",
+      "Casual",
+      "Indie",
+      "Simulação"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Ver na Steam",
+        "url": "https://store.steampowered.com/app/4001890"
+      }
+    ],
+    "idExterno": "steam-4001890",
+    "fonte": "steam",
+    "momento": "disponivel",
+    "relevancia": 50000
+  },
+  {
+    "id": "sug-steam-2406770",
+    "titulo": "Bodycam",
+    "descricao": "Listado na Steam por Reissad Studio. Consulte a página oficial para detalhes e requisitos.",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2024-06-07T00:00:00.000Z",
+    "imagemUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2406770/36264077393918f3945447eed3d6374cdf21e69a/header.jpg?t=1787522517",
+    "bannerUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2406770/dba61fbc3da9af203cc1c2bb2709c14bbb66a537/page_bg_raw.jpg?t=1787522517",
+    "plataformas": [
+      "Steam",
+      "PC"
+    ],
+    "generos": [
+      "Ação",
+      "Indie",
+      "Multijogador",
+      "Simulação",
+      "Estratégia",
+      "Early Access"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Ver na Steam",
+        "url": "https://store.steampowered.com/app/2406770"
+      }
+    ],
+    "idExterno": "steam-2406770",
+    "fonte": "steam",
+    "momento": "disponivel",
+    "relevancia": 50000
+  },
+  {
+    "id": "sug-steam-1867240",
+    "titulo": "WARDOGS",
+    "descricao": "Listado na Steam por BULKHEAD. Consulte a página oficial para detalhes e requisitos.",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-09-10T00:00:00.000Z",
+    "imagemUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1867240/59d4daf753bd5d982e6675f7eee363bc817c574e/header.jpg?t=1788352946",
+    "bannerUrl": "https://store.akamai.steamstatic.com/images/storepagebackground/app/1867240?t=1788352946",
+    "plataformas": [
+      "Steam",
+      "PC"
+    ],
+    "generos": [
+      "Ação",
+      "Indie",
+      "Multijogador",
+      "Simulação",
+      "Early Access"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Ver na Steam",
+        "url": "https://store.steampowered.com/app/1867240"
+      }
+    ],
+    "idExterno": "steam-1867240",
+    "fonte": "steam",
+    "momento": "em-breve",
+    "relevancia": 20000
+  },
+  {
+    "id": "sug-steam-2350790",
+    "titulo": "Moonlighter 2: The Endless Vault",
+    "descricao": "Listado na Steam por Digital Sun. Consulte a página oficial para detalhes e requisitos.",
+    "categoria": "jogos",
+    "dataLancamentoISO": "2026-09-02T00:00:00.000Z",
+    "imagemUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2350790/1c4bd440cfe43a8cc059ee6e6998ee1646451dcf/header_alt_assets_4.jpg?t=1788355174",
+    "bannerUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2350790/4b61547ad415e35c77a037926dce8a012cae7f14/page_bg_raw.jpg?t=1788355174",
+    "plataformas": [
+      "Steam",
+      "PC"
+    ],
+    "generos": [
+      "Ação",
+      "Aventura",
+      "RPG"
+    ],
+    "linksOficiais": [
+      {
+        "label": "Ver na Steam",
+        "url": "https://store.steampowered.com/app/2350790"
+      }
+    ],
+    "idExterno": "steam-2350790",
+    "fonte": "steam",
+    "momento": "disponivel",
+    "relevancia": 30134
   }
 ]

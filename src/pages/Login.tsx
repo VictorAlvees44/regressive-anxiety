@@ -30,9 +30,9 @@ export function Login() {
             <ShieldAlert className="text-accent-500" size={28} />
           </div>
           <div>
-            <h1 className="text-xl font-semibold">Acesso administrativo</h1>
+            <h1 className="text-xl font-semibold">Sua conta</h1>
             <p className="mt-1 text-sm text-base-900/55 dark:text-base-50/55">
-              Entre com a conta Google autorizada para gerenciar os eventos.
+              Entre com Google para acessar sua conta. A edição da agenda compartilhada continua restrita aos administradores.
             </p>
           </div>
 

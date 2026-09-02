@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Abrindo Regressive Anxiety</title></head><body>
+<p>Abrindo o aplicativo… <a href="/regressive-anxiety/">Ir para filmes</a></p>
+<script>
+  // GitHub Pages não possui rewrites: preserve a rota para restaurá-la na entrada.
+  const base = "/regressive-anxiety/";
+  if (location.pathname.startsWith(base)) {
+    const rota = location.pathname.slice(base.length) + location.search + location.hash;
+    location.replace(base + "?__route=" + encodeURIComponent(rota));
+  }
+</script></body></html>

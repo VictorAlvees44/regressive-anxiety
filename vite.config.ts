@@ -7,6 +7,10 @@ export default defineConfig({
   // Em produção (GitHub Pages), defina VITE_BASE_PATH="/nome-do-repositorio/"
   // como variável de ambiente no workflow de build. Localmente, "/" funciona.
   base: process.env.VITE_BASE_PATH ?? "/",
+  define: {
+    __APP_VERSION__: JSON.stringify("0.2.0" + (process.env.GITHUB_SHA ? " · " + process.env.GITHUB_SHA.slice(0, 7) : "")),
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
+  },
   plugins: [
     react(),
     VitePWA({
@@ -23,7 +27,8 @@ export default defineConfig({
         // tratados por rotas de runtime caching dentro de sw.ts.
         globPatterns: ["**/*.{js,css,html}"],
       },
-      registerType: "autoUpdate",
+      registerType: "prompt",
+      injectRegister: null,
       includeAssets: ["favicon.png", "icons/*.png"],
       manifest: {
         name: "Regressive Anxiety",

@@ -9,8 +9,8 @@ interface HeaderProps {
 
 export function Header({ titulo, subtitulo, acoesExtras }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between gap-3 px-1 pb-4 pt-2">
-      <div>
+    <header className="flex flex-wrap items-center justify-between gap-3 px-1 pb-2 pt-2">
+      <div className="min-w-0 flex-1">
         <h1 className="text-2xl font-semibold tracking-tight">{titulo}</h1>
         {subtitulo && <p className="text-sm text-base-900/55 dark:text-base-50/55">{subtitulo}</p>}
       </div>
