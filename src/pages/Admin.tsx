@@ -6,7 +6,6 @@ import { GlassCard } from "../components/ui/GlassCard";
 import { Button } from "../components/ui/Button";
 import { CategoriaBadge } from "../components/ui/CategoriaBadge";
 import { EventForm } from "../components/events/EventForm";
-import { NotificacoesCard } from "../components/layout/NotificacoesCard";
 import { useEventos } from "../hooks/useEventos";
 import { useAuth } from "../hooks/useAuth";
 import { formatarData } from "../lib/utils";
@@ -30,8 +29,6 @@ export function Admin() {
           </Button>
         }
       />
-
-      {usuario && <NotificacoesCard uid={usuario.uid} />}
 
       <GlassCard>
         <div className="flex items-center justify-between">

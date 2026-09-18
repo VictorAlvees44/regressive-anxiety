@@ -6,6 +6,8 @@
 import { writeFile, mkdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { buscarJogosSteam } from "./catalogo-steam.mjs";
+import { destaquesFilmesConfirmados } from "./destaques-filmes.mjs";
+import { validarContinuidadeCatalogo } from "./catalogo-qualidade.mjs";
 
 const SAIDA = path.resolve("public/data/sugestoes.json");
 const SAUDE_SAIDA = path.resolve("public/data/saude-sincronizacao.json");
@@ -159,12 +161,20 @@ async function buscarFilmesDosCatalogosBr() {
   return (await Promise.all(buscas)).flat();
 }
 
-/** Lançamentos recentes em salas brasileiras; a disponibilidade por rede varia por cidade. */
+/** Estreias brasileiras, inclusive futuras; a disponibilidade por rede varia por cidade. */
 async function buscarFilmesEmCartazNoBrasil() {
   if (!TMDB_API_KEY) return [];
   const inicio = haSeisMeses;
-  const dados = await json(`https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}&language=pt-BR&region=BR&with_release_type=2|3&primary_release_date.gte=${inicio}&primary_release_date.lte=${emDoisAnos}&sort_by=popularity.desc`);
-  return (dados?.results ?? []).map((item) => sugestaoTmdbFilme(item, "Em cartaz nos cinemas do Brasil")).filter(Boolean);
+  const paginas = await Promise.all([1, 2, 3, 4, 5].map((pagina) =>
+    json(`https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}&language=pt-BR&region=BR&with_release_type=2|3&primary_release_date.gte=${inicio}&primary_release_date.lte=${emDoisAnos}&sort_by=popularity.desc&page=${pagina}`)));
+  const proximasEstreias = await Promise.all([1, 2, 3].map((pagina) =>
+    json(`https://api.themoviedb.org/3/movie/upcoming?api_key=${TMDB_API_KEY}&language=pt-BR&region=BR&page=${pagina}`)));
+  return [...paginas, ...proximasEstreias].flatMap((dados) => dados?.results ?? [])
+    .filter((item) => {
+      const data = Date.parse(item.release_date);
+      return Number.isFinite(data) && data >= agora - 183 * DIA && data <= agora + 730 * DIA;
+    })
+    .map((item) => sugestaoTmdbFilme(item, "Cinema")).filter(Boolean);
 }
 
 function decodificarXml(texto = "") { return texto.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">"); }
@@ -336,7 +346,7 @@ async function main() {
     buscarAtualizacoesOficiais({ fonte: "xbox", nome: "Xbox Wire", plataforma: "Xbox Series X|S", url: "https://news.xbox.com/en-us/feed/", baseUrl: "https://news.xbox.com" }),
     buscarFilmesDosCatalogosBr(), buscarFilmesEmCartazNoBrasil(), buscarSeriesDosCatalogosBr(),
   ]);
-  const sugestoes = deduplicar([...destaques, ...igdb, ...steam, ...epic, ...gog, ...rawg, ...playstation, ...xbox, ...filmesStreaming, ...filmesCinema, ...seriesBrasil])
+  const sugestoes = deduplicar([...destaquesFilmesConfirmados(agora), ...destaques, ...igdb, ...steam, ...epic, ...gog, ...rawg, ...playstation, ...xbox, ...filmesStreaming, ...filmesCinema, ...seriesBrasil])
     .filter(jogoRelevante)
     .sort((a, b) => {
       const aData = new Date(a.dataLancamentoISO).getTime();
@@ -347,6 +357,8 @@ async function main() {
       if (aFuturo) return aData - bData;
       return (b.relevancia ?? 0) - (a.relevancia ?? 0) || bData - aData;
     });
+  const anteriores = JSON.parse(await readFile(SAIDA, "utf8"));
+  validarContinuidadeCatalogo(anteriores, sugestoes);
   await enriquecerMetadadosTmdb(sugestoes);
   // Jogos de maior relevância têm prioridade nas notícias; o restante privilegia as datas próximas.
   const jogosEmDestaque = sugestoes.filter((item) => item.categoria === "jogos").sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)).slice(0, 12);

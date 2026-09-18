@@ -89,6 +89,8 @@ export interface Evento {
 export interface SugestaoLancamento {
   id: string;
   titulo: string;
+  /** Títulos alternativos para busca, inclusive o nome original. */
+  aliases?: string[];
   descricao?: string;
   categoria: "jogos" | "filmes" | "series";
   dataLancamentoISO: string;
@@ -110,7 +112,7 @@ export interface SugestaoLancamento {
   /** Itens já lançados continuam visíveis enquanto ainda são relevantes. */
   momento: "em-breve" | "disponivel";
   idExterno: string;
-  fonte: "igdb" | "steam" | "epic" | "gog" | "rawg" | "nintendo" | "playstation" | "xbox" | "rockstar" | "tmdb" | "tvmaze" | "wikidata";
+  fonte: "igdb" | "steam" | "epic" | "gog" | "rawg" | "nintendo" | "playstation" | "xbox" | "rockstar" | "tmdb" | "tvmaze" | "wikidata" | "amazon-mgm" | "disney";
 }
 
 export interface NoticiaSugestao {
@@ -188,22 +190,3 @@ export interface FiltrosEventos {
 
 /** Tema visual (claro/escuro), persistido localmente e por usuário. */
 export type Tema = "claro" | "escuro";
-
-/** Tipos de template de notificação (personalidade por categoria). */
-export type TemplateNotificacaoTipo =
-  | "jogos"
-  | "filmes"
-  | "series"
-  | "cartao"
-  | "viagem"
-  | "datas-pessoais"
-  | "generico";
-
-/** Momentos de disparo de notificações relativas a um evento. */
-export type GatilhoNotificacao =
-  | "resumo-semanal"
-  | "7-dias-antes"
-  | "3-dias-antes"
-  | "1-dia-antes"
-  | "no-dia"
-  | "pre-venda-hoje";

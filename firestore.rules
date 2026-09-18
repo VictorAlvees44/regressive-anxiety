@@ -56,13 +56,6 @@ service cloud.firestore {
         && request.resource.data.atualizadoEm is string;
     }
 
-    // Tokens de notificação push (Firebase Cloud Messaging): cada
-    // administrador só pode ler/escrever os próprios tokens de
-    // dispositivo. Notificações são um recurso exclusivo dos admins.
-    match /tokensNotificacao/{uid}/dispositivos/{tokenId} {
-      allow read, write: if ehAdministrador() && request.auth.uid == uid;
-    }
-
     // Logs administrativos: apenas administradores podem ler ou escrever.
     // Nunca expostos a visitantes.
     match /logs/{logId} {

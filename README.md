@@ -22,12 +22,11 @@ O projeto está pronto para uso em <https://victoralvees44.github.io/regressive-
 - Pesquisa por título, ator, gênero ou plataforma.
 - Oferece uma curadoria inteligente e explicável, ajustada por preferências, eventos acompanhados, favoritos e feedback.
 - Mantém todo o histórico de recomendação no próprio aparelho, sem enviar hábitos pessoais para serviços externos.
-- Filtra filmes recentes (até seis meses) disponíveis no Brasil em Netflix, Prime Video, Disney+, Max e salas de cinema.
+- Filtra filmes recentes disponíveis no Brasil e acompanha estreias e relançamentos confirmados, mesmo quando as APIs ainda não os destacam.
 - Mantém séries recentes disponíveis nos serviços brasileiros escolhidos.
 - Dá prioridade a jogos relevantes de PlayStation, Xbox e PC, sem encher a estante com conteúdo adulto ou promoções aleatórias.
 - Permite acompanhar uma sugestão e transformá-la em evento.
 - Funciona como aplicativo instalado no celular, inclusive em iPhone.
-- Envia notificações quando configurado com Firebase.
 
 ## Como rodar no computador
 
@@ -70,7 +69,7 @@ O navegador não conversa diretamente com serviços externos. Uma Action do GitH
 | Tipo | Fontes |
 | --- | --- |
 | Jogos | RAWG, IGDB, GOG, PlayStation e Xbox; Steam e Epic entram apenas como apoio |
-| Filmes | TMDB, limitado aos últimos seis meses, disponibilidade brasileira e cinema |
+| Filmes | TMDB (streaming brasileiro, cinemas e próximas estreias) e destaques confirmados por fontes oficiais |
 | Séries | TMDB, com lançamentos recentes disponíveis no Brasil pelos catálogos selecionados |
 | Notícias | Google News em português do Brasil |
 
@@ -84,6 +83,8 @@ Os segredos abaixo ficam em **Settings → Secrets and variables → Actions** n
 | `IGDB_CLIENT_SECRET` | autenticação da IGDB |
 
 Sem `TMDB_API_KEY`, filmes e a maior parte das séries não conseguem aparecer. Sem `RAWG_API_KEY`, o catálogo ainda funciona, só perde uma ótima fonte de jogos e imagens.
+
+Estreias e relançamentos oficiais que escapam dos filtros automáticos ficam em `scripts/destaques-filmes.mjs`, com data e fonte verificadas. A sincronização rejeita uma queda acentuada de itens por categoria para não publicar um catálogo incompleto durante falhas temporárias das APIs.
 
 O catálogo se atualiza diariamente às 2h da manhã (horário de Brasília). O botão **Atualizar** apenas recarrega a versão mais recente já publicada — ele não expõe chaves nem dispara uma coleta no seu celular, porque o app é curioso, mas não inconsequente.
 
@@ -116,19 +117,14 @@ src/
   lib/           Firebase, repositórios e utilitários
   pages/         telas do app
   styles/        cores e estilos globais
-  sw.ts          cache offline e notificações em segundo plano
+  sw.ts          cache offline do PWA
 scripts/
   sincronizar-dados.mjs   monta o catálogo público diário
-functions/
-  index.js                envia notificações agendadas
+  destaques-filmes.mjs    estreias e relançamentos confirmados
 .github/workflows/
   publicar.yml            publica o site
   sincronizar-dados.yml   atualiza as sugestões
 ```
-
-## Notificações
-
-As notificações dependem do Firebase Cloud Messaging e da Cloud Function em `functions/`. Elas checam os eventos diariamente às 9h, no horário de Brasília. Para ativá-las, configure o Firebase e habilite o cartão de notificações no painel de administração.
 
 ## Limitações honestas
 

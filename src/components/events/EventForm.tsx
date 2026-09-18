@@ -124,7 +124,7 @@ export function EventForm({ eventoInicial, aoSalvar, aoCancelar }: EventFormProp
           />
           <p className="mt-1 text-xs text-base-900/45 dark:text-base-50/45">
             Não existe API pública para isso — preencha manualmente quando a pré-venda for anunciada
-            (Ingresso.com, Cinemark, redes sociais do filme). Você recebe uma notificação no dia.
+            (Ingresso.com, Cinemark, redes sociais do filme). A data aparecerá na contagem do evento.
           </p>
         </div>
       )}

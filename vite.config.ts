@@ -15,9 +15,7 @@ export default defineConfig({
     react(),
     VitePWA({
       // injectManifest: usamos um service worker próprio (src/sw.ts)
-      // em vez do gerado automaticamente, para poder combinar o cache
-      // offline (Workbox) com o recebimento de push do Firebase
-      // Messaging em um único SW/escopo.
+      // em vez do gerado automaticamente, para controlar o cache offline.
       strategies: "injectManifest",
       srcDir: "src",
       filename: "sw.ts",

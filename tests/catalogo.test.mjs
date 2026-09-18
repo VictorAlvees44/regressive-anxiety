@@ -3,6 +3,9 @@ import assert from "node:assert/strict";
 import { correspondePlataforma, formatarDataLancamento, urlExternaSegura } from "../src/lib/filtrosCatalogo.ts";
 import { baseCatalogo, selecionarCatalogo } from "../src/lib/selecionarCatalogo.ts";
 import { dataSteamISO, normalizarJogoSteam } from "../scripts/catalogo-steam.mjs";
+import { destaquesFilmesConfirmados } from "../scripts/destaques-filmes.mjs";
+import { validarContinuidadeCatalogo } from "../scripts/catalogo-qualidade.mjs";
+import { readFileSync } from "node:fs";
 
 const agora = Date.parse("2026-09-02T12:00:00Z");
 const item = (extras = {}) => ({ id: "1", idExterno: "tmdb-movie-1", titulo: "Ação no espaço", descricao: "Uma aventura", categoria: "filmes", dataLancamentoISO: "2026-09-01T00:00:00Z", momento: "disponivel", fonte: "tmdb", plataformas: ["Netflix"], ...extras });
@@ -37,6 +40,29 @@ test("busca combina palavras e ignora acentos; serviço é um filtro real", () =
   assert.equal(selecionar([item()], { busca: "acao netflix" }).length, 1);
   assert.equal(selecionar([item()], { busca: "acao xbox" }).length, 0);
   assert.equal(selecionar([item()], { servico: "Max" }).length, 0);
+});
+
+test("Verity e Ultimato Encore aparecem, inclusive em busca com erro de digitação", () => {
+  const filmes = destaquesFilmesConfirmados(Date.parse("2026-09-18T12:00:00Z"));
+  assert.equal(selecionar(filmes, { busca: "Verity" }).length, 1);
+  assert.equal(selecionar(filmes, { busca: "Vingadores Endcore" }).length, 1);
+  assert.equal(selecionar(filmes, { busca: "Avengers Endgame" }).length, 1);
+  assert.equal(selecionar(filmes, { servico: "Cinema" }).length, 2);
+  assert.equal(destaquesFilmesConfirmados(Date.parse("2027-05-01T12:00:00Z")).length, 0);
+  const publicado = JSON.parse(readFileSync("public/data/sugestoes.json", "utf8"));
+  for (const filme of destaquesFilmesConfirmados()) assert.ok(publicado.some((item) => item.idExterno === filme.idExterno));
+});
+
+test("sincronização incompleta preserva o catálogo anterior", () => {
+  const anteriores = [
+    ...Array.from({ length: 30 }, () => ({ categoria: "filmes" })),
+    ...Array.from({ length: 30 }, () => ({ categoria: "series" })),
+  ];
+  assert.throws(() => validarContinuidadeCatalogo(anteriores, [{ categoria: "filmes" }]), /Coleta incompleta de filmes/);
+  assert.doesNotThrow(() => validarContinuidadeCatalogo(anteriores, [
+    ...Array.from({ length: 16 }, () => ({ categoria: "filmes" })),
+    ...Array.from({ length: 16 }, () => ({ categoria: "series" })),
+  ]));
 });
 test("finalizados não são sugeridos por padrão e podem ser reexibidos", () => {
   const finalizados = new Set(["tmdb-movie-1"]);
