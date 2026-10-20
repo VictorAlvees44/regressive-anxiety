@@ -4,8 +4,12 @@ import { readFile } from "node:fs/promises";
 
 test("sincronização diária dispara a publicação do catálogo", async () => {
   const workflow = await readFile(".github/workflows/sincronizar-dados.yml", "utf8");
+  const publicacao = await readFile(".github/workflows/publicar.yml", "utf8");
   assert.match(workflow, /actions:\s*write/);
   assert.match(workflow, /gh workflow run publicar\.yml --ref main/);
+  assert.doesNotMatch(workflow + publicacao, /actions\/(?:checkout|setup-node)@v4/);
+  assert.match(publicacao, /actions\/upload-pages-artifact@v5/);
+  assert.match(publicacao, /actions\/deploy-pages@v5/);
 });
 
 test("dados compartilhados exigem administrador sem e-mails no repositório", async () => {
