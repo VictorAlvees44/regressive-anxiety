@@ -58,7 +58,7 @@ A biblioteca não muda a agenda compartilhada: “Finalizado” significa que vo
 
 Nesta versão, o uso local exige a escolha explícita **Usar neste aparelho**. Os dados são salvos somente neste navegador, não entre dispositivos. Limpar os dados do site apaga o histórico; **Exportar backup** salva um JSON. A interface não sobrescreve silenciosamente um histórico local corrompido e informa falhas de gravação.
 
-A integração opcional com a conta Google está preparada, mas **desativada por padrão** (`VITE_BIBLIOTECA_NUVEM=false`). Para habilitá-la, publique primeiro `firestore.rules` no projeto Firebase, valide acesso por proprietário e negação entre usuários e então configure a variável de repositório `VITE_BIBLIOTECA_NUVEM=true` no GitHub Actions. A publicação no Pages não publica regras do Firebase. Os dados de conta ficam em `bibliotecas/{uid}/itens/{id}`. Biblioteca local e biblioteca de conta não são migradas nem misturadas automaticamente.
+A integração opcional com a conta Google está preparada, mas **desativada por padrão** (`VITE_BIBLIOTECA_NUVEM=false`). Antes de publicar `firestore.rules`, cadastre os UIDs autorizados conforme [docs/FIREBASE_SEGURANCA.md](docs/FIREBASE_SEGURANCA.md), valide acesso por proprietário e negação entre usuários e então configure a variável de repositório `VITE_BIBLIOTECA_NUVEM=true` no GitHub Actions. A publicação no Pages não publica regras do Firebase. Os dados de conta ficam em `bibliotecas/{uid}/itens/{id}`. Biblioteca local e biblioteca de conta não são migradas nem misturadas automaticamente.
 
 Não habilite essa variável antes de validar as regras. Os testes locais desta entrega não incluem o Firebase em produção.
 
@@ -86,7 +86,7 @@ Sem `TMDB_API_KEY`, filmes e a maior parte das séries não conseguem aparecer. 
 
 Estreias e relançamentos oficiais que escapam dos filtros automáticos ficam em `scripts/destaques-filmes.mjs`, com data e fonte verificadas. A sincronização rejeita uma queda acentuada de itens por categoria para não publicar um catálogo incompleto durante falhas temporárias das APIs.
 
-O catálogo se atualiza diariamente às 2h da manhã (horário de Brasília). O botão **Atualizar** apenas recarrega a versão mais recente já publicada — ele não expõe chaves nem dispara uma coleta no seu celular, porque o app é curioso, mas não inconsequente.
+O catálogo se atualiza diariamente às 2h da manhã (horário de Brasília). Ao concluir, a própria rotina dispara a publicação do GitHub Pages; assim o JSON novo não fica parado apenas no repositório. O botão **Atualizar** apenas recarrega a versão mais recente já publicada — ele não expõe chaves nem dispara uma coleta no seu celular, porque o app é curioso, mas não inconsequente.
 
 ## Curadoria inteligente
 

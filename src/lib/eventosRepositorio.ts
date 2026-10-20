@@ -22,12 +22,11 @@ const CHAVE_STORAGE_DEMO = "regressive-anxiety:eventos-demo";
  * Os eventos são **compartilhados entre os dois administradores** (é
  * o painel de um casal, não dados isolados por conta) — por isso vivem
  * em uma única coleção de nível raiz no Firestore, `eventos`, protegida
- * pelas Security Rules (`firestore.rules`): leitura para qualquer
- * usuário autenticado, escrita apenas para os dois e-mails admin.
+ * pelas Security Rules (`firestore.rules`): leitura e escrita apenas
+ * para os dois administradores.
  *
- * Modo de demonstração: se o Firebase não estiver configurado (sem
- * `.env.local`) ou a chamada ao Firestore falhar por qualquer motivo,
- * a camada cai automaticamente para um armazenamento local
+ * Modo de demonstração: somente se o Firebase não estiver configurado
+ * (sem `.env.local`), a camada usa um armazenamento local
  * (`localStorage`, seed a partir de `eventos.mock.json`), para que o
  * app continue navegável em ambiente de desenvolvimento/demonstração
  * sem exigir um projeto Firebase real.
@@ -126,7 +125,7 @@ function excluirEventoDemo(id: string): void {
 }
 
 // ---------------------------------------------------------------------------
-// API pública (tenta Firestore primeiro; cai para o modo demo em caso de erro)
+// API pública (modo demo apenas quando o Firebase não está configurado)
 // ---------------------------------------------------------------------------
 
 function documentoParaEvento(id: string, dados: DocumentData): Evento {
@@ -135,13 +134,8 @@ function documentoParaEvento(id: string, dados: DocumentData): Evento {
 
 export async function listarEventos(): Promise<Evento[]> {
   if (!firebaseConfigurado) return carregarDemo().map(normalizar);
-  try {
-    const snapshot = await getDocs(collection(db, COLECAO_EVENTOS));
-    return snapshot.docs.map((d) => documentoParaEvento(d.id, d.data()));
-  } catch (erro) {
-    console.warn("[eventosRepositorio] Firestore indisponível, usando modo de demonstração local.", erro);
-    return carregarDemo().map(normalizar);
-  }
+  const snapshot = await getDocs(collection(db, COLECAO_EVENTOS));
+  return snapshot.docs.map((d) => documentoParaEvento(d.id, d.data()));
 }
 
 export async function criarEvento(
@@ -156,13 +150,8 @@ export async function criarEvento(
     status: recalcularStatus(dados),
   };
 
-  try {
-    const referencia = await addDoc(collection(db, COLECAO_EVENTOS), documento);
-    return normalizar({ ...documento, id: referencia.id } as Evento);
-  } catch (erro) {
-    console.warn("[eventosRepositorio] Falha ao criar no Firestore, salvando localmente.", erro);
-    return criarEventoDemo(dados);
-  }
+  const referencia = await addDoc(collection(db, COLECAO_EVENTOS), documento);
+  return normalizar({ ...documento, id: referencia.id } as Evento);
 }
 
 export async function atualizarEvento(id: string, alteracoes: Partial<Evento>): Promise<void> {
@@ -170,15 +159,10 @@ export async function atualizarEvento(id: string, alteracoes: Partial<Evento>): 
     atualizarEventoDemo(id, alteracoes);
     return;
   }
-  try {
-    await updateDoc(doc(db, COLECAO_EVENTOS, id), {
-      ...prepararPayloadAtualizacao(alteracoes),
-      atualizadoEm: new Date().toISOString(),
-    });
-  } catch (erro) {
-    console.warn("[eventosRepositorio] Falha ao atualizar no Firestore, salvando localmente.", erro);
-    atualizarEventoDemo(id, alteracoes);
-  }
+  await updateDoc(doc(db, COLECAO_EVENTOS, id), {
+    ...prepararPayloadAtualizacao(alteracoes),
+    atualizadoEm: new Date().toISOString(),
+  });
 }
 
 export async function excluirEvento(id: string): Promise<void> {
@@ -186,10 +170,5 @@ export async function excluirEvento(id: string): Promise<void> {
     excluirEventoDemo(id);
     return;
   }
-  try {
-    await deleteDoc(doc(db, COLECAO_EVENTOS, id));
-  } catch (erro) {
-    console.warn("[eventosRepositorio] Falha ao excluir no Firestore, removendo localmente.", erro);
-    excluirEventoDemo(id);
-  }
+  await deleteDoc(doc(db, COLECAO_EVENTOS, id));
 }

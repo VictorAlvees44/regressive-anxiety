@@ -3,9 +3,10 @@ rules_version = '2';
 // Firestore Security Rules — Regressive Anxiety
 //
 // Princípios:
-// 1. Apenas os dois e-mails abaixo podem escrever os dados compartilhados.
-// 2. Qualquer outro usuário autenticado é "visitante": apenas leitura
-//    dos dados compartilhados do casal (eventos, lista de desejos).
+// 1. Apenas UIDs cadastrados na coleção administrativa podem acessar
+//    os dados compartilhados.
+// 2. Os dados compartilhados do casal (eventos, lista de desejos) são
+//    privados: visitantes não podem ler nem escrever.
 // 3. Usuários não autenticados não têm acesso a nada no Firestore
 //    (os dados públicos de sugestões de lançamentos vêm dos arquivos
 //    JSON estáticos, não do Firestore).
@@ -15,30 +16,31 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    function ehAdministrador() {
-      return request.auth != null &&
-        request.auth.token.email in [
-          'chavosso16@gmail.com',
-          'gabrielly.gsena@gmail.com'
-        ];
-    }
-
     function estaAutenticado() {
       return request.auth != null;
     }
 
+    function ehAdministrador() {
+      return estaAutenticado() &&
+        exists(/databases/$(database)/documents/administradores/$(request.auth.uid));
+    }
+
+    // Os documentos de administradores são criados pelo proprietário no
+    // Console/Admin SDK. O app cliente nunca pode listar ou alterá-los.
+    match /administradores/{uid} {
+      allow read, write: if false;
+    }
+
     // Eventos: dados COMPARTILHADOS entre os dois administradores
     // (é o painel de um casal, não dados isolados por conta).
-    // Visitantes podem visualizar, mas nunca escrever.
+    // Visitantes não podem visualizar nem escrever.
     match /eventos/{eventoId} {
-      allow read: if estaAutenticado();
-      allow write: if ehAdministrador();
+      allow read, write: if ehAdministrador();
     }
 
     // Lista de desejos: mesma lógica de compartilhamento dos eventos.
     match /listaDesejos/{itemId} {
-      allow read: if estaAutenticado();
-      allow write: if ehAdministrador();
+      allow read, write: if ehAdministrador();
     }
 
     // Biblioteca pessoal: nunca mistura os dados privados com a agenda compartilhada.
@@ -70,10 +72,8 @@ service cloud.firestore {
     }
 
     // Documento "sonda": não guarda nenhum dado real, existe só para o
-    // cliente perguntar "eu sou administrador?" sem precisar saber a
-    // lista de e-mails. O SDK tenta ler; a regra abaixo responde
-    // sim/não. Assim a lista de e-mails fica só aqui no servidor, nunca
-    // no bundle JS que qualquer visitante pode inspecionar.
+    // cliente perguntar "eu sou administrador?" sem receber a lista de UIDs.
+    // O SDK tenta ler e a regra abaixo responde apenas sim/não.
     match /sistema/statusAdmin {
       allow read: if ehAdministrador();
       allow write: if false;

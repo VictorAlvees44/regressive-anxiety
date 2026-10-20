@@ -5,6 +5,7 @@ import type { CategoriaId, Evento } from "../../types";
 
 interface EventFormProps {
   eventoInicial?: Evento;
+  salvando?: boolean;
   aoSalvar: (dados: {
     titulo: string;
     descricao?: string;
@@ -17,7 +18,7 @@ interface EventFormProps {
   aoCancelar?: () => void;
 }
 
-export function EventForm({ eventoInicial, aoSalvar, aoCancelar }: EventFormProps) {
+export function EventForm({ eventoInicial, salvando = false, aoSalvar, aoCancelar }: EventFormProps) {
   const [titulo, setTitulo] = useState(eventoInicial?.titulo ?? "");
   const [descricao, setDescricao] = useState(eventoInicial?.descricao ?? "");
   const [categoria, setCategoria] = useState<CategoriaId>(eventoInicial?.categoria ?? "outros");
@@ -147,8 +148,8 @@ export function EventForm({ eventoInicial, aoSalvar, aoCancelar }: EventFormProp
             Cancelar
           </Button>
         )}
-        <Button type="submit" tamanho="sm">
-          {eventoInicial ? "Salvar alterações" : "Criar evento"}
+        <Button type="submit" tamanho="sm" disabled={salvando}>
+          {salvando ? "Salvando…" : eventoInicial ? "Salvar alterações" : "Criar evento"}
         </Button>
       </div>
     </form>

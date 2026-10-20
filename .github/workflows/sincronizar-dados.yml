@@ -10,6 +10,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
+  actions: write
   contents: write
 
 jobs:
@@ -39,3 +40,11 @@ jobs:
           git add public/data/sugestoes.json public/data/saude-sincronizacao.json
           git diff --cached --quiet || git commit -m "chore: sincronizar sugestões de lançamentos"
           git push
+
+      # Commits feitos com GITHUB_TOKEN não disparam o workflow de Pages por
+      # evento push. O workflow_dispatch é a exceção oficial e garante que o
+      # catálogo recém-gerado realmente chegue ao site.
+      - name: Publicar catálogo atualizado
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publicar.yml --ref main

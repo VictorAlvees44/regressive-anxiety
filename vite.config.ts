@@ -46,4 +46,19 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    rolldownOptions: {
+      output: {
+        codeSplitting: {
+          groups: [
+            { name: "firebase-firestore", test: /node_modules[\\/]@firebase[\\/](?:firestore|webchannel-wrapper)[\\/]/, priority: 50 },
+            { name: "firebase-auth", test: /node_modules[\\/]@firebase[\\/]auth[\\/]/, priority: 40 },
+            { name: "firebase-core", test: /node_modules[\\/](?:firebase|@firebase)[\\/]/, priority: 30 },
+            { name: "motion", test: /node_modules[\\/]framer-motion[\\/]/, priority: 20 },
+            { name: "react", test: /node_modules[\\/](?:react|react-dom|react-router|react-router-dom)[\\/]/, priority: 10 },
+          ],
+        },
+      },
+    },
+  },
 });

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { entrarComGoogle, firebaseConfigurado, observarUsuario, sair, verificarSeEhAdministrador } from "../lib/firebase";
 import type { UsuarioAutenticado } from "../types";
 import { AuthContext, type AuthContextValor } from "./authContextValue";
@@ -6,6 +6,7 @@ import { AuthContext, type AuthContextValor } from "./authContextValue";
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [usuario, setUsuario] = useState<UsuarioAutenticado | null>(null);
   const [carregando, setCarregando] = useState(true);
+  const versaoAutenticacao = useRef(0);
 
   useEffect(() => {
     // Observa o estado de autenticação do Firebase. A verificação de
@@ -24,6 +25,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     try {
       const cancelarInscricao = observarUsuario((firebaseUser) => {
+        const versao = ++versaoAutenticacao.current;
         if (!firebaseUser) {
           setUsuario(null);
           setCarregando(false);
@@ -35,6 +37,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setCarregando(true);
         verificarSeEhAdministrador()
           .then((ehAdministrador) => {
+            if (versao !== versaoAutenticacao.current) return;
             setUsuario({
               uid: firebaseUser.uid,
               nome: firebaseUser.displayName ?? "Usuário",
@@ -43,7 +46,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               perfil: ehAdministrador ? "administrador" : "visitante",
             });
           })
-          .finally(() => setCarregando(false));
+          .finally(() => {
+            if (versao === versaoAutenticacao.current) setCarregando(false);
+          });
       });
 
       return cancelarInscricao;

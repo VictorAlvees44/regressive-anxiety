@@ -9,8 +9,8 @@ const CHAVE_STORAGE_DEMO = "regressive-anxiety:lista-desejos-demo";
 /**
  * Assim como `eventosRepositorio.ts`, esta coleção é **compartilhada
  * entre os dois administradores** e vive em `listaDesejos` no
- * Firestore. Em caso de falha (ex.: Firebase não configurado), cai
- * para um `localStorage` local de demonstração.
+ * Firestore. O `localStorage` de demonstração só é usado quando o
+ * Firebase não está configurado; falhas reais são comunicadas à interface.
  */
 
 function carregarDemo(): ItemListaDesejos[] {
@@ -29,13 +29,8 @@ function salvarDemo(itens: ItemListaDesejos[]): void {
 
 export async function listarItens(): Promise<ItemListaDesejos[]> {
   if (!firebaseConfigurado) return carregarDemo();
-  try {
-    const snapshot = await getDocs(collection(db, COLECAO_LISTA_DESEJOS));
-    return snapshot.docs.map((d) => ({ ...(d.data() as ItemListaDesejos), id: d.id }));
-  } catch (erro) {
-    console.warn("[listaDesejosRepositorio] Firestore indisponível, usando modo de demonstração local.", erro);
-    return carregarDemo();
-  }
+  const snapshot = await getDocs(collection(db, COLECAO_LISTA_DESEJOS));
+  return snapshot.docs.map((d) => ({ ...(d.data() as ItemListaDesejos), id: d.id }));
 }
 
 export async function criarItem(
@@ -50,15 +45,8 @@ export async function criarItem(
   const agora = new Date().toISOString();
   const documento = { ...dados, criadoEm: agora, atualizadoEm: agora };
 
-  try {
-    const referencia = await addDoc(collection(db, COLECAO_LISTA_DESEJOS), documento);
-    return { ...documento, id: referencia.id };
-  } catch (erro) {
-    console.warn("[listaDesejosRepositorio] Falha ao criar no Firestore, salvando localmente.", erro);
-    const novoItem: ItemListaDesejos = { ...documento, id: gerarId("desejo") };
-    salvarDemo([...carregarDemo(), novoItem]);
-    return novoItem;
-  }
+  const referencia = await addDoc(collection(db, COLECAO_LISTA_DESEJOS), documento);
+  return { ...documento, id: referencia.id };
 }
 
 export async function atualizarItem(id: string, alteracoes: Partial<ItemListaDesejos>): Promise<void> {
@@ -67,12 +55,7 @@ export async function atualizarItem(id: string, alteracoes: Partial<ItemListaDes
     salvarDemo(carregarDemo().map((item) => (item.id === id ? { ...item, ...payload } : item)));
     return;
   }
-  try {
-    await updateDoc(doc(db, COLECAO_LISTA_DESEJOS, id), payload);
-  } catch (erro) {
-    console.warn("[listaDesejosRepositorio] Falha ao atualizar no Firestore, salvando localmente.", erro);
-    salvarDemo(carregarDemo().map((item) => (item.id === id ? { ...item, ...payload } : item)));
-  }
+  await updateDoc(doc(db, COLECAO_LISTA_DESEJOS, id), payload);
 }
 
 export async function excluirItem(id: string): Promise<void> {
@@ -80,10 +63,5 @@ export async function excluirItem(id: string): Promise<void> {
     salvarDemo(carregarDemo().filter((item) => item.id !== id));
     return;
   }
-  try {
-    await deleteDoc(doc(db, COLECAO_LISTA_DESEJOS, id));
-  } catch (erro) {
-    console.warn("[listaDesejosRepositorio] Falha ao excluir no Firestore, removendo localmente.", erro);
-    salvarDemo(carregarDemo().filter((item) => item.id !== id));
-  }
+  await deleteDoc(doc(db, COLECAO_LISTA_DESEJOS, id));
 }

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
+import { firebaseConfigurado } from "../../lib/firebase";
 import { GlassCard } from "../ui/GlassCard";
 
 /**
@@ -10,8 +11,10 @@ import { GlassCard } from "../ui/GlassCard";
  * qualquer escrita de usuários fora da lista de administradores
  * mesmo que esta rota fosse contornada.
  */
-export function RotaProtegida({ children }: { children: ReactNode }) {
+export function RotaProtegida({ children, permitirDemo = false }: { children: ReactNode; permitirDemo?: boolean }) {
   const { usuario, carregando, perfil } = useAuth();
+
+  if (permitirDemo && !firebaseConfigurado) return <>{children}</>;
 
   if (carregando) {
     return (
@@ -31,7 +34,7 @@ export function RotaProtegida({ children }: { children: ReactNode }) {
         <GlassCard className="max-w-sm text-center">
           <h1 className="text-lg font-semibold">Acesso negado</h1>
           <p className="mt-2 text-sm text-base-900/60 dark:text-base-50/60">
-            Sua conta não tem permissão para acessar o painel administrativo.
+            Sua conta não tem permissão para acessar estes dados privados.
           </p>
         </GlassCard>
       </div>

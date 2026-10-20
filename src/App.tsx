@@ -45,13 +45,13 @@ export function App() {
                   <Route path="/filmes" element={<Navigate to="/" replace />} />
                   <Route path="/series" element={<Sugestoes key="series" categoria="series" />} />
                   <Route path="/jogos" element={<Sugestoes key="jogos" categoria="jogos" />} />
-                  <Route path="/agenda" element={<Home />} />
+                  <Route path="/agenda" element={<RotaProtegida permitirDemo><Home /></RotaProtegida>} />
                   <Route path="/biblioteca" element={<Biblioteca />} />
                   <Route path="/titulo/:id" element={<DetalhesTitulo />} />
                   <Route path="/mais" element={<Mais />} />
                   <Route path="/sugestoes" element={<Sugestoes />} />
-                  <Route path="/calendario" element={<Calendario />} />
-                  <Route path="/lista-de-desejos" element={<ListaDesejos />} />
+                  <Route path="/calendario" element={<RotaProtegida permitirDemo><Calendario /></RotaProtegida>} />
+                  <Route path="/lista-de-desejos" element={<RotaProtegida permitirDemo><ListaDesejos /></RotaProtegida>} />
                   <Route path="/login" element={<Login />} />
                   <Route
                     path="/admin"

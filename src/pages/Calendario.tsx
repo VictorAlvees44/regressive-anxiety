@@ -11,7 +11,7 @@ import { obterCategoria } from "../data/categorias";
 import { cn } from "../lib/utils";
 
 export function Calendario() {
-  const { eventos, alternarFavorito } = useEventos();
+  const { eventos, alternarFavorito, erro, carregando, recarregar } = useEventos();
   const { mesReferencia, dias, irParaMesAnterior, irParaProximoMes, irParaHoje } = useCalendarioMensal();
   const [diaSelecionado, setDiaSelecionado] = useState<Date | null>(null);
 
@@ -31,6 +31,15 @@ export function Calendario() {
   return (
     <div className="flex flex-col gap-4">
       <Header titulo="Calendário" subtitulo="Todos os seus eventos, mês a mês" />
+
+      {erro && (
+        <GlassCard className="flex flex-wrap items-center justify-between gap-3 border-red-500/25 bg-red-500/5 text-sm text-red-700 dark:text-red-300" role="alert">
+          <span>{erro}</span>
+          <Button variante="fantasma" tamanho="sm" onClick={() => void recarregar()} disabled={carregando}>
+            {carregando ? "Tentando…" : "Tentar novamente"}
+          </Button>
+        </GlassCard>
+      )}
 
       <GlassCard>
         <div className="mb-3 flex items-center justify-between">

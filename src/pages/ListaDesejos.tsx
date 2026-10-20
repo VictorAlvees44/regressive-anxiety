@@ -21,28 +21,58 @@ export function ListaDesejos() {
   const [itens, setItens] = useState<ItemListaDesejos[]>([]);
   const [carregando, setCarregando] = useState(true);
   const [nomeNovoItem, setNomeNovoItem] = useState("");
+  const [erro, setErro] = useState<string | null>(null);
+  const [salvando, setSalvando] = useState(false);
+  const [removendoId, setRemovendoId] = useState<string | null>(null);
 
   useEffect(() => {
-    listaDesejosRepositorio
-      .listarItens()
-      .then(setItens)
-      .finally(() => setCarregando(false));
+    let consultaAtiva = true;
+    listaDesejosRepositorio.listarItens()
+      .then((lista) => {
+        if (!consultaAtiva) return;
+        setItens(lista);
+        setErro(null);
+      })
+      .catch(() => {
+        if (consultaAtiva) setErro("Não foi possível carregar a lista. Confira sua conexão e tente novamente.");
+      })
+      .finally(() => {
+        if (consultaAtiva) setCarregando(false);
+      });
+    return () => { consultaAtiva = false; };
   }, []);
 
   async function adicionarItem() {
-    if (!nomeNovoItem.trim()) return;
-    const novo = await listaDesejosRepositorio.criarItem({
-      nome: nomeNovoItem.trim(),
-      prioridade: "media",
-      status: "desejado",
-    });
-    setItens((atual) => [...atual, novo]);
-    setNomeNovoItem("");
+    if (!nomeNovoItem.trim() || salvando) return;
+    setSalvando(true);
+    try {
+      const novo = await listaDesejosRepositorio.criarItem({
+        nome: nomeNovoItem.trim(),
+        prioridade: "media",
+        status: "desejado",
+      });
+      setItens((atual) => [...atual, novo]);
+      setNomeNovoItem("");
+      setErro(null);
+    } catch {
+      setErro("Não foi possível adicionar o item. Nenhuma alteração foi salva.");
+    } finally {
+      setSalvando(false);
+    }
   }
 
   async function removerItem(id: string) {
-    setItens((atual) => atual.filter((item) => item.id !== id));
-    await listaDesejosRepositorio.excluirItem(id);
+    if (removendoId) return;
+    setRemovendoId(id);
+    try {
+      await listaDesejosRepositorio.excluirItem(id);
+      setItens((atual) => atual.filter((item) => item.id !== id));
+      setErro(null);
+    } catch {
+      setErro("Não foi possível remover o item. Ele continua salvo na lista.");
+    } finally {
+      setRemovendoId(null);
+    }
   }
 
   return (
@@ -54,13 +84,20 @@ export function ListaDesejos() {
           <input
             value={nomeNovoItem}
             onChange={(evento) => setNomeNovoItem(evento.target.value)}
-            onKeyDown={(evento) => evento.key === "Enter" && adicionarItem()}
+            onKeyDown={(evento) => evento.key === "Enter" && void adicionarItem()}
+            disabled={salvando}
             placeholder="Adicionar item à lista..."
             className="flex-1 bg-transparent text-sm outline-none placeholder:text-base-900/40 dark:placeholder:text-base-50/40"
           />
-          <Button tamanho="sm" icone={<Plus size={16} />} onClick={adicionarItem}>
-            Adicionar
+          <Button tamanho="sm" icone={<Plus size={16} />} onClick={() => void adicionarItem()} disabled={salvando}>
+            {salvando ? "Salvando…" : "Adicionar"}
           </Button>
+        </GlassCard>
+      )}
+
+      {erro && (
+        <GlassCard className="border-red-500/25 bg-red-500/5 text-sm text-red-700 dark:text-red-300" role="alert">
+          {erro}
         </GlassCard>
       )}
 
@@ -98,9 +135,10 @@ export function ListaDesejos() {
 
                 {podeEditar && (
                   <button
-                    onClick={() => removerItem(item.id)}
+                    onClick={() => void removerItem(item.id)}
+                    disabled={removendoId !== null}
                     className="rounded-full p-2 text-base-900/40 hover:bg-black/5 dark:text-base-50/40 dark:hover:bg-white/10"
-                    aria-label="Remover item"
+                    aria-label={removendoId === item.id ? `Removendo ${item.nome}` : `Remover ${item.nome}`}
                   >
                     <Trash2 size={16} />
                   </button>

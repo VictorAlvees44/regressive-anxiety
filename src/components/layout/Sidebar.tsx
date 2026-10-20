@@ -3,6 +3,7 @@ import { Home, Film, Tv, Gamepad2, Calendar, Gift, ShieldCheck, BookOpen, Ellips
 import { motion } from "framer-motion";
 import { cn } from "../../lib/utils";
 import { useAuth } from "../../hooks/useAuth";
+import { firebaseConfigurado } from "../../lib/firebase";
 
 const ITENS_NAV = [
   { rota: "/", rotulo: "Filmes", Icone: Film },
@@ -29,7 +30,7 @@ export function Sidebar() {
           </div>
         </div>
 
-        {ITENS_NAV.map(({ rota, rotulo, Icone }) => (
+        {ITENS_NAV.filter(({ rota }) => !firebaseConfigurado || perfil === "administrador" || !["/agenda", "/calendario", "/lista-de-desejos"].includes(rota)).map(({ rota, rotulo, Icone }) => (
           <NavLink key={rota} to={rota} end={rota === "/"}>
             {({ isActive }) => (
               <div className="relative flex items-center gap-3 rounded-xl px-3 py-2.5">

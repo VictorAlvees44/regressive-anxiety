@@ -12,9 +12,10 @@ import { formatarData } from "../lib/utils";
 import type { Evento } from "../types";
 
 export function Admin() {
-  const { eventos, criarEvento, editarEvento, excluirEvento } = useEventos();
+  const { eventos, erro, criarEvento, editarEvento, excluirEvento } = useEventos();
   const { usuario, sair } = useAuth();
   const [modoFormulario, setModoFormulario] = useState<"nenhum" | "criar" | string>("nenhum");
+  const [salvando, setSalvando] = useState(false);
 
   const eventoEmEdicao = eventos.find((e) => e.id === modoFormulario);
 
@@ -29,6 +30,8 @@ export function Admin() {
           </Button>
         }
       />
+
+      {erro && <p role="alert" className="text-sm text-red-500">{erro}</p>}
 
       <GlassCard>
         <div className="flex items-center justify-between">
@@ -46,14 +49,23 @@ export function Admin() {
               <h3 className="mb-3 font-semibold">{eventoEmEdicao ? "Editar evento" : "Novo evento"}</h3>
               <EventForm
                 eventoInicial={eventoEmEdicao}
+                salvando={salvando}
                 aoCancelar={() => setModoFormulario("nenhum")}
-                aoSalvar={(dados) => {
-                  if (eventoEmEdicao) {
-                    editarEvento(eventoEmEdicao.id, dados);
-                  } else {
-                    criarEvento({ ...dados, favorito: false, origem: "manual", criadoPor: usuario?.email });
+                aoSalvar={async (dados) => {
+                  if (salvando) return;
+                  setSalvando(true);
+                  try {
+                    if (eventoEmEdicao) {
+                      await editarEvento(eventoEmEdicao.id, dados);
+                    } else {
+                      await criarEvento({ ...dados, favorito: false, origem: "manual", criadoPor: usuario?.email });
+                    }
+                    setModoFormulario("nenhum");
+                  } catch {
+                    // O contexto mantém a mensagem de erro visível sem fechar o formulário.
+                  } finally {
+                    setSalvando(false);
                   }
-                  setModoFormulario("nenhum");
                 }}
               />
             </GlassCard>
@@ -82,9 +94,10 @@ function EventoAdminItem({
 }: {
   evento: Evento;
   aoEditar: () => void;
-  aoExcluir: () => void;
+  aoExcluir: () => Promise<void>;
 }) {
   const [confirmandoExclusao, setConfirmandoExclusao] = useState(false);
+  const [excluindo, setExcluindo] = useState(false);
 
   return (
     <GlassCard className="flex items-center justify-between gap-3">
@@ -106,8 +119,12 @@ function EventoAdminItem({
         </button>
 
         {confirmandoExclusao ? (
-          <Button variante="perigo" tamanho="sm" onClick={aoExcluir}>
-            Confirmar
+          <Button variante="perigo" tamanho="sm" disabled={excluindo} onClick={async () => {
+            setExcluindo(true);
+            try { await aoExcluir(); } catch { setConfirmandoExclusao(false); }
+            finally { setExcluindo(false); }
+          }}>
+            {excluindo ? "Excluindo…" : "Confirmar"}
           </Button>
         ) : (
           <button
