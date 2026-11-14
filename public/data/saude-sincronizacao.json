@@ -1,18 +1,18 @@
 {
-  "atualizadoEmISO": "2026-11-13T12:53:58.352Z",
-  "total": 561,
+  "atualizadoEmISO": "2026-11-14T11:57:51.288Z",
+  "total": 559,
   "porCategoria": {
-    "jogos": 26,
-    "filmes": 302,
-    "series": 233
+    "jogos": 25,
+    "filmes": 300,
+    "series": 234
   },
   "porFonte": {
     "amazon-mgm": 1,
     "disney": 1,
     "playstation": 10,
     "rockstar": 1,
-    "steam": 5,
-    "tmdb": 533,
+    "steam": 4,
+    "tmdb": 532,
     "xbox": 10
   }
 }
